@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kae.XTUML.Tools.MetaModelGenerator", "Kae.XTUML.Tools.MetaModelGenerator\Kae.XTUML.Tools.MetaModelGenerator.csproj", "{031BC4A3-2556-4F59-B1B2-5E1AEC919243}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{031BC4A3-2556-4F59-B1B2-5E1AEC919243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{031BC4A3-2556-4F59-B1B2-5E1AEC919243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{031BC4A3-2556-4F59-B1B2-5E1AEC919243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{031BC4A3-2556-4F59-B1B2-5E1AEC919243}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3A5A10E-7F39-450A-AED9-FD7AA595F03F}
+	EndGlobalSection
+EndGlobal

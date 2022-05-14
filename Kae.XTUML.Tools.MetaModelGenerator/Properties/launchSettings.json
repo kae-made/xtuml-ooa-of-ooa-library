@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Kae.XTUML.Tools.MetaModelGenerator": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\demo\\xtuml_schema\\xtumlmc_schema.sql"
+    }
+  }
+}
