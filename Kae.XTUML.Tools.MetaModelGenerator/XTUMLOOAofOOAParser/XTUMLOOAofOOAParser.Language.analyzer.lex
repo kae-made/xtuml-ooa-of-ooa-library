@@ -15,6 +15,7 @@ REMULT			[1M]C?
 FROM			FROM
 TO				TO
 Eol             (\r\n?|\n|\0)
+PHRASEC			'[a-zA-z][ a-zA-z0-9_]*'
 ELEM			[a-zA-Z][a-zA-Z0-9_]*
 NotWh           [^ \t\r\n]
 Space           [ \t]
@@ -22,7 +23,6 @@ COMMA			,
 EOS				;
 POpen			\(
 PClose			\)
-SQT				'
 
 %{
 
@@ -48,7 +48,7 @@ SQT				'
 {PClose}		{ Console.WriteLine(")"); return (int)Token.PClose; }
 {ELEM}			{ Console.WriteLine("elem: {0}", yytext); GetString(); return (int)Token.ELEM; }
 {COMMA}			{ Console.WriteLine("comma: {0}", yytext); return (int)Token.COMMA; }
-{SQT}			{ Console.WriteLine("sqt"); return (int)Token.SQT; }
+{PHRASEC}		{ Console.WriteLine("phrase content : {0}", yytext); GetString(); return (int)Token.PHRASEC; }
 {EOS}			{ Console.WriteLine("eos: {0}", yytext); return (int)Token.EOS; }
 {Space}+		/* skip */
 

@@ -3,13 +3,15 @@
 using Kae.XTUML.Tools.MetaModelGenerator.XTUMLOOAofOOA;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YamlDotNet.RepresentationModel;
 
 namespace Kae.XTUML.Tools.MetaModelGenerator
 {
-    class OOAofOOAModelBuilder
+   public  class OOAofOOAModelBuilder
     {
         public OOAofOOARepository Repository { get; set; }
 
@@ -21,7 +23,30 @@ namespace Kae.XTUML.Tools.MetaModelGenerator
         private RelationshpEdgeOfOOA lastFromEdge;
         private RelationshpEdgeOfOOA lastToEdge;
         private string lastPhrase;
+        private Dictionary<string, string> userDataTypeDefs = new Dictionary<string, string>();
 
+        public void LoadDataTypeDef(string yamlFilePath)
+        {
+            using (var reader = new StreamReader(yamlFilePath))
+            {
+                userDataTypeDefs.Clear();
+                var yaml = new YamlStream();
+                yaml.Load(reader);
+                var config = (YamlMappingNode)yaml.Documents[0].RootNode;
+                foreach (var configItem in config.Children)
+                {
+                    if (((YamlScalarNode)configItem.Key).Value == "datatype")
+                    {
+                        foreach (var dtItem in ((YamlMappingNode)configItem.Value).Children)
+                        {
+                            var modelTypeName = ((YamlScalarNode)dtItem.Key).Value;
+                            var userDefTypeName = ((YamlScalarNode)dtItem.Value).Value;
+                            userDataTypeDefs.Add(modelTypeName, userDefTypeName);
+                        }
+                    }
+                }
+            }
+        }
         public void RegisterElement(string element)
         {
             lastElement = element;
@@ -95,7 +120,9 @@ namespace Kae.XTUML.Tools.MetaModelGenerator
             {
                 var rel = Repository.Relationships[refId];
                 bool isValid = false;
-                if (rel.ToEdge.Edge.Name == lastToEdge.Edge.Name && rel.ToEdge.Mult == lastToEdge.Mult)
+                if ((rel.ToEdge.Edge.Name == lastToEdge.Edge.Name && (rel.FromEdge == null || (rel.FromEdge != null && rel.FromEdge.Edge.Name != lastFromEdge.Edge.Name))) &&
+                    (rel.ToEdge.Mult == RelationshpEdgeOfOOA.Multiplicity.MULT_1 && lastToEdge.Mult == RelationshpEdgeOfOOA.Multiplicity.MULT_1 &&
+                     (rel.FromEdge == null || (rel.FromEdge != null && rel.FromEdge.Mult == RelationshpEdgeOfOOA.Multiplicity.MULT_1C)) && lastFromEdge.Mult == RelationshpEdgeOfOOA.Multiplicity.MULT_1C))
                 {
                     SuperSubRelationshipOfOOA superSubRel = null;
                     if (rel is not SuperSubRelationshipOfOOA)
@@ -120,17 +147,17 @@ namespace Kae.XTUML.Tools.MetaModelGenerator
                         RelationshipClassRelationOfOOA relClassRel = null;
                         if (rel is not RelationshipClassRelationOfOOA)
                         {
-                            relClassRel = new RelationshipClassRelationOfOOA() { Ref_Id = rel.Ref_Id, OneSideEdge = rel.ToEdge, OtherSideEdge=lastToEdge };
+                            relClassRel = new RelationshipClassRelationOfOOA() { Ref_Id = rel.Ref_Id, OneSideEdge = rel.ToEdge, OtherSideEdge = lastToEdge };
                             relClassRel.RelationshipClass = new RelationshipClassOfOOA()
                             {
                                 Name = rel.FromEdge.Edge.Name,
                                 Attributes = rel.FromEdge.Edge.Attributes,
-                                Relationship = rel,
-                                OneSiedEdge = rel.FromEdge,
+                                Relationship = relClassRel,
+                                OneSideEdge = rel.FromEdge,
                                 OtherSideEdge = lastFromEdge
                             };
                             Repository.Classes.Remove(relClassRel.RelationshipClass.Name);
-                            Repository.Classes.Add(relClassRel.RelationshipClass.Name,relClassRel.RelationshipClass);
+                            Repository.Classes.Add(relClassRel.RelationshipClass.Name, relClassRel.RelationshipClass);
 
                             Repository.Relationships.Remove(rel.Ref_Id);
                             Repository.Relationships.Add(relClassRel.Ref_Id, relClassRel);
@@ -167,7 +194,15 @@ namespace Kae.XTUML.Tools.MetaModelGenerator
                     var d = c.Attributes[ak];
                     if (!datatypes.ContainsKey(d))
                     {
-                        datatypes.Add(d, new DataTypeOfOOA() { Name = d });
+                        var dtOfOOA = new DataTypeOfOOA() { Name = d };
+                        if (userDataTypeDefs.Count > 0)
+                        {
+                            if (userDataTypeDefs.ContainsKey(d))
+                            {
+                                dtOfOOA.CodeTypeName = userDataTypeDefs[d];
+                            }
+                        }
+                        datatypes.Add(d, dtOfOOA);
                     }
                 }
             }

@@ -1,0 +1,84 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#
+    if (this.subclasses == null && this.opponent != null)
+    {
+        var condition = BuildConditionRelAttributes(current, opponent, itemVarName);
+        string oppClassName = RuleOfNamesForTransfrom.GetCIMInterfaceClassName(opponent.Edge);
+#>
+<#
+        if (!string.IsNullOrEmpty(condition))
+        {
+#>
+<#= indent #>var candidates = repository.GetCIInstances(domainName, "<#= opponent.Edge.Name #>").Where(i => <#= condition #>);
+<#
+        }
+        else
+        {
+#>
+<#= indent #>var candidates = repository.GetCIInstances(domainName, "<#= opponent.Edge.Name #>");
+<#
+        }
+#>
+<#
+        if (opponent.Mult == XTUMLOOAofOOA.RelationshpEdgeOfOOA.Multiplicity.MULT_M || opponent.Mult == XTUMLOOAofOOA.RelationshpEdgeOfOOA.Multiplicity.MULT_MC)
+        {
+#>
+<#= indent #>var linked = new List<<#= oppClassName #>>();
+<#= indent #>foreach(var c in candidates)
+<#= indent #>{
+<#= indent #>    linked.Add((<#= oppClassName #>)c);
+<#= indent #>}
+<#= indent #>return linked;
+<#
+        }
+        else
+        {
+#>
+<#= indent #><#= oppClassName #> linked = null;
+<#= indent #>if (candidates.Count() > 0)
+<#= indent #>{
+<#= indent #>    linked = (<#= oppClassName #>)candidates.First();
+<#= indent #>}
+<#= indent #>return linked;
+<#
+        }
+    }
+    else if (this.subclasses!=null && this.opponent == null)
+    {
+        string subClassNames = "";
+        foreach(var s in subclasses)
+        {
+            if (string.IsNullOrEmpty(subClassNames))
+            {
+                subClassNames = $"\"{s.Edge.Name}\"";
+            }
+            else
+            {
+                subClassNames = $"{subClassNames}, \"{s.Edge.Name}\"";
+            }
+        }
+#>
+<#= indent #>var subClassNames = new List<string>() { <#= subClassNames #> };
+<#
+        string subRelClassName = RuleOfNamesForTransfrom.GetCIMSubClassName(relationship);
+        string superClassGetMethodName = RuleOfNamesForTransfrom.GetCIMSuperClassMethodName(current.Edge);
+        string condition = BuildConditionSubAttributes(relationship, relationship.ToEdge, itemVarName);
+#>
+<#= indent #><#= subRelClassName #> subClass = null;
+<#= indent #>foreach (var scName in subClassNames)
+<#= indent #>{
+<#= indent #>    var candidates = repository.GetCIInstances(domainName, className).Where(i=> <#= condition #>);
+<#= indent #>    if (candidates.Count() > 0)
+<#= indent #>    {
+<#= indent #>        subClass = (<#= subRelClassName #>)candidates.First();
+<#= indent #>        break;
+<#= indent #>    }
+<#= indent #>}
+<#= indent #>return subClass;
+<#
+    }
+#>

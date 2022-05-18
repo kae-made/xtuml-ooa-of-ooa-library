@@ -2,7 +2,7 @@
   "profiles": {
     "Kae.XTUML.Tools.MetaModelGenerator": {
       "commandName": "Project",
-      "commandLineArgs": "C:\\demo\\xtuml_schema\\xtumlmc_schema.sql"
+      "commandLineArgs": "--model C:\\demo\\xtuml_schema\\xtumlmc_schema.sql --out C:\\demo\\xtMULMetaModelProjects\\Kae.CIM.MetaModel.CIMofCIM"
     }
   }
 }

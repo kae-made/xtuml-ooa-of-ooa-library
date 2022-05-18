@@ -12,9 +12,16 @@ namespace Kae.XTUML.Tools.MetaModelGenerator
     {
         static void Main(string[] args)
         {
-            if (args.Length != 1)
+            var commandLine = new CommandLine();
+
+            if (commandLine.Parse(args))
             {
-                Console.WriteLine("command filename.sql");
+                Console.WriteLine($"Model File : {commandLine.ModelFile}");
+                Console.WriteLine($"Output : {commandLine.GenFolderPath}");
+            }
+            else
+            {
+                Console.WriteLine(commandLine.GetCommandLine());
                 return;
             }
 
@@ -26,24 +33,70 @@ namespace Kae.XTUML.Tools.MetaModelGenerator
             };
 
             var builder = new OOAofOOAModelBuilder() { Repository = repository };
+            builder.LoadDataTypeDef("datatype.yaml");
 
             var scanner = new XTUMLOOAofOOAParserScanner();
             var parser = new XTUMLOOAofOOAParserParser(builder);
 
             try
             {
-                using(var fs = new StreamReader(args[0]))
+                using(var fs = new StreamReader(commandLine.ModelFile))
                 {
                     var content = fs.ReadToEnd();
                     parser.Parse(content);
 
                     builder.PickupDataType();
+
+                    var generator = new COCLibGenerator(builder.Repository, commandLine.GenFolderPath);
+                    generator.Generate().Wait();
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+    }
+
+    class CommandLine
+    {
+        public string ModelFile { get; set; }
+        public string GenFolderPath { get; set; }
+
+        public bool Parse(string [] args)
+        {
+            bool result = true;
+            ModelFile = null;
+            GenFolderPath = null;
+            int index = 0;
+            while (index < args.Length)
+            {
+                if (args[index]=="-m"|| args[index] == "--model")
+                {
+                    if (++index < args.Length)
+                    {
+                        ModelFile = args[index];
+                    }
+                }
+                else if (args[index]=="-o"|| args[index] == "--out")
+                {
+                    if (++index < args.Length)
+                    {
+                        GenFolderPath = args[index];
+                    }
+                }
+                index++;
+            }
+            if (string.IsNullOrEmpty(ModelFile)|| string.IsNullOrEmpty(GenFolderPath))
+            {
+                result = false;
+            }
+            return result;
+        }
+
+        public string GetCommandLine()
+        {
+            return "--model model_file_path --out gen_folder_path";
         }
     }
 }

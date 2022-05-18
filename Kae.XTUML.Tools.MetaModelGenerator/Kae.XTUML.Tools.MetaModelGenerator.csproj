@@ -23,6 +23,55 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="YaccLexTools" Version="1.0.0" />
+	  <PackageReference Include="Kae.Utility.Logging" Version="1.0.0" />
+	  <PackageReference Include="System.CodeDom" Version="6.0.0" />
+	  <PackageReference Include="YaccLexTools" Version="1.0.0" />
+    <PackageReference Include="YamlDotNet" Version="11.2.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="datatype.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="template\CIMClassBase.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>CIMClassBase.cs</LastGenOutput>
+    </None>
+    <None Update="template\CIMClassInterface.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>CIMClassInterface.cs</LastGenOutput>
+    </None>
+    <None Update="template\CIMOOAofOOAClass.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>CIMOOAofOOAClass.cs</LastGenOutput>
+    </None>
+    <None Update="template\LinkedItemLogic.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>LinkedItemLogic.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="template\CIMClassBase.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CIMClassBase.tt</DependentUpon>
+    </Compile>
+    <Compile Update="template\CIMClassInterface.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CIMClassInterface.tt</DependentUpon>
+    </Compile>
+    <Compile Update="template\CIMOOAofOOAClass.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CIMOOAofOOAClass.tt</DependentUpon>
+    </Compile>
+    <Compile Update="template\LinkedItemLogic.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LinkedItemLogic.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

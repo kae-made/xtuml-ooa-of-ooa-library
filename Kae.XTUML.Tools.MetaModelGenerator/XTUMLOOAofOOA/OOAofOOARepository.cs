@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Kae.XTUML.Tools.MetaModelGenerator.XTUMLOOAofOOA
 {
-    class OOAofOOARepository
+    public class OOAofOOARepository
     {
         public IDictionary<string, ClassOfOOA> Classes { get; set; }
         public IDictionary<string, RelationshipOfOOA> Relationships { get; set; }
@@ -21,7 +21,7 @@ namespace Kae.XTUML.Tools.MetaModelGenerator.XTUMLOOAofOOA
         Normal,
         Relationship
     }
-    class ClassOfOOA
+    public class ClassOfOOA
     {
         public ClassOfOOA()
         {
@@ -32,26 +32,26 @@ namespace Kae.XTUML.Tools.MetaModelGenerator.XTUMLOOAofOOA
         public IDictionary<string, string> Attributes { get; set; }
     }
 
-    class RelationshipClassOfOOA : ClassOfOOA
+   public  class RelationshipClassOfOOA : ClassOfOOA
     {
         public RelationshipClassOfOOA() : base()
         {
             Kind = KindOfClass.Relationship;
         }
-        public RelationshipOfOOA Relationship { get; set; }
+        public RelationshipClassRelationOfOOA Relationship { get; set; }
 
-        public RelationshpEdgeOfOOA OneSiedEdge { get; set; }
+        public RelationshpEdgeOfOOA OneSideEdge { get; set; }
         public RelationshpEdgeOfOOA OtherSideEdge { get; set; }
     }
 
-    enum KindOfRelatioship
+    public enum KindOfRelatioship
     {
         Binary,
         SuperSub,
         RelationshipClass
     }
 
-    class RelationshipOfOOA
+    public  class RelationshipOfOOA
     {
         public RelationshipOfOOA()
         {
@@ -66,7 +66,7 @@ namespace Kae.XTUML.Tools.MetaModelGenerator.XTUMLOOAofOOA
         // public List<RelationshpEdgeOfOOA> ToEdges { get; set; }
     }
 
-    class SuperSubRelationshipOfOOA : RelationshipOfOOA
+    public class SuperSubRelationshipOfOOA : RelationshipOfOOA
     {
         public SuperSubRelationshipOfOOA() : base()
         {
@@ -76,7 +76,7 @@ namespace Kae.XTUML.Tools.MetaModelGenerator.XTUMLOOAofOOA
         public List<RelationshpEdgeOfOOA> SubEdges { get; set; }
     }
 
-    class RelationshipClassRelationOfOOA : RelationshipOfOOA
+    public class RelationshipClassRelationOfOOA : RelationshipOfOOA
     {
         public RelationshipClassRelationOfOOA() : base()
         {
@@ -88,7 +88,7 @@ namespace Kae.XTUML.Tools.MetaModelGenerator.XTUMLOOAofOOA
     }
 
 
-    class RelationshpEdgeOfOOA
+    public class RelationshpEdgeOfOOA
     {
         public static Multiplicity ConvertTo(string mult)
         {
@@ -120,7 +120,7 @@ namespace Kae.XTUML.Tools.MetaModelGenerator.XTUMLOOAofOOA
         public IEnumerable<string> RefAttributes { get; set; }
     }
 
-    class DataTypeOfOOA
+   public  class DataTypeOfOOA
     {
         public string Name { get; set; }
         public string CodeTypeName { get; set; }

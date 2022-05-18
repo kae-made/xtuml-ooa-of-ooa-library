@@ -53,6 +53,10 @@ namespace Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser
 
         private void RegisterPhrase(string phrase)
         {
+            if (phrase.StartsWith("'") && phrase.EndsWith("'"))
+            {
+                phrase = phrase.Substring(1, phrase.Length - 2);
+            }
             modelBuilder.RegisterPhrase(phrase);
         }
 

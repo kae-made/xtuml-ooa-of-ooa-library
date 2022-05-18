@@ -1,0 +1,5 @@
+﻿datatype:
+    UNIQUE_ID: string
+    STRING: string
+    INTEGER: int
+    BOOLEAN: bool

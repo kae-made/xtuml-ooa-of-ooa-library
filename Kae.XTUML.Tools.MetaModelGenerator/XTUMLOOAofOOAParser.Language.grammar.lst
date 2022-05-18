@@ -1,3 +1,12 @@
+
+// ==========================================================================
+//  GPPG error listing for yacc source file <XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2022/05/17 10:59:37>
+// ==========================================================================
+//  Version:  1.5.2
+//  DateTime: 2022/05/17 10:59:38
+// ==========================================================================
+
+
 %namespace Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser
 %partial
 %parsertype XTUMLOOAofOOAParserParser
@@ -20,12 +29,18 @@
 %token EOS
 %token CREATE
 %token TABLE
-%token ROP, REFID, FROM, TO, PHRASE
-%token ELEM, REFNO, PHRASEC
+%token ROP, REFID, FROM, TO, PHRASE, SQT
+%token ELEM, REFNO
 %token REMULT
 %token POpen, PClose
 
 %%
+// Error: There are 2 non-terminating NonTerminal Symbols
+   //  {rel_edge_phrase, PHRASEC}
+// Warning: Terminating PHRASEC fixes the following size-2 NonTerminal set
+   // {rel_edge_phrase, PHRASEC}
+// Error: NonTerminal symbol "PHRASEC" has no productions
+// -----------------------------------------------------------------------
 
 main   : line_list
        ;
@@ -99,19 +114,8 @@ rel_to_edge_def :
 rel_edge_def :	rel_edge_base_def | rel_edge_base_def rel_edge_phrase
 	;
 
-rel_edge_base_def :	rel_edge_base_args_def | rel_edge_base_none_def
-	;
-
-rel_edge_base_args_def :
+rel_edge_base_def :
 		REMULT ELEM POpen ref_attr_defs PClose
-		{
-			Console.WriteLine("Rule => rel edge object: {0}, mult:{1}", $2.s, $1.s);
-			AddEdgeDef($2.s, $1.s);
-		}
-	;
-
-rel_edge_base_none_def :
-		REMULT ELEM POpen PClose
 		{
 			Console.WriteLine("Rule => rel edge object: {0}, mult:{1}", $2.s, $1.s);
 			AddEdgeDef($2.s, $1.s);
@@ -136,4 +140,5 @@ ref_attr_def :
 			AddRefAttribute($1.s);
 		}
 	;
-%%
+%%// ==========================================================================
+
