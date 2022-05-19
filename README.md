@@ -52,3 +52,34 @@ Parseser が出来上がって、xtumlmc_schema.sql をパースしたところ
 と見積もられ、9日間の短縮となっている。この段階で、手作業に比べて、4倍の効率となっている。今後、作業が進むにしたがってさらなる見直しが発生することは火を見るより明らかなので、自動生成は、どんどん効率化の度合いが大きくなっていくことが判る。  
 
 この時点で、2022/5/18 の日暮れ。残りは、CIModelRepsitory クラスの実装の部分と、BridgePoint で作成したモデルを作成したライブラリに入れ込む部分の開発。
+
+次に、出来上がった OOA of OOA のクラスライブラリ群の生成、一覧利用を行うための、CIModelRepository を仕上げる作業を行う。現時点での実装は、[CIModelRepository.cs](Kae.CIM.MetaModel.CIMofCIM/CIModelRepository.cs) で、一応の定義となっている。  
+> …で、作業を進めるその前に、このリポジトリには、各概念クラスのインスタンスを、概念モデリングの流儀に従って検索する手段が用意されていない。より具体的に言えば、「概念クラスは、アイデンティティを保持するためのプロパティがあるので、そのプロパティ値を指定して、該当する概念インスタンスを取り出せてもいいんじゃないか？」という事。しかし、結局このリポジトリに格納されるのは、BirdgePoint で作成した、ある特定のドメインに対する UML モデル（私流にいえば<b>概念モデル</b>）の定義全てであり、その入力された情報を何に使うかと言えば、その入力情報を元に、開発活動において必要ななにがしかの開発成果物への変換用途としてしか使わないので、結局、全ての情報を総なめする事しかしないので、結局、アイデンティティベースの検索手段は必要ない。
+
+CIModelRepository は、それぞれの概念クラスのインスタンスを作成するメソッドを提供している。生成した時にユーザーコードが取得できるのは、CIM<i>ClassName</i>Def という、その概念クラスが持つプロパティ一式への読み書き用 Property 一式と、その概念クラスが関与する Relationship に基づいて Link されている概念インスタンス群を取得する Method 群一式を提供するインターフェイスである。CIModelRepository の各 Method の実装は、[CIModelRepositoryImpl](Kae.CIM.MetaModel.CIMofCIM/CIModeRepsoitoryImpl.cs) で行っている。作成済みの概念インスタンス群を取り出すのと、リポジトリからの削除は、まぁ簡単ではあるが、概念クラスのインスタンスを生成（つまり、CIM<i>ClassName</i>>Baseクラスのコンストラクターを使って新しいインスタンスを作成する）する部分は、具体的な型をなんとかして実装ロジック内で使わなければならなくなる。
+
+※ 書くと簡単だが、xtUML の OOA of OOA 概念クラスは何しろ 382 個もあるわけで、手書きなら見通しも悪いし、className を使って switch case 等使ったら、1000行以上のコードになってしまう。自動生成なら簡単ではあるが、たとえ自動生成であっても（まぁ、自動生成だからこそか？）シンプルで簡潔なコードにするのは大原則なので、どう実装するかは十分に検討しなければならない。  
+
+解決策として、[C# の Reflection](https://docs.microsoft.com/ja-jp/dotnet/csharp/programming-guide/concepts/reflection) を使う事に決定。
+CIModelRepositoryImpl.CreateCIInstance() メソッドの定義は、複数の概念クラスに対応できるように Generics を使って定義されている。  
+```C#
+T CreateCIInstance<T>(string domainName, string className, IDictionary<string, object> attributes) where T: CIClassDef;
+```
+この宣言の意味するところは、このメソッドが CIClassDef を実装するクラスのインスタンスを返すということであり、引数で生成する概念クラスの名前(className)が供給されることになっている。  
+このクラス名から、'CIM<i>className</i>Base' という命名規則で、どの C# 上のクラスのコンストラクターを呼べばいいかわかる。更に、CreateCIInstance メソッド内で、自分が所属しているアッセンブリーが持っている他のクラス群を Reflection によって見つけることができるので、結果として
+```C#
+    string typeName = $"CIMClass{className}Base";
+    var currentMethod = MethodBase.GetCurrentMethod();
+    var assembly = currentMethod.DeclaringType.Assembly;
+    var candidates = assembly.GetTypes().Where( t => t.IsClass && t.Name == typeName);
+    if (candidates.Count() > 0)
+    {
+        var cClass = candidates.First();
+        T cInstance = (T)cClass.GetConstructor(new Type[] { typeof(CIModelRepository), typeof(IDictionary<string, object>) }).Invoke(new object[] { this, attributes });
+```
+といったロジックを書けば、一切、概念クラスの実装クラスを明示しなくても、インスタンスを作成することができる。たかだか 10 行程度で実装は完成する。  
+
+> 繰り返しになるが、設計、コーディングにおいては、なるべく、やりたいことの本質を見出し、シンプルに短く簡潔にコードを仕上げることを常に意識する事。これは手書きでも自動生成でも同じである。手書きの場合は手間が劇的に減り、自動生成の場合は、自動生成ルール作成の手間が劇的に減る。  
+
+ここまでで、2022/5/19 のお昼間近く。なので作業時間は、0.5 日。
+後は、BridgePoint で作ったモデル定義を、このCIM of CIM ライブラリに入れ込むところを作れば、ゴール。  
