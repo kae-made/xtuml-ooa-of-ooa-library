@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kae.XTUML.Tools.MetaModelGenerator.XTUMLOOAofOOA
+namespace Kae.XTUML.Tools.CIModelResolver.XTUMLOOAofOOA
 {
     public class OOAofOOARepository
     {

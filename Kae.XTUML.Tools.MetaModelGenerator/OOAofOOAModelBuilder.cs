@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Knowledge & Experience. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
-using Kae.XTUML.Tools.MetaModelGenerator.XTUMLOOAofOOA;
+using Kae.XTUML.Tools.CIModelResolver.XTUMLOOAofOOA;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using YamlDotNet.RepresentationModel;
 
-namespace Kae.XTUML.Tools.MetaModelGenerator
+namespace Kae.XTUML.Tools.CIModelResolver
 {
    public  class OOAofOOAModelBuilder
     {

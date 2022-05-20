@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kae.XTUML.Tools.MetaModelGenerator
+namespace Kae.XTUML.Tools.CIModelResolver
 {
     public class COCLibGenerator
     {

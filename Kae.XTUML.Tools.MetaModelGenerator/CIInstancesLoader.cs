@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kae.XTUML.Tools.MetaModelGenerator
+namespace Kae.XTUML.Tools.CIModelResolver
 {
     class CIInstancesLoader
     {
@@ -163,11 +163,12 @@ namespace Kae.XTUML.Tools.MetaModelGenerator
             }
         }
 
-        public class ImportStatus
-        {
-            public string ClassName { get; set; }
-            public bool IsImported { get; set; }
-            public int Count { get; set; }
-        }
+        
+    }
+    public class ImportStatus
+    {
+        public string ClassName { get; set; }
+        public bool IsImported { get; set; }
+        public int Count { get; set; }
     }
 }

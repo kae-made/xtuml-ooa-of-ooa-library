@@ -109,3 +109,44 @@ OOA of OOA の 概念クラス群から生成したモデルフレームワー�
 先ず、設計を主導する上級エンジニアが、アーキテクチャやフレームワークを設計して、実装ガイドを作成し、それを見ながら、複数のエンジニアが、それぞれの担当部分をガイドに沿ってコーディングを行う事になるだろう。仮に、実装ガイドが間違っていた場合、あるいは、ありがちな状況として、上級エンジニアが、「コンストラクターで渡された引数、それも、プロパティ群と一対一対応する変数ならば、当然、それぞれのプロパティに代入するコードを書くだろう」という想定で、実装ガイドに記載していない（ありそう？）、手書きコーディングを行うエンジニアは、日々の間接業務に疲弊して、碌に頭を使わずに、実装ガイドに書かれている通りにしかコーディングしなかった（これもありそうだ）、これらの結果として、当然実装しなければならないロジックが抜け落ちる、ということは十分ありうるのではないかと思われる。  
 これは当然、テストで発覚する訳であるが、大人数での開発の場合は、複数人の作業成果物が揃った時点でテストが行われるので、一番作業が遅かったエンジニアの作業完了時点に拘束される。そこから修正作業が開始され、382 クラスのコンストラクターを修正しなければならなくなる。それにかかる時間を、一コンストラクターあたり最速 1 分掛かるとしても約1日がかかってしまう。それだけでなく、テストがホワイトボックス的なテストを実施している場合は、多分、不具合の原因を発見するのは非常に難しいのではないだろうか？「まさかそんなことしてないよね？」的なコーディングによる障害の原因発見は経験的になかなかに難しい。また、テスト時点で、作業の早いエンジニア達は既に次の作業にとりかかっているはずなので、プロジェクト全体への影響は、案外大きいのではないだろうか？  
 
+2022/5/20 15:30  
+xtUML（Shlaer Mellor法）の OOA of OOA を元にメタモデルフレームワークライブラリを生成し、BridgePoint で作成したモデルを元に概念情報インスタンスをプログラム上で保持するロジックが一通り完成したので、これまで開発に使っていた Console Application をクラスライブラリ化。  
+※ [Kae.XTUML.Tools.MetaModelGeneretor](Kae.XTUML.Tools.MetaModelGenerator/)の下のCSPROJファイルの名前が、よりふさわしい名前に変えた（現時点で、Kae.XTUML.Tools.CIModelResolver）ことにより変更されている。  
+この変更に伴い、新たに、[SampleModelGenerator](./SampleModelGenerator/) というプロジェクトを作成し、テスト用 Console Application とした。  
+
+```C#
+            var recognizer = new ConceptualInformationModelResolver(commandLine.MetaModelFilePath);
+            try
+            {
+                Console.WriteLine($"Loading OOA of OOA model... @{DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss")}");
+                recognizer.LoadOOAofOOA(commandLine.DataTypeDefFilePath);
+                Console.WriteLine($"Loaded.  @{DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss")}");
+
+                if (commandLine.GenerateFWLib && !string.IsNullOrEmpty(commandLine.GenFolderPath))
+                {
+                    Console.WriteLine($"Generating Meta Model Framework Library...  @{DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss")}");
+                    recognizer.GenerateCIMFramework(commandLine.GenFolderPath).Wait();
+                    Console.WriteLine($"Generated.   @{DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss")}");
+                }
+                if (!string.IsNullOrEmpty(commandLine.InstancesFile))
+                {
+                    Console.WriteLine($"Loading instances...   @{DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss")}");
+                    recognizer.LoadCIInstances(commandLine.InstancesFile, true);
+                    Console.WriteLine($"Loaded.   @{DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss")}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            var ciinstances = recognizer.ModelRepository.GetDomainCIClasses("OOAofOOA");
+            Console.WriteLine($"Count - {ciinstances.Keys.Count}");
+```
+この様な流れで、BridgePoint で作成した概念モデルの要素を全て解釈してプログラム上で扱える形式に変換できたので、それを元に、  
+- Azure Digital Twins 向け、DTDL ファイル  
+- IoT 機器アプリコード
+- クラウドサービス側の各種ロジック  
+
+等の自動生成を行う変換ルールを作って足してやればよい。
+
+2021/5/20 の時点で、若干スパゲッティコード化しているので、今後、適宜、リファクタリングを行っていく。また、フレームワークライブラリ生成後のビルド起動が、未実装なので、適宜行っていく。  

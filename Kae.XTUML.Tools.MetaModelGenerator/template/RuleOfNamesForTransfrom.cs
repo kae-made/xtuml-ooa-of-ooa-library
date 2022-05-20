@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kae.XTUML.Tools.MetaModelGenerator.template
+namespace Kae.XTUML.Tools.CIModelResolver.template
 {
     public class RuleOfNamesForTransfrom
     {

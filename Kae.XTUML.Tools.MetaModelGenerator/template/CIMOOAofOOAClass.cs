@@ -7,7 +7,7 @@
 //     コードが再生成されると失われます。
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace Kae.XTUML.Tools.MetaModelGenerator.template
+namespace Kae.XTUML.Tools.CIModelResolver.template
 {
     using System.Linq;
     using System.Text;

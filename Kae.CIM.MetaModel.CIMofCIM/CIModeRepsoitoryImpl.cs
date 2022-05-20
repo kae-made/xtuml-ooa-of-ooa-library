@@ -108,6 +108,23 @@ namespace Kae.CIM
             }
             return instances;
         }
+
+        public override IDictionary<string, IEnumerable<CIClassDef>> GetDomainCIClasses(string domainName)
+        {
+            var result = new Dictionary<string, IEnumerable<CIClassDef>>();
+
+           var domain =  ciInstances.Keys.Where(k => k == domainName);
+            if (domain.Count() > 0)
+            {
+                var domainRepo = ciInstances[domain.First()];
+                foreach(var cn in domainRepo.Keys)
+                {
+                    result.Add(cn, domainRepo[cn]);
+                }
+            }
+
+            return result;
+        }
     }
 
 }

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kae.XTUML.Tools.MetaModelGenerator", "Kae.XTUML.Tools.MetaModelGenerator\Kae.XTUML.Tools.MetaModelGenerator.csproj", "{031BC4A3-2556-4F59-B1B2-5E1AEC919243}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kae.CIM.MetaModel.CIMofCIM", "Kae.CIM.MetaModel.CIMofCIM\Kae.CIM.MetaModel.CIMofCIM.csproj", "{D9D38680-52BB-4FF3-B54E-20FE388DA9B8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kae.XTUML.Tools.CIModelResolver", "Kae.XTUML.Tools.MetaModelGenerator\Kae.XTUML.Tools.CIModelResolver.csproj", "{BC83E744-0321-48D3-8553-3F8A815E922D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleModelGenerator", "SampleModelGenerator\SampleModelGenerator.csproj", "{05F9959D-AE1E-4785-BB41-F5D8BD7D4795}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{031BC4A3-2556-4F59-B1B2-5E1AEC919243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{031BC4A3-2556-4F59-B1B2-5E1AEC919243}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{031BC4A3-2556-4F59-B1B2-5E1AEC919243}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{031BC4A3-2556-4F59-B1B2-5E1AEC919243}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D9D38680-52BB-4FF3-B54E-20FE388DA9B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D9D38680-52BB-4FF3-B54E-20FE388DA9B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9D38680-52BB-4FF3-B54E-20FE388DA9B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9D38680-52BB-4FF3-B54E-20FE388DA9B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC83E744-0321-48D3-8553-3F8A815E922D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC83E744-0321-48D3-8553-3F8A815E922D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC83E744-0321-48D3-8553-3F8A815E922D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC83E744-0321-48D3-8553-3F8A815E922D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05F9959D-AE1E-4785-BB41-F5D8BD7D4795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05F9959D-AE1E-4785-BB41-F5D8BD7D4795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05F9959D-AE1E-4785-BB41-F5D8BD7D4795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05F9959D-AE1E-4785-BB41-F5D8BD7D4795}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -25,7 +25,14 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_ACTBase(CIModelRepository repository, string Action_ID, string Type, int LoopLevel, string Block_ID, string CurrentScope_ID, int return_value, string Label, string Parsed_Block_ID ) : base(repository, "ACT_ACT")
         {
-            ;
+            Attr_Action_ID = Action_ID;
+            Attr_Type = Type;
+            Attr_LoopLevel = LoopLevel;
+            Attr_Block_ID = Block_ID;
+            Attr_CurrentScope_ID = CurrentScope_ID;
+            Attr_return_value = return_value;
+            Attr_Label = Label;
+            Attr_Parsed_Block_ID = Parsed_Block_ID;
         }
 
         public CIMClassACT_ACTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Action_ID"], (string)attrArgs["Type"], (int)attrArgs["LoopLevel"], (string)attrArgs["Block_ID"], (string)attrArgs["CurrentScope_ID"], (int)attrArgs["return_value"], (string)attrArgs["Label"], (string)attrArgs["Parsed_Block_ID"])
@@ -154,7 +161,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_AIBase(CIModelRepository repository, string Statement_ID, string r_Value_ID, string l_Value_ID, int attributeLineNumber, int attributeColumn ) : base(repository, "ACT_AI")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_r_Value_ID = r_Value_ID;
+            Attr_l_Value_ID = l_Value_ID;
+            Attr_attributeLineNumber = attributeLineNumber;
+            Attr_attributeColumn = attributeColumn;
         }
 
         public CIMClassACT_AIBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["r_Value_ID"], (string)attrArgs["l_Value_ID"], (int)attrArgs["attributeLineNumber"], (int)attrArgs["attributeColumn"])
@@ -215,7 +226,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_BICBase(CIModelRepository repository, string Component_Id, string Action_ID ) : base(repository, "ACT_BIC")
         {
-            ;
+            Attr_Component_Id = Component_Id;
+            Attr_Action_ID = Action_ID;
         }
 
         public CIMClassACT_BICBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Component_Id"], (string)attrArgs["Action_ID"])
@@ -265,7 +277,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_BIEBase(CIModelRepository repository, string Element_ID, string Action_ID ) : base(repository, "ACT_BIE")
         {
-            ;
+            Attr_Element_ID = Element_ID;
+            Attr_Action_ID = Action_ID;
         }
 
         public CIMClassACT_BIEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Element_ID"], (string)attrArgs["Action_ID"])
@@ -335,7 +348,28 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_BLKBase(CIModelRepository repository, string Block_ID, bool WhereSpecOK, bool InWhereSpec, bool SelectedFound, string TempBuffer, string SupData1, string SupData2, int CurrentLine, int CurrentCol, int currentKeyLettersLineNumber, int currentKeyLettersColumn, int currentParameterAssignmentNameLineNumber, int currentParameterAssignmentNameColumn, int currentAssociationNumberLineNumber, int currentAssociationNumberColumn, int currentAssociationPhraseLineNumber, int currentAssociationPhraseColumn, int currentDataTypeNameLineNumber, int currentDataTypeNameColumn, bool blockInStackFrameCreated, string Action_ID, string Parsed_Action_ID ) : base(repository, "ACT_BLK")
         {
-            ;
+            Attr_Block_ID = Block_ID;
+            Attr_WhereSpecOK = WhereSpecOK;
+            Attr_InWhereSpec = InWhereSpec;
+            Attr_SelectedFound = SelectedFound;
+            Attr_TempBuffer = TempBuffer;
+            Attr_SupData1 = SupData1;
+            Attr_SupData2 = SupData2;
+            Attr_CurrentLine = CurrentLine;
+            Attr_CurrentCol = CurrentCol;
+            Attr_currentKeyLettersLineNumber = currentKeyLettersLineNumber;
+            Attr_currentKeyLettersColumn = currentKeyLettersColumn;
+            Attr_currentParameterAssignmentNameLineNumber = currentParameterAssignmentNameLineNumber;
+            Attr_currentParameterAssignmentNameColumn = currentParameterAssignmentNameColumn;
+            Attr_currentAssociationNumberLineNumber = currentAssociationNumberLineNumber;
+            Attr_currentAssociationNumberColumn = currentAssociationNumberColumn;
+            Attr_currentAssociationPhraseLineNumber = currentAssociationPhraseLineNumber;
+            Attr_currentAssociationPhraseColumn = currentAssociationPhraseColumn;
+            Attr_currentDataTypeNameLineNumber = currentDataTypeNameLineNumber;
+            Attr_currentDataTypeNameColumn = currentDataTypeNameColumn;
+            Attr_blockInStackFrameCreated = blockInStackFrameCreated;
+            Attr_Action_ID = Action_ID;
+            Attr_Parsed_Action_ID = Parsed_Action_ID;
         }
 
         public CIMClassACT_BLKBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Block_ID"], (bool)attrArgs["WhereSpecOK"], (bool)attrArgs["InWhereSpec"], (bool)attrArgs["SelectedFound"], (string)attrArgs["TempBuffer"], (string)attrArgs["SupData1"], (string)attrArgs["SupData2"], (int)attrArgs["CurrentLine"], (int)attrArgs["CurrentCol"], (int)attrArgs["currentKeyLettersLineNumber"], (int)attrArgs["currentKeyLettersColumn"], (int)attrArgs["currentParameterAssignmentNameLineNumber"], (int)attrArgs["currentParameterAssignmentNameColumn"], (int)attrArgs["currentAssociationNumberLineNumber"], (int)attrArgs["currentAssociationNumberColumn"], (int)attrArgs["currentAssociationPhraseLineNumber"], (int)attrArgs["currentAssociationPhraseColumn"], (int)attrArgs["currentDataTypeNameLineNumber"], (int)attrArgs["currentDataTypeNameColumn"], (bool)attrArgs["blockInStackFrameCreated"], (string)attrArgs["Action_ID"], (string)attrArgs["Parsed_Action_ID"])
@@ -541,7 +575,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_BRBBase(CIModelRepository repository, string Action_ID, string Brg_ID ) : base(repository, "ACT_BRB")
         {
-            ;
+            Attr_Action_ID = Action_ID;
+            Attr_Brg_ID = Brg_ID;
         }
 
         public CIMClassACT_BRBBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Action_ID"], (string)attrArgs["Brg_ID"])
@@ -594,7 +629,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_BRGBase(CIModelRepository repository, string Statement_ID, string Brg_ID, int bridgeNameLineNumber, int bridgeNameColumn, int externalEntityKeyLettersLineNumber, int externalEntityKeyLettersColumn ) : base(repository, "ACT_BRG")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Brg_ID = Brg_ID;
+            Attr_bridgeNameLineNumber = bridgeNameLineNumber;
+            Attr_bridgeNameColumn = bridgeNameColumn;
+            Attr_externalEntityKeyLettersLineNumber = externalEntityKeyLettersLineNumber;
+            Attr_externalEntityKeyLettersColumn = externalEntityKeyLettersColumn;
         }
 
         public CIMClassACT_BRGBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Brg_ID"], (int)attrArgs["bridgeNameLineNumber"], (int)attrArgs["bridgeNameColumn"], (int)attrArgs["externalEntityKeyLettersLineNumber"], (int)attrArgs["externalEntityKeyLettersColumn"])
@@ -654,7 +694,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_BRKBase(CIModelRepository repository, string Statement_ID ) : base(repository, "ACT_BRK")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassACT_BRKBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"])
@@ -693,7 +733,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_CNVBase(CIModelRepository repository, string Statement_ID, string Obj_ID, int modelClassKeyLettersLineNumber, int modelClassKeyLettersColumn ) : base(repository, "ACT_CNV")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_modelClassKeyLettersLineNumber = modelClassKeyLettersLineNumber;
+            Attr_modelClassKeyLettersColumn = modelClassKeyLettersColumn;
         }
 
         public CIMClassACT_CNVBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Obj_ID"], (int)attrArgs["modelClassKeyLettersLineNumber"], (int)attrArgs["modelClassKeyLettersColumn"])
@@ -741,7 +784,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_CONBase(CIModelRepository repository, string Statement_ID ) : base(repository, "ACT_CON")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassACT_CONBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"])
@@ -782,7 +825,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_CRBase(CIModelRepository repository, string Statement_ID, string Var_ID, bool is_implicit, string Obj_ID, int modelClassKeyLettersLineNumber, int modelClassKeyLettersColumn ) : base(repository, "ACT_CR")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Var_ID = Var_ID;
+            Attr_is_implicit = is_implicit;
+            Attr_Obj_ID = Obj_ID;
+            Attr_modelClassKeyLettersLineNumber = modelClassKeyLettersLineNumber;
+            Attr_modelClassKeyLettersColumn = modelClassKeyLettersColumn;
         }
 
         public CIMClassACT_CRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Var_ID"], (bool)attrArgs["is_implicit"], (string)attrArgs["Obj_ID"], (int)attrArgs["modelClassKeyLettersLineNumber"], (int)attrArgs["modelClassKeyLettersColumn"])
@@ -842,7 +890,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_CTLBase(CIModelRepository repository, string Statement_ID ) : base(repository, "ACT_CTL")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassACT_CTLBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"])
@@ -881,7 +929,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_DABBase(CIModelRepository repository, string Action_ID, string Obj_ID, string Attr_ID, bool AttributeWritten ) : base(repository, "ACT_DAB")
         {
-            ;
+            Attr_Action_ID = Action_ID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Attr_ID = Attr_ID;
+            Attr_AttributeWritten = AttributeWritten;
         }
 
         public CIMClassACT_DABBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Action_ID"], (string)attrArgs["Obj_ID"], (string)attrArgs["Attr_ID"], (bool)attrArgs["AttributeWritten"])
@@ -930,7 +981,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_DELBase(CIModelRepository repository, string Statement_ID, string Var_ID ) : base(repository, "ACT_DEL")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Var_ID = Var_ID;
         }
 
         public CIMClassACT_DELBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Var_ID"])
@@ -980,7 +1032,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_EBase(CIModelRepository repository, string Statement_ID, string Block_ID, string If_Statement_ID ) : base(repository, "ACT_E")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Block_ID = Block_ID;
+            Attr_If_Statement_ID = If_Statement_ID;
         }
 
         public CIMClassACT_EBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Block_ID"], (string)attrArgs["If_Statement_ID"])
@@ -1055,7 +1109,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_ELBase(CIModelRepository repository, string Statement_ID, string Block_ID, string Value_ID, string If_Statement_ID ) : base(repository, "ACT_EL")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Block_ID = Block_ID;
+            Attr_Value_ID = Value_ID;
+            Attr_If_Statement_ID = If_Statement_ID;
         }
 
         public CIMClassACT_ELBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Block_ID"], (string)attrArgs["Value_ID"], (string)attrArgs["If_Statement_ID"])
@@ -1145,7 +1202,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_FIOBase(CIModelRepository repository, string Statement_ID, string Var_ID, bool is_implicit, string cardinality, string Obj_ID, int extentLineNumber, int extentColumn ) : base(repository, "ACT_FIO")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Var_ID = Var_ID;
+            Attr_is_implicit = is_implicit;
+            Attr_cardinality = cardinality;
+            Attr_Obj_ID = Obj_ID;
+            Attr_extentLineNumber = extentLineNumber;
+            Attr_extentColumn = extentColumn;
         }
 
         public CIMClassACT_FIOBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Var_ID"], (bool)attrArgs["is_implicit"], (string)attrArgs["cardinality"], (string)attrArgs["Obj_ID"], (int)attrArgs["extentLineNumber"], (int)attrArgs["extentColumn"])
@@ -1212,7 +1275,14 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_FIWBase(CIModelRepository repository, string Statement_ID, string Var_ID, bool is_implicit, string cardinality, string Where_Clause_Value_ID, string Obj_ID, int extentLineNumber, int extentColumn ) : base(repository, "ACT_FIW")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Var_ID = Var_ID;
+            Attr_is_implicit = is_implicit;
+            Attr_cardinality = cardinality;
+            Attr_Where_Clause_Value_ID = Where_Clause_Value_ID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_extentLineNumber = extentLineNumber;
+            Attr_extentColumn = extentColumn;
         }
 
         public CIMClassACT_FIWBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Var_ID"], (bool)attrArgs["is_implicit"], (string)attrArgs["cardinality"], (string)attrArgs["Where_Clause_Value_ID"], (string)attrArgs["Obj_ID"], (int)attrArgs["extentLineNumber"], (int)attrArgs["extentColumn"])
@@ -1285,7 +1355,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_FNBBase(CIModelRepository repository, string Action_ID, string Sync_ID ) : base(repository, "ACT_FNB")
         {
-            ;
+            Attr_Action_ID = Action_ID;
+            Attr_Sync_ID = Sync_ID;
         }
 
         public CIMClassACT_FNBBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Action_ID"], (string)attrArgs["Sync_ID"])
@@ -1336,7 +1407,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_FNCBase(CIModelRepository repository, string Statement_ID, string Sync_ID, int functionNameLineNumber, int functionNameColumn ) : base(repository, "ACT_FNC")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Sync_ID = Sync_ID;
+            Attr_functionNameLineNumber = functionNameLineNumber;
+            Attr_functionNameColumn = functionNameColumn;
         }
 
         public CIMClassACT_FNCBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Sync_ID"], (int)attrArgs["functionNameLineNumber"], (int)attrArgs["functionNameColumn"])
@@ -1401,7 +1475,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_FORBase(CIModelRepository repository, string Statement_ID, string Block_ID, bool is_implicit, string Loop_Var_ID, string Set_Var_ID, string Obj_ID ) : base(repository, "ACT_FOR")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Block_ID = Block_ID;
+            Attr_is_implicit = is_implicit;
+            Attr_Loop_Var_ID = Loop_Var_ID;
+            Attr_Set_Var_ID = Set_Var_ID;
+            Attr_Obj_ID = Obj_ID;
         }
 
         public CIMClassACT_FORBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Block_ID"], (bool)attrArgs["is_implicit"], (string)attrArgs["Loop_Var_ID"], (string)attrArgs["Set_Var_ID"], (string)attrArgs["Obj_ID"])
@@ -1489,7 +1568,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_IFBase(CIModelRepository repository, string Statement_ID, string Block_ID, string Value_ID, string Elif_Statement_ID, string Else_Statement_ID ) : base(repository, "ACT_IF")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Block_ID = Block_ID;
+            Attr_Value_ID = Value_ID;
+            Attr_Elif_Statement_ID = Elif_Statement_ID;
+            Attr_Else_Statement_ID = Else_Statement_ID;
         }
 
         public CIMClassACT_IFBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Block_ID"], (string)attrArgs["Value_ID"], (string)attrArgs["Elif_Statement_ID"], (string)attrArgs["Else_Statement_ID"])
@@ -1604,7 +1687,14 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_IOPBase(CIModelRepository repository, string Statement_ID, int opNameLineNumber, int opNameColumn, int ownerNameLineNumber, int ownerNameColumn, string ProvidedOp_Id, string RequiredOp_Id, string Value_ID ) : base(repository, "ACT_IOP")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_opNameLineNumber = opNameLineNumber;
+            Attr_opNameColumn = opNameColumn;
+            Attr_ownerNameLineNumber = ownerNameLineNumber;
+            Attr_ownerNameColumn = ownerNameColumn;
+            Attr_ProvidedOp_Id = ProvidedOp_Id;
+            Attr_RequiredOp_Id = RequiredOp_Id;
+            Attr_Value_ID = Value_ID;
         }
 
         public CIMClassACT_IOPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (int)attrArgs["opNameLineNumber"], (int)attrArgs["opNameColumn"], (int)attrArgs["ownerNameLineNumber"], (int)attrArgs["ownerNameColumn"], (string)attrArgs["ProvidedOp_Id"], (string)attrArgs["RequiredOp_Id"], (string)attrArgs["Value_ID"])
@@ -1700,7 +1790,19 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_LNKBase(CIModelRepository repository, string Link_ID, string Rel_Phrase, string Statement_ID, string Rel_ID, string Next_Link_ID, int Mult, string Obj_ID, int modelClassKeyLettersLineNumber, int modelClassKeyLettersColumn, int associationNumberLineNumber, int associationNumberColumn, int phraseLineNumber, int phraseColumn ) : base(repository, "ACT_LNK")
         {
-            ;
+            Attr_Link_ID = Link_ID;
+            Attr_Rel_Phrase = Rel_Phrase;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_Next_Link_ID = Next_Link_ID;
+            Attr_Mult = Mult;
+            Attr_Obj_ID = Obj_ID;
+            Attr_modelClassKeyLettersLineNumber = modelClassKeyLettersLineNumber;
+            Attr_modelClassKeyLettersColumn = modelClassKeyLettersColumn;
+            Attr_associationNumberLineNumber = associationNumberLineNumber;
+            Attr_associationNumberColumn = associationNumberColumn;
+            Attr_phraseLineNumber = phraseLineNumber;
+            Attr_phraseColumn = phraseColumn;
         }
 
         public CIMClassACT_LNKBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Link_ID"], (string)attrArgs["Rel_Phrase"], (string)attrArgs["Statement_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["Next_Link_ID"], (int)attrArgs["Mult"], (string)attrArgs["Obj_ID"], (int)attrArgs["modelClassKeyLettersLineNumber"], (int)attrArgs["modelClassKeyLettersColumn"], (int)attrArgs["associationNumberLineNumber"], (int)attrArgs["associationNumberColumn"], (int)attrArgs["phraseLineNumber"], (int)attrArgs["phraseColumn"])
@@ -1798,7 +1900,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_OPBBase(CIModelRepository repository, string Action_ID, string Tfr_ID ) : base(repository, "ACT_OPB")
         {
-            ;
+            Attr_Action_ID = Action_ID;
+            Attr_Tfr_ID = Tfr_ID;
         }
 
         public CIMClassACT_OPBBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Action_ID"], (string)attrArgs["Tfr_ID"])
@@ -1847,7 +1950,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_POBBase(CIModelRepository repository, string Action_ID, string Id ) : base(repository, "ACT_POB")
         {
-            ;
+            Attr_Action_ID = Action_ID;
+            Attr_Id = Id;
         }
 
         public CIMClassACT_POBBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Action_ID"], (string)attrArgs["Id"])
@@ -1896,7 +2000,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_PSBBase(CIModelRepository repository, string Action_ID, string Id ) : base(repository, "ACT_PSB")
         {
-            ;
+            Attr_Action_ID = Action_ID;
+            Attr_Id = Id;
         }
 
         public CIMClassACT_PSBBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Action_ID"], (string)attrArgs["Id"])
@@ -1952,7 +2057,15 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_RELBase(CIModelRepository repository, string Statement_ID, string One_Side_Var_ID, string Other_Side_Var_ID, string relationship_phrase, string Rel_ID, int associationNumberLineNumber, int associationNumberColumn, int associationPhraseLineNumber, int associationPhraseColumn ) : base(repository, "ACT_REL")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_One_Side_Var_ID = One_Side_Var_ID;
+            Attr_Other_Side_Var_ID = Other_Side_Var_ID;
+            Attr_relationship_phrase = relationship_phrase;
+            Attr_Rel_ID = Rel_ID;
+            Attr_associationNumberLineNumber = associationNumberLineNumber;
+            Attr_associationNumberColumn = associationNumberColumn;
+            Attr_associationPhraseLineNumber = associationPhraseLineNumber;
+            Attr_associationPhraseColumn = associationPhraseColumn;
         }
 
         public CIMClassACT_RELBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["One_Side_Var_ID"], (string)attrArgs["Other_Side_Var_ID"], (string)attrArgs["relationship_phrase"], (string)attrArgs["Rel_ID"], (int)attrArgs["associationNumberLineNumber"], (int)attrArgs["associationNumberColumn"], (int)attrArgs["associationPhraseLineNumber"], (int)attrArgs["associationPhraseColumn"])
@@ -2025,7 +2138,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_RETBase(CIModelRepository repository, string Statement_ID, string Value_ID ) : base(repository, "ACT_RET")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Value_ID = Value_ID;
         }
 
         public CIMClassACT_RETBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Value_ID"])
@@ -2074,7 +2188,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_ROBBase(CIModelRepository repository, string Action_ID, string Id ) : base(repository, "ACT_ROB")
         {
-            ;
+            Attr_Action_ID = Action_ID;
+            Attr_Id = Id;
         }
 
         public CIMClassACT_ROBBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Action_ID"], (string)attrArgs["Id"])
@@ -2123,7 +2238,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_RSBBase(CIModelRepository repository, string Action_ID, string Id ) : base(repository, "ACT_RSB")
         {
-            ;
+            Attr_Action_ID = Action_ID;
+            Attr_Id = Id;
         }
 
         public CIMClassACT_RSBBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Action_ID"], (string)attrArgs["Id"])
@@ -2180,7 +2296,16 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_RUBase(CIModelRepository repository, string Statement_ID, string One_Side_Var_ID, string Other_Side_Var_ID, string Associative_Var_ID, string relationship_phrase, string Rel_ID, int associationNumberLineNumber, int associationNumberColumn, int associationPhraseLineNumber, int associationPhraseColumn ) : base(repository, "ACT_RU")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_One_Side_Var_ID = One_Side_Var_ID;
+            Attr_Other_Side_Var_ID = Other_Side_Var_ID;
+            Attr_Associative_Var_ID = Associative_Var_ID;
+            Attr_relationship_phrase = relationship_phrase;
+            Attr_Rel_ID = Rel_ID;
+            Attr_associationNumberLineNumber = associationNumberLineNumber;
+            Attr_associationNumberColumn = associationNumberColumn;
+            Attr_associationPhraseLineNumber = associationPhraseLineNumber;
+            Attr_associationPhraseColumn = associationPhraseColumn;
         }
 
         public CIMClassACT_RUBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["One_Side_Var_ID"], (string)attrArgs["Other_Side_Var_ID"], (string)attrArgs["Associative_Var_ID"], (string)attrArgs["relationship_phrase"], (string)attrArgs["Rel_ID"], (int)attrArgs["associationNumberLineNumber"], (int)attrArgs["associationNumberColumn"], (int)attrArgs["associationPhraseLineNumber"], (int)attrArgs["associationPhraseColumn"])
@@ -2266,7 +2391,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_SABBase(CIModelRepository repository, string Action_ID, string SM_ID, string Act_ID ) : base(repository, "ACT_SAB")
         {
-            ;
+            Attr_Action_ID = Action_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_Act_ID = Act_ID;
         }
 
         public CIMClassACT_SABBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Action_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["Act_ID"])
@@ -2318,7 +2445,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_SELBase(CIModelRepository repository, string Statement_ID, string Var_ID, bool is_implicit, string cardinality, string Value_ID ) : base(repository, "ACT_SEL")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Var_ID = Var_ID;
+            Attr_is_implicit = is_implicit;
+            Attr_cardinality = cardinality;
+            Attr_Value_ID = Value_ID;
         }
 
         public CIMClassACT_SELBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Var_ID"], (bool)attrArgs["is_implicit"], (string)attrArgs["cardinality"], (string)attrArgs["Value_ID"])
@@ -2414,7 +2545,14 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_SGNBase(CIModelRepository repository, string Statement_ID, int sigNameLineNumber, int sigNameColumn, int ownerNameLineNumber, int ownerNameColumn, string ProvidedSig_Id, string RequiredSig_Id, string Value_ID ) : base(repository, "ACT_SGN")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_sigNameLineNumber = sigNameLineNumber;
+            Attr_sigNameColumn = sigNameColumn;
+            Attr_ownerNameLineNumber = ownerNameLineNumber;
+            Attr_ownerNameColumn = ownerNameColumn;
+            Attr_ProvidedSig_Id = ProvidedSig_Id;
+            Attr_RequiredSig_Id = RequiredSig_Id;
+            Attr_Value_ID = Value_ID;
         }
 
         public CIMClassACT_SGNBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (int)attrArgs["sigNameLineNumber"], (int)attrArgs["sigNameColumn"], (int)attrArgs["ownerNameLineNumber"], (int)attrArgs["ownerNameColumn"], (string)attrArgs["ProvidedSig_Id"], (string)attrArgs["RequiredSig_Id"], (string)attrArgs["Value_ID"])
@@ -2503,7 +2641,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_SMTBase(CIModelRepository repository, string Statement_ID, string Block_ID, string Previous_Statement_ID, int LineNumber, int StartPosition, string Label ) : base(repository, "ACT_SMT")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Block_ID = Block_ID;
+            Attr_Previous_Statement_ID = Previous_Statement_ID;
+            Attr_LineNumber = LineNumber;
+            Attr_StartPosition = StartPosition;
+            Attr_Label = Label;
         }
 
         public CIMClassACT_SMTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Block_ID"], (string)attrArgs["Previous_Statement_ID"], (int)attrArgs["LineNumber"], (int)attrArgs["StartPosition"], (string)attrArgs["Label"])
@@ -2605,7 +2748,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_SRBase(CIModelRepository repository, string Statement_ID ) : base(repository, "ACT_SR")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassACT_SRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"])
@@ -2642,7 +2785,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_SRWBase(CIModelRepository repository, string Statement_ID, string Where_Clause_Value_ID ) : base(repository, "ACT_SRW")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Where_Clause_Value_ID = Where_Clause_Value_ID;
         }
 
         public CIMClassACT_SRWBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Where_Clause_Value_ID"])
@@ -2692,7 +2836,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_TABBase(CIModelRepository repository, string Action_ID, string SM_ID, string Act_ID ) : base(repository, "ACT_TAB")
         {
-            ;
+            Attr_Action_ID = Action_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_Act_ID = Act_ID;
         }
 
         public CIMClassACT_TABBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Action_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["Act_ID"])
@@ -2746,7 +2892,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_TFMBase(CIModelRepository repository, string Statement_ID, string Tfr_ID, string Var_ID, int operationNameLineNumber, int operationNameColumn, int modelClassKeyLettersLineNumber, int modelClassKeyLettersColumn ) : base(repository, "ACT_TFM")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Tfr_ID = Tfr_ID;
+            Attr_Var_ID = Var_ID;
+            Attr_operationNameLineNumber = operationNameLineNumber;
+            Attr_operationNameColumn = operationNameColumn;
+            Attr_modelClassKeyLettersLineNumber = modelClassKeyLettersLineNumber;
+            Attr_modelClassKeyLettersColumn = modelClassKeyLettersColumn;
         }
 
         public CIMClassACT_TFMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Tfr_ID"], (string)attrArgs["Var_ID"], (int)attrArgs["operationNameLineNumber"], (int)attrArgs["operationNameColumn"], (int)attrArgs["modelClassKeyLettersLineNumber"], (int)attrArgs["modelClassKeyLettersColumn"])
@@ -2826,7 +2978,15 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_UNRBase(CIModelRepository repository, string Statement_ID, string One_Side_Var_ID, string Other_Side_Var_ID, string relationship_phrase, string Rel_ID, int associationNumberLineNumber, int associationNumberColumn, int associationPhraseLineNumber, int associationPhraseColumn ) : base(repository, "ACT_UNR")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_One_Side_Var_ID = One_Side_Var_ID;
+            Attr_Other_Side_Var_ID = Other_Side_Var_ID;
+            Attr_relationship_phrase = relationship_phrase;
+            Attr_Rel_ID = Rel_ID;
+            Attr_associationNumberLineNumber = associationNumberLineNumber;
+            Attr_associationNumberColumn = associationNumberColumn;
+            Attr_associationPhraseLineNumber = associationPhraseLineNumber;
+            Attr_associationPhraseColumn = associationPhraseColumn;
         }
 
         public CIMClassACT_UNRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["One_Side_Var_ID"], (string)attrArgs["Other_Side_Var_ID"], (string)attrArgs["relationship_phrase"], (string)attrArgs["Rel_ID"], (int)attrArgs["associationNumberLineNumber"], (int)attrArgs["associationNumberColumn"], (int)attrArgs["associationPhraseLineNumber"], (int)attrArgs["associationPhraseColumn"])
@@ -2907,7 +3067,16 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_URUBase(CIModelRepository repository, string Statement_ID, string One_Side_Var_ID, string Other_Side_Var_ID, string Associative_Var_ID, string relationship_phrase, string Rel_ID, int associationNumberLineNumber, int associationNumberColumn, int associationPhraseLineNumber, int associationPhraseColumn ) : base(repository, "ACT_URU")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_One_Side_Var_ID = One_Side_Var_ID;
+            Attr_Other_Side_Var_ID = Other_Side_Var_ID;
+            Attr_Associative_Var_ID = Associative_Var_ID;
+            Attr_relationship_phrase = relationship_phrase;
+            Attr_Rel_ID = Rel_ID;
+            Attr_associationNumberLineNumber = associationNumberLineNumber;
+            Attr_associationNumberColumn = associationNumberColumn;
+            Attr_associationPhraseLineNumber = associationPhraseLineNumber;
+            Attr_associationPhraseColumn = associationPhraseColumn;
         }
 
         public CIMClassACT_URUBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["One_Side_Var_ID"], (string)attrArgs["Other_Side_Var_ID"], (string)attrArgs["Associative_Var_ID"], (string)attrArgs["relationship_phrase"], (string)attrArgs["Rel_ID"], (int)attrArgs["associationNumberLineNumber"], (int)attrArgs["associationNumberColumn"], (int)attrArgs["associationPhraseLineNumber"], (int)attrArgs["associationPhraseColumn"])
@@ -2993,7 +3162,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_WHLBase(CIModelRepository repository, string Statement_ID, string Value_ID, string Block_ID ) : base(repository, "ACT_WHL")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Value_ID = Value_ID;
+            Attr_Block_ID = Block_ID;
         }
 
         public CIMClassACT_WHLBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Value_ID"], (string)attrArgs["Block_ID"])
@@ -3053,7 +3224,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassA_ACTBase(CIModelRepository repository, string Id ) : base(repository, "A_ACT")
         {
-            ;
+            Attr_Id = Id;
         }
 
         public CIMClassA_ACTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"])
@@ -3106,7 +3277,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassA_AEBase(CIModelRepository repository, string Id ) : base(repository, "A_AE")
         {
-            ;
+            Attr_Id = Id;
         }
 
         public CIMClassA_AEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"])
@@ -3161,7 +3332,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassA_AEABase(CIModelRepository repository, string Id, string Name, string Descrip ) : base(repository, "A_AEA")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassA_AEABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Name"], (string)attrArgs["Descrip"])
@@ -3198,7 +3371,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassA_AFBase(CIModelRepository repository, string Id, string Descrip ) : base(repository, "A_AF")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassA_AFBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Descrip"])
@@ -3237,7 +3411,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassA_APBase(CIModelRepository repository, string Id, string Package_IDdeprecated, string Name, string Descrip ) : base(repository, "A_AP")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Package_IDdeprecated = Package_IDdeprecated;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassA_APBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Package_IDdeprecated"], (string)attrArgs["Name"], (string)attrArgs["Descrip"])
@@ -3275,7 +3452,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassA_ATEBase(CIModelRepository repository, string Id, string Name, string Descrip ) : base(repository, "A_ATE")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassA_ATEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Name"], (string)attrArgs["Descrip"])
@@ -3311,7 +3490,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassA_CTLBase(CIModelRepository repository, string Id ) : base(repository, "A_CTL")
         {
-            ;
+            Attr_Id = Id;
         }
 
         public CIMClassA_CTLBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"])
@@ -3366,7 +3545,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassA_DMBase(CIModelRepository repository, string Id, string Name, string Descrip ) : base(repository, "A_DM")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassA_DMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Name"], (string)attrArgs["Descrip"])
@@ -3407,7 +3588,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassA_EBase(CIModelRepository repository, string Id, string Package_IDdeprecated, string Guard, string Descrip, string TargetId, string SourceId ) : base(repository, "A_E")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Package_IDdeprecated = Package_IDdeprecated;
+            Attr_Guard = Guard;
+            Attr_Descrip = Descrip;
+            Attr_TargetId = TargetId;
+            Attr_SourceId = SourceId;
         }
 
         public CIMClassA_EBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Package_IDdeprecated"], (string)attrArgs["Guard"], (string)attrArgs["Descrip"], (string)attrArgs["TargetId"], (string)attrArgs["SourceId"])
@@ -3468,7 +3654,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassA_FFBase(CIModelRepository repository, string Id, string Descrip ) : base(repository, "A_FF")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassA_FFBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Descrip"])
@@ -3506,7 +3693,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassA_FJBase(CIModelRepository repository, string Id, string Descrip, string GuardCondition ) : base(repository, "A_FJ")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Descrip = Descrip;
+            Attr_GuardCondition = GuardCondition;
         }
 
         public CIMClassA_FJBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Descrip"], (string)attrArgs["GuardCondition"])
@@ -3544,7 +3733,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassA_GABase(CIModelRepository repository, string Id, string Name, string Descrip ) : base(repository, "A_GA")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassA_GABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Name"], (string)attrArgs["Descrip"])
@@ -3581,7 +3772,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassA_INIBase(CIModelRepository repository, string Id, string Descrip ) : base(repository, "A_INI")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassA_INIBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Descrip"])
@@ -3618,7 +3810,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassA_NBase(CIModelRepository repository, string Id, string Package_IDdeprecated ) : base(repository, "A_N")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Package_IDdeprecated = Package_IDdeprecated;
         }
 
         public CIMClassA_NBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Package_IDdeprecated"])
@@ -3697,7 +3890,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassA_OBJBase(CIModelRepository repository, string Id, string Name, string Descrip ) : base(repository, "A_OBJ")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassA_OBJBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Name"], (string)attrArgs["Descrip"])
@@ -3735,7 +3930,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassA_SSBase(CIModelRepository repository, string Id, string Name, string Descrip ) : base(repository, "A_SS")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassA_SSBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Name"], (string)attrArgs["Descrip"])
@@ -3778,7 +3975,14 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassCL_ICBase(CIModelRepository repository, string Id, string AssignedComp_Id, string ParentComp_Id, string Component_Package_IDdeprecated, int Mult, string ClassifierName, string Name, string Descrip ) : base(repository, "CL_IC")
         {
-            ;
+            Attr_Id = Id;
+            Attr_AssignedComp_Id = AssignedComp_Id;
+            Attr_ParentComp_Id = ParentComp_Id;
+            Attr_Component_Package_IDdeprecated = Component_Package_IDdeprecated;
+            Attr_Mult = Mult;
+            Attr_ClassifierName = ClassifierName;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassCL_ICBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["AssignedComp_Id"], (string)attrArgs["ParentComp_Id"], (string)attrArgs["Component_Package_IDdeprecated"], (int)attrArgs["Mult"], (string)attrArgs["ClassifierName"], (string)attrArgs["Name"], (string)attrArgs["Descrip"])
@@ -3879,7 +4083,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassCL_IIRBase(CIModelRepository repository, string Id, string Ref_Id, string CL_POR_Id, string Delegation_Id, string Name, string Descrip ) : base(repository, "CL_IIR")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Ref_Id = Ref_Id;
+            Attr_CL_POR_Id = CL_POR_Id;
+            Attr_Delegation_Id = Delegation_Id;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassCL_IIRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Ref_Id"], (string)attrArgs["CL_POR_Id"], (string)attrArgs["Delegation_Id"], (string)attrArgs["Name"], (string)attrArgs["Descrip"])
@@ -3971,7 +4180,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassCL_IPBase(CIModelRepository repository, string Id, string Name, string Descrip ) : base(repository, "CL_IP")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassCL_IPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Name"], (string)attrArgs["Descrip"])
@@ -4019,7 +4230,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassCL_IPINSBase(CIModelRepository repository, string Satisfaction_Id, string ImportedProvision_Id ) : base(repository, "CL_IPINS")
         {
-            ;
+            Attr_Satisfaction_Id = Satisfaction_Id;
+            Attr_ImportedProvision_Id = ImportedProvision_Id;
         }
 
         public CIMClassCL_IPINSBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Satisfaction_Id"], (string)attrArgs["ImportedProvision_Id"])
@@ -4071,7 +4283,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassCL_IRBase(CIModelRepository repository, string Id, string Satisfaction_Element_Id, string Name, string Descrip ) : base(repository, "CL_IR")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Satisfaction_Element_Id = Satisfaction_Element_Id;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassCL_IRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Satisfaction_Element_Id"], (string)attrArgs["Name"], (string)attrArgs["Descrip"])
@@ -4123,7 +4338,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassCL_PORBase(CIModelRepository repository, string CL_IC_Id, string C_PO_Id, string Name, string Id, string Key_Lett ) : base(repository, "CL_POR")
         {
-            ;
+            Attr_CL_IC_Id = CL_IC_Id;
+            Attr_C_PO_Id = C_PO_Id;
+            Attr_Name = Name;
+            Attr_Id = Id;
+            Attr_Key_Lett = Key_Lett;
         }
 
         public CIMClassCL_PORBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["CL_IC_Id"], (string)attrArgs["C_PO_Id"], (string)attrArgs["Name"], (string)attrArgs["Id"], (string)attrArgs["Key_Lett"])
@@ -4186,7 +4405,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassCNST_CSPBase(CIModelRepository repository, string Constant_Spec_ID, string InformalGroupName, string Descrip ) : base(repository, "CNST_CSP")
         {
-            ;
+            Attr_Constant_Spec_ID = Constant_Spec_ID;
+            Attr_InformalGroupName = InformalGroupName;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassCNST_CSPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Constant_Spec_ID"], (string)attrArgs["InformalGroupName"], (string)attrArgs["Descrip"])
@@ -4235,7 +4456,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassCNST_LFSCBase(CIModelRepository repository, string Const_ID, string DT_ID_Deprecated ) : base(repository, "CNST_LFSC")
         {
-            ;
+            Attr_Const_ID = Const_ID;
+            Attr_DT_ID_Deprecated = DT_ID_Deprecated;
         }
 
         public CIMClassCNST_LFSCBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Const_ID"], (string)attrArgs["DT_ID_Deprecated"])
@@ -4286,7 +4508,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassCNST_LSCBase(CIModelRepository repository, string Const_ID, string DT_ID_Deprecated, string Value ) : base(repository, "CNST_LSC")
         {
-            ;
+            Attr_Const_ID = Const_ID;
+            Attr_DT_ID_Deprecated = DT_ID_Deprecated;
+            Attr_Value = Value;
         }
 
         public CIMClassCNST_LSCBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Const_ID"], (string)attrArgs["DT_ID_Deprecated"], (string)attrArgs["Value"])
@@ -4329,7 +4553,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassCNST_SYCBase(CIModelRepository repository, string Const_ID, string Name, string Descrip, string DT_ID, string Constant_Spec_ID, string Previous_Const_ID, string Previous_DT_DT_ID_Deprecated ) : base(repository, "CNST_SYC")
         {
-            ;
+            Attr_Const_ID = Const_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_DT_ID = DT_ID;
+            Attr_Constant_Spec_ID = Constant_Spec_ID;
+            Attr_Previous_Const_ID = Previous_Const_ID;
+            Attr_Previous_DT_DT_ID_Deprecated = Previous_DT_DT_ID_Deprecated;
         }
 
         public CIMClassCNST_SYCBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Const_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["DT_ID"], (string)attrArgs["Constant_Spec_ID"], (string)attrArgs["Previous_Const_ID"], (string)attrArgs["Previous_DT_DT_ID_Deprecated"])
@@ -4436,7 +4666,17 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassCOMM_LNKBase(CIModelRepository repository, string Link_ID, string Rel_ID, string Numb, string Descrip, string StartText, string EndText, bool isFormal, int StartVisibility, int EndVisibility, string Start_Part_ID, string Destination_Part_ID ) : base(repository, "COMM_LNK")
         {
-            ;
+            Attr_Link_ID = Link_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_Numb = Numb;
+            Attr_Descrip = Descrip;
+            Attr_StartText = StartText;
+            Attr_EndText = EndText;
+            Attr_isFormal = isFormal;
+            Attr_StartVisibility = StartVisibility;
+            Attr_EndVisibility = EndVisibility;
+            Attr_Start_Part_ID = Start_Part_ID;
+            Attr_Destination_Part_ID = Destination_Part_ID;
         }
 
         public CIMClassCOMM_LNKBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Link_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["Numb"], (string)attrArgs["Descrip"], (string)attrArgs["StartText"], (string)attrArgs["EndText"], (bool)attrArgs["isFormal"], (int)attrArgs["StartVisibility"], (int)attrArgs["EndVisibility"], (string)attrArgs["Start_Part_ID"], (string)attrArgs["Destination_Part_ID"])
@@ -4501,7 +4741,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassC_ASBase(CIModelRepository repository, string Id, string Name, string Descrip, int Direction, string Previous_Id ) : base(repository, "C_AS")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_Direction = Direction;
+            Attr_Previous_Id = Previous_Id;
         }
 
         public CIMClassC_ASBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (int)attrArgs["Direction"], (string)attrArgs["Previous_Id"])
@@ -4582,7 +4826,16 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassC_CBase(CIModelRepository repository, string Id, string Package_IDdeprecated, string NestedComponent_IDdeprecated, string Name, string Descrip, int Mult, string Root_Package_IDdeprecated, bool isRealized, string Realized_Class_Path, string Key_Lett ) : base(repository, "C_C")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Package_IDdeprecated = Package_IDdeprecated;
+            Attr_NestedComponent_IDdeprecated = NestedComponent_IDdeprecated;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_Mult = Mult;
+            Attr_Root_Package_IDdeprecated = Root_Package_IDdeprecated;
+            Attr_isRealized = isRealized;
+            Attr_Realized_Class_Path = Realized_Class_Path;
+            Attr_Key_Lett = Key_Lett;
         }
 
         public CIMClassC_CBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Package_IDdeprecated"], (string)attrArgs["NestedComponent_IDdeprecated"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (int)attrArgs["Mult"], (string)attrArgs["Root_Package_IDdeprecated"], (bool)attrArgs["isRealized"], (string)attrArgs["Realized_Class_Path"], (string)attrArgs["Key_Lett"])
@@ -4763,7 +5016,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassC_DGBase(CIModelRepository repository, string Id, string Name ) : base(repository, "C_DG")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Name = Name;
         }
 
         public CIMClassC_DGBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Name"])
@@ -4862,7 +5116,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassC_EPBase(CIModelRepository repository, string Id, string Interface_Id, int Direction, string Name, string Descrip, int Numb ) : base(repository, "C_EP")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Interface_Id = Interface_Id;
+            Attr_Direction = Direction;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_Numb = Numb;
         }
 
         public CIMClassC_EPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Interface_Id"], (int)attrArgs["Direction"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (int)attrArgs["Numb"])
@@ -4955,7 +5214,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassC_IBase(CIModelRepository repository, string Id, string Package_IDdeprecated, string Name, string Descrip ) : base(repository, "C_I")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Package_IDdeprecated = Package_IDdeprecated;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassC_IBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Package_IDdeprecated"], (string)attrArgs["Name"], (string)attrArgs["Descrip"])
@@ -5045,7 +5307,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassC_IOBase(CIModelRepository repository, string Id, string DT_ID, string Name, string Descrip, int Direction, string Return_Dimensions, string Previous_Id ) : base(repository, "C_IO")
         {
-            ;
+            Attr_Id = Id;
+            Attr_DT_ID = DT_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_Direction = Direction;
+            Attr_Return_Dimensions = Return_Dimensions;
+            Attr_Previous_Id = Previous_Id;
         }
 
         public CIMClassC_IOBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["DT_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (int)attrArgs["Direction"], (string)attrArgs["Return_Dimensions"], (string)attrArgs["Previous_Id"])
@@ -5144,7 +5412,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassC_IRBase(CIModelRepository repository, string Id, string Formal_Interface_Id, string Delegation_Id, string Port_Id ) : base(repository, "C_IR")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Formal_Interface_Id = Formal_Interface_Id;
+            Attr_Delegation_Id = Delegation_Id;
+            Attr_Port_Id = Port_Id;
         }
 
         public CIMClassC_IRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Formal_Interface_Id"], (string)attrArgs["Delegation_Id"], (string)attrArgs["Port_Id"])
@@ -5262,7 +5533,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassC_PBase(CIModelRepository repository, string Provision_Id, string Name, string InformalName, string Descrip, string pathFromComponent ) : base(repository, "C_P")
         {
-            ;
+            Attr_Provision_Id = Provision_Id;
+            Attr_Name = Name;
+            Attr_InformalName = InformalName;
+            Attr_Descrip = Descrip;
+            Attr_pathFromComponent = pathFromComponent;
         }
 
         public CIMClassC_PBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Provision_Id"], (string)attrArgs["Name"], (string)attrArgs["InformalName"], (string)attrArgs["Descrip"], (string)attrArgs["pathFromComponent"])
@@ -5324,7 +5599,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassC_POBase(CIModelRepository repository, string Id, string Component_Id, string Name, int Mult, bool DoNotShowPortOnCanvas ) : base(repository, "C_PO")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Component_Id = Component_Id;
+            Attr_Name = Name;
+            Attr_Mult = Mult;
+            Attr_DoNotShowPortOnCanvas = DoNotShowPortOnCanvas;
         }
 
         public CIMClassC_POBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Component_Id"], (string)attrArgs["Name"], (int)attrArgs["Mult"], (bool)attrArgs["DoNotShowPortOnCanvas"])
@@ -5404,7 +5683,14 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassC_PPBase(CIModelRepository repository, string PP_Id, string Signal_Id, string DT_ID, string Name, string Descrip, int By_Ref, string Dimensions, string Previous_PP_Id ) : base(repository, "C_PP")
         {
-            ;
+            Attr_PP_Id = PP_Id;
+            Attr_Signal_Id = Signal_Id;
+            Attr_DT_ID = DT_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_By_Ref = By_Ref;
+            Attr_Dimensions = Dimensions;
+            Attr_Previous_PP_Id = Previous_PP_Id;
         }
 
         public CIMClassC_PPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["PP_Id"], (string)attrArgs["Signal_Id"], (string)attrArgs["DT_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (int)attrArgs["By_Ref"], (string)attrArgs["Dimensions"], (string)attrArgs["Previous_PP_Id"])
@@ -5553,7 +5839,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassC_RBase(CIModelRepository repository, string Requirement_Id, string Name, string Descrip, string InformalName, string reversePathFromComponent ) : base(repository, "C_R")
         {
-            ;
+            Attr_Requirement_Id = Requirement_Id;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_InformalName = InformalName;
+            Attr_reversePathFromComponent = reversePathFromComponent;
         }
 
         public CIMClassC_RBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Requirement_Id"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["InformalName"], (string)attrArgs["reversePathFromComponent"])
@@ -5613,7 +5903,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassC_RIDBase(CIModelRepository repository, string Reference_Id, string Delegation_Id ) : base(repository, "C_RID")
         {
-            ;
+            Attr_Reference_Id = Reference_Id;
+            Attr_Delegation_Id = Delegation_Id;
         }
 
         public CIMClassC_RIDBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Reference_Id"], (string)attrArgs["Delegation_Id"])
@@ -5666,7 +5957,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassC_SFBase(CIModelRepository repository, string Id, string Requirement_Id, string Provision_Id, string Descrip, string Label ) : base(repository, "C_SF")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Requirement_Id = Requirement_Id;
+            Attr_Provision_Id = Provision_Id;
+            Attr_Descrip = Descrip;
+            Attr_Label = Label;
         }
 
         public CIMClassC_SFBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Requirement_Id"], (string)attrArgs["Provision_Id"], (string)attrArgs["Descrip"], (string)attrArgs["Label"])
@@ -5775,7 +6070,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassD_DEPLBase(CIModelRepository repository, string Deployment_ID, string Name, string Descrip ) : base(repository, "D_DEPL")
         {
-            ;
+            Attr_Deployment_ID = Deployment_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassD_DEPLBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Deployment_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"])
@@ -5829,7 +6126,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassD_TERMBase(CIModelRepository repository, string Term_ID, string Deployment_ID, string Name, string Descrip, string Domain_Name, string Terminator_Name, bool Provider ) : base(repository, "D_TERM")
         {
-            ;
+            Attr_Term_ID = Term_ID;
+            Attr_Deployment_ID = Deployment_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_Domain_Name = Domain_Name;
+            Attr_Terminator_Name = Terminator_Name;
+            Attr_Provider = Provider;
         }
 
         public CIMClassD_TERMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Term_ID"], (string)attrArgs["Deployment_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["Domain_Name"], (string)attrArgs["Terminator_Name"], (bool)attrArgs["Provider"])
@@ -5885,7 +6188,14 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassD_TSPARMBase(CIModelRepository repository, string TSParm_ID, string Svc_ID, string Name, string DT_ID, int By_Ref, string Dimensions, string Previous_TSParm_ID, string Descrip ) : base(repository, "D_TSPARM")
         {
-            ;
+            Attr_TSParm_ID = TSParm_ID;
+            Attr_Svc_ID = Svc_ID;
+            Attr_Name = Name;
+            Attr_DT_ID = DT_ID;
+            Attr_By_Ref = By_Ref;
+            Attr_Dimensions = Dimensions;
+            Attr_Previous_TSParm_ID = Previous_TSParm_ID;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassD_TSPARMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["TSParm_ID"], (string)attrArgs["Svc_ID"], (string)attrArgs["Name"], (string)attrArgs["DT_ID"], (int)attrArgs["By_Ref"], (string)attrArgs["Dimensions"], (string)attrArgs["Previous_TSParm_ID"], (string)attrArgs["Descrip"])
@@ -5981,7 +6291,18 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassD_TSVCBase(CIModelRepository repository, string Svc_ID, string Term_ID, string Name, string Descrip, string Action_Semantics, string DT_ID, int Suc_Pars, string Return_Dimensions, int Dialect, bool Is_Stale, int Implementation_Scope, int Numb ) : base(repository, "D_TSVC")
         {
-            ;
+            Attr_Svc_ID = Svc_ID;
+            Attr_Term_ID = Term_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_Action_Semantics = Action_Semantics;
+            Attr_DT_ID = DT_ID;
+            Attr_Suc_Pars = Suc_Pars;
+            Attr_Return_Dimensions = Return_Dimensions;
+            Attr_Dialect = Dialect;
+            Attr_Is_Stale = Is_Stale;
+            Attr_Implementation_Scope = Implementation_Scope;
+            Attr_Numb = Numb;
         }
 
         public CIMClassD_TSVCBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Svc_ID"], (string)attrArgs["Term_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["Action_Semantics"], (string)attrArgs["DT_ID"], (int)attrArgs["Suc_Pars"], (string)attrArgs["Return_Dimensions"], (int)attrArgs["Dialect"], (bool)attrArgs["Is_Stale"], (int)attrArgs["Implementation_Scope"], (int)attrArgs["Numb"])
@@ -6059,7 +6380,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassEP_PKGBase(CIModelRepository repository, string Package_ID, string Sys_ID, string Direct_Sys_ID, string Name, string Descrip, int Num_Rng ) : base(repository, "EP_PKG")
         {
-            ;
+            Attr_Package_ID = Package_ID;
+            Attr_Sys_ID = Sys_ID;
+            Attr_Direct_Sys_ID = Direct_Sys_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_Num_Rng = Num_Rng;
         }
 
         public CIMClassEP_PKGBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Package_ID"], (string)attrArgs["Sys_ID"], (string)attrArgs["Direct_Sys_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (int)attrArgs["Num_Rng"])
@@ -6202,7 +6528,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassEP_PKGREFBase(CIModelRepository repository, string Referring_Package_ID, string Referred_Package_ID ) : base(repository, "EP_PKGREF")
         {
-            ;
+            Attr_Referring_Package_ID = Referring_Package_ID;
+            Attr_Referred_Package_ID = Referred_Package_ID;
         }
 
         public CIMClassEP_PKGREFBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Referring_Package_ID"], (string)attrArgs["Referred_Package_ID"])
@@ -6251,7 +6578,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassE_CEABase(CIModelRepository repository, string Statement_ID ) : base(repository, "E_CEA")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassE_CEABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"])
@@ -6287,7 +6614,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassE_CECBase(CIModelRepository repository, string Statement_ID ) : base(repository, "E_CEC")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassE_CECBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"])
@@ -6324,7 +6651,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassE_CEIBase(CIModelRepository repository, string Statement_ID, string Var_ID ) : base(repository, "E_CEI")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Var_ID = Var_ID;
         }
 
         public CIMClassE_CEIBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Var_ID"])
@@ -6374,7 +6702,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassE_CESBase(CIModelRepository repository, string Statement_ID, bool is_implicit, string Var_ID ) : base(repository, "E_CES")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_is_implicit = is_implicit;
+            Attr_Var_ID = Var_ID;
         }
 
         public CIMClassE_CESBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (bool)attrArgs["is_implicit"], (string)attrArgs["Var_ID"])
@@ -6435,7 +6765,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassE_CSMEBase(CIModelRepository repository, string Statement_ID, string SMevt_ID ) : base(repository, "E_CSME")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_SMevt_ID = SMevt_ID;
         }
 
         public CIMClassE_CSMEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["SMevt_ID"])
@@ -6513,7 +6844,19 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassE_ESSBase(CIModelRepository repository, string Statement_ID, bool ParmListOK, bool PEIndicated, int eventDerivedLabelLineNumber, int eventDerivedLabelColumn, int eventMeaningLineNumber, int eventMeaningColumn, int eventTargetKeyLettersLineNumber, int eventTargetKeyLettersColumn, int firstEventDataItemNameLineNumber, int firstEventDataItemNameColumn, int currentLaterEventDataItemNameLineNumber, int currentLaterEventDataItemNameColumn ) : base(repository, "E_ESS")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_ParmListOK = ParmListOK;
+            Attr_PEIndicated = PEIndicated;
+            Attr_eventDerivedLabelLineNumber = eventDerivedLabelLineNumber;
+            Attr_eventDerivedLabelColumn = eventDerivedLabelColumn;
+            Attr_eventMeaningLineNumber = eventMeaningLineNumber;
+            Attr_eventMeaningColumn = eventMeaningColumn;
+            Attr_eventTargetKeyLettersLineNumber = eventTargetKeyLettersLineNumber;
+            Attr_eventTargetKeyLettersColumn = eventTargetKeyLettersColumn;
+            Attr_firstEventDataItemNameLineNumber = firstEventDataItemNameLineNumber;
+            Attr_firstEventDataItemNameColumn = firstEventDataItemNameColumn;
+            Attr_currentLaterEventDataItemNameLineNumber = currentLaterEventDataItemNameLineNumber;
+            Attr_currentLaterEventDataItemNameColumn = currentLaterEventDataItemNameColumn;
         }
 
         public CIMClassE_ESSBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (bool)attrArgs["ParmListOK"], (bool)attrArgs["PEIndicated"], (int)attrArgs["eventDerivedLabelLineNumber"], (int)attrArgs["eventDerivedLabelColumn"], (int)attrArgs["eventMeaningLineNumber"], (int)attrArgs["eventMeaningColumn"], (int)attrArgs["eventTargetKeyLettersLineNumber"], (int)attrArgs["eventTargetKeyLettersColumn"], (int)attrArgs["firstEventDataItemNameLineNumber"], (int)attrArgs["firstEventDataItemNameColumn"], (int)attrArgs["currentLaterEventDataItemNameLineNumber"], (int)attrArgs["currentLaterEventDataItemNameColumn"])
@@ -6578,7 +6921,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassE_GARBase(CIModelRepository repository, string Statement_ID ) : base(repository, "E_GAR")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassE_GARBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"])
@@ -6614,7 +6957,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassE_GECBase(CIModelRepository repository, string Statement_ID ) : base(repository, "E_GEC")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassE_GECBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"])
@@ -6651,7 +6994,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassE_GENBase(CIModelRepository repository, string Statement_ID, string Var_ID ) : base(repository, "E_GEN")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Var_ID = Var_ID;
         }
 
         public CIMClassE_GENBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Var_ID"])
@@ -6699,7 +7043,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassE_GESBase(CIModelRepository repository, string Statement_ID ) : base(repository, "E_GES")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassE_GESBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"])
@@ -6748,7 +7092,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassE_GPRBase(CIModelRepository repository, string Statement_ID, string Value_ID ) : base(repository, "E_GPR")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Value_ID = Value_ID;
         }
 
         public CIMClassE_GPRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["Value_ID"])
@@ -6797,7 +7142,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassE_GSMEBase(CIModelRepository repository, string Statement_ID, string SMevt_ID ) : base(repository, "E_GSME")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_SMevt_ID = SMevt_ID;
         }
 
         public CIMClassE_GSMEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["SMevt_ID"])
@@ -6864,7 +7210,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassG_EISBase(CIModelRepository repository, string Element_ID, string Sys_ID ) : base(repository, "G_EIS")
         {
-            ;
+            Attr_Element_ID = Element_ID;
+            Attr_Sys_ID = Sys_ID;
         }
 
         public CIMClassG_EISBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Element_ID"], (string)attrArgs["Sys_ID"])
@@ -6915,7 +7262,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassIA_UCPBase(CIModelRepository repository, string Part_ID, string Name, string Descrip ) : base(repository, "IA_UCP")
         {
-            ;
+            Attr_Part_ID = Part_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassIA_UCPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Part_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"])
@@ -6957,7 +7306,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_AVLBase(CIModelRepository repository, string Inst_ID, string Obj_ID, string Attr_ID, string Value, string Label, string RuntimeValue_ID, string Derived_RuntimeValue_ID ) : base(repository, "I_AVL")
         {
-            ;
+            Attr_Inst_ID = Inst_ID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Attr_ID = Attr_ID;
+            Attr_Value = Value;
+            Attr_Label = Label;
+            Attr_RuntimeValue_ID = RuntimeValue_ID;
+            Attr_Derived_RuntimeValue_ID = Derived_RuntimeValue_ID;
         }
 
         public CIMClassI_AVLBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Inst_ID"], (string)attrArgs["Obj_ID"], (string)attrArgs["Attr_ID"], (string)attrArgs["Value"], (string)attrArgs["Label"], (string)attrArgs["RuntimeValue_ID"], (string)attrArgs["Derived_RuntimeValue_ID"])
@@ -7009,7 +7364,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_BSFBase(CIModelRepository repository, string Block_ID, string Stack_Frame_ID, string Statement_ID, bool isExecuting ) : base(repository, "I_BSF")
         {
-            ;
+            Attr_Block_ID = Block_ID;
+            Attr_Stack_Frame_ID = Stack_Frame_ID;
+            Attr_Statement_ID = Statement_ID;
+            Attr_isExecuting = isExecuting;
         }
 
         public CIMClassI_BSFBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Block_ID"], (string)attrArgs["Stack_Frame_ID"], (string)attrArgs["Statement_ID"], (bool)attrArgs["isExecuting"])
@@ -7070,7 +7428,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_CINBase(CIModelRepository repository, string Container_ID ) : base(repository, "I_CIN")
         {
-            ;
+            Attr_Container_ID = Container_ID;
         }
 
         public CIMClassI_CINBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Container_ID"])
@@ -7124,7 +7482,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_DIVBase(CIModelRepository repository, string DIV_ID, string Event_ID, string SM_ID, string SMedi_ID, string RuntimeValue_ID, string PP_Id ) : base(repository, "I_DIV")
         {
-            ;
+            Attr_DIV_ID = DIV_ID;
+            Attr_Event_ID = Event_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMedi_ID = SMedi_ID;
+            Attr_RuntimeValue_ID = RuntimeValue_ID;
+            Attr_PP_Id = PP_Id;
         }
 
         public CIMClassI_DIVBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["DIV_ID"], (string)attrArgs["Event_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMedi_ID"], (string)attrArgs["RuntimeValue_ID"], (string)attrArgs["PP_Id"])
@@ -7188,7 +7551,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_EQEBase(CIModelRepository repository, string Event_Queue_Entry_ID, string Execution_Engine_ID, string Event_ID, string Next_Event_Queue_Entry_ID ) : base(repository, "I_EQE")
         {
-            ;
+            Attr_Event_Queue_Entry_ID = Event_Queue_Entry_ID;
+            Attr_Execution_Engine_ID = Execution_Engine_ID;
+            Attr_Event_ID = Event_ID;
+            Attr_Next_Event_Queue_Entry_ID = Next_Event_Queue_Entry_ID;
         }
 
         public CIMClassI_EQEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Event_Queue_Entry_ID"], (string)attrArgs["Execution_Engine_ID"], (string)attrArgs["Event_ID"], (string)attrArgs["Next_Event_Queue_Entry_ID"])
@@ -7273,7 +7639,19 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_EVIBase(CIModelRepository repository, string Event_ID, bool isExecuting, bool isCreation, string SMevt_ID, string Target_Inst_ID, string nextEvent_ID, string Sent_By_Inst_ID, string next_self_Event_ID, string Sent_By_CIE_ID, string CIE_ID, string Execution_Engine_ID, string Originating_Execution_Engine_ID, string Label ) : base(repository, "I_EVI")
         {
-            ;
+            Attr_Event_ID = Event_ID;
+            Attr_isExecuting = isExecuting;
+            Attr_isCreation = isCreation;
+            Attr_SMevt_ID = SMevt_ID;
+            Attr_Target_Inst_ID = Target_Inst_ID;
+            Attr_nextEvent_ID = nextEvent_ID;
+            Attr_Sent_By_Inst_ID = Sent_By_Inst_ID;
+            Attr_next_self_Event_ID = next_self_Event_ID;
+            Attr_Sent_By_CIE_ID = Sent_By_CIE_ID;
+            Attr_CIE_ID = CIE_ID;
+            Attr_Execution_Engine_ID = Execution_Engine_ID;
+            Attr_Originating_Execution_Engine_ID = Originating_Execution_Engine_ID;
+            Attr_Label = Label;
         }
 
         public CIMClassI_EVIBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Event_ID"], (bool)attrArgs["isExecuting"], (bool)attrArgs["isCreation"], (string)attrArgs["SMevt_ID"], (string)attrArgs["Target_Inst_ID"], (string)attrArgs["nextEvent_ID"], (string)attrArgs["Sent_By_Inst_ID"], (string)attrArgs["next_self_Event_ID"], (string)attrArgs["Sent_By_CIE_ID"], (string)attrArgs["CIE_ID"], (string)attrArgs["Execution_Engine_ID"], (string)attrArgs["Originating_Execution_Engine_ID"], (string)attrArgs["Label"])
@@ -7473,7 +7851,16 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_EXEBase(CIModelRepository repository, bool Running, string Execution_Engine_ID, string Dom_IDdeprecated, string Component_Id, string Package_ID, int Next_Unique_ID, int Next_Instance_ID, string ImportedComponent_Id, string Label, string Container_ID ) : base(repository, "I_EXE")
         {
-            ;
+            Attr_Running = Running;
+            Attr_Execution_Engine_ID = Execution_Engine_ID;
+            Attr_Dom_IDdeprecated = Dom_IDdeprecated;
+            Attr_Component_Id = Component_Id;
+            Attr_Package_ID = Package_ID;
+            Attr_Next_Unique_ID = Next_Unique_ID;
+            Attr_Next_Instance_ID = Next_Instance_ID;
+            Attr_ImportedComponent_Id = ImportedComponent_Id;
+            Attr_Label = Label;
+            Attr_Container_ID = Container_ID;
         }
 
         public CIMClassI_EXEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (bool)attrArgs["Running"], (string)attrArgs["Execution_Engine_ID"], (string)attrArgs["Dom_IDdeprecated"], (string)attrArgs["Component_Id"], (string)attrArgs["Package_ID"], (int)attrArgs["Next_Unique_ID"], (int)attrArgs["Next_Instance_ID"], (string)attrArgs["ImportedComponent_Id"], (string)attrArgs["Label"], (string)attrArgs["Container_ID"])
@@ -7679,7 +8066,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_ICQEBase(CIModelRepository repository, string Stack_ID, string Stack_Frame_ID, string Execution_Engine_ID ) : base(repository, "I_ICQE")
         {
-            ;
+            Attr_Stack_ID = Stack_ID;
+            Attr_Stack_Frame_ID = Stack_Frame_ID;
+            Attr_Execution_Engine_ID = Execution_Engine_ID;
         }
 
         public CIMClassI_ICQEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Stack_ID"], (string)attrArgs["Stack_Frame_ID"], (string)attrArgs["Execution_Engine_ID"])
@@ -7748,7 +8137,15 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_INSBase(CIModelRepository repository, string Inst_ID, string Name, string SM_ID, string SMstt_ID, string Execution_Engine_ID, string Trans_ID, string CIE_ID, string Label, string Default_Name ) : base(repository, "I_INS")
         {
-            ;
+            Attr_Inst_ID = Inst_ID;
+            Attr_Name = Name;
+            Attr_SM_ID = SM_ID;
+            Attr_SMstt_ID = SMstt_ID;
+            Attr_Execution_Engine_ID = Execution_Engine_ID;
+            Attr_Trans_ID = Trans_ID;
+            Attr_CIE_ID = CIE_ID;
+            Attr_Label = Label;
+            Attr_Default_Name = Default_Name;
         }
 
         public CIMClassI_INSBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Inst_ID"], (string)attrArgs["Name"], (string)attrArgs["SM_ID"], (string)attrArgs["SMstt_ID"], (string)attrArgs["Execution_Engine_ID"], (string)attrArgs["Trans_ID"], (string)attrArgs["CIE_ID"], (string)attrArgs["Label"], (string)attrArgs["Default_Name"])
@@ -7895,7 +8292,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_LIPBase(CIModelRepository repository, string Participation_ID, string Rel_ID, string Inst_ID, string Label ) : base(repository, "I_LIP")
         {
-            ;
+            Attr_Participation_ID = Participation_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_Inst_ID = Inst_ID;
+            Attr_Label = Label;
         }
 
         public CIMClassI_LIPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Participation_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["Inst_ID"], (string)attrArgs["Label"])
@@ -7984,7 +8384,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_LNKBase(CIModelRepository repository, string Link_ID, string Rel_ID, string fromInst_ID, string toInst_ID, string assocInst_ID ) : base(repository, "I_LNK")
         {
-            ;
+            Attr_Link_ID = Link_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_fromInst_ID = fromInst_ID;
+            Attr_toInst_ID = toInst_ID;
+            Attr_assocInst_ID = assocInst_ID;
         }
 
         public CIMClassI_LNKBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Link_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["fromInst_ID"], (string)attrArgs["toInst_ID"], (string)attrArgs["assocInst_ID"])
@@ -8059,7 +8463,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_MONBase(CIModelRepository repository, string Execution_Engine_ID, string Inst_ID, bool enabled ) : base(repository, "I_MON")
         {
-            ;
+            Attr_Execution_Engine_ID = Execution_Engine_ID;
+            Attr_Inst_ID = Inst_ID;
+            Attr_enabled = enabled;
         }
 
         public CIMClassI_MONBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Execution_Engine_ID"], (string)attrArgs["Inst_ID"], (bool)attrArgs["enabled"])
@@ -8113,7 +8519,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_RCHBase(CIModelRepository repository, string Channel_Id, string Execution_Engine_ID, string other_Execution_Engine_ID, string Satisfaction_Id, string Delegation_Id, string Next_provider_Channel_Id ) : base(repository, "I_RCH")
         {
-            ;
+            Attr_Channel_Id = Channel_Id;
+            Attr_Execution_Engine_ID = Execution_Engine_ID;
+            Attr_other_Execution_Engine_ID = other_Execution_Engine_ID;
+            Attr_Satisfaction_Id = Satisfaction_Id;
+            Attr_Delegation_Id = Delegation_Id;
+            Attr_Next_provider_Channel_Id = Next_provider_Channel_Id;
         }
 
         public CIMClassI_RCHBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Channel_Id"], (string)attrArgs["Execution_Engine_ID"], (string)attrArgs["other_Execution_Engine_ID"], (string)attrArgs["Satisfaction_Id"], (string)attrArgs["Delegation_Id"], (string)attrArgs["Next_provider_Channel_Id"])
@@ -8213,7 +8624,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_SQEBase(CIModelRepository repository, string Self_Queue_Entry_ID, string Execution_Engine_ID, string Event_ID, string Next_Self_Queue_Entry_ID ) : base(repository, "I_SQE")
         {
-            ;
+            Attr_Self_Queue_Entry_ID = Self_Queue_Entry_ID;
+            Attr_Execution_Engine_ID = Execution_Engine_ID;
+            Attr_Event_ID = Event_ID;
+            Attr_Next_Self_Queue_Entry_ID = Next_Self_Queue_Entry_ID;
         }
 
         public CIMClassI_SQEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Self_Queue_Entry_ID"], (string)attrArgs["Execution_Engine_ID"], (string)attrArgs["Event_ID"], (string)attrArgs["Next_Self_Queue_Entry_ID"])
@@ -8289,7 +8703,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_STACKBase(CIModelRepository repository, string Stack_ID, string Execution_Engine_ID, int runState, string suspendReason ) : base(repository, "I_STACK")
         {
-            ;
+            Attr_Stack_ID = Stack_ID;
+            Attr_Execution_Engine_ID = Execution_Engine_ID;
+            Attr_runState = runState;
+            Attr_suspendReason = suspendReason;
         }
 
         public CIMClassI_STACKBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Stack_ID"], (string)attrArgs["Execution_Engine_ID"], (int)attrArgs["runState"], (string)attrArgs["suspendReason"])
@@ -8383,7 +8800,16 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_STFBase(CIModelRepository repository, string Stack_Frame_ID, bool Created_For_Wired_Bridge, bool readyForInterrupt, string Bridge_Caller_Stack_Frame_ID, string Child_Stack_Frame_ID, string Top_Stack_Frame_Stack_ID, string Stack_ID, string Inst_ID, string Value_Q_Stack_ID, string Blocking_Stack_Frame_ID ) : base(repository, "I_STF")
         {
-            ;
+            Attr_Stack_Frame_ID = Stack_Frame_ID;
+            Attr_Created_For_Wired_Bridge = Created_For_Wired_Bridge;
+            Attr_readyForInterrupt = readyForInterrupt;
+            Attr_Bridge_Caller_Stack_Frame_ID = Bridge_Caller_Stack_Frame_ID;
+            Attr_Child_Stack_Frame_ID = Child_Stack_Frame_ID;
+            Attr_Top_Stack_Frame_Stack_ID = Top_Stack_Frame_Stack_ID;
+            Attr_Stack_ID = Stack_ID;
+            Attr_Inst_ID = Inst_ID;
+            Attr_Value_Q_Stack_ID = Value_Q_Stack_ID;
+            Attr_Blocking_Stack_Frame_ID = Blocking_Stack_Frame_ID;
         }
 
         public CIMClassI_STFBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Stack_Frame_ID"], (bool)attrArgs["Created_For_Wired_Bridge"], (bool)attrArgs["readyForInterrupt"], (string)attrArgs["Bridge_Caller_Stack_Frame_ID"], (string)attrArgs["Child_Stack_Frame_ID"], (string)attrArgs["Top_Stack_Frame_Stack_ID"], (string)attrArgs["Stack_ID"], (string)attrArgs["Inst_ID"], (string)attrArgs["Value_Q_Stack_ID"], (string)attrArgs["Blocking_Stack_Frame_ID"])
@@ -8544,7 +8970,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_TIMBase(CIModelRepository repository, string Timer_ID, int delay, bool running, bool recurring, string Event_ID, string Label, int expiration ) : base(repository, "I_TIM")
         {
-            ;
+            Attr_Timer_ID = Timer_ID;
+            Attr_delay = delay;
+            Attr_running = running;
+            Attr_recurring = recurring;
+            Attr_Event_ID = Event_ID;
+            Attr_Label = Label;
+            Attr_expiration = expiration;
         }
 
         public CIMClassI_TIMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Timer_ID"], (int)attrArgs["delay"], (bool)attrArgs["running"], (bool)attrArgs["recurring"], (string)attrArgs["Event_ID"], (string)attrArgs["Label"], (int)attrArgs["expiration"])
@@ -8584,7 +9016,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassI_VSFBase(CIModelRepository repository, string ValueInStackFrame_ID, string RuntimeValue_ID, string Value_ID, string Stack_Frame_ID ) : base(repository, "I_VSF")
         {
-            ;
+            Attr_ValueInStackFrame_ID = ValueInStackFrame_ID;
+            Attr_RuntimeValue_ID = RuntimeValue_ID;
+            Attr_Value_ID = Value_ID;
+            Attr_Stack_Frame_ID = Stack_Frame_ID;
         }
 
         public CIMClassI_VSFBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ValueInStackFrame_ID"], (string)attrArgs["RuntimeValue_ID"], (string)attrArgs["Value_ID"], (string)attrArgs["Stack_Frame_ID"])
@@ -8640,7 +9075,14 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_ABase(CIModelRepository repository, string Arg_ID, string Informal_Msg_ID, string Formal_Msg_ID, string Label, string Value, string InformalName, string Descrip, bool isFormal ) : base(repository, "MSG_A")
         {
-            ;
+            Attr_Arg_ID = Arg_ID;
+            Attr_Informal_Msg_ID = Informal_Msg_ID;
+            Attr_Formal_Msg_ID = Formal_Msg_ID;
+            Attr_Label = Label;
+            Attr_Value = Value;
+            Attr_InformalName = InformalName;
+            Attr_Descrip = Descrip;
+            Attr_isFormal = isFormal;
         }
 
         public CIMClassMSG_ABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Arg_ID"], (string)attrArgs["Informal_Msg_ID"], (string)attrArgs["Formal_Msg_ID"], (string)attrArgs["Label"], (string)attrArgs["Value"], (string)attrArgs["InformalName"], (string)attrArgs["Descrip"], (bool)attrArgs["isFormal"])
@@ -8714,7 +9156,15 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_AMBase(CIModelRepository repository, string Msg_ID, string InformalName, string Descrip, string GuardCondition, string DurationObservation, string DurationConstraint, bool isFormal, string Label, string SequenceNumb ) : base(repository, "MSG_AM")
         {
-            ;
+            Attr_Msg_ID = Msg_ID;
+            Attr_InformalName = InformalName;
+            Attr_Descrip = Descrip;
+            Attr_GuardCondition = GuardCondition;
+            Attr_DurationObservation = DurationObservation;
+            Attr_DurationConstraint = DurationConstraint;
+            Attr_isFormal = isFormal;
+            Attr_Label = Label;
+            Attr_SequenceNumb = SequenceNumb;
         }
 
         public CIMClassMSG_AMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Msg_ID"], (string)attrArgs["InformalName"], (string)attrArgs["Descrip"], (string)attrArgs["GuardCondition"], (string)attrArgs["DurationObservation"], (string)attrArgs["DurationConstraint"], (bool)attrArgs["isFormal"], (string)attrArgs["Label"], (string)attrArgs["SequenceNumb"])
@@ -8768,7 +9218,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_BBase(CIModelRepository repository, string Msg_ID, string Brg_ID ) : base(repository, "MSG_B")
         {
-            ;
+            Attr_Msg_ID = Msg_ID;
+            Attr_Brg_ID = Brg_ID;
         }
 
         public CIMClassMSG_BBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Msg_ID"], (string)attrArgs["Brg_ID"])
@@ -8817,7 +9268,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_BABase(CIModelRepository repository, string Arg_ID, string BParm_ID ) : base(repository, "MSG_BA")
         {
-            ;
+            Attr_Arg_ID = Arg_ID;
+            Attr_BParm_ID = BParm_ID;
         }
 
         public CIMClassMSG_BABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Arg_ID"], (string)attrArgs["BParm_ID"])
@@ -8866,7 +9318,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_EBase(CIModelRepository repository, string Msg_ID, string SMevt_ID ) : base(repository, "MSG_E")
         {
-            ;
+            Attr_Msg_ID = Msg_ID;
+            Attr_SMevt_ID = SMevt_ID;
         }
 
         public CIMClassMSG_EBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Msg_ID"], (string)attrArgs["SMevt_ID"])
@@ -8916,7 +9369,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_EABase(CIModelRepository repository, string Arg_ID, string SM_ID, string SMedi_ID ) : base(repository, "MSG_EA")
         {
-            ;
+            Attr_Arg_ID = Arg_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMedi_ID = SMedi_ID;
         }
 
         public CIMClassMSG_EABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Arg_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMedi_ID"])
@@ -8965,7 +9420,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_EPABase(CIModelRepository repository, string Arg_ID, string PP_Id ) : base(repository, "MSG_EPA")
         {
-            ;
+            Attr_Arg_ID = Arg_ID;
+            Attr_PP_Id = PP_Id;
         }
 
         public CIMClassMSG_EPABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Arg_ID"], (string)attrArgs["PP_Id"])
@@ -9014,7 +9470,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_FBase(CIModelRepository repository, string Msg_ID, string Sync_ID ) : base(repository, "MSG_F")
         {
-            ;
+            Attr_Msg_ID = Msg_ID;
+            Attr_Sync_ID = Sync_ID;
         }
 
         public CIMClassMSG_FBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Msg_ID"], (string)attrArgs["Sync_ID"])
@@ -9063,7 +9520,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_FABase(CIModelRepository repository, string Arg_ID, string SParm_ID ) : base(repository, "MSG_FA")
         {
-            ;
+            Attr_Arg_ID = Arg_ID;
+            Attr_SParm_ID = SParm_ID;
         }
 
         public CIMClassMSG_FABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Arg_ID"], (string)attrArgs["SParm_ID"])
@@ -9111,7 +9569,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_IABase(CIModelRepository repository, string Arg_ID ) : base(repository, "MSG_IA")
         {
-            ;
+            Attr_Arg_ID = Arg_ID;
         }
 
         public CIMClassMSG_IABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Arg_ID"])
@@ -9147,7 +9605,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_IAMBase(CIModelRepository repository, string Msg_ID ) : base(repository, "MSG_IAM")
         {
-            ;
+            Attr_Msg_ID = Msg_ID;
         }
 
         public CIMClassMSG_IAMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Msg_ID"])
@@ -9184,7 +9642,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_IOPBase(CIModelRepository repository, string Msg_ID, string Id ) : base(repository, "MSG_IOP")
         {
-            ;
+            Attr_Msg_ID = Msg_ID;
+            Attr_Id = Id;
         }
 
         public CIMClassMSG_IOPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Msg_ID"], (string)attrArgs["Id"])
@@ -9232,7 +9691,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_ISMBase(CIModelRepository repository, string Msg_ID ) : base(repository, "MSG_ISM")
         {
-            ;
+            Attr_Msg_ID = Msg_ID;
         }
 
         public CIMClassMSG_ISMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Msg_ID"])
@@ -9271,7 +9730,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_MBase(CIModelRepository repository, string Msg_ID, string Receiver_Part_ID, string Sender_Part_ID, bool participatesInCommunication ) : base(repository, "MSG_M")
         {
-            ;
+            Attr_Msg_ID = Msg_ID;
+            Attr_Receiver_Part_ID = Receiver_Part_ID;
+            Attr_Sender_Part_ID = Sender_Part_ID;
+            Attr_participatesInCommunication = participatesInCommunication;
         }
 
         public CIMClassMSG_MBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Msg_ID"], (string)attrArgs["Receiver_Part_ID"], (string)attrArgs["Sender_Part_ID"], (bool)attrArgs["participatesInCommunication"])
@@ -9373,7 +9835,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_OBase(CIModelRepository repository, string Msg_ID, string Tfr_ID ) : base(repository, "MSG_O")
         {
-            ;
+            Attr_Msg_ID = Msg_ID;
+            Attr_Tfr_ID = Tfr_ID;
         }
 
         public CIMClassMSG_OBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Msg_ID"], (string)attrArgs["Tfr_ID"])
@@ -9422,7 +9885,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_OABase(CIModelRepository repository, string Arg_ID, string TParm_ID ) : base(repository, "MSG_OA")
         {
-            ;
+            Attr_Arg_ID = Arg_ID;
+            Attr_TParm_ID = TParm_ID;
         }
 
         public CIMClassMSG_OABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Arg_ID"], (string)attrArgs["TParm_ID"])
@@ -9476,7 +9940,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_RBase(CIModelRepository repository, string Msg_ID, string Name, string Descrip, string GuardCondition, string ResultTarget, string ReturnValue, string SequenceNumb ) : base(repository, "MSG_R")
         {
-            ;
+            Attr_Msg_ID = Msg_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_GuardCondition = GuardCondition;
+            Attr_ResultTarget = ResultTarget;
+            Attr_ReturnValue = ReturnValue;
+            Attr_SequenceNumb = SequenceNumb;
         }
 
         public CIMClassMSG_RBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Msg_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["GuardCondition"], (string)attrArgs["ResultTarget"], (string)attrArgs["ReturnValue"], (string)attrArgs["SequenceNumb"])
@@ -9513,7 +9983,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_SIGBase(CIModelRepository repository, string Msg_ID, string Id ) : base(repository, "MSG_SIG")
         {
-            ;
+            Attr_Msg_ID = Msg_ID;
+            Attr_Id = Id;
         }
 
         public CIMClassMSG_SIGBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Msg_ID"], (string)attrArgs["Id"])
@@ -9569,7 +10040,15 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassMSG_SMBase(CIModelRepository repository, string Msg_ID, string InformalName, string Descrip, string GuardCondition, string ResultTarget, string ReturnValue, bool isFormal, string Label, string SequenceNumb ) : base(repository, "MSG_SM")
         {
-            ;
+            Attr_Msg_ID = Msg_ID;
+            Attr_InformalName = InformalName;
+            Attr_Descrip = Descrip;
+            Attr_GuardCondition = GuardCondition;
+            Attr_ResultTarget = ResultTarget;
+            Attr_ReturnValue = ReturnValue;
+            Attr_isFormal = isFormal;
+            Attr_Label = Label;
+            Attr_SequenceNumb = SequenceNumb;
         }
 
         public CIMClassMSG_SMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Msg_ID"], (string)attrArgs["InformalName"], (string)attrArgs["Descrip"], (string)attrArgs["GuardCondition"], (string)attrArgs["ResultTarget"], (string)attrArgs["ReturnValue"], (bool)attrArgs["isFormal"], (string)attrArgs["Label"], (string)attrArgs["SequenceNumb"])
@@ -9632,7 +10111,17 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_ATTRBase(CIModelRepository repository, string Attr_ID, string Obj_ID, string PAttr_ID, string Name, string Descrip, string Prefix, string Root_Nam, int Pfx_Mode, string DT_ID, string Dimensions, string DefaultValue ) : base(repository, "O_ATTR")
         {
-            ;
+            Attr_Attr_ID = Attr_ID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_PAttr_ID = PAttr_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_Prefix = Prefix;
+            Attr_Root_Nam = Root_Nam;
+            Attr_Pfx_Mode = Pfx_Mode;
+            Attr_DT_ID = DT_ID;
+            Attr_Dimensions = Dimensions;
+            Attr_DefaultValue = DefaultValue;
         }
 
         public CIMClassO_ATTRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Attr_ID"], (string)attrArgs["Obj_ID"], (string)attrArgs["PAttr_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["Prefix"], (string)attrArgs["Root_Nam"], (int)attrArgs["Pfx_Mode"], (string)attrArgs["DT_ID"], (string)attrArgs["Dimensions"], (string)attrArgs["DefaultValue"])
@@ -9806,7 +10295,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_BATTRBase(CIModelRepository repository, string Attr_ID, string Obj_ID ) : base(repository, "O_BATTR")
         {
-            ;
+            Attr_Attr_ID = Attr_ID;
+            Attr_Obj_ID = Obj_ID;
         }
 
         public CIMClassO_BATTRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Attr_ID"], (string)attrArgs["Obj_ID"])
@@ -9875,7 +10365,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_DBATTRBase(CIModelRepository repository, string Attr_ID, string Obj_ID, string Action_Semantics, int Suc_Pars, int Dialect ) : base(repository, "O_DBATTR")
         {
-            ;
+            Attr_Attr_ID = Attr_ID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Action_Semantics = Action_Semantics;
+            Attr_Suc_Pars = Suc_Pars;
+            Attr_Dialect = Dialect;
         }
 
         public CIMClassO_DBATTRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Attr_ID"], (string)attrArgs["Obj_ID"], (string)attrArgs["Action_Semantics"], (int)attrArgs["Suc_Pars"], (int)attrArgs["Dialect"])
@@ -9937,7 +10431,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_DEFBase(CIModelRepository repository, string Tfr_ID, string Rel_ID, int required ) : base(repository, "O_DEF")
         {
-            ;
+            Attr_Tfr_ID = Tfr_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_required = required;
         }
 
         public CIMClassO_DEFBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Tfr_ID"], (string)attrArgs["Rel_ID"], (int)attrArgs["required"])
@@ -9987,7 +10483,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_IDBase(CIModelRepository repository, int Oid_ID, string Obj_ID ) : base(repository, "O_ID")
         {
-            ;
+            Attr_Oid_ID = Oid_ID;
+            Attr_Obj_ID = Obj_ID;
         }
 
         public CIMClassO_IDBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (int)attrArgs["Oid_ID"], (string)attrArgs["Obj_ID"])
@@ -10065,7 +10562,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_IOBJBase(CIModelRepository repository, string IObj_ID, string Obj_ID, int Modl_Typ, string SS_IDdeprecated, string Obj_Name, string Obj_KL ) : base(repository, "O_IOBJ")
         {
-            ;
+            Attr_IObj_ID = IObj_ID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Modl_Typ = Modl_Typ;
+            Attr_SS_IDdeprecated = SS_IDdeprecated;
+            Attr_Obj_Name = Obj_Name;
+            Attr_Obj_KL = Obj_KL;
         }
 
         public CIMClassO_IOBJBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["IObj_ID"], (string)attrArgs["Obj_ID"], (int)attrArgs["Modl_Typ"], (string)attrArgs["SS_IDdeprecated"], (string)attrArgs["Obj_Name"], (string)attrArgs["Obj_KL"])
@@ -10126,7 +10628,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_NBATTRBase(CIModelRepository repository, string Attr_ID, string Obj_ID ) : base(repository, "O_NBATTR")
         {
-            ;
+            Attr_Attr_ID = Attr_ID;
+            Attr_Obj_ID = Obj_ID;
         }
 
         public CIMClassO_NBATTRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Attr_ID"], (string)attrArgs["Obj_ID"])
@@ -10167,7 +10670,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_OBJBase(CIModelRepository repository, string Obj_ID, string Name, int Numb, string Key_Lett, string Descrip, string SS_IDdeprecated ) : base(repository, "O_OBJ")
         {
-            ;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Name = Name;
+            Attr_Numb = Numb;
+            Attr_Key_Lett = Key_Lett;
+            Attr_Descrip = Descrip;
+            Attr_SS_IDdeprecated = SS_IDdeprecated;
         }
 
         public CIMClassO_OBJBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Obj_ID"], (string)attrArgs["Name"], (int)attrArgs["Numb"], (string)attrArgs["Key_Lett"], (string)attrArgs["Descrip"], (string)attrArgs["SS_IDdeprecated"])
@@ -10433,7 +10941,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_OIDABase(CIModelRepository repository, string Attr_ID, string Obj_ID, int Oid_ID, string localAttributeName ) : base(repository, "O_OIDA")
         {
-            ;
+            Attr_Attr_ID = Attr_ID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Oid_ID = Oid_ID;
+            Attr_localAttributeName = localAttributeName;
         }
 
         public CIMClassO_OIDABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Attr_ID"], (string)attrArgs["Obj_ID"], (int)attrArgs["Oid_ID"], (string)attrArgs["localAttributeName"])
@@ -10498,7 +11009,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_RATTRBase(CIModelRepository repository, string Attr_ID, string Obj_ID, string BAttr_ID, string BObj_ID, int Ref_Mode, string BaseAttrName ) : base(repository, "O_RATTR")
         {
-            ;
+            Attr_Attr_ID = Attr_ID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_BAttr_ID = BAttr_ID;
+            Attr_BObj_ID = BObj_ID;
+            Attr_Ref_Mode = Ref_Mode;
+            Attr_BaseAttrName = BaseAttrName;
         }
 
         public CIMClassO_RATTRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Attr_ID"], (string)attrArgs["Obj_ID"], (string)attrArgs["BAttr_ID"], (string)attrArgs["BObj_ID"], (int)attrArgs["Ref_Mode"], (string)attrArgs["BaseAttrName"])
@@ -10572,7 +11088,21 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_REFBase(CIModelRepository repository, string Obj_ID, string RObj_ID, int ROid_ID, string RAttr_ID, string Rel_ID, string OIR_ID, string ROIR_ID, string Attr_ID, string ARef_ID, string PARef_ID, bool Is_Cstrd, string Descrip, string RObj_Name, string RAttr_Name, string Rel_Name ) : base(repository, "O_REF")
         {
-            ;
+            Attr_Obj_ID = Obj_ID;
+            Attr_RObj_ID = RObj_ID;
+            Attr_ROid_ID = ROid_ID;
+            Attr_RAttr_ID = RAttr_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_OIR_ID = OIR_ID;
+            Attr_ROIR_ID = ROIR_ID;
+            Attr_Attr_ID = Attr_ID;
+            Attr_ARef_ID = ARef_ID;
+            Attr_PARef_ID = PARef_ID;
+            Attr_Is_Cstrd = Is_Cstrd;
+            Attr_Descrip = Descrip;
+            Attr_RObj_Name = RObj_Name;
+            Attr_RAttr_Name = RAttr_Name;
+            Attr_Rel_Name = Rel_Name;
         }
 
         public CIMClassO_REFBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Obj_ID"], (string)attrArgs["RObj_ID"], (int)attrArgs["ROid_ID"], (string)attrArgs["RAttr_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["OIR_ID"], (string)attrArgs["ROIR_ID"], (string)attrArgs["Attr_ID"], (string)attrArgs["ARef_ID"], (string)attrArgs["PARef_ID"], (bool)attrArgs["Is_Cstrd"], (string)attrArgs["Descrip"], (string)attrArgs["RObj_Name"], (string)attrArgs["RAttr_Name"], (string)attrArgs["Rel_Name"])
@@ -10661,7 +11191,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_RTIDABase(CIModelRepository repository, string Attr_ID, string Obj_ID, int Oid_ID, string Rel_ID, string OIR_ID ) : base(repository, "O_RTIDA")
         {
-            ;
+            Attr_Attr_ID = Attr_ID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Oid_ID = Oid_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_OIR_ID = OIR_ID;
         }
 
         public CIMClassO_RTIDABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Attr_ID"], (string)attrArgs["Obj_ID"], (int)attrArgs["Oid_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["OIR_ID"])
@@ -10732,7 +11266,18 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_TFRBase(CIModelRepository repository, string Tfr_ID, string Obj_ID, string Name, string Descrip, string DT_ID, int Instance_Based, string Action_Semantics, int Suc_Pars, string Return_Dimensions, string Previous_Tfr_ID, int Dialect, int Numb ) : base(repository, "O_TFR")
         {
-            ;
+            Attr_Tfr_ID = Tfr_ID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_DT_ID = DT_ID;
+            Attr_Instance_Based = Instance_Based;
+            Attr_Action_Semantics = Action_Semantics;
+            Attr_Suc_Pars = Suc_Pars;
+            Attr_Return_Dimensions = Return_Dimensions;
+            Attr_Previous_Tfr_ID = Previous_Tfr_ID;
+            Attr_Dialect = Dialect;
+            Attr_Numb = Numb;
         }
 
         public CIMClassO_TFRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Tfr_ID"], (string)attrArgs["Obj_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["DT_ID"], (int)attrArgs["Instance_Based"], (string)attrArgs["Action_Semantics"], (int)attrArgs["Suc_Pars"], (string)attrArgs["Return_Dimensions"], (string)attrArgs["Previous_Tfr_ID"], (int)attrArgs["Dialect"], (int)attrArgs["Numb"])
@@ -10907,7 +11452,14 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_TPARMBase(CIModelRepository repository, string TParm_ID, string Tfr_ID, string Name, string DT_ID, int By_Ref, string Dimensions, string Previous_TParm_ID, string Descrip ) : base(repository, "O_TPARM")
         {
-            ;
+            Attr_TParm_ID = TParm_ID;
+            Attr_Tfr_ID = Tfr_ID;
+            Attr_Name = Name;
+            Attr_DT_ID = DT_ID;
+            Attr_By_Ref = By_Ref;
+            Attr_Dimensions = Dimensions;
+            Attr_Previous_TParm_ID = Previous_TParm_ID;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassO_TPARMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["TParm_ID"], (string)attrArgs["Tfr_ID"], (string)attrArgs["Name"], (string)attrArgs["DT_ID"], (int)attrArgs["By_Ref"], (string)attrArgs["Dimensions"], (string)attrArgs["Previous_TParm_ID"], (string)attrArgs["Descrip"])
@@ -11029,7 +11581,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassPA_DICBase(CIModelRepository repository, string Component_Id, string Delegation_Id ) : base(repository, "PA_DIC")
         {
-            ;
+            Attr_Component_Id = Component_Id;
+            Attr_Delegation_Id = Delegation_Id;
         }
 
         public CIMClassPA_DICBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Component_Id"], (string)attrArgs["Delegation_Id"])
@@ -11079,7 +11632,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassPA_SICBase(CIModelRepository repository, string Component_Id, string Satisfaction_Id ) : base(repository, "PA_SIC")
         {
-            ;
+            Attr_Component_Id = Component_Id;
+            Attr_Satisfaction_Id = Satisfaction_Id;
         }
 
         public CIMClassPA_SICBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Component_Id"], (string)attrArgs["Satisfaction_Id"])
@@ -11130,7 +11684,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassPE_CRSBase(CIModelRepository repository, string Id, string Name, int Type ) : base(repository, "PE_CRS")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Name = Name;
+            Attr_Type = Type;
         }
 
         public CIMClassPE_CRSBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Name"], (int)attrArgs["Type"])
@@ -11183,7 +11739,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassPE_CVSBase(CIModelRepository repository, string Visibility_ID, string Element_ID, string Id, string Name, int Type ) : base(repository, "PE_CVS")
         {
-            ;
+            Attr_Visibility_ID = Visibility_ID;
+            Attr_Element_ID = Element_ID;
+            Attr_Id = Id;
+            Attr_Name = Name;
+            Attr_Type = Type;
         }
 
         public CIMClassPE_CVSBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Visibility_ID"], (string)attrArgs["Element_ID"], (string)attrArgs["Id"], (string)attrArgs["Name"], (int)attrArgs["Type"])
@@ -11248,7 +11808,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassPE_PEBase(CIModelRepository repository, string Element_ID, int Visibility, string Package_ID, string Component_ID, int type ) : base(repository, "PE_PE")
         {
-            ;
+            Attr_Element_ID = Element_ID;
+            Attr_Visibility = Visibility;
+            Attr_Package_ID = Package_ID;
+            Attr_Component_ID = Component_ID;
+            Attr_type = type;
         }
 
         public CIMClassPE_PEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Element_ID"], (int)attrArgs["Visibility"], (string)attrArgs["Package_ID"], (string)attrArgs["Component_ID"], (int)attrArgs["type"])
@@ -11362,7 +11926,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassPE_SRSBase(CIModelRepository repository, string Package_ID, string Name, int Type ) : base(repository, "PE_SRS")
         {
-            ;
+            Attr_Package_ID = Package_ID;
+            Attr_Name = Name;
+            Attr_Type = Type;
         }
 
         public CIMClassPE_SRSBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Package_ID"], (string)attrArgs["Name"], (int)attrArgs["Type"])
@@ -11415,7 +11981,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassPE_VISBase(CIModelRepository repository, string Visibility_ID, string Element_ID, string Package_ID, string Name, int Type ) : base(repository, "PE_VIS")
         {
-            ;
+            Attr_Visibility_ID = Visibility_ID;
+            Attr_Element_ID = Element_ID;
+            Attr_Package_ID = Package_ID;
+            Attr_Name = Name;
+            Attr_Type = Type;
         }
 
         public CIMClassPE_VISBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Visibility_ID"], (string)attrArgs["Element_ID"], (string)attrArgs["Package_ID"], (string)attrArgs["Name"], (int)attrArgs["Type"])
@@ -11481,7 +12051,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_AONEBase(CIModelRepository repository, string Obj_ID, string Rel_ID, string OIR_ID, int Mult, int Cond, string Txt_Phrs ) : base(repository, "R_AONE")
         {
-            ;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_OIR_ID = OIR_ID;
+            Attr_Mult = Mult;
+            Attr_Cond = Cond;
+            Attr_Txt_Phrs = Txt_Phrs;
         }
 
         public CIMClassR_AONEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Obj_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["OIR_ID"], (int)attrArgs["Mult"], (int)attrArgs["Cond"], (string)attrArgs["Txt_Phrs"])
@@ -11534,7 +12109,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_AOTHBase(CIModelRepository repository, string Obj_ID, string Rel_ID, string OIR_ID, int Mult, int Cond, string Txt_Phrs ) : base(repository, "R_AOTH")
         {
-            ;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_OIR_ID = OIR_ID;
+            Attr_Mult = Mult;
+            Attr_Cond = Cond;
+            Attr_Txt_Phrs = Txt_Phrs;
         }
 
         public CIMClassR_AOTHBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Obj_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["OIR_ID"], (int)attrArgs["Mult"], (int)attrArgs["Cond"], (string)attrArgs["Txt_Phrs"])
@@ -11582,7 +12162,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_ASSOCBase(CIModelRepository repository, string Rel_ID ) : base(repository, "R_ASSOC")
         {
-            ;
+            Attr_Rel_ID = Rel_ID;
         }
 
         public CIMClassR_ASSOCBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Rel_ID"])
@@ -11657,7 +12237,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_ASSRBase(CIModelRepository repository, string Obj_ID, string Rel_ID, string OIR_ID, int Mult ) : base(repository, "R_ASSR")
         {
-            ;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_OIR_ID = OIR_ID;
+            Attr_Mult = Mult;
         }
 
         public CIMClassR_ASSRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Obj_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["OIR_ID"], (int)attrArgs["Mult"])
@@ -11706,7 +12289,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_COMPBase(CIModelRepository repository, string Rel_ID, string Rel_Chn ) : base(repository, "R_COMP")
         {
-            ;
+            Attr_Rel_ID = Rel_ID;
+            Attr_Rel_Chn = Rel_Chn;
         }
 
         public CIMClassR_COMPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Rel_ID"], (string)attrArgs["Rel_Chn"])
@@ -11771,7 +12355,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_CONEBase(CIModelRepository repository, string Obj_ID, string Rel_ID, string OIR_ID, int Mult, int Cond, string Txt_Phrs ) : base(repository, "R_CONE")
         {
-            ;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_OIR_ID = OIR_ID;
+            Attr_Mult = Mult;
+            Attr_Cond = Cond;
+            Attr_Txt_Phrs = Txt_Phrs;
         }
 
         public CIMClassR_CONEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Obj_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["OIR_ID"], (int)attrArgs["Mult"], (int)attrArgs["Cond"], (string)attrArgs["Txt_Phrs"])
@@ -11824,7 +12413,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_COTHBase(CIModelRepository repository, string Obj_ID, string Rel_ID, string OIR_ID, int Mult, int Cond, string Txt_Phrs ) : base(repository, "R_COTH")
         {
-            ;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_OIR_ID = OIR_ID;
+            Attr_Mult = Mult;
+            Attr_Cond = Cond;
+            Attr_Txt_Phrs = Txt_Phrs;
         }
 
         public CIMClassR_COTHBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Obj_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["OIR_ID"], (int)attrArgs["Mult"], (int)attrArgs["Cond"], (string)attrArgs["Txt_Phrs"])
@@ -11877,7 +12471,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_FORMBase(CIModelRepository repository, string Obj_ID, string Rel_ID, string OIR_ID, int Mult, int Cond, string Txt_Phrs ) : base(repository, "R_FORM")
         {
-            ;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_OIR_ID = OIR_ID;
+            Attr_Mult = Mult;
+            Attr_Cond = Cond;
+            Attr_Txt_Phrs = Txt_Phrs;
         }
 
         public CIMClassR_FORMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Obj_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["OIR_ID"], (int)attrArgs["Mult"], (int)attrArgs["Cond"], (string)attrArgs["Txt_Phrs"])
@@ -11928,7 +12527,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_OIRBase(CIModelRepository repository, string Obj_ID, string Rel_ID, string OIR_ID, string IObj_ID ) : base(repository, "R_OIR")
         {
-            ;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_OIR_ID = OIR_ID;
+            Attr_IObj_ID = IObj_ID;
         }
 
         public CIMClassR_OIRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Obj_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["OIR_ID"], (string)attrArgs["IObj_ID"])
@@ -12023,7 +12625,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_PARTBase(CIModelRepository repository, string Obj_ID, string Rel_ID, string OIR_ID, int Mult, int Cond, string Txt_Phrs ) : base(repository, "R_PART")
         {
-            ;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_OIR_ID = OIR_ID;
+            Attr_Mult = Mult;
+            Attr_Cond = Cond;
+            Attr_Txt_Phrs = Txt_Phrs;
         }
 
         public CIMClassR_PARTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Obj_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["OIR_ID"], (int)attrArgs["Mult"], (int)attrArgs["Cond"], (string)attrArgs["Txt_Phrs"])
@@ -12074,7 +12681,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_RELBase(CIModelRepository repository, string Rel_ID, int Numb, string Descrip, string SS_IDdeprecated ) : base(repository, "R_REL")
         {
-            ;
+            Attr_Rel_ID = Rel_ID;
+            Attr_Numb = Numb;
+            Attr_Descrip = Descrip;
+            Attr_SS_IDdeprecated = SS_IDdeprecated;
         }
 
         public CIMClassR_RELBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Rel_ID"], (int)attrArgs["Numb"], (string)attrArgs["Descrip"], (string)attrArgs["SS_IDdeprecated"])
@@ -12261,7 +12871,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_RGOBase(CIModelRepository repository, string Obj_ID, string Rel_ID, string OIR_ID ) : base(repository, "R_RGO")
         {
-            ;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_OIR_ID = OIR_ID;
         }
 
         public CIMClassR_RGOBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Obj_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["OIR_ID"])
@@ -12329,7 +12941,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_RTOBase(CIModelRepository repository, string Obj_ID, string Rel_ID, string OIR_ID, int Oid_ID ) : base(repository, "R_RTO")
         {
-            ;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_OIR_ID = OIR_ID;
+            Attr_Oid_ID = Oid_ID;
         }
 
         public CIMClassR_RTOBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Obj_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["OIR_ID"], (int)attrArgs["Oid_ID"])
@@ -12406,7 +13021,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_SIMPBase(CIModelRepository repository, string Rel_ID ) : base(repository, "R_SIMP")
         {
-            ;
+            Attr_Rel_ID = Rel_ID;
         }
 
         public CIMClassR_SIMPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Rel_ID"])
@@ -12468,7 +13083,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_SUBBase(CIModelRepository repository, string Obj_ID, string Rel_ID, string OIR_ID ) : base(repository, "R_SUB")
         {
-            ;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_OIR_ID = OIR_ID;
         }
 
         public CIMClassR_SUBBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Obj_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["OIR_ID"])
@@ -12516,7 +13133,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_SUBSUPBase(CIModelRepository repository, string Rel_ID ) : base(repository, "R_SUBSUP")
         {
-            ;
+            Attr_Rel_ID = Rel_ID;
         }
 
         public CIMClassR_SUBSUPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Rel_ID"])
@@ -12578,7 +13195,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_SUPERBase(CIModelRepository repository, string Obj_ID, string Rel_ID, string OIR_ID ) : base(repository, "R_SUPER")
         {
-            ;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Rel_ID = Rel_ID;
+            Attr_OIR_ID = OIR_ID;
         }
 
         public CIMClassR_SUPERBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Obj_ID"], (string)attrArgs["Rel_ID"], (string)attrArgs["OIR_ID"])
@@ -12631,7 +13250,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_ACTBase(CIModelRepository repository, string Act_ID, string SM_ID, int Suc_Pars, string Action_Semantics, string Descrip, int Dialect ) : base(repository, "SM_ACT")
         {
-            ;
+            Attr_Act_ID = Act_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_Suc_Pars = Suc_Pars;
+            Attr_Action_Semantics = Action_Semantics;
+            Attr_Descrip = Descrip;
+            Attr_Dialect = Dialect;
         }
 
         public CIMClassSM_ACTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Act_ID"], (string)attrArgs["SM_ID"], (int)attrArgs["Suc_Pars"], (string)attrArgs["Action_Semantics"], (string)attrArgs["Descrip"], (int)attrArgs["Dialect"])
@@ -12717,7 +13341,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_AHBase(CIModelRepository repository, string Act_ID, string SM_ID ) : base(repository, "SM_AH")
         {
-            ;
+            Attr_Act_ID = Act_ID;
+            Attr_SM_ID = SM_ID;
         }
 
         public CIMClassSM_AHBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Act_ID"], (string)attrArgs["SM_ID"])
@@ -12772,7 +13397,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_ASMBase(CIModelRepository repository, string SM_ID, string Obj_ID ) : base(repository, "SM_ASM")
         {
-            ;
+            Attr_SM_ID = SM_ID;
+            Attr_Obj_ID = Obj_ID;
         }
 
         public CIMClassSM_ASMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["SM_ID"], (string)attrArgs["Obj_ID"])
@@ -12824,7 +13450,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_CHBase(CIModelRepository repository, string SMstt_ID, string SMevt_ID, string SM_ID, string SMspd_IDdeprecated, string Descrip ) : base(repository, "SM_CH")
         {
-            ;
+            Attr_SMstt_ID = SMstt_ID;
+            Attr_SMevt_ID = SMevt_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMspd_IDdeprecated = SMspd_IDdeprecated;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassSM_CHBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["SMstt_ID"], (string)attrArgs["SMevt_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMspd_IDdeprecated"], (string)attrArgs["Descrip"])
@@ -12863,7 +13493,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_CRTXNBase(CIModelRepository repository, string Trans_ID, string SM_ID, string SMevt_ID, string SMspd_IDdeprecated ) : base(repository, "SM_CRTXN")
         {
-            ;
+            Attr_Trans_ID = Trans_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMevt_ID = SMevt_ID;
+            Attr_SMspd_IDdeprecated = SMspd_IDdeprecated;
         }
 
         public CIMClassSM_CRTXNBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Trans_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMevt_ID"], (string)attrArgs["SMspd_IDdeprecated"])
@@ -12915,7 +13548,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_EIGNBase(CIModelRepository repository, string SMstt_ID, string SMevt_ID, string SM_ID, string SMspd_IDdeprecated, string Descrip ) : base(repository, "SM_EIGN")
         {
-            ;
+            Attr_SMstt_ID = SMstt_ID;
+            Attr_SMevt_ID = SMevt_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMspd_IDdeprecated = SMspd_IDdeprecated;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassSM_EIGNBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["SMstt_ID"], (string)attrArgs["SMevt_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMspd_IDdeprecated"], (string)attrArgs["Descrip"])
@@ -12959,7 +13596,15 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_EVTBase(CIModelRepository repository, string SMevt_ID, string SM_ID, string SMspd_IDdeprecated, int Numb, string Mning, int Is_Lbl_U, string Unq_Lbl, string Drv_Lbl, string Descrip ) : base(repository, "SM_EVT")
         {
-            ;
+            Attr_SMevt_ID = SMevt_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMspd_IDdeprecated = SMspd_IDdeprecated;
+            Attr_Numb = Numb;
+            Attr_Mning = Mning;
+            Attr_Is_Lbl_U = Is_Lbl_U;
+            Attr_Unq_Lbl = Unq_Lbl;
+            Attr_Drv_Lbl = Drv_Lbl;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassSM_EVTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["SMevt_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMspd_IDdeprecated"], (int)attrArgs["Numb"], (string)attrArgs["Mning"], (int)attrArgs["Is_Lbl_U"], (string)attrArgs["Unq_Lbl"], (string)attrArgs["Drv_Lbl"], (string)attrArgs["Descrip"])
@@ -13092,7 +13737,14 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_EVTDIBase(CIModelRepository repository, string SMedi_ID, string SM_ID, string Name, string Descrip, string DT_ID, string Dimensions, string SMevt_ID, string Previous_SMedi_ID ) : base(repository, "SM_EVTDI")
         {
-            ;
+            Attr_SMedi_ID = SMedi_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_DT_ID = DT_ID;
+            Attr_Dimensions = Dimensions;
+            Attr_SMevt_ID = SMevt_ID;
+            Attr_Previous_SMedi_ID = Previous_SMedi_ID;
         }
 
         public CIMClassSM_EVTDIBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["SMedi_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["DT_ID"], (string)attrArgs["Dimensions"], (string)attrArgs["SMevt_ID"], (string)attrArgs["Previous_SMedi_ID"])
@@ -13238,7 +13890,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_ISMBase(CIModelRepository repository, string SM_ID, string Obj_ID ) : base(repository, "SM_ISM")
         {
-            ;
+            Attr_SM_ID = SM_ID;
+            Attr_Obj_ID = Obj_ID;
         }
 
         public CIMClassSM_ISMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["SM_ID"], (string)attrArgs["Obj_ID"])
@@ -13288,7 +13941,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_LEVTBase(CIModelRepository repository, string SMevt_ID, string SM_ID, string SMspd_IDdeprecated ) : base(repository, "SM_LEVT")
         {
-            ;
+            Attr_SMevt_ID = SMevt_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMspd_IDdeprecated = SMspd_IDdeprecated;
         }
 
         public CIMClassSM_LEVTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["SMevt_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMspd_IDdeprecated"])
@@ -13338,7 +13993,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_MEAHBase(CIModelRepository repository, string Act_ID, string SM_ID, string Trans_ID ) : base(repository, "SM_MEAH")
         {
-            ;
+            Attr_Act_ID = Act_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_Trans_ID = Trans_ID;
         }
 
         public CIMClassSM_MEAHBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Act_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["Trans_ID"])
@@ -13398,7 +14055,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_MEALYBase(CIModelRepository repository, string SM_ID ) : base(repository, "SM_MEALY")
         {
-            ;
+            Attr_SM_ID = SM_ID;
         }
 
         public CIMClassSM_MEALYBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["SM_ID"])
@@ -13448,7 +14105,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_MOAHBase(CIModelRepository repository, string Act_ID, string SM_ID, string SMstt_ID ) : base(repository, "SM_MOAH")
         {
-            ;
+            Attr_Act_ID = Act_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMstt_ID = SMstt_ID;
         }
 
         public CIMClassSM_MOAHBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Act_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMstt_ID"])
@@ -13508,7 +14167,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_MOOREBase(CIModelRepository repository, string SM_ID ) : base(repository, "SM_MOORE")
         {
-            ;
+            Attr_SM_ID = SM_ID;
         }
 
         public CIMClassSM_MOOREBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["SM_ID"])
@@ -13559,7 +14218,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_NETXNBase(CIModelRepository repository, string Trans_ID, string SM_ID, string SMstt_ID, string SMspd_IDdeprecated ) : base(repository, "SM_NETXN")
         {
-            ;
+            Attr_Trans_ID = Trans_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMstt_ID = SMstt_ID;
+            Attr_SMspd_IDdeprecated = SMspd_IDdeprecated;
         }
 
         public CIMClassSM_NETXNBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Trans_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMstt_ID"], (string)attrArgs["SMspd_IDdeprecated"])
@@ -13613,7 +14275,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_NLEVTBase(CIModelRepository repository, string SMevt_ID, string SM_ID, string SMspd_IDdeprecated, string polySMevt_ID, string polySM_ID, string polySMspd_IDdeprecated, string Local_Meaning ) : base(repository, "SM_NLEVT")
         {
-            ;
+            Attr_SMevt_ID = SMevt_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMspd_IDdeprecated = SMspd_IDdeprecated;
+            Attr_polySMevt_ID = polySMevt_ID;
+            Attr_polySM_ID = polySM_ID;
+            Attr_polySMspd_IDdeprecated = polySMspd_IDdeprecated;
+            Attr_Local_Meaning = Local_Meaning;
         }
 
         public CIMClassSM_NLEVTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["SMevt_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMspd_IDdeprecated"], (string)attrArgs["polySMevt_ID"], (string)attrArgs["polySM_ID"], (string)attrArgs["polySMspd_IDdeprecated"], (string)attrArgs["Local_Meaning"])
@@ -13665,7 +14333,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_NSTXNBase(CIModelRepository repository, string Trans_ID, string SM_ID, string SMstt_ID, string SMevt_ID, string SMspd_IDdeprecated ) : base(repository, "SM_NSTXN")
         {
-            ;
+            Attr_Trans_ID = Trans_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMstt_ID = SMstt_ID;
+            Attr_SMevt_ID = SMevt_ID;
+            Attr_SMspd_IDdeprecated = SMspd_IDdeprecated;
         }
 
         public CIMClassSM_NSTXNBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Trans_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMstt_ID"], (string)attrArgs["SMevt_ID"], (string)attrArgs["SMspd_IDdeprecated"])
@@ -13717,7 +14389,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_PEVTBase(CIModelRepository repository, string SMevt_ID, string SM_ID, string SMspd_IDdeprecated, string localClassName, string localClassKL, string localEventMning ) : base(repository, "SM_PEVT")
         {
-            ;
+            Attr_SMevt_ID = SMevt_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMspd_IDdeprecated = SMspd_IDdeprecated;
+            Attr_localClassName = localClassName;
+            Attr_localClassKL = localClassKL;
+            Attr_localEventMning = localEventMning;
         }
 
         public CIMClassSM_PEVTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["SMevt_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMspd_IDdeprecated"], (string)attrArgs["localClassName"], (string)attrArgs["localClassKL"], (string)attrArgs["localEventMning"])
@@ -13768,7 +14445,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_SEMEBase(CIModelRepository repository, string SMstt_ID, string SMevt_ID, string SM_ID, string SMspd_IDdeprecated ) : base(repository, "SM_SEME")
         {
-            ;
+            Attr_SMstt_ID = SMstt_ID;
+            Attr_SMevt_ID = SMevt_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMspd_IDdeprecated = SMspd_IDdeprecated;
         }
 
         public CIMClassSM_SEMEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["SMstt_ID"], (string)attrArgs["SMevt_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMspd_IDdeprecated"])
@@ -13836,7 +14516,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_SEVTBase(CIModelRepository repository, string SMevt_ID, string SM_ID, string SMspd_IDdeprecated ) : base(repository, "SM_SEVT")
         {
-            ;
+            Attr_SMevt_ID = SMevt_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMspd_IDdeprecated = SMspd_IDdeprecated;
         }
 
         public CIMClassSM_SEVTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["SMevt_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMspd_IDdeprecated"])
@@ -13905,7 +14587,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_SGEVTBase(CIModelRepository repository, string SMevt_ID, string SM_ID, string SMspd_IDdeprecated, string Provided_Signal_Id, string Required_Signal_Id, string signal_name ) : base(repository, "SM_SGEVT")
         {
-            ;
+            Attr_SMevt_ID = SMevt_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMspd_IDdeprecated = SMspd_IDdeprecated;
+            Attr_Provided_Signal_Id = Provided_Signal_Id;
+            Attr_Required_Signal_Id = Required_Signal_Id;
+            Attr_signal_name = signal_name;
         }
 
         public CIMClassSM_SGEVTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["SMevt_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMspd_IDdeprecated"], (string)attrArgs["Provided_Signal_Id"], (string)attrArgs["Required_Signal_Id"], (string)attrArgs["signal_name"])
@@ -13967,7 +14654,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_SMBase(CIModelRepository repository, string SM_ID, string Descrip, int Config_ID ) : base(repository, "SM_SM")
         {
-            ;
+            Attr_SM_ID = SM_ID;
+            Attr_Descrip = Descrip;
+            Attr_Config_ID = Config_ID;
         }
 
         public CIMClassSM_SMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["SM_ID"], (string)attrArgs["Descrip"], (int)attrArgs["Config_ID"])
@@ -14103,7 +14792,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_STATEBase(CIModelRepository repository, string SMstt_ID, string SM_ID, string SMspd_IDdeprecated, string Name, int Numb, int Final ) : base(repository, "SM_STATE")
         {
-            ;
+            Attr_SMstt_ID = SMstt_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMspd_IDdeprecated = SMspd_IDdeprecated;
+            Attr_Name = Name;
+            Attr_Numb = Numb;
+            Attr_Final = Final;
         }
 
         public CIMClassSM_STATEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["SMstt_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMspd_IDdeprecated"], (string)attrArgs["Name"], (int)attrArgs["Numb"], (int)attrArgs["Final"])
@@ -14213,7 +14907,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_TAHBase(CIModelRepository repository, string Act_ID, string SM_ID, string Trans_ID ) : base(repository, "SM_TAH")
         {
-            ;
+            Attr_Act_ID = Act_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_Trans_ID = Trans_ID;
         }
 
         public CIMClassSM_TAHBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Act_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["Trans_ID"])
@@ -14264,7 +14960,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSM_TXNBase(CIModelRepository repository, string Trans_ID, string SM_ID, string SMstt_ID, string SMspd_IDdeprecated ) : base(repository, "SM_TXN")
         {
-            ;
+            Attr_Trans_ID = Trans_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMstt_ID = SMstt_ID;
+            Attr_SMspd_IDdeprecated = SMspd_IDdeprecated;
         }
 
         public CIMClassSM_TXNBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Trans_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMstt_ID"], (string)attrArgs["SMspd_IDdeprecated"])
@@ -14367,7 +15066,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSPR_PEPBase(CIModelRepository repository, string Id, string ExecutableProperty_Id, string Provision_Id ) : base(repository, "SPR_PEP")
         {
-            ;
+            Attr_Id = Id;
+            Attr_ExecutableProperty_Id = ExecutableProperty_Id;
+            Attr_Provision_Id = Provision_Id;
         }
 
         public CIMClassSPR_PEPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["ExecutableProperty_Id"], (string)attrArgs["Provision_Id"])
@@ -14450,7 +15151,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSPR_POBase(CIModelRepository repository, string Id, string Name, string Descrip, string Action_Semantics, int Suc_Pars, int Dialect ) : base(repository, "SPR_PO")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_Action_Semantics = Action_Semantics;
+            Attr_Suc_Pars = Suc_Pars;
+            Attr_Dialect = Dialect;
         }
 
         public CIMClassSPR_POBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["Action_Semantics"], (int)attrArgs["Suc_Pars"], (int)attrArgs["Dialect"])
@@ -14527,7 +15233,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSPR_PSBase(CIModelRepository repository, string Id, string Name, string Descrip, string Action_Semantics, int Suc_Pars, int Dialect ) : base(repository, "SPR_PS")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_Action_Semantics = Action_Semantics;
+            Attr_Suc_Pars = Suc_Pars;
+            Attr_Dialect = Dialect;
         }
 
         public CIMClassSPR_PSBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["Action_Semantics"], (int)attrArgs["Suc_Pars"], (int)attrArgs["Dialect"])
@@ -14613,7 +15324,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSPR_REPBase(CIModelRepository repository, string Id, string ExecutableProperty_Id, string Requirement_Id ) : base(repository, "SPR_REP")
         {
-            ;
+            Attr_Id = Id;
+            Attr_ExecutableProperty_Id = ExecutableProperty_Id;
+            Attr_Requirement_Id = Requirement_Id;
         }
 
         public CIMClassSPR_REPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["ExecutableProperty_Id"], (string)attrArgs["Requirement_Id"])
@@ -14697,7 +15410,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSPR_ROBase(CIModelRepository repository, string Id, string Name, string Descrip, string Action_Semantics, int Suc_Pars, int Dialect, int Numb ) : base(repository, "SPR_RO")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_Action_Semantics = Action_Semantics;
+            Attr_Suc_Pars = Suc_Pars;
+            Attr_Dialect = Dialect;
+            Attr_Numb = Numb;
         }
 
         public CIMClassSPR_ROBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["Action_Semantics"], (int)attrArgs["Suc_Pars"], (int)attrArgs["Dialect"], (int)attrArgs["Numb"])
@@ -14774,7 +15493,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSPR_RSBase(CIModelRepository repository, string Id, string Name, string Descrip, string Action_Semantics, int Suc_Pars, int Dialect ) : base(repository, "SPR_RS")
         {
-            ;
+            Attr_Id = Id;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_Action_Semantics = Action_Semantics;
+            Attr_Suc_Pars = Suc_Pars;
+            Attr_Dialect = Dialect;
         }
 
         public CIMClassSPR_RSBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["Action_Semantics"], (int)attrArgs["Suc_Pars"], (int)attrArgs["Dialect"])
@@ -14861,7 +15585,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSQ_APBase(CIModelRepository repository, string Part_ID, string Name, string Descrip, string LS_Part_ID ) : base(repository, "SQ_AP")
         {
-            ;
+            Attr_Part_ID = Part_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_LS_Part_ID = LS_Part_ID;
         }
 
         public CIMClassSQ_APBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Part_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["LS_Part_ID"])
@@ -14918,7 +15645,16 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSQ_AVBase(CIModelRepository repository, string Av_ID, string Obj_ID, string Attr_ID, string Label, string Value, string InformalName, string Informal_Part_ID, string Formal_Part_ID, string Descrip, bool isFormal ) : base(repository, "SQ_AV")
         {
-            ;
+            Attr_Av_ID = Av_ID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Attr_ID = Attr_ID;
+            Attr_Label = Label;
+            Attr_Value = Value;
+            Attr_InformalName = InformalName;
+            Attr_Informal_Part_ID = Informal_Part_ID;
+            Attr_Formal_Part_ID = Formal_Part_ID;
+            Attr_Descrip = Descrip;
+            Attr_isFormal = isFormal;
         }
 
         public CIMClassSQ_AVBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Av_ID"], (string)attrArgs["Obj_ID"], (string)attrArgs["Attr_ID"], (string)attrArgs["Label"], (string)attrArgs["Value"], (string)attrArgs["InformalName"], (string)attrArgs["Informal_Part_ID"], (string)attrArgs["Formal_Part_ID"], (string)attrArgs["Descrip"], (bool)attrArgs["isFormal"])
@@ -15002,7 +15738,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSQ_CIPBase(CIModelRepository repository, string Part_ID, string Obj_ID, string Name, string InformalClassName, string Label, string Descrip, bool isFormal ) : base(repository, "SQ_CIP")
         {
-            ;
+            Attr_Part_ID = Part_ID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Name = Name;
+            Attr_InformalClassName = InformalClassName;
+            Attr_Label = Label;
+            Attr_Descrip = Descrip;
+            Attr_isFormal = isFormal;
         }
 
         public CIMClassSQ_CIPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Part_ID"], (string)attrArgs["Obj_ID"], (string)attrArgs["Name"], (string)attrArgs["InformalClassName"], (string)attrArgs["Label"], (string)attrArgs["Descrip"], (bool)attrArgs["isFormal"])
@@ -15079,7 +15821,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSQ_COPBase(CIModelRepository repository, string Part_ID, string Component_Id, string Label, string InformalComponentName, string Descrip, bool isFormal ) : base(repository, "SQ_COP")
         {
-            ;
+            Attr_Part_ID = Part_ID;
+            Attr_Component_Id = Component_Id;
+            Attr_Label = Label;
+            Attr_InformalComponentName = InformalComponentName;
+            Attr_Descrip = Descrip;
+            Attr_isFormal = isFormal;
         }
 
         public CIMClassSQ_COPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Part_ID"], (string)attrArgs["Component_Id"], (string)attrArgs["Label"], (string)attrArgs["InformalComponentName"], (string)attrArgs["Descrip"], (bool)attrArgs["isFormal"])
@@ -15132,7 +15879,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSQ_CPBase(CIModelRepository repository, string Part_ID, string Obj_ID, string Label, string InformalName, string Descrip, bool isFormal ) : base(repository, "SQ_CP")
         {
-            ;
+            Attr_Part_ID = Part_ID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Label = Label;
+            Attr_InformalName = InformalName;
+            Attr_Descrip = Descrip;
+            Attr_isFormal = isFormal;
         }
 
         public CIMClassSQ_CPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Part_ID"], (string)attrArgs["Obj_ID"], (string)attrArgs["Label"], (string)attrArgs["InformalName"], (string)attrArgs["Descrip"], (bool)attrArgs["isFormal"])
@@ -15196,7 +15948,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSQ_CPABase(CIModelRepository repository, string Ia_ID, string Name, string Type, string Part_ID, string Descrip ) : base(repository, "SQ_CPA")
         {
-            ;
+            Attr_Ia_ID = Ia_ID;
+            Attr_Name = Name;
+            Attr_Type = Type;
+            Attr_Part_ID = Part_ID;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassSQ_CPABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Ia_ID"], (string)attrArgs["Name"], (string)attrArgs["Type"], (string)attrArgs["Part_ID"], (string)attrArgs["Descrip"])
@@ -15255,7 +16011,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSQ_EEPBase(CIModelRepository repository, string Part_ID, string EE_ID, string Label, string InformalName, string Descrip, bool isFormal ) : base(repository, "SQ_EEP")
         {
-            ;
+            Attr_Part_ID = Part_ID;
+            Attr_EE_ID = EE_ID;
+            Attr_Label = Label;
+            Attr_InformalName = InformalName;
+            Attr_Descrip = Descrip;
+            Attr_isFormal = isFormal;
         }
 
         public CIMClassSQ_EEPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Part_ID"], (string)attrArgs["EE_ID"], (string)attrArgs["Label"], (string)attrArgs["InformalName"], (string)attrArgs["Descrip"], (bool)attrArgs["isFormal"])
@@ -15303,7 +16064,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSQ_FABase(CIModelRepository repository, string Ia_ID ) : base(repository, "SQ_FA")
         {
-            ;
+            Attr_Ia_ID = Ia_ID;
         }
 
         public CIMClassSQ_FABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Ia_ID"])
@@ -15339,7 +16100,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSQ_FAVBase(CIModelRepository repository, string Av_ID ) : base(repository, "SQ_FAV")
         {
-            ;
+            Attr_Av_ID = Av_ID;
         }
 
         public CIMClassSQ_FAVBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Av_ID"])
@@ -15375,7 +16136,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSQ_IABase(CIModelRepository repository, string Ia_ID ) : base(repository, "SQ_IA")
         {
-            ;
+            Attr_Ia_ID = Ia_ID;
         }
 
         public CIMClassSQ_IABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Ia_ID"])
@@ -15411,7 +16172,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSQ_IAVBase(CIModelRepository repository, string Av_ID ) : base(repository, "SQ_IAV")
         {
-            ;
+            Attr_Av_ID = Av_ID;
         }
 
         public CIMClassSQ_IAVBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Av_ID"])
@@ -15450,7 +16211,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSQ_LSBase(CIModelRepository repository, string Part_ID, string Source_Part_ID, string Descrip, bool Destroyed ) : base(repository, "SQ_LS")
         {
-            ;
+            Attr_Part_ID = Part_ID;
+            Attr_Source_Part_ID = Source_Part_ID;
+            Attr_Descrip = Descrip;
+            Attr_Destroyed = Destroyed;
         }
 
         public CIMClassSQ_LSBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Part_ID"], (string)attrArgs["Source_Part_ID"], (string)attrArgs["Descrip"], (bool)attrArgs["Destroyed"])
@@ -15523,7 +16287,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSQ_PBase(CIModelRepository repository, string Part_ID, string Sequence_Package_IDdeprecated ) : base(repository, "SQ_P")
         {
-            ;
+            Attr_Part_ID = Part_ID;
+            Attr_Sequence_Package_IDdeprecated = Sequence_Package_IDdeprecated;
         }
 
         public CIMClassSQ_PBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Part_ID"], (string)attrArgs["Sequence_Package_IDdeprecated"])
@@ -15665,7 +16430,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSQ_PPBase(CIModelRepository repository, string Part_ID, string Package_ID, string Label, string InformalName, string Descrip, bool isFormal ) : base(repository, "SQ_PP")
         {
-            ;
+            Attr_Part_ID = Part_ID;
+            Attr_Package_ID = Package_ID;
+            Attr_Label = Label;
+            Attr_InformalName = InformalName;
+            Attr_Descrip = Descrip;
+            Attr_isFormal = isFormal;
         }
 
         public CIMClassSQ_PPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Part_ID"], (string)attrArgs["Package_ID"], (string)attrArgs["Label"], (string)attrArgs["InformalName"], (string)attrArgs["Descrip"], (bool)attrArgs["isFormal"])
@@ -15716,7 +16486,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSQ_TMBase(CIModelRepository repository, string Mark_ID, string Name, string Part_ID, string Descrip ) : base(repository, "SQ_TM")
         {
-            ;
+            Attr_Mark_ID = Mark_ID;
+            Attr_Name = Name;
+            Attr_Part_ID = Part_ID;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassSQ_TMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Mark_ID"], (string)attrArgs["Name"], (string)attrArgs["Part_ID"], (string)attrArgs["Descrip"])
@@ -15781,7 +16554,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSQ_TSBase(CIModelRepository repository, string Span_ID, string Mark_ID, string Prev_Mark_ID, string Name, string Descrip ) : base(repository, "SQ_TS")
         {
-            ;
+            Attr_Span_ID = Span_ID;
+            Attr_Mark_ID = Mark_ID;
+            Attr_Prev_Mark_ID = Prev_Mark_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassSQ_TSBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Span_ID"], (string)attrArgs["Mark_ID"], (string)attrArgs["Prev_Mark_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"])
@@ -15837,7 +16614,14 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_BPARMBase(CIModelRepository repository, string BParm_ID, string Brg_ID, string Name, string DT_ID, int By_Ref, string Dimensions, string Previous_BParm_ID, string Descrip ) : base(repository, "S_BPARM")
         {
-            ;
+            Attr_BParm_ID = BParm_ID;
+            Attr_Brg_ID = Brg_ID;
+            Attr_Name = Name;
+            Attr_DT_ID = DT_ID;
+            Attr_By_Ref = By_Ref;
+            Attr_Dimensions = Dimensions;
+            Attr_Previous_BParm_ID = Previous_BParm_ID;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassS_BPARMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["BParm_ID"], (string)attrArgs["Brg_ID"], (string)attrArgs["Name"], (string)attrArgs["DT_ID"], (int)attrArgs["By_Ref"], (string)attrArgs["Dimensions"], (string)attrArgs["Previous_BParm_ID"], (string)attrArgs["Descrip"])
@@ -15967,7 +16751,16 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_BRGBase(CIModelRepository repository, string Brg_ID, string EE_ID, string Name, string Descrip, int Brg_Typ, string DT_ID, string Action_Semantics, int Suc_Pars, string Return_Dimensions, int Dialect ) : base(repository, "S_BRG")
         {
-            ;
+            Attr_Brg_ID = Brg_ID;
+            Attr_EE_ID = EE_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_Brg_Typ = Brg_Typ;
+            Attr_DT_ID = DT_ID;
+            Attr_Action_Semantics = Action_Semantics;
+            Attr_Suc_Pars = Suc_Pars;
+            Attr_Return_Dimensions = Return_Dimensions;
+            Attr_Dialect = Dialect;
         }
 
         public CIMClassS_BRGBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Brg_ID"], (string)attrArgs["EE_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (int)attrArgs["Brg_Typ"], (string)attrArgs["DT_ID"], (string)attrArgs["Action_Semantics"], (int)attrArgs["Suc_Pars"], (string)attrArgs["Return_Dimensions"], (int)attrArgs["Dialect"])
@@ -16101,7 +16894,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_CDTBase(CIModelRepository repository, string DT_ID, int Core_Typ ) : base(repository, "S_CDT")
         {
-            ;
+            Attr_DT_ID = DT_ID;
+            Attr_Core_Typ = Core_Typ;
         }
 
         public CIMClassS_CDTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["DT_ID"], (int)attrArgs["Core_Typ"])
@@ -16156,7 +16950,26 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_DIMBase(CIModelRepository repository, int elementCount, int dimensionCount, string Sync_ID, string SParm_ID, string BParm_ID, string Brg_ID, string Id, string Obj_ID, string Attr_ID, string TParm_ID, string Tfr_ID, string Member_ID, string DT_ID, string PP_Id, string SM_ID, string SMedi_ID, string DIM_ID, string Var_ID, string TSParm_ID, string Svc_ID ) : base(repository, "S_DIM")
         {
-            ;
+            Attr_elementCount = elementCount;
+            Attr_dimensionCount = dimensionCount;
+            Attr_Sync_ID = Sync_ID;
+            Attr_SParm_ID = SParm_ID;
+            Attr_BParm_ID = BParm_ID;
+            Attr_Brg_ID = Brg_ID;
+            Attr_Id = Id;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Attr_ID = Attr_ID;
+            Attr_TParm_ID = TParm_ID;
+            Attr_Tfr_ID = Tfr_ID;
+            Attr_Member_ID = Member_ID;
+            Attr_DT_ID = DT_ID;
+            Attr_PP_Id = PP_Id;
+            Attr_SM_ID = SM_ID;
+            Attr_SMedi_ID = SMedi_ID;
+            Attr_DIM_ID = DIM_ID;
+            Attr_Var_ID = Var_ID;
+            Attr_TSParm_ID = TSParm_ID;
+            Attr_Svc_ID = Svc_ID;
         }
 
         public CIMClassS_DIMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (int)attrArgs["elementCount"], (int)attrArgs["dimensionCount"], (string)attrArgs["Sync_ID"], (string)attrArgs["SParm_ID"], (string)attrArgs["BParm_ID"], (string)attrArgs["Brg_ID"], (string)attrArgs["Id"], (string)attrArgs["Obj_ID"], (string)attrArgs["Attr_ID"], (string)attrArgs["TParm_ID"], (string)attrArgs["Tfr_ID"], (string)attrArgs["Member_ID"], (string)attrArgs["DT_ID"], (string)attrArgs["PP_Id"], (string)attrArgs["SM_ID"], (string)attrArgs["SMedi_ID"], (string)attrArgs["DIM_ID"], (string)attrArgs["Var_ID"], (string)attrArgs["TSParm_ID"], (string)attrArgs["Svc_ID"])
@@ -16365,7 +17178,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_DTBase(CIModelRepository repository, string DT_ID, string Dom_IDdeprecated, string Name, string Descrip, string DefaultValue ) : base(repository, "S_DT")
         {
-            ;
+            Attr_DT_ID = DT_ID;
+            Attr_Dom_IDdeprecated = Dom_IDdeprecated;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_DefaultValue = DefaultValue;
         }
 
         public CIMClassS_DTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["DT_ID"], (string)attrArgs["Dom_IDdeprecated"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["DefaultValue"])
@@ -16646,7 +17463,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_EDTBase(CIModelRepository repository, string DT_ID ) : base(repository, "S_EDT")
         {
-            ;
+            Attr_DT_ID = DT_ID;
         }
 
         public CIMClassS_EDTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["DT_ID"])
@@ -16701,7 +17518,14 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_EEBase(CIModelRepository repository, string EE_ID, string Name, string Descrip, string Key_Lett, string Dom_IDdeprecated, string Realized_Class_Path, string Label, bool isRealized ) : base(repository, "S_EE")
         {
-            ;
+            Attr_EE_ID = EE_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_Key_Lett = Key_Lett;
+            Attr_Dom_IDdeprecated = Dom_IDdeprecated;
+            Attr_Realized_Class_Path = Realized_Class_Path;
+            Attr_Label = Label;
+            Attr_isRealized = isRealized;
         }
 
         public CIMClassS_EEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["EE_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["Key_Lett"], (string)attrArgs["Dom_IDdeprecated"], (string)attrArgs["Realized_Class_Path"], (string)attrArgs["Label"], (bool)attrArgs["isRealized"])
@@ -16788,7 +17612,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_EEMBase(CIModelRepository repository, string EEmod_ID, string EE_ID, int Modl_Typ, string SS_IDdeprecated ) : base(repository, "S_EEM")
         {
-            ;
+            Attr_EEmod_ID = EEmod_ID;
+            Attr_EE_ID = EE_ID;
+            Attr_Modl_Typ = Modl_Typ;
+            Attr_SS_IDdeprecated = SS_IDdeprecated;
         }
 
         public CIMClassS_EEMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["EEmod_ID"], (string)attrArgs["EE_ID"], (int)attrArgs["Modl_Typ"], (string)attrArgs["SS_IDdeprecated"])
@@ -16829,7 +17656,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_ENUMBase(CIModelRepository repository, string Enum_ID, string Name, string Descrip, string EDT_DT_ID, string Previous_Enum_ID ) : base(repository, "S_ENUM")
         {
-            ;
+            Attr_Enum_ID = Enum_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_EDT_DT_ID = EDT_DT_ID;
+            Attr_Previous_Enum_ID = Previous_Enum_ID;
         }
 
         public CIMClassS_ENUMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Enum_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["EDT_DT_ID"], (string)attrArgs["Previous_Enum_ID"])
@@ -16916,7 +17747,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_EXPBase(CIModelRepository repository, string Exception_ID, string Name, string Descrip ) : base(repository, "S_EXP")
         {
-            ;
+            Attr_Exception_ID = Exception_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassS_EXPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Exception_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"])
@@ -16954,7 +17787,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_IRDTBase(CIModelRepository repository, string DT_ID, bool isSet, string Obj_ID ) : base(repository, "S_IRDT")
         {
-            ;
+            Attr_DT_ID = DT_ID;
+            Attr_isSet = isSet;
+            Attr_Obj_ID = Obj_ID;
         }
 
         public CIMClassS_IRDTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["DT_ID"], (bool)attrArgs["isSet"], (string)attrArgs["Obj_ID"])
@@ -17008,7 +17843,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_MBRBase(CIModelRepository repository, string Member_ID, string Name, string Descrip, string Parent_DT_DT_ID, string DT_ID, string Previous_Member_ID, string Dimensions ) : base(repository, "S_MBR")
         {
-            ;
+            Attr_Member_ID = Member_ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_Parent_DT_DT_ID = Parent_DT_DT_ID;
+            Attr_DT_ID = DT_ID;
+            Attr_Previous_Member_ID = Previous_Member_ID;
+            Attr_Dimensions = Dimensions;
         }
 
         public CIMClassS_MBRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Member_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["Parent_DT_DT_ID"], (string)attrArgs["DT_ID"], (string)attrArgs["Previous_Member_ID"], (string)attrArgs["Dimensions"])
@@ -17119,7 +17960,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_RANGEBase(CIModelRepository repository, string DT_ID, string Min, string Max ) : base(repository, "S_RANGE")
         {
-            ;
+            Attr_DT_ID = DT_ID;
+            Attr_Min = Min;
+            Attr_Max = Max;
         }
 
         public CIMClassS_RANGEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["DT_ID"], (string)attrArgs["Min"], (string)attrArgs["Max"])
@@ -17156,7 +17999,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_SDTBase(CIModelRepository repository, string DT_ID ) : base(repository, "S_SDT")
         {
-            ;
+            Attr_DT_ID = DT_ID;
         }
 
         public CIMClassS_SDTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["DT_ID"])
@@ -17211,7 +18054,14 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_SPARMBase(CIModelRepository repository, string SParm_ID, string Sync_ID, string Name, string DT_ID, int By_Ref, string Dimensions, string Previous_SParm_ID, string Descrip ) : base(repository, "S_SPARM")
         {
-            ;
+            Attr_SParm_ID = SParm_ID;
+            Attr_Sync_ID = Sync_ID;
+            Attr_Name = Name;
+            Attr_DT_ID = DT_ID;
+            Attr_By_Ref = By_Ref;
+            Attr_Dimensions = Dimensions;
+            Attr_Previous_SParm_ID = Previous_SParm_ID;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassS_SPARMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["SParm_ID"], (string)attrArgs["Sync_ID"], (string)attrArgs["Name"], (string)attrArgs["DT_ID"], (int)attrArgs["By_Ref"], (string)attrArgs["Dimensions"], (string)attrArgs["Previous_SParm_ID"], (string)attrArgs["Descrip"])
@@ -17341,7 +18191,16 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_SYNCBase(CIModelRepository repository, string Sync_ID, string Dom_IDdeprecated, string Name, string Descrip, string Action_Semantics, string DT_ID, int Suc_Pars, string Return_Dimensions, int Dialect, int Numb ) : base(repository, "S_SYNC")
         {
-            ;
+            Attr_Sync_ID = Sync_ID;
+            Attr_Dom_IDdeprecated = Dom_IDdeprecated;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_Action_Semantics = Action_Semantics;
+            Attr_DT_ID = DT_ID;
+            Attr_Suc_Pars = Suc_Pars;
+            Attr_Return_Dimensions = Return_Dimensions;
+            Attr_Dialect = Dialect;
+            Attr_Numb = Numb;
         }
 
         public CIMClassS_SYNCBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Sync_ID"], (string)attrArgs["Dom_IDdeprecated"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["Action_Semantics"], (string)attrArgs["DT_ID"], (int)attrArgs["Suc_Pars"], (string)attrArgs["Return_Dimensions"], (int)attrArgs["Dialect"], (int)attrArgs["Numb"])
@@ -17475,7 +18334,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_SYSBase(CIModelRepository repository, string Sys_ID, string Name, bool useGlobals ) : base(repository, "S_SYS")
         {
-            ;
+            Attr_Sys_ID = Sys_ID;
+            Attr_Name = Name;
+            Attr_useGlobals = useGlobals;
         }
 
         public CIMClassS_SYSBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Sys_ID"], (string)attrArgs["Name"], (bool)attrArgs["useGlobals"])
@@ -17550,7 +18411,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_UDTBase(CIModelRepository repository, string DT_ID, string CDT_DT_ID, int Gen_Type, string Definition ) : base(repository, "S_UDT")
         {
-            ;
+            Attr_DT_ID = DT_ID;
+            Attr_CDT_DT_ID = CDT_DT_ID;
+            Attr_Gen_Type = Gen_Type;
+            Attr_Definition = Definition;
         }
 
         public CIMClassS_UDTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["DT_ID"], (string)attrArgs["CDT_DT_ID"], (int)attrArgs["Gen_Type"], (string)attrArgs["Definition"])
@@ -17631,7 +18495,28 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_ABABase(CIModelRepository repository, string AbaID, string subtypeKL, string te_cID, int SelfEventCount, int NonSelfEventCount, bool IsTrace, string ParameterDeclaration, string ParameterDefinition, string ParameterStructure, string ParameterTrace, string ParameterFormat, string ParameterInvocation, string ParameterSMSGinvoke, string ParameterAssignment, string ParameterAssignmentBase, string scope, string GeneratedName, string ReturnDataType, int dimensions, string te_dimID, string array_spec, string code ) : base(repository, "TE_ABA")
         {
-            ;
+            Attr_AbaID = AbaID;
+            Attr_subtypeKL = subtypeKL;
+            Attr_te_cID = te_cID;
+            Attr_SelfEventCount = SelfEventCount;
+            Attr_NonSelfEventCount = NonSelfEventCount;
+            Attr_IsTrace = IsTrace;
+            Attr_ParameterDeclaration = ParameterDeclaration;
+            Attr_ParameterDefinition = ParameterDefinition;
+            Attr_ParameterStructure = ParameterStructure;
+            Attr_ParameterTrace = ParameterTrace;
+            Attr_ParameterFormat = ParameterFormat;
+            Attr_ParameterInvocation = ParameterInvocation;
+            Attr_ParameterSMSGinvoke = ParameterSMSGinvoke;
+            Attr_ParameterAssignment = ParameterAssignment;
+            Attr_ParameterAssignmentBase = ParameterAssignmentBase;
+            Attr_scope = scope;
+            Attr_GeneratedName = GeneratedName;
+            Attr_ReturnDataType = ReturnDataType;
+            Attr_dimensions = dimensions;
+            Attr_te_dimID = te_dimID;
+            Attr_array_spec = array_spec;
+            Attr_code = code;
         }
 
         public CIMClassTE_ABABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["AbaID"], (string)attrArgs["subtypeKL"], (string)attrArgs["te_cID"], (int)attrArgs["SelfEventCount"], (int)attrArgs["NonSelfEventCount"], (bool)attrArgs["IsTrace"], (string)attrArgs["ParameterDeclaration"], (string)attrArgs["ParameterDefinition"], (string)attrArgs["ParameterStructure"], (string)attrArgs["ParameterTrace"], (string)attrArgs["ParameterFormat"], (string)attrArgs["ParameterInvocation"], (string)attrArgs["ParameterSMSGinvoke"], (string)attrArgs["ParameterAssignment"], (string)attrArgs["ParameterAssignmentBase"], (string)attrArgs["scope"], (string)attrArgs["GeneratedName"], (string)attrArgs["ReturnDataType"], (int)attrArgs["dimensions"], (string)attrArgs["te_dimID"], (string)attrArgs["array_spec"], (string)attrArgs["code"])
@@ -17725,7 +18610,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_ACTBase(CIModelRepository repository, string AbaID, string GeneratedName, int number, string SM_ID, string Act_ID ) : base(repository, "TE_ACT")
         {
-            ;
+            Attr_AbaID = AbaID;
+            Attr_GeneratedName = GeneratedName;
+            Attr_number = number;
+            Attr_SM_ID = SM_ID;
+            Attr_Act_ID = Act_ID;
         }
 
         public CIMClassTE_ACTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["AbaID"], (string)attrArgs["GeneratedName"], (int)attrArgs["number"], (string)attrArgs["SM_ID"], (string)attrArgs["Act_ID"])
@@ -17781,7 +18670,15 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_ASSIGNBase(CIModelRepository repository, bool isImplicit, int dimensions, string array_spec, string left_declaration, int Core_Typ, string lval, string rval, string Statement_ID, int rval_dimensions ) : base(repository, "TE_ASSIGN")
         {
-            ;
+            Attr_isImplicit = isImplicit;
+            Attr_dimensions = dimensions;
+            Attr_array_spec = array_spec;
+            Attr_left_declaration = left_declaration;
+            Attr_Core_Typ = Core_Typ;
+            Attr_lval = lval;
+            Attr_rval = rval;
+            Attr_Statement_ID = Statement_ID;
+            Attr_rval_dimensions = rval_dimensions;
         }
 
         public CIMClassTE_ASSIGNBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (bool)attrArgs["isImplicit"], (int)attrArgs["dimensions"], (string)attrArgs["array_spec"], (string)attrArgs["left_declaration"], (int)attrArgs["Core_Typ"], (string)attrArgs["lval"], (string)attrArgs["rval"], (string)attrArgs["Statement_ID"], (int)attrArgs["rval_dimensions"])
@@ -17835,7 +18732,25 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_ATTRBase(CIModelRepository repository, string ID, bool Used, bool read, bool written, bool Included, int Order, string ParamBuffer, string Name, string GeneratedName, string DefaultValue, bool translate, int dimensions, string te_dimID, string array_spec, string te_classGeneratedName, string GeneratedType, string prevID, string Attr_ID, string Obj_ID ) : base(repository, "TE_ATTR")
         {
-            ;
+            Attr_ID = ID;
+            Attr_Used = Used;
+            Attr_read = read;
+            Attr_written = written;
+            Attr_Included = Included;
+            Attr_Order = Order;
+            Attr_ParamBuffer = ParamBuffer;
+            Attr_Name = Name;
+            Attr_GeneratedName = GeneratedName;
+            Attr_DefaultValue = DefaultValue;
+            Attr_translate = translate;
+            Attr_dimensions = dimensions;
+            Attr_te_dimID = te_dimID;
+            Attr_array_spec = array_spec;
+            Attr_te_classGeneratedName = te_classGeneratedName;
+            Attr_GeneratedType = GeneratedType;
+            Attr_prevID = prevID;
+            Attr_Attr_ID = Attr_ID;
+            Attr_Obj_ID = Obj_ID;
         }
 
         public CIMClassTE_ATTRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ID"], (bool)attrArgs["Used"], (bool)attrArgs["read"], (bool)attrArgs["written"], (bool)attrArgs["Included"], (int)attrArgs["Order"], (string)attrArgs["ParamBuffer"], (string)attrArgs["Name"], (string)attrArgs["GeneratedName"], (string)attrArgs["DefaultValue"], (bool)attrArgs["translate"], (int)attrArgs["dimensions"], (string)attrArgs["te_dimID"], (string)attrArgs["array_spec"], (string)attrArgs["te_classGeneratedName"], (string)attrArgs["GeneratedType"], (string)attrArgs["prevID"], (string)attrArgs["Attr_ID"], (string)attrArgs["Obj_ID"])
@@ -17926,7 +18841,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_BLKBase(CIModelRepository repository, string Block_ID, string first_Statement_ID, string declaration, string deallocation, int depth, string indentation, string AbaID ) : base(repository, "TE_BLK")
         {
-            ;
+            Attr_Block_ID = Block_ID;
+            Attr_first_Statement_ID = first_Statement_ID;
+            Attr_declaration = declaration;
+            Attr_deallocation = deallocation;
+            Attr_depth = depth;
+            Attr_indentation = indentation;
+            Attr_AbaID = AbaID;
         }
 
         public CIMClassTE_BLKBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Block_ID"], (string)attrArgs["first_Statement_ID"], (string)attrArgs["declaration"], (string)attrArgs["deallocation"], (int)attrArgs["depth"], (string)attrArgs["indentation"], (string)attrArgs["AbaID"])
@@ -18011,7 +18932,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_BREAKBase(CIModelRepository repository, string Statement_ID ) : base(repository, "TE_BREAK")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_BREAKBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"])
@@ -18053,7 +18974,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_BRGBase(CIModelRepository repository, string EEname, string EEkeyletters, string Name, string GeneratedName, string AbaID, string Brg_ID, string EE_ID ) : base(repository, "TE_BRG")
         {
-            ;
+            Attr_EEname = EEname;
+            Attr_EEkeyletters = EEkeyletters;
+            Attr_Name = Name;
+            Attr_GeneratedName = GeneratedName;
+            Attr_AbaID = AbaID;
+            Attr_Brg_ID = Brg_ID;
+            Attr_EE_ID = EE_ID;
         }
 
         public CIMClassTE_BRGBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["EEname"], (string)attrArgs["EEkeyletters"], (string)attrArgs["Name"], (string)attrArgs["GeneratedName"], (string)attrArgs["AbaID"], (string)attrArgs["Brg_ID"], (string)attrArgs["EE_ID"])
@@ -18115,7 +19042,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_BRIDGEBase(CIModelRepository repository, string bridge_name, string parameters, string Statement_ID ) : base(repository, "TE_BRIDGE")
         {
-            ;
+            Attr_bridge_name = bridge_name;
+            Attr_parameters = parameters;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_BRIDGEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["bridge_name"], (string)attrArgs["parameters"], (string)attrArgs["Statement_ID"])
@@ -18185,7 +19114,41 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_CBase(CIModelRepository repository, string ID, string Name, string Descrip, int number, bool StateTrace, bool StmtTrace, bool DetectEmpty, bool OptDisabled, bool RawComments, bool CodeComments, int CollectionsFlavor, string classes_file, int MaxObjExtent, int MaxRelExtent, int MaxSelectExtent, int MaxSelfEvents, int MaxNonSelfEvents, int MaxPriorityEvents, int MaxTimers, int InterleavedBridges, int PEIClassCount, int PersistentClassCount, string module_file, bool included_in_build, bool internal_behavior, bool isRealized, int SystemID, string next_ID, string cId, string first_eeID, string first_syncID, string smsg_send, string smsg_recv, string class_strings, string first_te_class_ID ) : base(repository, "TE_C")
         {
-            ;
+            Attr_ID = ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_number = number;
+            Attr_StateTrace = StateTrace;
+            Attr_StmtTrace = StmtTrace;
+            Attr_DetectEmpty = DetectEmpty;
+            Attr_OptDisabled = OptDisabled;
+            Attr_RawComments = RawComments;
+            Attr_CodeComments = CodeComments;
+            Attr_CollectionsFlavor = CollectionsFlavor;
+            Attr_classes_file = classes_file;
+            Attr_MaxObjExtent = MaxObjExtent;
+            Attr_MaxRelExtent = MaxRelExtent;
+            Attr_MaxSelectExtent = MaxSelectExtent;
+            Attr_MaxSelfEvents = MaxSelfEvents;
+            Attr_MaxNonSelfEvents = MaxNonSelfEvents;
+            Attr_MaxPriorityEvents = MaxPriorityEvents;
+            Attr_MaxTimers = MaxTimers;
+            Attr_InterleavedBridges = InterleavedBridges;
+            Attr_PEIClassCount = PEIClassCount;
+            Attr_PersistentClassCount = PersistentClassCount;
+            Attr_module_file = module_file;
+            Attr_included_in_build = included_in_build;
+            Attr_internal_behavior = internal_behavior;
+            Attr_isRealized = isRealized;
+            Attr_SystemID = SystemID;
+            Attr_next_ID = next_ID;
+            Attr_cId = cId;
+            Attr_first_eeID = first_eeID;
+            Attr_first_syncID = first_syncID;
+            Attr_smsg_send = smsg_send;
+            Attr_smsg_recv = smsg_recv;
+            Attr_class_strings = class_strings;
+            Attr_first_te_class_ID = first_te_class_ID;
         }
 
         public CIMClassTE_CBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (int)attrArgs["number"], (bool)attrArgs["StateTrace"], (bool)attrArgs["StmtTrace"], (bool)attrArgs["DetectEmpty"], (bool)attrArgs["OptDisabled"], (bool)attrArgs["RawComments"], (bool)attrArgs["CodeComments"], (int)attrArgs["CollectionsFlavor"], (string)attrArgs["classes_file"], (int)attrArgs["MaxObjExtent"], (int)attrArgs["MaxRelExtent"], (int)attrArgs["MaxSelectExtent"], (int)attrArgs["MaxSelfEvents"], (int)attrArgs["MaxNonSelfEvents"], (int)attrArgs["MaxPriorityEvents"], (int)attrArgs["MaxTimers"], (int)attrArgs["InterleavedBridges"], (int)attrArgs["PEIClassCount"], (int)attrArgs["PersistentClassCount"], (string)attrArgs["module_file"], (bool)attrArgs["included_in_build"], (bool)attrArgs["internal_behavior"], (bool)attrArgs["isRealized"], (int)attrArgs["SystemID"], (string)attrArgs["next_ID"], (string)attrArgs["cId"], (string)attrArgs["first_eeID"], (string)attrArgs["first_syncID"], (string)attrArgs["smsg_send"], (string)attrArgs["smsg_recv"], (string)attrArgs["class_strings"], (string)attrArgs["first_te_class_ID"])
@@ -18430,7 +19393,23 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_CALLOUTBase(CIModelRepository repository, string file, string initialization, string pre_xtUML_initialization, string post_xtUML_initialization, string background_processing, string event_cant_happen, string pre_shutdown, string post_shutdown, string event_no_instance, string event_free_list_empty, string empty_handle_detected, string object_pool_empty, string node_list_empty, string interleaved_bridge_overflow, string self_event_queue_empty, string non_self_event_queue_empty, string persistence_error ) : base(repository, "TE_CALLOUT")
         {
-            ;
+            Attr_file = file;
+            Attr_initialization = initialization;
+            Attr_pre_xtUML_initialization = pre_xtUML_initialization;
+            Attr_post_xtUML_initialization = post_xtUML_initialization;
+            Attr_background_processing = background_processing;
+            Attr_event_cant_happen = event_cant_happen;
+            Attr_pre_shutdown = pre_shutdown;
+            Attr_post_shutdown = post_shutdown;
+            Attr_event_no_instance = event_no_instance;
+            Attr_event_free_list_empty = event_free_list_empty;
+            Attr_empty_handle_detected = empty_handle_detected;
+            Attr_object_pool_empty = object_pool_empty;
+            Attr_node_list_empty = node_list_empty;
+            Attr_interleaved_bridge_overflow = interleaved_bridge_overflow;
+            Attr_self_event_queue_empty = self_event_queue_empty;
+            Attr_non_self_event_queue_empty = non_self_event_queue_empty;
+            Attr_persistence_error = persistence_error;
         }
 
         public CIMClassTE_CALLOUTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["file"], (string)attrArgs["initialization"], (string)attrArgs["pre_xtUML_initialization"], (string)attrArgs["post_xtUML_initialization"], (string)attrArgs["background_processing"], (string)attrArgs["event_cant_happen"], (string)attrArgs["pre_shutdown"], (string)attrArgs["post_shutdown"], (string)attrArgs["event_no_instance"], (string)attrArgs["event_free_list_empty"], (string)attrArgs["empty_handle_detected"], (string)attrArgs["object_pool_empty"], (string)attrArgs["node_list_empty"], (string)attrArgs["interleaved_bridge_overflow"], (string)attrArgs["self_event_queue_empty"], (string)attrArgs["non_self_event_queue_empty"], (string)attrArgs["persistence_error"])
@@ -18460,7 +19439,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_CIBase(CIModelRepository repository, string ID, string Name, string ClassifierName, string template_parameter_values, string te_cID, string cl_icId ) : base(repository, "TE_CI")
         {
-            ;
+            Attr_ID = ID;
+            Attr_Name = Name;
+            Attr_ClassifierName = ClassifierName;
+            Attr_template_parameter_values = template_parameter_values;
+            Attr_te_cID = te_cID;
+            Attr_cl_icId = cl_icId;
         }
 
         public CIMClassTE_CIBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ID"], (string)attrArgs["Name"], (string)attrArgs["ClassifierName"], (string)attrArgs["template_parameter_values"], (string)attrArgs["te_cID"], (string)attrArgs["cl_icId"])
@@ -18525,7 +19509,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_CIABase(CIModelRepository repository, string class_info_name, string class_info_type, string active_count, string class_count, string count_type ) : base(repository, "TE_CIA")
         {
-            ;
+            Attr_class_info_name = class_info_name;
+            Attr_class_info_type = class_info_type;
+            Attr_active_count = active_count;
+            Attr_class_count = class_count;
+            Attr_count_type = count_type;
         }
 
         public CIMClassTE_CIABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["class_info_name"], (string)attrArgs["class_info_type"], (string)attrArgs["active_count"], (string)attrArgs["class_count"], (string)attrArgs["count_type"])
@@ -18580,7 +19568,37 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_CLASSBase(CIModelRepository repository, string ID, string Name, int Numb, string Key_Lett, string scope, string GeneratedName, string CBGeneratedName, bool Included, bool PEIsDefinedInData, bool IsFixedPopulation, bool IsReadOnly, bool ExcludeFromGen, int MaxExtentSize, bool SelfCreated, bool NonSelfCreated, bool Persistent, int Order, bool IsTrace, int ContainerIndex, int Task, string class_file, string system_class_number, string CBsystem_class_number, string persist_link, string dispatcher, string CBdispatcher, string attribute_format, string attribute_dump, string te_cID, string Obj_ID, string nextID ) : base(repository, "TE_CLASS")
         {
-            ;
+            Attr_ID = ID;
+            Attr_Name = Name;
+            Attr_Numb = Numb;
+            Attr_Key_Lett = Key_Lett;
+            Attr_scope = scope;
+            Attr_GeneratedName = GeneratedName;
+            Attr_CBGeneratedName = CBGeneratedName;
+            Attr_Included = Included;
+            Attr_PEIsDefinedInData = PEIsDefinedInData;
+            Attr_IsFixedPopulation = IsFixedPopulation;
+            Attr_IsReadOnly = IsReadOnly;
+            Attr_ExcludeFromGen = ExcludeFromGen;
+            Attr_MaxExtentSize = MaxExtentSize;
+            Attr_SelfCreated = SelfCreated;
+            Attr_NonSelfCreated = NonSelfCreated;
+            Attr_Persistent = Persistent;
+            Attr_Order = Order;
+            Attr_IsTrace = IsTrace;
+            Attr_ContainerIndex = ContainerIndex;
+            Attr_Task = Task;
+            Attr_class_file = class_file;
+            Attr_system_class_number = system_class_number;
+            Attr_CBsystem_class_number = CBsystem_class_number;
+            Attr_persist_link = persist_link;
+            Attr_dispatcher = dispatcher;
+            Attr_CBdispatcher = CBdispatcher;
+            Attr_attribute_format = attribute_format;
+            Attr_attribute_dump = attribute_dump;
+            Attr_te_cID = te_cID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_nextID = nextID;
         }
 
         public CIMClassTE_CLASSBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ID"], (string)attrArgs["Name"], (int)attrArgs["Numb"], (string)attrArgs["Key_Lett"], (string)attrArgs["scope"], (string)attrArgs["GeneratedName"], (string)attrArgs["CBGeneratedName"], (bool)attrArgs["Included"], (bool)attrArgs["PEIsDefinedInData"], (bool)attrArgs["IsFixedPopulation"], (bool)attrArgs["IsReadOnly"], (bool)attrArgs["ExcludeFromGen"], (int)attrArgs["MaxExtentSize"], (bool)attrArgs["SelfCreated"], (bool)attrArgs["NonSelfCreated"], (bool)attrArgs["Persistent"], (int)attrArgs["Order"], (bool)attrArgs["IsTrace"], (int)attrArgs["ContainerIndex"], (int)attrArgs["Task"], (string)attrArgs["class_file"], (string)attrArgs["system_class_number"], (string)attrArgs["CBsystem_class_number"], (string)attrArgs["persist_link"], (string)attrArgs["dispatcher"], (string)attrArgs["CBdispatcher"], (string)attrArgs["attribute_format"], (string)attrArgs["attribute_dump"], (string)attrArgs["te_cID"], (string)attrArgs["Obj_ID"], (string)attrArgs["nextID"])
@@ -18725,7 +19743,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_CONTAINERBase(CIModelRepository repository, string flavor ) : base(repository, "TE_CONTAINER")
         {
-            ;
+            Attr_flavor = flavor;
         }
 
         public CIMClassTE_CONTAINERBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["flavor"])
@@ -18767,7 +19785,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_CONTINUEBase(CIModelRepository repository, string Statement_ID ) : base(repository, "TE_CONTINUE")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_CONTINUEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"])
@@ -18803,7 +19821,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_CONTROLBase(CIModelRepository repository, string Statement_ID ) : base(repository, "TE_CONTROL")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_CONTROLBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"])
@@ -18839,7 +19857,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_COPYRIGHTBase(CIModelRepository repository, string body ) : base(repository, "TE_COPYRIGHT")
         {
-            ;
+            Attr_body = body;
         }
 
         public CIMClassTE_COPYRIGHTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["body"])
@@ -18872,7 +19890,15 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_CREATE_EVENTBase(CIModelRepository repository, string sm_evt, bool is_implicit, string class_name, string event_meaning, string oal_var_name, string var_name, string recipient_var_name, string parameters, string Statement_ID ) : base(repository, "TE_CREATE_EVENT")
         {
-            ;
+            Attr_sm_evt = sm_evt;
+            Attr_is_implicit = is_implicit;
+            Attr_class_name = class_name;
+            Attr_event_meaning = event_meaning;
+            Attr_oal_var_name = oal_var_name;
+            Attr_var_name = var_name;
+            Attr_recipient_var_name = recipient_var_name;
+            Attr_parameters = parameters;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_CREATE_EVENTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["sm_evt"], (bool)attrArgs["is_implicit"], (string)attrArgs["class_name"], (string)attrArgs["event_meaning"], (string)attrArgs["oal_var_name"], (string)attrArgs["var_name"], (string)attrArgs["recipient_var_name"], (string)attrArgs["parameters"], (string)attrArgs["Statement_ID"])
@@ -18912,7 +19938,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_CREATE_INSTANCEBase(CIModelRepository repository, string o_obj, bool is_implicit, string class_name, string var_name, string Statement_ID ) : base(repository, "TE_CREATE_INSTANCE")
         {
-            ;
+            Attr_o_obj = o_obj;
+            Attr_is_implicit = is_implicit;
+            Attr_class_name = class_name;
+            Attr_var_name = var_name;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_CREATE_INSTANCEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["o_obj"], (bool)attrArgs["is_implicit"], (string)attrArgs["class_name"], (string)attrArgs["var_name"], (string)attrArgs["Statement_ID"])
@@ -18952,7 +19982,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_DBATTRBase(CIModelRepository repository, bool Included, string AbaID, string GeneratedName, string Attr_ID, string Obj_ID ) : base(repository, "TE_DBATTR")
         {
-            ;
+            Attr_Included = Included;
+            Attr_AbaID = AbaID;
+            Attr_GeneratedName = GeneratedName;
+            Attr_Attr_ID = Attr_ID;
+            Attr_Obj_ID = Obj_ID;
         }
 
         public CIMClassTE_DBATTRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (bool)attrArgs["Included"], (string)attrArgs["AbaID"], (string)attrArgs["GeneratedName"], (string)attrArgs["Attr_ID"], (string)attrArgs["Obj_ID"])
@@ -19008,7 +20042,15 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_DCIBase(CIModelRepository repository, string te_cID, string class_numbers, string persist_union, string task_list, string task_numbers, string max, string max_models, string init, string array_name ) : base(repository, "TE_DCI")
         {
-            ;
+            Attr_te_cID = te_cID;
+            Attr_class_numbers = class_numbers;
+            Attr_persist_union = persist_union;
+            Attr_task_list = task_list;
+            Attr_task_numbers = task_numbers;
+            Attr_max = max;
+            Attr_max_models = max_models;
+            Attr_init = init;
+            Attr_array_name = array_name;
         }
 
         public CIMClassTE_DCIBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["te_cID"], (string)attrArgs["class_numbers"], (string)attrArgs["persist_union"], (string)attrArgs["task_list"], (string)attrArgs["task_numbers"], (string)attrArgs["max"], (string)attrArgs["max_models"], (string)attrArgs["init"], (string)attrArgs["array_name"])
@@ -19048,7 +20090,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_DELETE_INSTANCEBase(CIModelRepository repository, string o_obj, string var_name, int del_count, string Statement_ID ) : base(repository, "TE_DELETE_INSTANCE")
         {
-            ;
+            Attr_o_obj = o_obj;
+            Attr_var_name = var_name;
+            Attr_del_count = del_count;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_DELETE_INSTANCEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["o_obj"], (string)attrArgs["var_name"], (int)attrArgs["del_count"], (string)attrArgs["Statement_ID"])
@@ -19087,7 +20132,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_DIMBase(CIModelRepository repository, string te_dimID, int elementCount, int dimensionCount, string next_te_dimID ) : base(repository, "TE_DIM")
         {
-            ;
+            Attr_te_dimID = te_dimID;
+            Attr_elementCount = elementCount;
+            Attr_dimensionCount = dimensionCount;
+            Attr_next_te_dimID = next_te_dimID;
         }
 
         public CIMClassTE_DIMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["te_dimID"], (int)attrArgs["elementCount"], (int)attrArgs["dimensionCount"], (string)attrArgs["next_te_dimID"])
@@ -19213,7 +20261,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_DISPBase(CIModelRepository repository, int Dispatcher_ID, int SystemID, string Name, string Descrip, string message_id_type, string base_message_type ) : base(repository, "TE_DISP")
         {
-            ;
+            Attr_Dispatcher_ID = Dispatcher_ID;
+            Attr_SystemID = SystemID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_message_id_type = message_id_type;
+            Attr_base_message_type = base_message_type;
         }
 
         public CIMClassTE_DISPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (int)attrArgs["Dispatcher_ID"], (int)attrArgs["SystemID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["message_id_type"], (string)attrArgs["base_message_type"])
@@ -19263,7 +20316,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_DLISTBase(CIModelRepository repository, string flavor, string remove_node ) : base(repository, "TE_DLIST")
         {
-            ;
+            Attr_flavor = flavor;
+            Attr_remove_node = remove_node;
         }
 
         public CIMClassTE_DLISTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["flavor"], (string)attrArgs["remove_node"])
@@ -19302,7 +20356,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_DMABase(CIModelRepository repository, string file, string allocate, string release, bool debugging_heap ) : base(repository, "TE_DMA")
         {
-            ;
+            Attr_file = file;
+            Attr_allocate = allocate;
+            Attr_release = release;
+            Attr_debugging_heap = debugging_heap;
         }
 
         public CIMClassTE_DMABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["file"], (string)attrArgs["allocate"], (string)attrArgs["release"], (bool)attrArgs["debugging_heap"])
@@ -19340,7 +20397,20 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_DTBase(CIModelRepository repository, string ID, string Name, int Core_Typ, bool Included, string ExtName, string Include_File, string Initial_Value, string Value, bool Is_Enum, string Owning_Dom_Name, string string_format, bool generated, string te_cID, string DT_ID ) : base(repository, "TE_DT")
         {
-            ;
+            Attr_ID = ID;
+            Attr_Name = Name;
+            Attr_Core_Typ = Core_Typ;
+            Attr_Included = Included;
+            Attr_ExtName = ExtName;
+            Attr_Include_File = Include_File;
+            Attr_Initial_Value = Initial_Value;
+            Attr_Value = Value;
+            Attr_Is_Enum = Is_Enum;
+            Attr_Owning_Dom_Name = Owning_Dom_Name;
+            Attr_string_format = string_format;
+            Attr_generated = generated;
+            Attr_te_cID = te_cID;
+            Attr_DT_ID = DT_ID;
         }
 
         public CIMClassTE_DTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ID"], (string)attrArgs["Name"], (int)attrArgs["Core_Typ"], (bool)attrArgs["Included"], (string)attrArgs["ExtName"], (string)attrArgs["Include_File"], (string)attrArgs["Initial_Value"], (string)attrArgs["Value"], (bool)attrArgs["Is_Enum"], (string)attrArgs["Owning_Dom_Name"], (string)attrArgs["string_format"], (bool)attrArgs["generated"], (string)attrArgs["te_cID"], (string)attrArgs["DT_ID"])
@@ -19424,7 +20494,18 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_EEBase(CIModelRepository repository, string Name, string RegisteredName, string Key_Lett, string Descrip, bool Included, string file, string Include_File, bool Used, string te_cID, string EE_ID, string ID, string nextID ) : base(repository, "TE_EE")
         {
-            ;
+            Attr_Name = Name;
+            Attr_RegisteredName = RegisteredName;
+            Attr_Key_Lett = Key_Lett;
+            Attr_Descrip = Descrip;
+            Attr_Included = Included;
+            Attr_file = file;
+            Attr_Include_File = Include_File;
+            Attr_Used = Used;
+            Attr_te_cID = te_cID;
+            Attr_EE_ID = EE_ID;
+            Attr_ID = ID;
+            Attr_nextID = nextID;
         }
 
         public CIMClassTE_EEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Name"], (string)attrArgs["RegisteredName"], (string)attrArgs["Key_Lett"], (string)attrArgs["Descrip"], (bool)attrArgs["Included"], (string)attrArgs["file"], (string)attrArgs["Include_File"], (bool)attrArgs["Used"], (string)attrArgs["te_cID"], (string)attrArgs["EE_ID"], (string)attrArgs["ID"], (string)attrArgs["nextID"])
@@ -19522,7 +20603,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_ELIFBase(CIModelRepository repository, string condition, string Statement_ID ) : base(repository, "TE_ELIF")
         {
-            ;
+            Attr_condition = condition;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_ELIFBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["condition"], (string)attrArgs["Statement_ID"])
@@ -19558,7 +20640,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_ELSEBase(CIModelRepository repository, string Statement_ID ) : base(repository, "TE_ELSE")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_ELSEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"])
@@ -19598,7 +20680,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_ENUMBase(CIModelRepository repository, string Name, string Value, int Order, string GeneratedName, string Enum_ID ) : base(repository, "TE_ENUM")
         {
-            ;
+            Attr_Name = Name;
+            Attr_Value = Value;
+            Attr_Order = Order;
+            Attr_GeneratedName = GeneratedName;
+            Attr_Enum_ID = Enum_ID;
         }
 
         public CIMClassTE_ENUMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Name"], (string)attrArgs["Value"], (int)attrArgs["Order"], (string)attrArgs["GeneratedName"], (string)attrArgs["Enum_ID"])
@@ -19654,7 +20740,26 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_EQBase(CIModelRepository repository, string ignored, string cant_happen, string system_events_union, string system_event_pool, string constant_type, string base_event_type, string base_variable, string max_events, string max_self_events, string max_nonself_events, string new_, string allocate, string delete, string modify, string self, string non_self, string search_and_destroy, string run_flag, string event_message_variable, string scope ) : base(repository, "TE_EQ")
         {
-            ;
+            Attr_ignored = ignored;
+            Attr_cant_happen = cant_happen;
+            Attr_system_events_union = system_events_union;
+            Attr_system_event_pool = system_event_pool;
+            Attr_constant_type = constant_type;
+            Attr_base_event_type = base_event_type;
+            Attr_base_variable = base_variable;
+            Attr_max_events = max_events;
+            Attr_max_self_events = max_self_events;
+            Attr_max_nonself_events = max_nonself_events;
+            Attr_new = new_;
+            Attr_allocate = allocate;
+            Attr_delete = delete;
+            Attr_modify = modify;
+            Attr_self = self;
+            Attr_non_self = non_self;
+            Attr_search_and_destroy = search_and_destroy;
+            Attr_run_flag = run_flag;
+            Attr_event_message_variable = event_message_variable;
+            Attr_scope = scope;
         }
 
         public CIMClassTE_EQBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ignored"], (string)attrArgs["cant_happen"], (string)attrArgs["system_events_union"], (string)attrArgs["system_event_pool"], (string)attrArgs["constant_type"], (string)attrArgs["base_event_type"], (string)attrArgs["base_variable"], (string)attrArgs["max_events"], (string)attrArgs["max_self_events"], (string)attrArgs["max_nonself_events"], (string)attrArgs["new"], (string)attrArgs["allocate"], (string)attrArgs["delete"], (string)attrArgs["modify"], (string)attrArgs["self"], (string)attrArgs["non_self"], (string)attrArgs["search_and_destroy"], (string)attrArgs["run_flag"], (string)attrArgs["event_message_variable"], (string)attrArgs["scope"])
@@ -19683,7 +20788,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_EVENT_PARAMETERSBase(CIModelRepository repository, string evt_msg_var, string parameter, string value, string value_type, string Statement_ID ) : base(repository, "TE_EVENT_PARAMETERS")
         {
-            ;
+            Attr_evt_msg_var = evt_msg_var;
+            Attr_parameter = parameter;
+            Attr_value = value;
+            Attr_value_type = value_type;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_EVENT_PARAMETERSBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["evt_msg_var"], (string)attrArgs["parameter"], (string)attrArgs["value"], (string)attrArgs["value_type"], (string)attrArgs["Statement_ID"])
@@ -19731,7 +20840,19 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_EVTBase(CIModelRepository repository, string ID, string Name, int Numb, string GeneratedName, string Enumerator, int Order, bool Used, int UsedCount, int Priority, string SM_ID, string SMevt_ID, string te_smID, string next_ID ) : base(repository, "TE_EVT")
         {
-            ;
+            Attr_ID = ID;
+            Attr_Name = Name;
+            Attr_Numb = Numb;
+            Attr_GeneratedName = GeneratedName;
+            Attr_Enumerator = Enumerator;
+            Attr_Order = Order;
+            Attr_Used = Used;
+            Attr_UsedCount = UsedCount;
+            Attr_Priority = Priority;
+            Attr_SM_ID = SM_ID;
+            Attr_SMevt_ID = SMevt_ID;
+            Attr_te_smID = te_smID;
+            Attr_next_ID = next_ID;
         }
 
         public CIMClassTE_EVTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ID"], (string)attrArgs["Name"], (int)attrArgs["Numb"], (string)attrArgs["GeneratedName"], (string)attrArgs["Enumerator"], (int)attrArgs["Order"], (bool)attrArgs["Used"], (int)attrArgs["UsedCount"], (int)attrArgs["Priority"], (string)attrArgs["SM_ID"], (string)attrArgs["SMevt_ID"], (string)attrArgs["te_smID"], (string)attrArgs["next_ID"])
@@ -19845,7 +20966,24 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_EXTENTBase(CIModelRepository repository, string sets_type, string type, string active, string inactive, string initializer, string size_type, string size_name, string istate_type, string istate_name, string container_type, string container_name, string pool_type, string pool_name, string population_type, string population_name, string rstorsize_type, string rstorsize_name, string linkfunc_name ) : base(repository, "TE_EXTENT")
         {
-            ;
+            Attr_sets_type = sets_type;
+            Attr_type = type;
+            Attr_active = active;
+            Attr_inactive = inactive;
+            Attr_initializer = initializer;
+            Attr_size_type = size_type;
+            Attr_size_name = size_name;
+            Attr_istate_type = istate_type;
+            Attr_istate_name = istate_name;
+            Attr_container_type = container_type;
+            Attr_container_name = container_name;
+            Attr_pool_type = pool_type;
+            Attr_pool_name = pool_name;
+            Attr_population_type = population_type;
+            Attr_population_name = population_name;
+            Attr_rstorsize_type = rstorsize_type;
+            Attr_rstorsize_name = rstorsize_name;
+            Attr_linkfunc_name = linkfunc_name;
         }
 
         public CIMClassTE_EXTENTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["sets_type"], (string)attrArgs["type"], (string)attrArgs["active"], (string)attrArgs["inactive"], (string)attrArgs["initializer"], (string)attrArgs["size_type"], (string)attrArgs["size_name"], (string)attrArgs["istate_type"], (string)attrArgs["istate_name"], (string)attrArgs["container_type"], (string)attrArgs["container_name"], (string)attrArgs["pool_type"], (string)attrArgs["pool_name"], (string)attrArgs["population_type"], (string)attrArgs["population_name"], (string)attrArgs["rstorsize_type"], (string)attrArgs["rstorsize_name"], (string)attrArgs["linkfunc_name"])
@@ -19927,7 +21065,40 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_FILEBase(CIModelRepository repository, string hdr_file_ext, string src_file_ext, string obj_file_ext, string sys_main, string factory, string events, string nvs, string nvs_bridge, string sets, string types, string thread, string trace, string tim, string callout, string ilb, string persist, string xtumlload, string interfaces, string registers, string domain_color_path, string domain_source_path, string domain_include_path, string system_source_path, string system_include_path, string system_color_path, string bridge_mark, string system_mark, string datatype_mark, string event_mark, string class_mark, string domain_mark, string system_functions_mark, string arc_path, string root_path ) : base(repository, "TE_FILE")
         {
-            ;
+            Attr_hdr_file_ext = hdr_file_ext;
+            Attr_src_file_ext = src_file_ext;
+            Attr_obj_file_ext = obj_file_ext;
+            Attr_sys_main = sys_main;
+            Attr_factory = factory;
+            Attr_events = events;
+            Attr_nvs = nvs;
+            Attr_nvs_bridge = nvs_bridge;
+            Attr_sets = sets;
+            Attr_types = types;
+            Attr_thread = thread;
+            Attr_trace = trace;
+            Attr_tim = tim;
+            Attr_callout = callout;
+            Attr_ilb = ilb;
+            Attr_persist = persist;
+            Attr_xtumlload = xtumlload;
+            Attr_interfaces = interfaces;
+            Attr_registers = registers;
+            Attr_domain_color_path = domain_color_path;
+            Attr_domain_source_path = domain_source_path;
+            Attr_domain_include_path = domain_include_path;
+            Attr_system_source_path = system_source_path;
+            Attr_system_include_path = system_include_path;
+            Attr_system_color_path = system_color_path;
+            Attr_bridge_mark = bridge_mark;
+            Attr_system_mark = system_mark;
+            Attr_datatype_mark = datatype_mark;
+            Attr_event_mark = event_mark;
+            Attr_class_mark = class_mark;
+            Attr_domain_mark = domain_mark;
+            Attr_system_functions_mark = system_functions_mark;
+            Attr_arc_path = arc_path;
+            Attr_root_path = root_path;
         }
 
         public CIMClassTE_FILEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["hdr_file_ext"], (string)attrArgs["src_file_ext"], (string)attrArgs["obj_file_ext"], (string)attrArgs["sys_main"], (string)attrArgs["factory"], (string)attrArgs["events"], (string)attrArgs["nvs"], (string)attrArgs["nvs_bridge"], (string)attrArgs["sets"], (string)attrArgs["types"], (string)attrArgs["thread"], (string)attrArgs["trace"], (string)attrArgs["tim"], (string)attrArgs["callout"], (string)attrArgs["ilb"], (string)attrArgs["persist"], (string)attrArgs["xtumlload"], (string)attrArgs["interfaces"], (string)attrArgs["registers"], (string)attrArgs["domain_color_path"], (string)attrArgs["domain_source_path"], (string)attrArgs["domain_include_path"], (string)attrArgs["system_source_path"], (string)attrArgs["system_include_path"], (string)attrArgs["system_color_path"], (string)attrArgs["bridge_mark"], (string)attrArgs["system_mark"], (string)attrArgs["datatype_mark"], (string)attrArgs["event_mark"], (string)attrArgs["class_mark"], (string)attrArgs["domain_mark"], (string)attrArgs["system_functions_mark"], (string)attrArgs["arc_path"], (string)attrArgs["root_path"])
@@ -19956,7 +21127,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_FORBase(CIModelRepository repository, bool isImplicit, string class_name, string loop_variable, string set_variable, string Statement_ID ) : base(repository, "TE_FOR")
         {
-            ;
+            Attr_isImplicit = isImplicit;
+            Attr_class_name = class_name;
+            Attr_loop_variable = loop_variable;
+            Attr_set_variable = set_variable;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_FORBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (bool)attrArgs["isImplicit"], (string)attrArgs["class_name"], (string)attrArgs["loop_variable"], (string)attrArgs["set_variable"], (string)attrArgs["Statement_ID"])
@@ -19994,7 +21169,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_FUNCTIONBase(CIModelRepository repository, string method, string parameters, string Statement_ID ) : base(repository, "TE_FUNCTION")
         {
-            ;
+            Attr_method = method;
+            Attr_parameters = parameters;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_FUNCTIONBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["method"], (string)attrArgs["parameters"], (string)attrArgs["Statement_ID"])
@@ -20036,7 +21213,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_GENERATEBase(CIModelRepository repository, string sm_evt, bool self_directed, string var_name, string event_label, string event_meaning, string parameters, string Statement_ID ) : base(repository, "TE_GENERATE")
         {
-            ;
+            Attr_sm_evt = sm_evt;
+            Attr_self_directed = self_directed;
+            Attr_var_name = var_name;
+            Attr_event_label = event_label;
+            Attr_event_meaning = event_meaning;
+            Attr_parameters = parameters;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_GENERATEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["sm_evt"], (bool)attrArgs["self_directed"], (string)attrArgs["var_name"], (string)attrArgs["event_label"], (string)attrArgs["event_meaning"], (string)attrArgs["parameters"], (string)attrArgs["Statement_ID"])
@@ -20078,7 +21261,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_GENERATE_CREATOR_EVENTBase(CIModelRepository repository, string sm_evt, bool self_directed, string var_name, string event_label, string event_meaning, string parameters, string Statement_ID ) : base(repository, "TE_GENERATE_CREATOR_EVENT")
         {
-            ;
+            Attr_sm_evt = sm_evt;
+            Attr_self_directed = self_directed;
+            Attr_var_name = var_name;
+            Attr_event_label = event_label;
+            Attr_event_meaning = event_meaning;
+            Attr_parameters = parameters;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_GENERATE_CREATOR_EVENTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["sm_evt"], (bool)attrArgs["self_directed"], (string)attrArgs["var_name"], (string)attrArgs["event_label"], (string)attrArgs["event_meaning"], (string)attrArgs["parameters"], (string)attrArgs["Statement_ID"])
@@ -20116,7 +21305,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_GENERATE_PRECREATED_EVENTBase(CIModelRepository repository, bool self_directed, string var_name, string Statement_ID ) : base(repository, "TE_GENERATE_PRECREATED_EVENT")
         {
-            ;
+            Attr_self_directed = self_directed;
+            Attr_var_name = var_name;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_GENERATE_PRECREATED_EVENTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (bool)attrArgs["self_directed"], (string)attrArgs["var_name"], (string)attrArgs["Statement_ID"])
@@ -20158,7 +21349,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_GENERATE_TO_CLASSBase(CIModelRepository repository, string sm_evt, bool self_directed, string var_name, string event_label, string even_meaning, string parameters, string Statement_ID ) : base(repository, "TE_GENERATE_TO_CLASS")
         {
-            ;
+            Attr_sm_evt = sm_evt;
+            Attr_self_directed = self_directed;
+            Attr_var_name = var_name;
+            Attr_event_label = event_label;
+            Attr_even_meaning = even_meaning;
+            Attr_parameters = parameters;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_GENERATE_TO_CLASSBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["sm_evt"], (bool)attrArgs["self_directed"], (string)attrArgs["var_name"], (string)attrArgs["event_label"], (string)attrArgs["even_meaning"], (string)attrArgs["parameters"], (string)attrArgs["Statement_ID"])
@@ -20195,7 +21392,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_IFBase(CIModelRepository repository, string condition, string Statement_ID ) : base(repository, "TE_IF")
         {
-            ;
+            Attr_condition = condition;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_IFBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["condition"], (string)attrArgs["Statement_ID"])
@@ -20241,7 +21439,17 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_IIRBase(CIModelRepository repository, string ID, string component_name, string port_name, string interface_name, bool polymorphic, string template_parameter_values, string C2C, string cl_iirId, string c_irId, string te_poID, string provider_te_iirID ) : base(repository, "TE_IIR")
         {
-            ;
+            Attr_ID = ID;
+            Attr_component_name = component_name;
+            Attr_port_name = port_name;
+            Attr_interface_name = interface_name;
+            Attr_polymorphic = polymorphic;
+            Attr_template_parameter_values = template_parameter_values;
+            Attr_C2C = C2C;
+            Attr_cl_iirId = cl_iirId;
+            Attr_c_irId = c_irId;
+            Attr_te_poID = te_poID;
+            Attr_provider_te_iirID = provider_te_iirID;
         }
 
         public CIMClassTE_IIRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ID"], (string)attrArgs["component_name"], (string)attrArgs["port_name"], (string)attrArgs["interface_name"], (bool)attrArgs["polymorphic"], (string)attrArgs["template_parameter_values"], (string)attrArgs["C2C"], (string)attrArgs["cl_iirId"], (string)attrArgs["c_irId"], (string)attrArgs["te_poID"], (string)attrArgs["provider_te_iirID"])
@@ -20344,7 +21552,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_ILBBase(CIModelRepository repository, string file, string define_name, string data_define_name, string interleave_bridge, string interleave_bridge_done, string get_data, string dispatch ) : base(repository, "TE_ILB")
         {
-            ;
+            Attr_file = file;
+            Attr_define_name = define_name;
+            Attr_data_define_name = data_define_name;
+            Attr_interleave_bridge = interleave_bridge;
+            Attr_interleave_bridge_done = interleave_bridge_done;
+            Attr_get_data = get_data;
+            Attr_dispatch = dispatch;
         }
 
         public CIMClassTE_ILBBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["file"], (string)attrArgs["define_name"], (string)attrArgs["data_define_name"], (string)attrArgs["interleave_bridge"], (string)attrArgs["interleave_bridge_done"], (string)attrArgs["get_data"], (string)attrArgs["dispatch"])
@@ -20387,7 +21601,25 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_INSTANCEBase(CIModelRepository repository, string create, string create_persistent, string delete, string delete_persistent, string self, string global_self, string base_, string handle, string factory_init, string base_class, string max_extent, string max_association_extent, string max_transient_extent, string current_state, string scope, string get_dci, string get_event_dispatcher, string get_thread_assignment, string module ) : base(repository, "TE_INSTANCE")
         {
-            ;
+            Attr_create = create;
+            Attr_create_persistent = create_persistent;
+            Attr_delete = delete;
+            Attr_delete_persistent = delete_persistent;
+            Attr_self = self;
+            Attr_global_self = global_self;
+            Attr_base = base_;
+            Attr_handle = handle;
+            Attr_factory_init = factory_init;
+            Attr_base_class = base_class;
+            Attr_max_extent = max_extent;
+            Attr_max_association_extent = max_association_extent;
+            Attr_max_transient_extent = max_transient_extent;
+            Attr_current_state = current_state;
+            Attr_scope = scope;
+            Attr_get_dci = get_dci;
+            Attr_get_event_dispatcher = get_event_dispatcher;
+            Attr_get_thread_assignment = get_thread_assignment;
+            Attr_module = module;
         }
 
         public CIMClassTE_INSTANCEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["create"], (string)attrArgs["create_persistent"], (string)attrArgs["delete"], (string)attrArgs["delete_persistent"], (string)attrArgs["self"], (string)attrArgs["global_self"], (string)attrArgs["base"], (string)attrArgs["handle"], (string)attrArgs["factory_init"], (string)attrArgs["base_class"], (string)attrArgs["max_extent"], (string)attrArgs["max_association_extent"], (string)attrArgs["max_transient_extent"], (string)attrArgs["current_state"], (string)attrArgs["scope"], (string)attrArgs["get_dci"], (string)attrArgs["get_event_dispatcher"], (string)attrArgs["get_thread_assignment"], (string)attrArgs["module"])
@@ -20425,7 +21657,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_IOPBase(CIModelRepository repository, string name, string parameters, string Statement_ID ) : base(repository, "TE_IOP")
         {
-            ;
+            Attr_name = name;
+            Attr_parameters = parameters;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_IOPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["name"], (string)attrArgs["parameters"], (string)attrArgs["Statement_ID"])
@@ -20475,7 +21709,21 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_LNKBase(CIModelRepository repository, string ID, int Mult, string rel_phrase, int rel_number, string OAL, string buffer, string next_ID, string Link_ID, string linkage, string iterator, string left, string te_classGeneratedName, bool first, bool last, string assoc_type ) : base(repository, "TE_LNK")
         {
-            ;
+            Attr_ID = ID;
+            Attr_Mult = Mult;
+            Attr_rel_phrase = rel_phrase;
+            Attr_rel_number = rel_number;
+            Attr_OAL = OAL;
+            Attr_buffer = buffer;
+            Attr_next_ID = next_ID;
+            Attr_Link_ID = Link_ID;
+            Attr_linkage = linkage;
+            Attr_iterator = iterator;
+            Attr_left = left;
+            Attr_te_classGeneratedName = te_classGeneratedName;
+            Attr_first = first;
+            Attr_last = last;
+            Attr_assoc_type = assoc_type;
         }
 
         public CIMClassTE_LNKBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ID"], (int)attrArgs["Mult"], (string)attrArgs["rel_phrase"], (int)attrArgs["rel_number"], (string)attrArgs["OAL"], (string)attrArgs["buffer"], (string)attrArgs["next_ID"], (string)attrArgs["Link_ID"], (string)attrArgs["linkage"], (string)attrArgs["iterator"], (string)attrArgs["left"], (string)attrArgs["te_classGeneratedName"], (bool)attrArgs["first"], (bool)attrArgs["last"], (string)attrArgs["assoc_type"])
@@ -20583,7 +21831,30 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_MACTBase(CIModelRepository repository, string AbaID, string ID, string Name, string Descrip, string GeneratedName, string ComponentName, string OALParamBuffer, string PortName, string InterfaceName, string MessageName, int Direction, bool Provision, string subtypeKL, bool polymorphic, bool trace, int Order, string SPR_POId, string SPR_PSId, string SPR_ROId, string SPR_RSId, string te_cID, string te_poID, string te_evtID, string nextID ) : base(repository, "TE_MACT")
         {
-            ;
+            Attr_AbaID = AbaID;
+            Attr_ID = ID;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_GeneratedName = GeneratedName;
+            Attr_ComponentName = ComponentName;
+            Attr_OALParamBuffer = OALParamBuffer;
+            Attr_PortName = PortName;
+            Attr_InterfaceName = InterfaceName;
+            Attr_MessageName = MessageName;
+            Attr_Direction = Direction;
+            Attr_Provision = Provision;
+            Attr_subtypeKL = subtypeKL;
+            Attr_polymorphic = polymorphic;
+            Attr_trace = trace;
+            Attr_Order = Order;
+            Attr_SPR_POId = SPR_POId;
+            Attr_SPR_PSId = SPR_PSId;
+            Attr_SPR_ROId = SPR_ROId;
+            Attr_SPR_RSId = SPR_RSId;
+            Attr_te_cID = te_cID;
+            Attr_te_poID = te_poID;
+            Attr_te_evtID = te_evtID;
+            Attr_nextID = nextID;
         }
 
         public CIMClassTE_MACTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["AbaID"], (string)attrArgs["ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"], (string)attrArgs["GeneratedName"], (string)attrArgs["ComponentName"], (string)attrArgs["OALParamBuffer"], (string)attrArgs["PortName"], (string)attrArgs["InterfaceName"], (string)attrArgs["MessageName"], (int)attrArgs["Direction"], (bool)attrArgs["Provision"], (string)attrArgs["subtypeKL"], (bool)attrArgs["polymorphic"], (bool)attrArgs["trace"], (int)attrArgs["Order"], (string)attrArgs["SPR_POId"], (string)attrArgs["SPR_PSId"], (string)attrArgs["SPR_ROId"], (string)attrArgs["SPR_RSId"], (string)attrArgs["te_cID"], (string)attrArgs["te_poID"], (string)attrArgs["te_evtID"], (string)attrArgs["nextID"])
@@ -20760,7 +22031,16 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_MBRBase(CIModelRepository repository, string ID, string Name, string GeneratedName, int dimensions, string te_dimID, string array_spec, string previousID, string te_dtID, string Member_ID, string DT_ID ) : base(repository, "TE_MBR")
         {
-            ;
+            Attr_ID = ID;
+            Attr_Name = Name;
+            Attr_GeneratedName = GeneratedName;
+            Attr_dimensions = dimensions;
+            Attr_te_dimID = te_dimID;
+            Attr_array_spec = array_spec;
+            Attr_previousID = previousID;
+            Attr_te_dtID = te_dtID;
+            Attr_Member_ID = Member_ID;
+            Attr_DT_ID = DT_ID;
         }
 
         public CIMClassTE_MBRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ID"], (string)attrArgs["Name"], (string)attrArgs["GeneratedName"], (int)attrArgs["dimensions"], (string)attrArgs["te_dimID"], (string)attrArgs["array_spec"], (string)attrArgs["previousID"], (string)attrArgs["te_dtID"], (string)attrArgs["Member_ID"], (string)attrArgs["DT_ID"])
@@ -20853,7 +22133,15 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_OIRBase(CIModelRepository repository, string data_member, string assoc_type, string object_id, string rel_phrase, int Mult, bool NavigatedTo, string OIR_ID, string Obj_ID, string Rel_ID ) : base(repository, "TE_OIR")
         {
-            ;
+            Attr_data_member = data_member;
+            Attr_assoc_type = assoc_type;
+            Attr_object_id = object_id;
+            Attr_rel_phrase = rel_phrase;
+            Attr_Mult = Mult;
+            Attr_NavigatedTo = NavigatedTo;
+            Attr_OIR_ID = OIR_ID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Rel_ID = Rel_ID;
         }
 
         public CIMClassTE_OIRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["data_member"], (string)attrArgs["assoc_type"], (string)attrArgs["object_id"], (string)attrArgs["rel_phrase"], (int)attrArgs["Mult"], (bool)attrArgs["NavigatedTo"], (string)attrArgs["OIR_ID"], (string)attrArgs["Obj_ID"], (string)attrArgs["Rel_ID"])
@@ -20894,7 +22182,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_OPERATIONBase(CIModelRepository repository, bool instance_based, string operation_name, string parameters, string var_name, string Statement_ID ) : base(repository, "TE_OPERATION")
         {
-            ;
+            Attr_instance_based = instance_based;
+            Attr_operation_name = operation_name;
+            Attr_parameters = parameters;
+            Attr_var_name = var_name;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_OPERATIONBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (bool)attrArgs["instance_based"], (string)attrArgs["operation_name"], (string)attrArgs["parameters"], (string)attrArgs["var_name"], (string)attrArgs["Statement_ID"])
@@ -20933,7 +22225,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_OUTFILEBase(CIModelRepository repository, string ID, string Name, string body, int Order ) : base(repository, "TE_OUTFILE")
         {
-            ;
+            Attr_ID = ID;
+            Attr_Name = Name;
+            Attr_body = body;
+            Attr_Order = Order;
         }
 
         public CIMClassTE_OUTFILEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ID"], (string)attrArgs["Name"], (string)attrArgs["body"], (int)attrArgs["Order"])
@@ -20963,7 +22258,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_PARBase(CIModelRepository repository, string Name, int By_Ref, string buffer, int Order, string Value_ID, string te_parmID ) : base(repository, "TE_PAR")
         {
-            ;
+            Attr_Name = Name;
+            Attr_By_Ref = By_Ref;
+            Attr_buffer = buffer;
+            Attr_Order = Order;
+            Attr_Value_ID = Value_ID;
+            Attr_te_parmID = te_parmID;
         }
 
         public CIMClassTE_PARBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Name"], (int)attrArgs["By_Ref"], (string)attrArgs["buffer"], (int)attrArgs["Order"], (string)attrArgs["Value_ID"], (string)attrArgs["te_parmID"])
@@ -21031,7 +22331,26 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_PARMBase(CIModelRepository repository, string Name, string Descrip, int Order, string ParamBuffer, string OALParamBuffer, string ID, string nextID, string GeneratedName, int By_Ref, string te_dtID, int dimensions, string te_dimID, string array_spec, string AbaID, string SM_ID, string SMedi_ID, string SParm_ID, string TParm_ID, string PP_Id, string BParm_ID ) : base(repository, "TE_PARM")
         {
-            ;
+            Attr_Name = Name;
+            Attr_Descrip = Descrip;
+            Attr_Order = Order;
+            Attr_ParamBuffer = ParamBuffer;
+            Attr_OALParamBuffer = OALParamBuffer;
+            Attr_ID = ID;
+            Attr_nextID = nextID;
+            Attr_GeneratedName = GeneratedName;
+            Attr_By_Ref = By_Ref;
+            Attr_te_dtID = te_dtID;
+            Attr_dimensions = dimensions;
+            Attr_te_dimID = te_dimID;
+            Attr_array_spec = array_spec;
+            Attr_AbaID = AbaID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMedi_ID = SMedi_ID;
+            Attr_SParm_ID = SParm_ID;
+            Attr_TParm_ID = TParm_ID;
+            Attr_PP_Id = PP_Id;
+            Attr_BParm_ID = BParm_ID;
         }
 
         public CIMClassTE_PARMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Name"], (string)attrArgs["Descrip"], (int)attrArgs["Order"], (string)attrArgs["ParamBuffer"], (string)attrArgs["OALParamBuffer"], (string)attrArgs["ID"], (string)attrArgs["nextID"], (string)attrArgs["GeneratedName"], (int)attrArgs["By_Ref"], (string)attrArgs["te_dtID"], (int)attrArgs["dimensions"], (string)attrArgs["te_dimID"], (string)attrArgs["array_spec"], (string)attrArgs["AbaID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMedi_ID"], (string)attrArgs["SParm_ID"], (string)attrArgs["TParm_ID"], (string)attrArgs["PP_Id"], (string)attrArgs["BParm_ID"])
@@ -21211,7 +22530,30 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_PERSISTBase(CIModelRepository repository, string persist_file, string class_union, string instance_cache_depth, string link_cache_depth, string check_mark, string post_link, string link_type_name, string link_type_type, string factory_init, string commit, string restore, string remove, string domainnum_name, string domainnum_type, string classnum_name, string classnum_type, string index_name, string index_type, string instid_type, string instid_name, string dirty_type, string dirty_name, int dirty_dirty, int dirty_clean ) : base(repository, "TE_PERSIST")
         {
-            ;
+            Attr_persist_file = persist_file;
+            Attr_class_union = class_union;
+            Attr_instance_cache_depth = instance_cache_depth;
+            Attr_link_cache_depth = link_cache_depth;
+            Attr_check_mark = check_mark;
+            Attr_post_link = post_link;
+            Attr_link_type_name = link_type_name;
+            Attr_link_type_type = link_type_type;
+            Attr_factory_init = factory_init;
+            Attr_commit = commit;
+            Attr_restore = restore;
+            Attr_remove = remove;
+            Attr_domainnum_name = domainnum_name;
+            Attr_domainnum_type = domainnum_type;
+            Attr_classnum_name = classnum_name;
+            Attr_classnum_type = classnum_type;
+            Attr_index_name = index_name;
+            Attr_index_type = index_type;
+            Attr_instid_type = instid_type;
+            Attr_instid_name = instid_name;
+            Attr_dirty_type = dirty_type;
+            Attr_dirty_name = dirty_name;
+            Attr_dirty_dirty = dirty_dirty;
+            Attr_dirty_clean = dirty_clean;
         }
 
         public CIMClassTE_PERSISTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["persist_file"], (string)attrArgs["class_union"], (string)attrArgs["instance_cache_depth"], (string)attrArgs["link_cache_depth"], (string)attrArgs["check_mark"], (string)attrArgs["post_link"], (string)attrArgs["link_type_name"], (string)attrArgs["link_type_type"], (string)attrArgs["factory_init"], (string)attrArgs["commit"], (string)attrArgs["restore"], (string)attrArgs["remove"], (string)attrArgs["domainnum_name"], (string)attrArgs["domainnum_type"], (string)attrArgs["classnum_name"], (string)attrArgs["classnum_type"], (string)attrArgs["index_name"], (string)attrArgs["index_type"], (string)attrArgs["instid_type"], (string)attrArgs["instid_name"], (string)attrArgs["dirty_type"], (string)attrArgs["dirty_name"], (int)attrArgs["dirty_dirty"], (int)attrArgs["dirty_clean"])
@@ -21250,7 +22592,21 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_POBase(CIModelRepository repository, string ID, string Name, string GeneratedName, string InterfaceName, string PackageName, string smsg_send, string smsg_recv, bool Provision, bool polymorphic, int sibling, int Order, string te_cID, string c_iId, string c_poId, string first_te_mactID ) : base(repository, "TE_PO")
         {
-            ;
+            Attr_ID = ID;
+            Attr_Name = Name;
+            Attr_GeneratedName = GeneratedName;
+            Attr_InterfaceName = InterfaceName;
+            Attr_PackageName = PackageName;
+            Attr_smsg_send = smsg_send;
+            Attr_smsg_recv = smsg_recv;
+            Attr_Provision = Provision;
+            Attr_polymorphic = polymorphic;
+            Attr_sibling = sibling;
+            Attr_Order = Order;
+            Attr_te_cID = te_cID;
+            Attr_c_iId = c_iId;
+            Attr_c_poId = c_poId;
+            Attr_first_te_mactID = first_te_mactID;
         }
 
         public CIMClassTE_POBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ID"], (string)attrArgs["Name"], (string)attrArgs["GeneratedName"], (string)attrArgs["InterfaceName"], (string)attrArgs["PackageName"], (string)attrArgs["smsg_send"], (string)attrArgs["smsg_recv"], (bool)attrArgs["Provision"], (bool)attrArgs["polymorphic"], (int)attrArgs["sibling"], (int)attrArgs["Order"], (string)attrArgs["te_cID"], (string)attrArgs["c_iId"], (string)attrArgs["c_poId"], (string)attrArgs["first_te_mactID"])
@@ -21359,7 +22715,19 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_PREFIXBase(CIModelRepository repository, string symbol, string symbolsw, string type, string typesw, string define_u, string define_c, string define_csw, string define_usw, string file, string result, string provided_port, string required_port, string channel ) : base(repository, "TE_PREFIX")
         {
-            ;
+            Attr_symbol = symbol;
+            Attr_symbolsw = symbolsw;
+            Attr_type = type;
+            Attr_typesw = typesw;
+            Attr_define_u = define_u;
+            Attr_define_c = define_c;
+            Attr_define_csw = define_csw;
+            Attr_define_usw = define_usw;
+            Attr_file = file;
+            Attr_result = result;
+            Attr_provided_port = provided_port;
+            Attr_required_port = required_port;
+            Attr_channel = channel;
         }
 
         public CIMClassTE_PREFIXBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["symbol"], (string)attrArgs["symbolsw"], (string)attrArgs["type"], (string)attrArgs["typesw"], (string)attrArgs["define_u"], (string)attrArgs["define_c"], (string)attrArgs["define_csw"], (string)attrArgs["define_usw"], (string)attrArgs["file"], (string)attrArgs["result"], (string)attrArgs["provided_port"], (string)attrArgs["required_port"], (string)attrArgs["channel"])
@@ -21389,7 +22757,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_QUEUEBase(CIModelRepository repository, int Queue_ID, int Dispatcher_ID, int Type, string Descrip, bool RenderCode, int MaxDepth ) : base(repository, "TE_QUEUE")
         {
-            ;
+            Attr_Queue_ID = Queue_ID;
+            Attr_Dispatcher_ID = Dispatcher_ID;
+            Attr_Type = Type;
+            Attr_Descrip = Descrip;
+            Attr_RenderCode = RenderCode;
+            Attr_MaxDepth = MaxDepth;
         }
 
         public CIMClassTE_QUEUEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (int)attrArgs["Queue_ID"], (int)attrArgs["Dispatcher_ID"], (int)attrArgs["Type"], (string)attrArgs["Descrip"], (bool)attrArgs["RenderCode"], (int)attrArgs["MaxDepth"])
@@ -21432,7 +22805,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_RELBase(CIModelRepository repository, int Numb, bool LinkNeeded, bool UnlinkNeeded, bool Navigated, int Order, bool storage_needed, string Rel_ID ) : base(repository, "TE_REL")
         {
-            ;
+            Attr_Numb = Numb;
+            Attr_LinkNeeded = LinkNeeded;
+            Attr_UnlinkNeeded = UnlinkNeeded;
+            Attr_Navigated = Navigated;
+            Attr_Order = Order;
+            Attr_storage_needed = storage_needed;
+            Attr_Rel_ID = Rel_ID;
         }
 
         public CIMClassTE_RELBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (int)attrArgs["Numb"], (bool)attrArgs["LinkNeeded"], (bool)attrArgs["UnlinkNeeded"], (bool)attrArgs["Navigated"], (int)attrArgs["Order"], (bool)attrArgs["storage_needed"], (string)attrArgs["Rel_ID"])
@@ -21477,7 +22856,15 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_RELATEBase(CIModelRepository repository, string one_o_obj, string oth_o_obj, string r_rel, bool is_reflexive, int relationship_number, string relationship_phrase, string one_var_name, string oth_var_name, string Statement_ID ) : base(repository, "TE_RELATE")
         {
-            ;
+            Attr_one_o_obj = one_o_obj;
+            Attr_oth_o_obj = oth_o_obj;
+            Attr_r_rel = r_rel;
+            Attr_is_reflexive = is_reflexive;
+            Attr_relationship_number = relationship_number;
+            Attr_relationship_phrase = relationship_phrase;
+            Attr_one_var_name = one_var_name;
+            Attr_oth_var_name = oth_var_name;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_RELATEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["one_o_obj"], (string)attrArgs["oth_o_obj"], (string)attrArgs["r_rel"], (bool)attrArgs["is_reflexive"], (int)attrArgs["relationship_number"], (string)attrArgs["relationship_phrase"], (string)attrArgs["one_var_name"], (string)attrArgs["oth_var_name"], (string)attrArgs["Statement_ID"])
@@ -21525,7 +22912,19 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_RELATE_USINGBase(CIModelRepository repository, string one_o_obj, string oth_o_obj, string ass_o_obj, string r_rel, bool is_inflexive, int relationship_number, string relationship_phrase, string one_var_name, string oth_var_name, string ass_var_name, string one_rel_phrase, string oth_rel_phrase, string Statement_ID ) : base(repository, "TE_RELATE_USING")
         {
-            ;
+            Attr_one_o_obj = one_o_obj;
+            Attr_oth_o_obj = oth_o_obj;
+            Attr_ass_o_obj = ass_o_obj;
+            Attr_r_rel = r_rel;
+            Attr_is_inflexive = is_inflexive;
+            Attr_relationship_number = relationship_number;
+            Attr_relationship_phrase = relationship_phrase;
+            Attr_one_var_name = one_var_name;
+            Attr_oth_var_name = oth_var_name;
+            Attr_ass_var_name = ass_var_name;
+            Attr_one_rel_phrase = one_rel_phrase;
+            Attr_oth_rel_phrase = oth_rel_phrase;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_RELATE_USINGBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["one_o_obj"], (string)attrArgs["oth_o_obj"], (string)attrArgs["ass_o_obj"], (string)attrArgs["r_rel"], (bool)attrArgs["is_inflexive"], (int)attrArgs["relationship_number"], (string)attrArgs["relationship_phrase"], (string)attrArgs["one_var_name"], (string)attrArgs["oth_var_name"], (string)attrArgs["ass_var_name"], (string)attrArgs["one_rel_phrase"], (string)attrArgs["oth_rel_phrase"], (string)attrArgs["Statement_ID"])
@@ -21573,7 +22972,19 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_RELINFOBase(CIModelRepository repository, string obj, string related_obj, string rel, string rto, string rgo, string oir, int multiplicity, bool gen_link_methods, string rel_phrase, bool is_formalizer, bool is_supertype, bool generate_subtype, bool gen_declaration ) : base(repository, "TE_RELINFO")
         {
-            ;
+            Attr_obj = obj;
+            Attr_related_obj = related_obj;
+            Attr_rel = rel;
+            Attr_rto = rto;
+            Attr_rgo = rgo;
+            Attr_oir = oir;
+            Attr_multiplicity = multiplicity;
+            Attr_gen_link_methods = gen_link_methods;
+            Attr_rel_phrase = rel_phrase;
+            Attr_is_formalizer = is_formalizer;
+            Attr_is_supertype = is_supertype;
+            Attr_generate_subtype = generate_subtype;
+            Attr_gen_declaration = gen_declaration;
         }
 
         public CIMClassTE_RELINFOBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["obj"], (string)attrArgs["related_obj"], (string)attrArgs["rel"], (string)attrArgs["rto"], (string)attrArgs["rgo"], (string)attrArgs["oir"], (int)attrArgs["multiplicity"], (bool)attrArgs["gen_link_methods"], (string)attrArgs["rel_phrase"], (bool)attrArgs["is_formalizer"], (bool)attrArgs["is_supertype"], (bool)attrArgs["generate_subtype"], (bool)attrArgs["gen_declaration"])
@@ -21603,7 +23014,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_RELSTOREBase(CIModelRepository repository, string data_declare, string data_init, string link_calls, int link_index, string data_fini, string self_name ) : base(repository, "TE_RELSTORE")
         {
-            ;
+            Attr_data_declare = data_declare;
+            Attr_data_init = data_init;
+            Attr_link_calls = link_calls;
+            Attr_link_index = link_index;
+            Attr_data_fini = data_fini;
+            Attr_self_name = self_name;
         }
 
         public CIMClassTE_RELSTOREBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["data_declare"], (string)attrArgs["data_init"], (string)attrArgs["link_calls"], (int)attrArgs["link_index"], (string)attrArgs["data_fini"], (string)attrArgs["self_name"])
@@ -21631,7 +23047,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_RETURNBase(CIModelRepository repository, string value, string cast1, string cast2, string Statement_ID ) : base(repository, "TE_RETURN")
         {
-            ;
+            Attr_value = value;
+            Attr_cast1 = cast1;
+            Attr_cast2 = cast2;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_RETURNBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["value"], (string)attrArgs["cast1"], (string)attrArgs["cast2"], (string)attrArgs["Statement_ID"])
@@ -21674,7 +23093,14 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_SELECTBase(CIModelRepository repository, string o_obj, bool is_implicit, string class_name, string target_class_name, string class_description, string multiplicity, string var_name, string Statement_ID ) : base(repository, "TE_SELECT")
         {
-            ;
+            Attr_o_obj = o_obj;
+            Attr_is_implicit = is_implicit;
+            Attr_class_name = class_name;
+            Attr_target_class_name = target_class_name;
+            Attr_class_description = class_description;
+            Attr_multiplicity = multiplicity;
+            Attr_var_name = var_name;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_SELECTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["o_obj"], (bool)attrArgs["is_implicit"], (string)attrArgs["class_name"], (string)attrArgs["target_class_name"], (string)attrArgs["class_description"], (string)attrArgs["multiplicity"], (string)attrArgs["var_name"], (string)attrArgs["Statement_ID"])
@@ -21726,7 +23152,23 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_SELECT_RELATEDBase(CIModelRepository repository, string Statement_ID, string link_ID, string starting_Value_ID, string where_clause_Value_ID, string starting_Var_ID, string result_Var_ID, bool by_where, string where_clause, string where_clause_OAL, string multiplicity, bool is_implicit, string result_var, string result_var_OAL, bool start_many, string start_var, string start_var_OAL, string te_classGeneratedName ) : base(repository, "TE_SELECT_RELATED")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_link_ID = link_ID;
+            Attr_starting_Value_ID = starting_Value_ID;
+            Attr_where_clause_Value_ID = where_clause_Value_ID;
+            Attr_starting_Var_ID = starting_Var_ID;
+            Attr_result_Var_ID = result_Var_ID;
+            Attr_by_where = by_where;
+            Attr_where_clause = where_clause;
+            Attr_where_clause_OAL = where_clause_OAL;
+            Attr_multiplicity = multiplicity;
+            Attr_is_implicit = is_implicit;
+            Attr_result_var = result_var;
+            Attr_result_var_OAL = result_var_OAL;
+            Attr_start_many = start_many;
+            Attr_start_var = start_var;
+            Attr_start_var_OAL = start_var_OAL;
+            Attr_te_classGeneratedName = te_classGeneratedName;
         }
 
         public CIMClassTE_SELECT_RELATEDBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["link_ID"], (string)attrArgs["starting_Value_ID"], (string)attrArgs["where_clause_Value_ID"], (string)attrArgs["starting_Var_ID"], (string)attrArgs["result_Var_ID"], (bool)attrArgs["by_where"], (string)attrArgs["where_clause"], (string)attrArgs["where_clause_OAL"], (string)attrArgs["multiplicity"], (bool)attrArgs["is_implicit"], (string)attrArgs["result_var"], (string)attrArgs["result_var_OAL"], (bool)attrArgs["start_many"], (string)attrArgs["start_var"], (string)attrArgs["start_var_OAL"], (string)attrArgs["te_classGeneratedName"])
@@ -21845,7 +23287,18 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_SELECT_WHEREBase(CIModelRepository repository, string o_obj, bool is_implicit, string class_name, string oal_var_name, string class_description, string multiplicity, string var_name, string selected_var_name, string where_clause, bool special, int oid_id, string Statement_ID ) : base(repository, "TE_SELECT_WHERE")
         {
-            ;
+            Attr_o_obj = o_obj;
+            Attr_is_implicit = is_implicit;
+            Attr_class_name = class_name;
+            Attr_oal_var_name = oal_var_name;
+            Attr_class_description = class_description;
+            Attr_multiplicity = multiplicity;
+            Attr_var_name = var_name;
+            Attr_selected_var_name = selected_var_name;
+            Attr_where_clause = where_clause;
+            Attr_special = special;
+            Attr_oid_id = oid_id;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_SELECT_WHEREBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["o_obj"], (bool)attrArgs["is_implicit"], (string)attrArgs["class_name"], (string)attrArgs["oal_var_name"], (string)attrArgs["class_description"], (string)attrArgs["multiplicity"], (string)attrArgs["var_name"], (string)attrArgs["selected_var_name"], (string)attrArgs["where_clause"], (bool)attrArgs["special"], (int)attrArgs["oid_id"], (string)attrArgs["Statement_ID"])
@@ -21906,7 +23359,32 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_SETBase(CIModelRepository repository, string number_of_containoids, string iterator_class_name, string factory, string init, string copy, string clear, string setunion, string setintersection, string setdifference, string setsymmetricdifference, string insert_element, string insert_instance, string insert_block, string remove_element, string remove_instance, string element_count, string contains, string equality, string emptiness, string get_any, string iterator_reset, string iterator_next, string base_class, string element_type, string scope, string module ) : base(repository, "TE_SET")
         {
-            ;
+            Attr_number_of_containoids = number_of_containoids;
+            Attr_iterator_class_name = iterator_class_name;
+            Attr_factory = factory;
+            Attr_init = init;
+            Attr_copy = copy;
+            Attr_clear = clear;
+            Attr_setunion = setunion;
+            Attr_setintersection = setintersection;
+            Attr_setdifference = setdifference;
+            Attr_setsymmetricdifference = setsymmetricdifference;
+            Attr_insert_element = insert_element;
+            Attr_insert_instance = insert_instance;
+            Attr_insert_block = insert_block;
+            Attr_remove_element = remove_element;
+            Attr_remove_instance = remove_instance;
+            Attr_element_count = element_count;
+            Attr_contains = contains;
+            Attr_equality = equality;
+            Attr_emptiness = emptiness;
+            Attr_get_any = get_any;
+            Attr_iterator_reset = iterator_reset;
+            Attr_iterator_next = iterator_next;
+            Attr_base_class = base_class;
+            Attr_element_type = element_type;
+            Attr_scope = scope;
+            Attr_module = module;
         }
 
         public CIMClassTE_SETBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["number_of_containoids"], (string)attrArgs["iterator_class_name"], (string)attrArgs["factory"], (string)attrArgs["init"], (string)attrArgs["copy"], (string)attrArgs["clear"], (string)attrArgs["setunion"], (string)attrArgs["setintersection"], (string)attrArgs["setdifference"], (string)attrArgs["setsymmetricdifference"], (string)attrArgs["insert_element"], (string)attrArgs["insert_instance"], (string)attrArgs["insert_block"], (string)attrArgs["remove_element"], (string)attrArgs["remove_instance"], (string)attrArgs["element_count"], (string)attrArgs["contains"], (string)attrArgs["equality"], (string)attrArgs["emptiness"], (string)attrArgs["get_any"], (string)attrArgs["iterator_reset"], (string)attrArgs["iterator_next"], (string)attrArgs["base_class"], (string)attrArgs["element_type"], (string)attrArgs["scope"], (string)attrArgs["module"])
@@ -21949,7 +23427,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_SGNBase(CIModelRepository repository, string sm_evt, bool self_directed, string var_name, string event_label, string event_meaning, string parameters, string Statement_ID ) : base(repository, "TE_SGN")
         {
-            ;
+            Attr_sm_evt = sm_evt;
+            Attr_self_directed = self_directed;
+            Attr_var_name = var_name;
+            Attr_event_label = event_label;
+            Attr_event_meaning = event_meaning;
+            Attr_parameters = parameters;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_SGNBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["sm_evt"], (bool)attrArgs["self_directed"], (string)attrArgs["var_name"], (string)attrArgs["event_label"], (string)attrArgs["event_meaning"], (string)attrArgs["parameters"], (string)attrArgs["Statement_ID"])
@@ -21986,7 +23470,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_SLISTBase(CIModelRepository repository, string flavor, string remove_node ) : base(repository, "TE_SLIST")
         {
-            ;
+            Attr_flavor = flavor;
+            Attr_remove_node = remove_node;
         }
 
         public CIMClassTE_SLISTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["flavor"], (string)attrArgs["remove_node"])
@@ -22040,7 +23525,25 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_SMBase(CIModelRepository repository, string ID, bool complete, string initial_state, string SEMname, string action_array, string action_type, string events_union, string txn_action_array, int txn_action_count, string state_names_array, int num_states, int num_events, string SM_ID, string te_classGeneratedName, string first_te_state_ID, string first_te_evt_ID, string state_strings, string event_strings, bool class_based ) : base(repository, "TE_SM")
         {
-            ;
+            Attr_ID = ID;
+            Attr_complete = complete;
+            Attr_initial_state = initial_state;
+            Attr_SEMname = SEMname;
+            Attr_action_array = action_array;
+            Attr_action_type = action_type;
+            Attr_events_union = events_union;
+            Attr_txn_action_array = txn_action_array;
+            Attr_txn_action_count = txn_action_count;
+            Attr_state_names_array = state_names_array;
+            Attr_num_states = num_states;
+            Attr_num_events = num_events;
+            Attr_SM_ID = SM_ID;
+            Attr_te_classGeneratedName = te_classGeneratedName;
+            Attr_first_te_state_ID = first_te_state_ID;
+            Attr_first_te_evt_ID = first_te_evt_ID;
+            Attr_state_strings = state_strings;
+            Attr_event_strings = event_strings;
+            Attr_class_based = class_based;
         }
 
         public CIMClassTE_SMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ID"], (bool)attrArgs["complete"], (string)attrArgs["initial_state"], (string)attrArgs["SEMname"], (string)attrArgs["action_array"], (string)attrArgs["action_type"], (string)attrArgs["events_union"], (string)attrArgs["txn_action_array"], (int)attrArgs["txn_action_count"], (string)attrArgs["state_names_array"], (int)attrArgs["num_states"], (int)attrArgs["num_events"], (string)attrArgs["SM_ID"], (string)attrArgs["te_classGeneratedName"], (string)attrArgs["first_te_state_ID"], (string)attrArgs["first_te_evt_ID"], (string)attrArgs["state_strings"], (string)attrArgs["event_strings"], (bool)attrArgs["class_based"])
@@ -22133,7 +23636,15 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_SMTBase(CIModelRepository repository, string Statement_ID, string OAL, string buffer, string buffer2, string trace, string next_Statement_ID, string sub_Block_ID, string subtypeKL, string parent_Block_ID ) : base(repository, "TE_SMT")
         {
-            ;
+            Attr_Statement_ID = Statement_ID;
+            Attr_OAL = OAL;
+            Attr_buffer = buffer;
+            Attr_buffer2 = buffer2;
+            Attr_trace = trace;
+            Attr_next_Statement_ID = next_Statement_ID;
+            Attr_sub_Block_ID = sub_Block_ID;
+            Attr_subtypeKL = subtypeKL;
+            Attr_parent_Block_ID = parent_Block_ID;
         }
 
         public CIMClassTE_SMTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Statement_ID"], (string)attrArgs["OAL"], (string)attrArgs["buffer"], (string)attrArgs["buffer2"], (string)attrArgs["trace"], (string)attrArgs["next_Statement_ID"], (string)attrArgs["sub_Block_ID"], (string)attrArgs["subtypeKL"], (string)attrArgs["parent_Block_ID"])
@@ -22255,7 +23766,15 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_STATEBase(CIModelRepository repository, string ID, string Name, string enumerator, int Numb, int number, int Order, string SM_ID, string SMstt_ID, string next_ID ) : base(repository, "TE_STATE")
         {
-            ;
+            Attr_ID = ID;
+            Attr_Name = Name;
+            Attr_enumerator = enumerator;
+            Attr_Numb = Numb;
+            Attr_number = number;
+            Attr_Order = Order;
+            Attr_SM_ID = SM_ID;
+            Attr_SMstt_ID = SMstt_ID;
+            Attr_next_ID = next_ID;
         }
 
         public CIMClassTE_STATEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ID"], (string)attrArgs["Name"], (string)attrArgs["enumerator"], (int)attrArgs["Numb"], (int)attrArgs["number"], (int)attrArgs["Order"], (string)attrArgs["SM_ID"], (string)attrArgs["SMstt_ID"], (string)attrArgs["next_ID"])
@@ -22340,7 +23859,19 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_STRINGBase(CIModelRepository repository, string memset, string memmove, string strcpy, string stradd, string strlen, string strcmp, string strget, string itoa, string atoi, string max_string_length, string debug_buffer_depth, string u128touuid, string uuidtou128 ) : base(repository, "TE_STRING")
         {
-            ;
+            Attr_memset = memset;
+            Attr_memmove = memmove;
+            Attr_strcpy = strcpy;
+            Attr_stradd = stradd;
+            Attr_strlen = strlen;
+            Attr_strcmp = strcmp;
+            Attr_strget = strget;
+            Attr_itoa = itoa;
+            Attr_atoi = atoi;
+            Attr_max_string_length = max_string_length;
+            Attr_debug_buffer_depth = debug_buffer_depth;
+            Attr_u128touuid = u128touuid;
+            Attr_uuidtou128 = uuidtou128;
         }
 
         public CIMClassTE_STRINGBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["memset"], (string)attrArgs["memmove"], (string)attrArgs["strcpy"], (string)attrArgs["stradd"], (string)attrArgs["strlen"], (string)attrArgs["strcmp"], (string)attrArgs["strget"], (string)attrArgs["itoa"], (string)attrArgs["atoi"], (string)attrArgs["max_string_length"], (string)attrArgs["debug_buffer_depth"], (string)attrArgs["u128touuid"], (string)attrArgs["uuidtou128"])
@@ -22371,7 +23902,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_SWCBase(CIModelRepository repository, string Obj_Kl, string Where_Spec, string Key, bool Ret_Val, bool Built_In, int Oid_ID, string GeneratedName ) : base(repository, "TE_SWC")
         {
-            ;
+            Attr_Obj_Kl = Obj_Kl;
+            Attr_Where_Spec = Where_Spec;
+            Attr_Key = Key;
+            Attr_Ret_Val = Ret_Val;
+            Attr_Built_In = Built_In;
+            Attr_Oid_ID = Oid_ID;
+            Attr_GeneratedName = GeneratedName;
         }
 
         public CIMClassTE_SWCBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Obj_Kl"], (string)attrArgs["Where_Spec"], (string)attrArgs["Key"], (bool)attrArgs["Ret_Val"], (bool)attrArgs["Built_In"], (int)attrArgs["Oid_ID"], (string)attrArgs["GeneratedName"])
@@ -22421,7 +23958,20 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_SYNCBase(CIModelRepository repository, string Name, bool Included, bool IsInitFunction, bool IsSafeForInterrupts, bool XlateSemantics, int Order, string AbaID, string GeneratedName, string intraface_method, string deferred_method, string te_cID, string Sync_ID, string ID, string nextID ) : base(repository, "TE_SYNC")
         {
-            ;
+            Attr_Name = Name;
+            Attr_Included = Included;
+            Attr_IsInitFunction = IsInitFunction;
+            Attr_IsSafeForInterrupts = IsSafeForInterrupts;
+            Attr_XlateSemantics = XlateSemantics;
+            Attr_Order = Order;
+            Attr_AbaID = AbaID;
+            Attr_GeneratedName = GeneratedName;
+            Attr_intraface_method = intraface_method;
+            Attr_deferred_method = deferred_method;
+            Attr_te_cID = te_cID;
+            Attr_Sync_ID = Sync_ID;
+            Attr_ID = ID;
+            Attr_nextID = nextID;
         }
 
         public CIMClassTE_SYNCBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Name"], (bool)attrArgs["Included"], (bool)attrArgs["IsInitFunction"], (bool)attrArgs["IsSafeForInterrupts"], (bool)attrArgs["XlateSemantics"], (int)attrArgs["Order"], (string)attrArgs["AbaID"], (string)attrArgs["GeneratedName"], (string)attrArgs["intraface_method"], (string)attrArgs["deferred_method"], (string)attrArgs["te_cID"], (string)attrArgs["Sync_ID"], (string)attrArgs["ID"], (string)attrArgs["nextID"])
@@ -22546,7 +24096,36 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_SYSBase(CIModelRepository repository, int SystemID, string ModelCompilerName, string ExecutableName, int MaxStringLen, int MaxObjExtent, int MaxRelExtent, int MaxSelectExtent, int TotalContainers, int MaxSelfEvents, int MaxNonSelfEvents, int MaxTimers, int MaxInterleavedBridges, int MaxInterleavedBridgeDataSize, int CollectionsFlavor, bool ForcePriorityEvents, int PEIClassCount, int PersistentClassCount, int PersistInstanceCacheDepth, int PersistLinkCacheDepth, int UnitsToDynamicallyAllocate, bool InstanceLoading, string self_name, string Name, string SystemCPortsType, bool AllPortsPoly, bool StructuredMessaging, bool NetworkSockets, bool SimulatedTime, int StateSaveBufferSize, string Sys_ID ) : base(repository, "TE_SYS")
         {
-            ;
+            Attr_SystemID = SystemID;
+            Attr_ModelCompilerName = ModelCompilerName;
+            Attr_ExecutableName = ExecutableName;
+            Attr_MaxStringLen = MaxStringLen;
+            Attr_MaxObjExtent = MaxObjExtent;
+            Attr_MaxRelExtent = MaxRelExtent;
+            Attr_MaxSelectExtent = MaxSelectExtent;
+            Attr_TotalContainers = TotalContainers;
+            Attr_MaxSelfEvents = MaxSelfEvents;
+            Attr_MaxNonSelfEvents = MaxNonSelfEvents;
+            Attr_MaxTimers = MaxTimers;
+            Attr_MaxInterleavedBridges = MaxInterleavedBridges;
+            Attr_MaxInterleavedBridgeDataSize = MaxInterleavedBridgeDataSize;
+            Attr_CollectionsFlavor = CollectionsFlavor;
+            Attr_ForcePriorityEvents = ForcePriorityEvents;
+            Attr_PEIClassCount = PEIClassCount;
+            Attr_PersistentClassCount = PersistentClassCount;
+            Attr_PersistInstanceCacheDepth = PersistInstanceCacheDepth;
+            Attr_PersistLinkCacheDepth = PersistLinkCacheDepth;
+            Attr_UnitsToDynamicallyAllocate = UnitsToDynamicallyAllocate;
+            Attr_InstanceLoading = InstanceLoading;
+            Attr_self_name = self_name;
+            Attr_Name = Name;
+            Attr_SystemCPortsType = SystemCPortsType;
+            Attr_AllPortsPoly = AllPortsPoly;
+            Attr_StructuredMessaging = StructuredMessaging;
+            Attr_NetworkSockets = NetworkSockets;
+            Attr_SimulatedTime = SimulatedTime;
+            Attr_StateSaveBufferSize = StateSaveBufferSize;
+            Attr_Sys_ID = Sys_ID;
         }
 
         public CIMClassTE_SYSBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (int)attrArgs["SystemID"], (string)attrArgs["ModelCompilerName"], (string)attrArgs["ExecutableName"], (int)attrArgs["MaxStringLen"], (int)attrArgs["MaxObjExtent"], (int)attrArgs["MaxRelExtent"], (int)attrArgs["MaxSelectExtent"], (int)attrArgs["TotalContainers"], (int)attrArgs["MaxSelfEvents"], (int)attrArgs["MaxNonSelfEvents"], (int)attrArgs["MaxTimers"], (int)attrArgs["MaxInterleavedBridges"], (int)attrArgs["MaxInterleavedBridgeDataSize"], (int)attrArgs["CollectionsFlavor"], (bool)attrArgs["ForcePriorityEvents"], (int)attrArgs["PEIClassCount"], (int)attrArgs["PersistentClassCount"], (int)attrArgs["PersistInstanceCacheDepth"], (int)attrArgs["PersistLinkCacheDepth"], (int)attrArgs["UnitsToDynamicallyAllocate"], (bool)attrArgs["InstanceLoading"], (string)attrArgs["self_name"], (string)attrArgs["Name"], (string)attrArgs["SystemCPortsType"], (bool)attrArgs["AllPortsPoly"], (bool)attrArgs["StructuredMessaging"], (bool)attrArgs["NetworkSockets"], (bool)attrArgs["SimulatedTime"], (int)attrArgs["StateSaveBufferSize"], (string)attrArgs["Sys_ID"])
@@ -22610,7 +24189,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_TARGETBase(CIModelRepository repository, string language, string c2cplusplus_linkage_begin, string c2cplusplus_linkage_end, string main ) : base(repository, "TE_TARGET")
         {
-            ;
+            Attr_language = language;
+            Attr_c2cplusplus_linkage_begin = c2cplusplus_linkage_begin;
+            Attr_c2cplusplus_linkage_end = c2cplusplus_linkage_end;
+            Attr_main = main;
         }
 
         public CIMClassTE_TARGETBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["language"], (string)attrArgs["c2cplusplus_linkage_begin"], (string)attrArgs["c2cplusplus_linkage_end"], (string)attrArgs["main"])
@@ -22642,7 +24224,14 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_TFRBase(CIModelRepository repository, bool Included, bool XlateSemantics, int Instance_Based, string Key_Lett, string Name, string GeneratedName, string AbaID, string Tfr_ID ) : base(repository, "TE_TFR")
         {
-            ;
+            Attr_Included = Included;
+            Attr_XlateSemantics = XlateSemantics;
+            Attr_Instance_Based = Instance_Based;
+            Attr_Key_Lett = Key_Lett;
+            Attr_Name = Name;
+            Attr_GeneratedName = GeneratedName;
+            Attr_AbaID = AbaID;
+            Attr_Tfr_ID = Tfr_ID;
         }
 
         public CIMClassTE_TFRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (bool)attrArgs["Included"], (bool)attrArgs["XlateSemantics"], (int)attrArgs["Instance_Based"], (string)attrArgs["Key_Lett"], (string)attrArgs["Name"], (string)attrArgs["GeneratedName"], (string)attrArgs["AbaID"], (string)attrArgs["Tfr_ID"])
@@ -22701,7 +24290,18 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_THREADBase(CIModelRepository repository, string file, string create, string mutex_lock, string mutex_unlock, string nonbusy_wait, string nonbusy_wake, string shutdown, bool enabled, string flavor, bool serialize, int number_of_threads, string extra_initialization ) : base(repository, "TE_THREAD")
         {
-            ;
+            Attr_file = file;
+            Attr_create = create;
+            Attr_mutex_lock = mutex_lock;
+            Attr_mutex_unlock = mutex_unlock;
+            Attr_nonbusy_wait = nonbusy_wait;
+            Attr_nonbusy_wake = nonbusy_wake;
+            Attr_shutdown = shutdown;
+            Attr_enabled = enabled;
+            Attr_flavor = flavor;
+            Attr_serialize = serialize;
+            Attr_number_of_threads = number_of_threads;
+            Attr_extra_initialization = extra_initialization;
         }
 
         public CIMClassTE_THREADBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["file"], (string)attrArgs["create"], (string)attrArgs["mutex_lock"], (string)attrArgs["mutex_unlock"], (string)attrArgs["nonbusy_wait"], (string)attrArgs["nonbusy_wake"], (string)attrArgs["shutdown"], (bool)attrArgs["enabled"], (string)attrArgs["flavor"], (bool)attrArgs["serialize"], (int)attrArgs["number_of_threads"], (string)attrArgs["extra_initialization"])
@@ -22732,7 +24332,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_TIMBase(CIModelRepository repository, string max_timers, bool keyed_timer_support, bool recurring_timer_support, bool timer_event_search_and_destroy, string internal_type, string scope, string event_name ) : base(repository, "TE_TIM")
         {
-            ;
+            Attr_max_timers = max_timers;
+            Attr_keyed_timer_support = keyed_timer_support;
+            Attr_recurring_timer_support = recurring_timer_support;
+            Attr_timer_event_search_and_destroy = timer_event_search_and_destroy;
+            Attr_internal_type = internal_type;
+            Attr_scope = scope;
+            Attr_event_name = event_name;
         }
 
         public CIMClassTE_TIMBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["max_timers"], (bool)attrArgs["keyed_timer_support"], (bool)attrArgs["recurring_timer_support"], (bool)attrArgs["timer_event_search_and_destroy"], (string)attrArgs["internal_type"], (string)attrArgs["scope"], (string)attrArgs["event_name"])
@@ -22763,7 +24369,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_TRACEBase(CIModelRepository repository, string component_msg_start, string component_msg_end, string state_txn_start, string state_txn_end, string state_txn_event_ignored, string state_txn_cant_happen, string oal_trace ) : base(repository, "TE_TRACE")
         {
-            ;
+            Attr_component_msg_start = component_msg_start;
+            Attr_component_msg_end = component_msg_end;
+            Attr_state_txn_start = state_txn_start;
+            Attr_state_txn_end = state_txn_end;
+            Attr_state_txn_event_ignored = state_txn_event_ignored;
+            Attr_state_txn_cant_happen = state_txn_cant_happen;
+            Attr_oal_trace = oal_trace;
         }
 
         public CIMClassTE_TRACEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["component_msg_start"], (string)attrArgs["component_msg_end"], (string)attrArgs["state_txn_start"], (string)attrArgs["state_txn_end"], (string)attrArgs["state_txn_event_ignored"], (string)attrArgs["state_txn_cant_happen"], (string)attrArgs["oal_trace"])
@@ -22810,7 +24422,29 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_TYPEMAPBase(CIModelRepository repository, string instance_index_name, string instance_index_type, string object_size_name, string object_size_type, string object_number_name, string object_number_type, string state_number_name, string state_number_type, string domain_number_name, string domain_number_type, string event_number_name, string event_number_type, string event_priority_name, string event_priority_type, string event_flags_name, string event_flags_type, string poly_return_name, string poly_return_type, string SEM_cell_name, string SEM_cell_type, string structured_data_types, string enumeration_info, string user_supplied_data_types ) : base(repository, "TE_TYPEMAP")
         {
-            ;
+            Attr_instance_index_name = instance_index_name;
+            Attr_instance_index_type = instance_index_type;
+            Attr_object_size_name = object_size_name;
+            Attr_object_size_type = object_size_type;
+            Attr_object_number_name = object_number_name;
+            Attr_object_number_type = object_number_type;
+            Attr_state_number_name = state_number_name;
+            Attr_state_number_type = state_number_type;
+            Attr_domain_number_name = domain_number_name;
+            Attr_domain_number_type = domain_number_type;
+            Attr_event_number_name = event_number_name;
+            Attr_event_number_type = event_number_type;
+            Attr_event_priority_name = event_priority_name;
+            Attr_event_priority_type = event_priority_type;
+            Attr_event_flags_name = event_flags_name;
+            Attr_event_flags_type = event_flags_type;
+            Attr_poly_return_name = poly_return_name;
+            Attr_poly_return_type = poly_return_type;
+            Attr_SEM_cell_name = SEM_cell_name;
+            Attr_SEM_cell_type = SEM_cell_type;
+            Attr_structured_data_types = structured_data_types;
+            Attr_enumeration_info = enumeration_info;
+            Attr_user_supplied_data_types = user_supplied_data_types;
         }
 
         public CIMClassTE_TYPEMAPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["instance_index_name"], (string)attrArgs["instance_index_type"], (string)attrArgs["object_size_name"], (string)attrArgs["object_size_type"], (string)attrArgs["object_number_name"], (string)attrArgs["object_number_type"], (string)attrArgs["state_number_name"], (string)attrArgs["state_number_type"], (string)attrArgs["domain_number_name"], (string)attrArgs["domain_number_type"], (string)attrArgs["event_number_name"], (string)attrArgs["event_number_type"], (string)attrArgs["event_priority_name"], (string)attrArgs["event_priority_type"], (string)attrArgs["event_flags_name"], (string)attrArgs["event_flags_type"], (string)attrArgs["poly_return_name"], (string)attrArgs["poly_return_type"], (string)attrArgs["SEM_cell_name"], (string)attrArgs["SEM_cell_type"], (string)attrArgs["structured_data_types"], (string)attrArgs["enumeration_info"], (string)attrArgs["user_supplied_data_types"])
@@ -22843,7 +24477,15 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_UNRELATEBase(CIModelRepository repository, string one_o_obj, string oth_o_obj, string r_rel, bool is_inflexive, int relationship_number, string relationship_phrase, string one_var_name, string oth_var_name, string Statement_ID ) : base(repository, "TE_UNRELATE")
         {
-            ;
+            Attr_one_o_obj = one_o_obj;
+            Attr_oth_o_obj = oth_o_obj;
+            Attr_r_rel = r_rel;
+            Attr_is_inflexive = is_inflexive;
+            Attr_relationship_number = relationship_number;
+            Attr_relationship_phrase = relationship_phrase;
+            Attr_one_var_name = one_var_name;
+            Attr_oth_var_name = oth_var_name;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_UNRELATEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["one_o_obj"], (string)attrArgs["oth_o_obj"], (string)attrArgs["r_rel"], (bool)attrArgs["is_inflexive"], (int)attrArgs["relationship_number"], (string)attrArgs["relationship_phrase"], (string)attrArgs["one_var_name"], (string)attrArgs["oth_var_name"], (string)attrArgs["Statement_ID"])
@@ -22891,7 +24533,19 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_UNRELATE_USINGBase(CIModelRepository repository, string one_o_obj, string oth_o_obj, string ass_o_obj, string r_rel, bool is_reflexive, int relationship_number, string relationship_phrase, string one_var_name, string oth_var_name, string ass_var_name, string one_rel_phrase, string oth_rel_phrase, string Statement_ID ) : base(repository, "TE_UNRELATE_USING")
         {
-            ;
+            Attr_one_o_obj = one_o_obj;
+            Attr_oth_o_obj = oth_o_obj;
+            Attr_ass_o_obj = ass_o_obj;
+            Attr_r_rel = r_rel;
+            Attr_is_reflexive = is_reflexive;
+            Attr_relationship_number = relationship_number;
+            Attr_relationship_phrase = relationship_phrase;
+            Attr_one_var_name = one_var_name;
+            Attr_oth_var_name = oth_var_name;
+            Attr_ass_var_name = ass_var_name;
+            Attr_one_rel_phrase = one_rel_phrase;
+            Attr_oth_rel_phrase = oth_rel_phrase;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_UNRELATE_USINGBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["one_o_obj"], (string)attrArgs["oth_o_obj"], (string)attrArgs["ass_o_obj"], (string)attrArgs["r_rel"], (bool)attrArgs["is_reflexive"], (int)attrArgs["relationship_number"], (string)attrArgs["relationship_phrase"], (string)attrArgs["one_var_name"], (string)attrArgs["oth_var_name"], (string)attrArgs["ass_var_name"], (string)attrArgs["one_rel_phrase"], (string)attrArgs["oth_rel_phrase"], (string)attrArgs["Statement_ID"])
@@ -22932,7 +24586,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_VALBase(CIModelRepository repository, string OAL, string buffer, int dimensions, string array_spec, string te_dimID, string Value_ID ) : base(repository, "TE_VAL")
         {
-            ;
+            Attr_OAL = OAL;
+            Attr_buffer = buffer;
+            Attr_dimensions = dimensions;
+            Attr_array_spec = array_spec;
+            Attr_te_dimID = te_dimID;
+            Attr_Value_ID = Value_ID;
         }
 
         public CIMClassTE_VALBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["OAL"], (string)attrArgs["buffer"], (int)attrArgs["dimensions"], (string)attrArgs["array_spec"], (string)attrArgs["te_dimID"], (string)attrArgs["Value_ID"])
@@ -23010,7 +24669,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_VARBase(CIModelRepository repository, string OAL, string buffer, int dimensions, string te_dimID, string array_spec, string Var_ID ) : base(repository, "TE_VAR")
         {
-            ;
+            Attr_OAL = OAL;
+            Attr_buffer = buffer;
+            Attr_dimensions = dimensions;
+            Attr_te_dimID = te_dimID;
+            Attr_array_spec = array_spec;
+            Attr_Var_ID = Var_ID;
         }
 
         public CIMClassTE_VARBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["OAL"], (string)attrArgs["buffer"], (int)attrArgs["dimensions"], (string)attrArgs["te_dimID"], (string)attrArgs["array_spec"], (string)attrArgs["Var_ID"])
@@ -23086,7 +24750,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_WHEREBase(CIModelRepository repository, bool WhereKey, string select_any_where, int Oid_ID, string Obj_ID ) : base(repository, "TE_WHERE")
         {
-            ;
+            Attr_WhereKey = WhereKey;
+            Attr_select_any_where = select_any_where;
+            Attr_Oid_ID = Oid_ID;
+            Attr_Obj_ID = Obj_ID;
         }
 
         public CIMClassTE_WHEREBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (bool)attrArgs["WhereKey"], (string)attrArgs["select_any_where"], (int)attrArgs["Oid_ID"], (string)attrArgs["Obj_ID"])
@@ -23124,7 +24791,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_WHILEBase(CIModelRepository repository, string condition, string Statement_ID ) : base(repository, "TE_WHILE")
         {
-            ;
+            Attr_condition = condition;
+            Attr_Statement_ID = Statement_ID;
         }
 
         public CIMClassTE_WHILEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["condition"], (string)attrArgs["Statement_ID"])
@@ -23162,7 +24830,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTM_BUILDBase(CIModelRepository repository, string package_to_build, string package_obj_name, string package_inst_name ) : base(repository, "TM_BUILD")
         {
-            ;
+            Attr_package_to_build = package_to_build;
+            Attr_package_obj_name = package_obj_name;
+            Attr_package_inst_name = package_inst_name;
         }
 
         public CIMClassTM_BUILDBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["package_to_build"], (string)attrArgs["package_obj_name"], (string)attrArgs["package_inst_name"])
@@ -23193,7 +24863,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTM_CBase(CIModelRepository repository, string Package, string Name, string xName, string include_file, bool isChannel, bool isRealized, string te_cID ) : base(repository, "TM_C")
         {
-            ;
+            Attr_Package = Package;
+            Attr_Name = Name;
+            Attr_xName = xName;
+            Attr_include_file = include_file;
+            Attr_isChannel = isChannel;
+            Attr_isRealized = isRealized;
+            Attr_te_cID = te_cID;
         }
 
         public CIMClassTM_CBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Package"], (string)attrArgs["Name"], (string)attrArgs["xName"], (string)attrArgs["include_file"], (bool)attrArgs["isChannel"], (bool)attrArgs["isRealized"], (string)attrArgs["te_cID"])
@@ -23244,7 +24920,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTM_ENUMINITBase(CIModelRepository repository, string Domain, string enumeration, string value ) : base(repository, "TM_ENUMINIT")
         {
-            ;
+            Attr_Domain = Domain;
+            Attr_enumeration = enumeration;
+            Attr_value = value;
         }
 
         public CIMClassTM_ENUMINITBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Domain"], (string)attrArgs["enumeration"], (string)attrArgs["value"])
@@ -23272,7 +24950,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTM_ENUMVALBase(CIModelRepository repository, string Domain, string enumeration, string enumerator, string value ) : base(repository, "TM_ENUMVAL")
         {
-            ;
+            Attr_Domain = Domain;
+            Attr_enumeration = enumeration;
+            Attr_enumerator = enumerator;
+            Attr_value = value;
         }
 
         public CIMClassTM_ENUMVALBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Domain"], (string)attrArgs["enumeration"], (string)attrArgs["enumerator"], (string)attrArgs["value"])
@@ -23299,7 +24980,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTM_IFBase(CIModelRepository repository, string Package, string Name, string c_iId ) : base(repository, "TM_IF")
         {
-            ;
+            Attr_Package = Package;
+            Attr_Name = Name;
+            Attr_c_iId = c_iId;
         }
 
         public CIMClassTM_IFBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Package"], (string)attrArgs["Name"], (string)attrArgs["c_iId"])
@@ -23352,7 +25035,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTM_MSGBase(CIModelRepository repository, string te_mactID, string ComponentName, string PortName, string MessageName, bool IsSafeForInterrupts ) : base(repository, "TM_MSG")
         {
-            ;
+            Attr_te_mactID = te_mactID;
+            Attr_ComponentName = ComponentName;
+            Attr_PortName = PortName;
+            Attr_MessageName = MessageName;
+            Attr_IsSafeForInterrupts = IsSafeForInterrupts;
         }
 
         public CIMClassTM_MSGBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["te_mactID"], (string)attrArgs["ComponentName"], (string)attrArgs["PortName"], (string)attrArgs["MessageName"], (bool)attrArgs["IsSafeForInterrupts"])
@@ -23392,7 +25079,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTM_POINTERBase(CIModelRepository repository, string Domain, string DT_name, string pointer_type, string include_file ) : base(repository, "TM_POINTER")
         {
-            ;
+            Attr_Domain = Domain;
+            Attr_DT_name = DT_name;
+            Attr_pointer_type = pointer_type;
+            Attr_include_file = include_file;
         }
 
         public CIMClassTM_POINTERBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Domain"], (string)attrArgs["DT_name"], (string)attrArgs["pointer_type"], (string)attrArgs["include_file"])
@@ -23420,7 +25110,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTM_PRECISIONBase(CIModelRepository repository, string Domain, string DT_name, string xName, string initial_value ) : base(repository, "TM_PRECISION")
         {
-            ;
+            Attr_Domain = Domain;
+            Attr_DT_name = DT_name;
+            Attr_xName = xName;
+            Attr_initial_value = initial_value;
         }
 
         public CIMClassTM_PRECISIONBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Domain"], (string)attrArgs["DT_name"], (string)attrArgs["xName"], (string)attrArgs["initial_value"])
@@ -23448,7 +25141,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTM_SYNCBase(CIModelRepository repository, string RegisteredDomain, string Name, bool IsSafeForInterrupts, bool IsInitFunction ) : base(repository, "TM_SYNC")
         {
-            ;
+            Attr_RegisteredDomain = RegisteredDomain;
+            Attr_Name = Name;
+            Attr_IsSafeForInterrupts = IsSafeForInterrupts;
+            Attr_IsInitFunction = IsInitFunction;
         }
 
         public CIMClassTM_SYNCBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["RegisteredDomain"], (string)attrArgs["Name"], (bool)attrArgs["IsSafeForInterrupts"], (bool)attrArgs["IsInitFunction"])
@@ -23491,7 +25187,25 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTM_SYSTAGBase(CIModelRepository repository, int MaxStringLen, int MaxRelExtent, int MaxSelectExtent, int MaxSelfEvents, int MaxNonSelfEvents, int MaxTimers, int MaxInterleavedBridges, int MaxInterleavedBridgeDataSize, int CollectionsFlavor, int PersistInstanceCacheDepth, int PersistLinkCacheDepth, int UnitsToDynamicallyAllocate, bool InstanceLoading, string SystemCPortsType, bool AllPortsPoly, bool StructuredMessaging, bool NetworkSockets, bool SimulatedTime, int StateSaveBufferSize ) : base(repository, "TM_SYSTAG")
         {
-            ;
+            Attr_MaxStringLen = MaxStringLen;
+            Attr_MaxRelExtent = MaxRelExtent;
+            Attr_MaxSelectExtent = MaxSelectExtent;
+            Attr_MaxSelfEvents = MaxSelfEvents;
+            Attr_MaxNonSelfEvents = MaxNonSelfEvents;
+            Attr_MaxTimers = MaxTimers;
+            Attr_MaxInterleavedBridges = MaxInterleavedBridges;
+            Attr_MaxInterleavedBridgeDataSize = MaxInterleavedBridgeDataSize;
+            Attr_CollectionsFlavor = CollectionsFlavor;
+            Attr_PersistInstanceCacheDepth = PersistInstanceCacheDepth;
+            Attr_PersistLinkCacheDepth = PersistLinkCacheDepth;
+            Attr_UnitsToDynamicallyAllocate = UnitsToDynamicallyAllocate;
+            Attr_InstanceLoading = InstanceLoading;
+            Attr_SystemCPortsType = SystemCPortsType;
+            Attr_AllPortsPoly = AllPortsPoly;
+            Attr_StructuredMessaging = StructuredMessaging;
+            Attr_NetworkSockets = NetworkSockets;
+            Attr_SimulatedTime = SimulatedTime;
+            Attr_StateSaveBufferSize = StateSaveBufferSize;
         }
 
         public CIMClassTM_SYSTAGBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (int)attrArgs["MaxStringLen"], (int)attrArgs["MaxRelExtent"], (int)attrArgs["MaxSelectExtent"], (int)attrArgs["MaxSelfEvents"], (int)attrArgs["MaxNonSelfEvents"], (int)attrArgs["MaxTimers"], (int)attrArgs["MaxInterleavedBridges"], (int)attrArgs["MaxInterleavedBridgeDataSize"], (int)attrArgs["CollectionsFlavor"], (int)attrArgs["PersistInstanceCacheDepth"], (int)attrArgs["PersistLinkCacheDepth"], (int)attrArgs["UnitsToDynamicallyAllocate"], (bool)attrArgs["InstanceLoading"], (string)attrArgs["SystemCPortsType"], (bool)attrArgs["AllPortsPoly"], (bool)attrArgs["StructuredMessaging"], (bool)attrArgs["NetworkSockets"], (bool)attrArgs["SimulatedTime"], (int)attrArgs["StateSaveBufferSize"])
@@ -23525,7 +25239,16 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTM_TEMPLATEBase(CIModelRepository repository, string ID, string tm_cPackage, string tm_cName, string tm_ifPackage, string tm_ifName, bool current, string template_parameters, string template_parameters_default, string template_actual_parameters, string template_default_instantiation ) : base(repository, "TM_TEMPLATE")
         {
-            ;
+            Attr_ID = ID;
+            Attr_tm_cPackage = tm_cPackage;
+            Attr_tm_cName = tm_cName;
+            Attr_tm_ifPackage = tm_ifPackage;
+            Attr_tm_ifName = tm_ifName;
+            Attr_current = current;
+            Attr_template_parameters = template_parameters;
+            Attr_template_parameters_default = template_parameters_default;
+            Attr_template_actual_parameters = template_actual_parameters;
+            Attr_template_default_instantiation = template_default_instantiation;
         }
 
         public CIMClassTM_TEMPLATEBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ID"], (string)attrArgs["tm_cPackage"], (string)attrArgs["tm_cName"], (string)attrArgs["tm_ifPackage"], (string)attrArgs["tm_ifName"], (bool)attrArgs["current"], (string)attrArgs["template_parameters"], (string)attrArgs["template_parameters_default"], (string)attrArgs["template_actual_parameters"], (string)attrArgs["template_default_instantiation"])
@@ -23590,7 +25313,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTM_THREADBase(CIModelRepository repository, bool enabled, string flavor, bool serialize, int number_of_threads, string extra_initialization ) : base(repository, "TM_THREAD")
         {
-            ;
+            Attr_enabled = enabled;
+            Attr_flavor = flavor;
+            Attr_serialize = serialize;
+            Attr_number_of_threads = number_of_threads;
+            Attr_extra_initialization = extra_initialization;
         }
 
         public CIMClassTM_THREADBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (bool)attrArgs["enabled"], (string)attrArgs["flavor"], (bool)attrArgs["serialize"], (int)attrArgs["number_of_threads"], (string)attrArgs["extra_initialization"])
@@ -23619,7 +25346,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTM_TPBase(CIModelRepository repository, string ID, string typename, string Name, string DefaultValue, string tm_templateID ) : base(repository, "TM_TP")
         {
-            ;
+            Attr_ID = ID;
+            Attr_typename = typename;
+            Attr_Name = Name;
+            Attr_DefaultValue = DefaultValue;
+            Attr_tm_templateID = tm_templateID;
         }
 
         public CIMClassTM_TPBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ID"], (string)attrArgs["typename"], (string)attrArgs["Name"], (string)attrArgs["DefaultValue"], (string)attrArgs["tm_templateID"])
@@ -23673,7 +25404,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTM_TPVBase(CIModelRepository repository, string ID, string instance, string value, string tm_tpID, string te_iirID, string te_ciID ) : base(repository, "TM_TPV")
         {
-            ;
+            Attr_ID = ID;
+            Attr_instance = instance;
+            Attr_value = value;
+            Attr_tm_tpID = tm_tpID;
+            Attr_te_iirID = te_iirID;
+            Attr_te_ciID = te_ciID;
         }
 
         public CIMClassTM_TPVBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["ID"], (string)attrArgs["instance"], (string)attrArgs["value"], (string)attrArgs["tm_tpID"], (string)attrArgs["te_iirID"], (string)attrArgs["te_ciID"])
@@ -23735,7 +25471,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassUC_BABase(CIModelRepository repository, string Assoc_ID, string Descrip ) : base(repository, "UC_BA")
         {
-            ;
+            Attr_Assoc_ID = Assoc_ID;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassUC_BABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Assoc_ID"], (string)attrArgs["Descrip"])
@@ -23772,7 +25509,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassUC_EBase(CIModelRepository repository, string Assoc_ID, string Descrip ) : base(repository, "UC_E")
         {
-            ;
+            Attr_Assoc_ID = Assoc_ID;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassUC_EBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Assoc_ID"], (string)attrArgs["Descrip"])
@@ -23809,7 +25547,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassUC_GBase(CIModelRepository repository, string Assoc_ID, string Descrip ) : base(repository, "UC_G")
         {
-            ;
+            Attr_Assoc_ID = Assoc_ID;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassUC_GBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Assoc_ID"], (string)attrArgs["Descrip"])
@@ -23846,7 +25585,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassUC_IBase(CIModelRepository repository, string Assoc_ID, string Descrip ) : base(repository, "UC_I")
         {
-            ;
+            Attr_Assoc_ID = Assoc_ID;
+            Attr_Descrip = Descrip;
         }
 
         public CIMClassUC_IBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Assoc_ID"], (string)attrArgs["Descrip"])
@@ -23884,7 +25624,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassUC_UCABase(CIModelRepository repository, string Assoc_ID, string Source_Part_ID, string Destination_Part_ID ) : base(repository, "UC_UCA")
         {
-            ;
+            Attr_Assoc_ID = Assoc_ID;
+            Attr_Source_Part_ID = Source_Part_ID;
+            Attr_Destination_Part_ID = Destination_Part_ID;
         }
 
         public CIMClassUC_UCABase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Assoc_ID"], (string)attrArgs["Source_Part_ID"], (string)attrArgs["Destination_Part_ID"])
@@ -23963,7 +25705,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_AERBase(CIModelRepository repository, string Value_ID, string Root_Value_ID, string Index_Value_ID ) : base(repository, "V_AER")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Root_Value_ID = Root_Value_ID;
+            Attr_Index_Value_ID = Index_Value_ID;
         }
 
         public CIMClassV_AERBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Root_Value_ID"], (string)attrArgs["Index_Value_ID"])
@@ -24024,7 +25768,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_ALVBase(CIModelRepository repository, string Value_ID, string Array_Value_ID ) : base(repository, "V_ALV")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Array_Value_ID = Array_Value_ID;
         }
 
         public CIMClassV_ALVBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Array_Value_ID"])
@@ -24075,7 +25820,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_AVLBase(CIModelRepository repository, string Value_ID, string Root_Value_ID, string Obj_ID, string Attr_ID ) : base(repository, "V_AVL")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Root_Value_ID = Root_Value_ID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Attr_ID = Attr_ID;
         }
 
         public CIMClassV_AVLBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Root_Value_ID"], (string)attrArgs["Obj_ID"], (string)attrArgs["Attr_ID"])
@@ -24138,7 +25886,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_BINBase(CIModelRepository repository, string Value_ID, string Right_Value_ID, string Left_Value_ID, string Operator ) : base(repository, "V_BIN")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Right_Value_ID = Right_Value_ID;
+            Attr_Left_Value_ID = Left_Value_ID;
+            Attr_Operator = Operator;
         }
 
         public CIMClassV_BINBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Right_Value_ID"], (string)attrArgs["Left_Value_ID"], (string)attrArgs["Operator"])
@@ -24202,7 +25953,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_BRVBase(CIModelRepository repository, string Value_ID, string Brg_ID, bool ParmListOK, int externalEntityKeyLettersLineNumber, int externalEntityKeyLettersColumn ) : base(repository, "V_BRV")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Brg_ID = Brg_ID;
+            Attr_ParmListOK = ParmListOK;
+            Attr_externalEntityKeyLettersLineNumber = externalEntityKeyLettersLineNumber;
+            Attr_externalEntityKeyLettersColumn = externalEntityKeyLettersColumn;
         }
 
         public CIMClassV_BRVBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Brg_ID"], (bool)attrArgs["ParmListOK"], (int)attrArgs["externalEntityKeyLettersLineNumber"], (int)attrArgs["externalEntityKeyLettersColumn"])
@@ -24262,7 +26017,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_EDVBase(CIModelRepository repository, string Value_ID ) : base(repository, "V_EDV")
         {
-            ;
+            Attr_Value_ID = Value_ID;
         }
 
         public CIMClassV_EDVBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"])
@@ -24313,7 +26068,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_EPRBase(CIModelRepository repository, string Value_ID, string SM_ID, string SMedi_ID, string PP_Id ) : base(repository, "V_EPR")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_SM_ID = SM_ID;
+            Attr_SMedi_ID = SMedi_ID;
+            Attr_PP_Id = PP_Id;
         }
 
         public CIMClassV_EPRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["SM_ID"], (string)attrArgs["SMedi_ID"], (string)attrArgs["PP_Id"])
@@ -24376,7 +26134,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_FNVBase(CIModelRepository repository, string Value_ID, string Sync_ID, bool ParmListOK ) : base(repository, "V_FNV")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Sync_ID = Sync_ID;
+            Attr_ParmListOK = ParmListOK;
         }
 
         public CIMClassV_FNVBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Sync_ID"], (bool)attrArgs["ParmListOK"])
@@ -24437,7 +26197,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_INSBase(CIModelRepository repository, string Var_ID, string Obj_ID ) : base(repository, "V_INS")
         {
-            ;
+            Attr_Var_ID = Var_ID;
+            Attr_Obj_ID = Obj_ID;
         }
 
         public CIMClassV_INSBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Var_ID"], (string)attrArgs["Obj_ID"])
@@ -24487,7 +26248,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_INTBase(CIModelRepository repository, string Var_ID, bool IsImplicitInFor, string Obj_ID ) : base(repository, "V_INT")
         {
-            ;
+            Attr_Var_ID = Var_ID;
+            Attr_IsImplicitInFor = IsImplicitInFor;
+            Attr_Obj_ID = Obj_ID;
         }
 
         public CIMClassV_INTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Var_ID"], (bool)attrArgs["IsImplicitInFor"], (string)attrArgs["Obj_ID"])
@@ -24536,7 +26299,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_IRFBase(CIModelRepository repository, string Value_ID, string Var_ID ) : base(repository, "V_IRF")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Var_ID = Var_ID;
         }
 
         public CIMClassV_IRFBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Var_ID"])
@@ -24585,7 +26349,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_ISRBase(CIModelRepository repository, string Value_ID, string Var_ID ) : base(repository, "V_ISR")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Var_ID = Var_ID;
         }
 
         public CIMClassV_ISRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Var_ID"])
@@ -24634,7 +26399,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_LBOBase(CIModelRepository repository, string Value_ID, string Value ) : base(repository, "V_LBO")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Value = Value;
         }
 
         public CIMClassV_LBOBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Value"])
@@ -24673,7 +26439,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_LENBase(CIModelRepository repository, string Value_ID, string Enum_ID, int dataTypeNameLineNumber, int dataTypeNameColumn ) : base(repository, "V_LEN")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Enum_ID = Enum_ID;
+            Attr_dataTypeNameLineNumber = dataTypeNameLineNumber;
+            Attr_dataTypeNameColumn = dataTypeNameColumn;
         }
 
         public CIMClassV_LENBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Enum_ID"], (int)attrArgs["dataTypeNameLineNumber"], (int)attrArgs["dataTypeNameColumn"])
@@ -24722,7 +26491,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_LINBase(CIModelRepository repository, string Value_ID, string Value ) : base(repository, "V_LIN")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Value = Value;
         }
 
         public CIMClassV_LINBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Value"])
@@ -24762,7 +26532,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_LOCBase(CIModelRepository repository, string Id, int LineNumber, int StartPosition, int EndPosition, string Var_ID ) : base(repository, "V_LOC")
         {
-            ;
+            Attr_Id = Id;
+            Attr_LineNumber = LineNumber;
+            Attr_StartPosition = StartPosition;
+            Attr_EndPosition = EndPosition;
+            Attr_Var_ID = Var_ID;
         }
 
         public CIMClassV_LOCBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Id"], (int)attrArgs["LineNumber"], (int)attrArgs["StartPosition"], (int)attrArgs["EndPosition"], (string)attrArgs["Var_ID"])
@@ -24800,7 +26574,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_LRLBase(CIModelRepository repository, string Value_ID, string Value ) : base(repository, "V_LRL")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Value = Value;
         }
 
         public CIMClassV_LRLBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Value"])
@@ -24837,7 +26612,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_LSTBase(CIModelRepository repository, string Value_ID, string Value ) : base(repository, "V_LST")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Value = Value;
         }
 
         public CIMClassV_LSTBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Value"])
@@ -24879,7 +26655,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_MSVBase(CIModelRepository repository, string Value_ID, string PEP_Id, string REP_Id, bool ParmListOK, int ownerNameLineNumber, int ownerNameColumn, string Target_Value_ID ) : base(repository, "V_MSV")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_PEP_Id = PEP_Id;
+            Attr_REP_Id = REP_Id;
+            Attr_ParmListOK = ParmListOK;
+            Attr_ownerNameLineNumber = ownerNameLineNumber;
+            Attr_ownerNameColumn = ownerNameColumn;
+            Attr_Target_Value_ID = Target_Value_ID;
         }
 
         public CIMClassV_MSVBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["PEP_Id"], (string)attrArgs["REP_Id"], (bool)attrArgs["ParmListOK"], (int)attrArgs["ownerNameLineNumber"], (int)attrArgs["ownerNameColumn"], (string)attrArgs["Target_Value_ID"])
@@ -24966,7 +26748,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_MVLBase(CIModelRepository repository, string Value_ID, string Root_Value_ID, string Member_ID, string DT_DT_ID ) : base(repository, "V_MVL")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Root_Value_ID = Root_Value_ID;
+            Attr_Member_ID = Member_ID;
+            Attr_DT_DT_ID = DT_DT_ID;
         }
 
         public CIMClassV_MVLBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Root_Value_ID"], (string)attrArgs["Member_ID"], (string)attrArgs["DT_DT_ID"])
@@ -25032,7 +26817,13 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_PARBase(CIModelRepository repository, string Value_ID, string Statement_ID, string Invocation_Value_ID, string Name, string Next_Value_ID, int labelLineNumber, int labelColumn ) : base(repository, "V_PAR")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Statement_ID = Statement_ID;
+            Attr_Invocation_Value_ID = Invocation_Value_ID;
+            Attr_Name = Name;
+            Attr_Next_Value_ID = Next_Value_ID;
+            Attr_labelLineNumber = labelLineNumber;
+            Attr_labelColumn = labelColumn;
         }
 
         public CIMClassV_PARBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Statement_ID"], (string)attrArgs["Invocation_Value_ID"], (string)attrArgs["Name"], (string)attrArgs["Next_Value_ID"], (int)attrArgs["labelLineNumber"], (int)attrArgs["labelColumn"])
@@ -25229,7 +27020,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_PVLBase(CIModelRepository repository, string Value_ID, string BParm_ID, string SParm_ID, string TParm_ID, string PP_Id ) : base(repository, "V_PVL")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_BParm_ID = BParm_ID;
+            Attr_SParm_ID = SParm_ID;
+            Attr_TParm_ID = TParm_ID;
+            Attr_PP_Id = PP_Id;
         }
 
         public CIMClassV_PVLBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["BParm_ID"], (string)attrArgs["SParm_ID"], (string)attrArgs["TParm_ID"], (string)attrArgs["PP_Id"])
@@ -25315,7 +27110,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_SCVBase(CIModelRepository repository, string Value_ID, string Const_ID, string DT_ID_Deprecated ) : base(repository, "V_SCV")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Const_ID = Const_ID;
+            Attr_DT_ID_Deprecated = DT_ID_Deprecated;
         }
 
         public CIMClassV_SCVBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Const_ID"], (string)attrArgs["DT_ID_Deprecated"])
@@ -25366,7 +27163,10 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_SLRBase(CIModelRepository repository, string Value_ID, string Obj_ID, string Attr_ID, string Op_Value_ID ) : base(repository, "V_SLR")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Obj_ID = Obj_ID;
+            Attr_Attr_ID = Attr_ID;
+            Attr_Op_Value_ID = Op_Value_ID;
         }
 
         public CIMClassV_SLRBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Obj_ID"], (string)attrArgs["Attr_ID"], (string)attrArgs["Op_Value_ID"])
@@ -25428,7 +27228,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_TRNBase(CIModelRepository repository, string Var_ID, string DT_ID, string Dimensions ) : base(repository, "V_TRN")
         {
-            ;
+            Attr_Var_ID = Var_ID;
+            Attr_DT_ID = DT_ID;
+            Attr_Dimensions = Dimensions;
         }
 
         public CIMClassV_TRNBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Var_ID"], (string)attrArgs["DT_ID"], (string)attrArgs["Dimensions"])
@@ -25493,7 +27295,12 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_TRVBase(CIModelRepository repository, string Value_ID, string Tfr_ID, string Var_ID, bool ParmListOK, int modelClassKeyLettersLineNumber, int modelClassKeyLettersColumn ) : base(repository, "V_TRV")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Tfr_ID = Tfr_ID;
+            Attr_Var_ID = Var_ID;
+            Attr_ParmListOK = ParmListOK;
+            Attr_modelClassKeyLettersLineNumber = modelClassKeyLettersLineNumber;
+            Attr_modelClassKeyLettersColumn = modelClassKeyLettersColumn;
         }
 
         public CIMClassV_TRVBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Tfr_ID"], (string)attrArgs["Var_ID"], (bool)attrArgs["ParmListOK"], (int)attrArgs["modelClassKeyLettersLineNumber"], (int)attrArgs["modelClassKeyLettersColumn"])
@@ -25578,7 +27385,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_TVLBase(CIModelRepository repository, string Value_ID, string Var_ID ) : base(repository, "V_TVL")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Var_ID = Var_ID;
         }
 
         public CIMClassV_TVLBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Var_ID"])
@@ -25628,7 +27436,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_UNYBase(CIModelRepository repository, string Value_ID, string Operand_Value_ID, string Operator ) : base(repository, "V_UNY")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_Operand_Value_ID = Operand_Value_ID;
+            Attr_Operator = Operator;
         }
 
         public CIMClassV_UNYBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (string)attrArgs["Operand_Value_ID"], (string)attrArgs["Operator"])
@@ -25687,7 +27497,18 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_VALBase(CIModelRepository repository, string Value_ID, bool isLValue, bool isImplicit, int LineNumber, int StartPosition, int EndPosition, int firstParameterLabelLineNumber, int firstParameterLabelColumn, int currentLaterParameterLabelLineNumber, int currentLaterParameterLabelColumn, string DT_ID, string Block_ID ) : base(repository, "V_VAL")
         {
-            ;
+            Attr_Value_ID = Value_ID;
+            Attr_isLValue = isLValue;
+            Attr_isImplicit = isImplicit;
+            Attr_LineNumber = LineNumber;
+            Attr_StartPosition = StartPosition;
+            Attr_EndPosition = EndPosition;
+            Attr_firstParameterLabelLineNumber = firstParameterLabelLineNumber;
+            Attr_firstParameterLabelColumn = firstParameterLabelColumn;
+            Attr_currentLaterParameterLabelLineNumber = currentLaterParameterLabelLineNumber;
+            Attr_currentLaterParameterLabelColumn = currentLaterParameterLabelColumn;
+            Attr_DT_ID = DT_ID;
+            Attr_Block_ID = Block_ID;
         }
 
         public CIMClassV_VALBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Value_ID"], (bool)attrArgs["isLValue"], (bool)attrArgs["isImplicit"], (int)attrArgs["LineNumber"], (int)attrArgs["StartPosition"], (int)attrArgs["EndPosition"], (int)attrArgs["firstParameterLabelLineNumber"], (int)attrArgs["firstParameterLabelColumn"], (int)attrArgs["currentLaterParameterLabelLineNumber"], (int)attrArgs["currentLaterParameterLabelColumn"], (string)attrArgs["DT_ID"], (string)attrArgs["Block_ID"])
@@ -26045,7 +27866,11 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_VARBase(CIModelRepository repository, string Var_ID, string Block_ID, string Name, bool Declared, string DT_ID ) : base(repository, "V_VAR")
         {
-            ;
+            Attr_Var_ID = Var_ID;
+            Attr_Block_ID = Block_ID;
+            Attr_Name = Name;
+            Attr_Declared = Declared;
+            Attr_DT_ID = DT_ID;
         }
 
         public CIMClassV_VARBase(CIModelRepository repository, IDictionary<string, object>attrArgs ) : this(repository, (string)attrArgs["Var_ID"], (string)attrArgs["Block_ID"], (string)attrArgs["Name"], (bool)attrArgs["Declared"], (string)attrArgs["DT_ID"])

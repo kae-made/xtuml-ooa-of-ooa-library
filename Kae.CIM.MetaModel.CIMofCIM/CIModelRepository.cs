@@ -6,6 +6,7 @@ namespace Kae.CIM
 {
     public abstract class CIModelRepository
     {
+        public abstract IDictionary<string, IEnumerable<CIClassDef>> GetDomainCIClasses(string domainName);
         public abstract IEnumerable<CIClassDef> GetCIInstances(string domainName, string className);
         public abstract T CreateCIInstance<T>(string domainName, string className, IDictionary<string, object> attributes, bool allowUndef = true) where T : CIClassDef;
 
