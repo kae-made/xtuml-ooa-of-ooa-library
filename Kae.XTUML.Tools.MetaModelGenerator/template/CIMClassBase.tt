@@ -48,7 +48,20 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public <#= className #>(<#= ciModelRepsositoryClassName #> repository, <#= constructorAttrArgs #> ) : base(repository, "<#= classDef.Name #>")
         {
-            ;
+<#
+        foreach (var attrName in classDef.Attributes.Keys)
+        {
+            var attrPropertyName = RuleOfNamesForTransfrom.GetAttrPropertyName(attrName);
+            string argAttrVarName = attrName;
+            if (RuleOfNamesForTransfrom.CheckPreservedWord(argAttrVarName))
+            {
+                argAttrVarName += "_";
+            }
+#>
+            <#= attrPropertyName #> = <#= argAttrVarName #>;
+<#
+        }
+#>
         }
 
         public <#= className #>(<#= ciModelRepsositoryClassName #> repository, IDictionary<string, object><#= attrDictionary #> ) : this(repository, <#= constructorAttrDictArgs #>)
