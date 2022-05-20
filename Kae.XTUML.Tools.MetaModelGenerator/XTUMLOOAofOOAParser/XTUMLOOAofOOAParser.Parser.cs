@@ -1,5 +1,6 @@
 // Copyright (c) Knowledge & Experience. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+using Kae.CIM;
 using Kae.XTUML.Tools.MetaModelGenerator;
 using Kae.XTUML.Tools.MetaModelGenerator.XTUMLOOAofOOA;
 using System;
@@ -74,6 +75,17 @@ namespace Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser
         private void RegisterToEdge()
         {
             modelBuilder.RegisterToRelEdge();
+        }
+
+        // for Loading Conceptual Instance
+        private void RegisterInsert(string objName)
+        {
+            modelBuilder.RegisterInsert(objName);
+        }
+
+        private void AddAttrbuteValue(string attrValue)
+        {
+            modelBuilder.AddAttributeValue(attrValue);
         }
     }
 }

@@ -18,12 +18,13 @@
 %token NUMBER
 %token COMMA
 %token EOS
-%token CREATE
+%token CREATE, INSERT
 %token TABLE
-%token ROP, REFID, FROM, TO, PHRASE
-%token ELEM, REFNO, PHRASEC
+%token ROP, REFID, FROM, TO, PHRASE, INTO, VALUES
+%token ELEM, REFNO, PHRASEC, ATTRVAL, ATTRSVAL, ATTRRVAL
 %token REMULT
 %token POpen, PClose
+%token ATTRIVAL
 
 %%
 
@@ -36,7 +37,7 @@ line_list	: line
 line		: statement EOS
 	;
 
-statement : CREATE create_statement { Console.WriteLine("Rule => create:"); }
+statement : CREATE create_statement { Console.WriteLine("Rule => create:"); } | insert_statement
 	;
 
 create_statement : table_statement | rop_statememnt
@@ -119,7 +120,7 @@ rel_edge_base_none_def :
 	;
 
 rel_edge_phrase:
-		PHRASE PHRASEC
+		PHRASE ATTRVAL
 		{
 			Console.WriteLine("Rule => rel phrase: {0}", $2.s);
 			RegisterPhrase($2.s);
@@ -134,6 +135,57 @@ ref_attr_def :
 		{
 			Console.WriteLine("Rule => ref attr : {0}", $1.s);
 			AddRefAttribute($1.s);
+		}
+	;
+
+insert_statement :	INSERT INTO ELEM VALUES POpen attrval_defs PClose
+		{
+			Console.WriteLine("Rule => insert into {0}", $3.s);
+			RegisterInsert($3.s);
+		}
+	;
+
+attrval_defs :		attrval_def | attrval_def COMMA attrval_defs
+	;
+
+attrval_def : attrval_string_def | attrval_dstring_def | attrval_integer_def | attrval_remult_def | attrval_real_def
+		
+	;
+
+attrval_string_def :	ATTRVAL
+		{
+			Console.WriteLine("Rule => attr string value : {0}", $1.s);
+			string val = $1.s;
+			AddAttrbuteValue(val.Substring(1, val.Length - 2));
+		}
+	;
+
+attrval_dstring_def :	ATTRSVAL
+		{
+			Console.WriteLine("Rule => attr unique string value : {0}", $1.s);
+			string val = $1.s;
+			AddAttrbuteValue(val.Substring(1, val.Length - 2));
+		}
+	;
+
+attrval_integer_def : ATTRIVAL
+		{
+			Console.WriteLine("Rule => attr integer value : {0}", $1.s);
+			AddAttrbuteValue($1.s);
+		}
+	;
+
+attrval_real_def :	ATTRRVAL
+		{
+			Console.WriteLine("Rule => attr real value : {0}", $1.s);
+			AddAttrbuteValue($1.s);
+		}
+	;
+
+attrval_remult_def : REMULT
+		{
+			Console.WriteLine("Rule => attr 1 value : {0}", $1.s);
+			AddAttrbuteValue($1.s);
 		}
 	;
 %%

@@ -1,3 +1,12 @@
+
+// ==========================================================================
+//  GPLEX error listing for lex source file <XTUMLOOAofOOAParser.Language.analyzer.lex>
+// ==========================================================================
+//  Version:  1.2.2
+//  DateTime: 2022/05/19 15:03:40
+// ==========================================================================
+
+
 %namespace Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser
 %scannertype XTUMLOOAofOOAParserScanner
 %visibility internal
@@ -51,6 +60,9 @@ PClose			\)
 {INTO}			{ Console.WriteLine("into: "); return (int)Token.INTO; }
 {VALUES}		{ Console.WriteLine("values: "); return (int)Token.VALUES; }
 {ATTRVAL}		{ Console.WriteLine("attrval: {0}", yytext); GetString(); return (int)Token.ATTRVAL; }
+//^^^^^^^
+// Warning: This pattern always overrides "{PHRASEC}" 
+// ---------------------------------------------------
 {REFNO}			{ Console.WriteLine("fefno: {0}", yytext); GetString(); return (int)Token.REFNO; }
 {REMULT}		{ Console.WriteLine("rel edge multi: {0}", yytext); GetString(); return (int)Token.REMULT; }
 {FROM}			{ Console.WriteLine("from:"); return (int)Token.FROM; }
@@ -61,6 +73,9 @@ PClose			\)
 {ELEM}			{ Console.WriteLine("elem: {0}", yytext); GetString(); return (int)Token.ELEM; }
 {COMMA}			{ Console.WriteLine("comma: {0}", yytext); return (int)Token.COMMA; }
 {PHRASEC}		{ Console.WriteLine("phrase content : {0}", yytext); GetString(); return (int)Token.PHRASEC; }
+//^^^^^^^
+// Warning: This pattern always overridden by "{ATTRVAL}" 
+// -------------------------------------------------------
 {ATTRSVAL}		{ Console.WriteLine("attr string value : {0}", yytext); GetString(); return (int)Token.ATTRSVAL; }
 {ATTRIVAL}		{ Console.WriteLine("attr integer value : {0}", yytext); GetString(); return (int)Token.ATTRIVAL; }
 {ATTRRVAL}		{ Console.WriteLine("attr real value : {0}", yytext); GetString(); return (int)Token.ATTRRVAL; }
@@ -68,4 +83,5 @@ PClose			\)
 {COMMENT}		{ Console.WriteLine("comment: {0}", yytext); }
 {Space}+		/* skip */
 
-%%
+%%// ==========================================================================
+

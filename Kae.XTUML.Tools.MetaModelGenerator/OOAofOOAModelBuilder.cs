@@ -25,6 +25,7 @@ namespace Kae.XTUML.Tools.MetaModelGenerator
         private string lastPhrase;
         private Dictionary<string, string> userDataTypeDefs = new Dictionary<string, string>();
 
+
         public void LoadDataTypeDef(string yamlFilePath)
         {
             using (var reader = new StreamReader(yamlFilePath))
@@ -207,6 +208,34 @@ namespace Kae.XTUML.Tools.MetaModelGenerator
                 }
             }
             Repository.DataTypes = datatypes;
+        }
+
+        public delegate void FoundInsertHandler(string className, IList<string> attrValues);
+        protected FoundInsertHandler OnFindInsert;
+
+        public void RegisterFondInsertHandler(FoundInsertHandler handler)
+        {
+            OnFindInsert = handler;
+        }
+
+        public void ResetAttributeValues()
+        {
+            lastAttrValues = new List<string>();
+        }
+
+        private List<string> lastAttrValues = new List<string>();
+        public void AddAttributeValue(string attrValue)
+        {
+            lastAttrValues.Add(attrValue);
+        }
+
+        public void RegisterInsert(string objName)
+        {
+            if (OnFindInsert != null)
+            {
+                OnFindInsert(objName, lastAttrValues);
+                lastAttrValues = new List<string>();
+            }
         }
     }
 }

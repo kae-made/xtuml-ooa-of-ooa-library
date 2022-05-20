@@ -29,6 +29,9 @@
     <PackageReference Include="YamlDotNet" Version="11.2.1" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Kae.CIM.MetaModel.CIMofCIM\Kae.CIM.MetaModel.CIMofCIM.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <None Update="datatype.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
