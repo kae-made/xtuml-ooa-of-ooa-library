@@ -12,7 +12,7 @@ namespace Kae.XTUML.Tools.CIModelResolver
 {
     public class COCLibGenerator
     {
-        protected static readonly string version = "0.0.1";
+        protected static readonly string version = "0.1.0";
         protected Logger logger;
         protected XTUMLOOAofOOA.OOAofOOARepository modelRepository;
         protected string GenFolderPath;
