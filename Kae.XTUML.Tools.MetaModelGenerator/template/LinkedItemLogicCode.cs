@@ -70,6 +70,8 @@ namespace Kae.XTUML.Tools.CIModelResolver.template
                     result = $"{result} && {fragment}";
                 }
             }
+            // I thoght all subclass has corresponded one super class but there are some instane which has no super class. why?
+            result = $"(({subRelClassName}){vName}).{getSubRelClassMethodName}() != null && ({result})";
 
             return result;
         }

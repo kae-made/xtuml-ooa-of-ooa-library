@@ -25,8 +25,20 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         var classDef = repository.Classes[ck];
         var className = RuleOfNamesForTransfrom.GetCIMInterfaceClassName(classDef);
+        var superSubRels = repository.Relationships.Values.Where(r => r.Kind == XTUMLOOAofOOA.KindOfRelatioship.SuperSub);
+        var baseClassName = "CIClassDef";
+        foreach (var ssRel in superSubRels)
+        {
+            var ssRelC = (XTUMLOOAofOOA.SuperSubRelationshipOfOOA)ssRel;
+            var superSubRelSub = ssRelC.SubEdges.Where(r => r.Edge.Name == ck);
+            foreach(var subrel in superSubRelSub)
+            {
+                var subClassIFName = RuleOfNamesForTransfrom.GetCIMSubClassName(ssRel);
+                baseClassName += $", {subClassIFName}";
+            }
+        }
 #>
-    public interface <#= className #> : CIClassDef
+    public interface <#= className #> : <#= baseClassName #>
     {
 <#
         foreach(var attrName in classDef.Attributes.Keys)
@@ -41,7 +53,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
 <#
         var binaryRels = repository.Relationships.Values.Where(r => r.Kind == XTUMLOOAofOOA.KindOfRelatioship.Binary);
-        var superSubRels = repository.Relationships.Values.Where(r => r.Kind == XTUMLOOAofOOA.KindOfRelatioship.SuperSub);
         var relObjRels = repository.Relationships.Values.Where(r => r.Kind == XTUMLOOAofOOA.KindOfRelatioship.RelationshipClass);
 
         var binaryRelFrom = binaryRels.Where(r => r.FromEdge.Edge.Name == ck);
@@ -143,7 +154,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             var superClassName = RuleOfNamesForTransfrom.GetCIMInterfaceClassName(relationship.ToEdge.Edge);
             var getSuperClassMethodName = RuleOfNamesForTransfrom.GetCIMSuperClassMethodName(relationship.ToEdge.Edge);
 #>
-    public interface <#= className #> : CIClassDef
+    public interface <#= className #>
     {
         public <#= superClassName #> <#= getSuperClassMethodName #>();
     }

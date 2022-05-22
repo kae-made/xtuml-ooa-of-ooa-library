@@ -75,7 +75,7 @@
 <#= indent #><#= subRelClassName #> subClass = null;
 <#= indent #>foreach (var scName in subClassNames)
 <#= indent #>{
-<#= indent #>    var candidates = repository.GetCIInstances(domainName, className).Where(i=> <#= condition #>);
+<#= indent #>    var candidates = repository.GetCIInstances(domainName, scName).Where(i=> <#= condition #>);
 <#= indent #>    if (candidates.Count() > 0)
 <#= indent #>    {
 <#= indent #>        subClass = (<#= subRelClassName #>)candidates.First();

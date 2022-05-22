@@ -320,7 +320,7 @@ namespace Kae.XTUML.Tools.CIModelResolver.template
             
             #line default
             #line hidden
-            this.Write("    var candidates = repository.GetCIInstances(domainName, className).Where(i=> ");
+            this.Write("    var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ");
             
             #line 78 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\LinkedItemLogic.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(condition));

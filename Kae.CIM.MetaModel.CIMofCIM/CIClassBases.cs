@@ -116,7 +116,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR698 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR698)i).CIMSuperClassACT_ACT().Attr_Action_ID == this.Attr_Action_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR698)i).CIMSuperClassACT_ACT() != null && (((CIMSubClassR698)i).CIMSuperClassACT_ACT().Attr_Action_ID == this.Attr_Action_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR698)candidates.First();
@@ -2509,7 +2509,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR664 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR664)i).CIMSuperClassACT_SEL().Attr_Statement_ID == this.Attr_Statement_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR664)i).CIMSuperClassACT_SEL() != null && (((CIMSubClassR664)i).CIMSuperClassACT_SEL().Attr_Statement_ID == this.Attr_Statement_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR664)candidates.First();
@@ -2730,7 +2730,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR603 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR603)i).CIMSuperClassACT_SMT().Attr_Statement_ID == this.Attr_Statement_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR603)i).CIMSuperClassACT_SMT() != null && (((CIMSubClassR603)i).CIMSuperClassACT_SMT().Attr_Statement_ID == this.Attr_Statement_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR603)candidates.First();
@@ -3248,7 +3248,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR1107 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR1107)i).CIMSuperClassA_ACT().Attr_Id == this.Attr_Id);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR1107)i).CIMSuperClassA_ACT() != null && (((CIMSubClassR1107)i).CIMSuperClassA_ACT().Attr_Id == this.Attr_Id));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR1107)candidates.First();
@@ -3301,7 +3301,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR1112 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR1112)i).CIMSuperClassA_AE().Attr_Id == this.Attr_Id);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR1112)i).CIMSuperClassA_AE() != null && (((CIMSubClassR1112)i).CIMSuperClassA_AE().Attr_Id == this.Attr_Id));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR1112)candidates.First();
@@ -3514,7 +3514,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR1106 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR1106)i).CIMSuperClassA_CTL().Attr_Id == this.Attr_Id);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR1106)i).CIMSuperClassA_CTL() != null && (((CIMSubClassR1106)i).CIMSuperClassA_CTL().Attr_Id == this.Attr_Id));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR1106)candidates.First();
@@ -3859,7 +3859,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR1105 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR1105)i).CIMSuperClassA_N().Attr_Id == this.Attr_Id);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR1105)i).CIMSuperClassA_N() != null && (((CIMSubClassR1105)i).CIMSuperClassA_N().Attr_Id == this.Attr_Id));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR1105)candidates.First();
@@ -4160,7 +4160,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR4703 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR4703)i).CIMSuperClassCL_IIR().Attr_Id == this.Attr_Id);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR4703)i).CIMSuperClassCL_IIR() != null && (((CIMSubClassR4703)i).CIMSuperClassCL_IIR().Attr_Id == this.Attr_Id));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR4703)candidates.First();
@@ -5169,7 +5169,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR4004 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR4004)i).CIMSuperClassC_EP().Attr_Id == this.Attr_Id);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR4004)i).CIMSuperClassC_EP() != null && (((CIMSubClassR4004)i).CIMSuperClassC_EP().Attr_Id == this.Attr_Id));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR4004)candidates.First();
@@ -5499,7 +5499,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR4009 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR4009)i).CIMSuperClassC_IR().Attr_Id == this.Attr_Id);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR4009)i).CIMSuperClassC_IR() != null && (((CIMSubClassR4009)i).CIMSuperClassC_IR().Attr_Id == this.Attr_Id));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR4009)candidates.First();
@@ -6814,7 +6814,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR704 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR704)i).CIMSuperClassE_CSME().Attr_Statement_ID == this.Attr_Statement_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR704)i).CIMSuperClassE_CSME() != null && (((CIMSubClassR704)i).CIMSuperClassE_CSME().Attr_Statement_ID == this.Attr_Statement_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR704)candidates.First();
@@ -6892,7 +6892,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR701 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR701)i).CIMSuperClassE_ESS().Attr_Statement_ID == this.Attr_Statement_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR701)i).CIMSuperClassE_ESS() != null && (((CIMSubClassR701)i).CIMSuperClassE_ESS().Attr_Statement_ID == this.Attr_Statement_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR701)candidates.First();
@@ -7191,7 +7191,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR705 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR705)i).CIMSuperClassE_GSME().Attr_Statement_ID == this.Attr_Statement_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR705)i).CIMSuperClassE_GSME() != null && (((CIMSubClassR705)i).CIMSuperClassE_GSME().Attr_Statement_ID == this.Attr_Statement_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR705)candidates.First();
@@ -9130,7 +9130,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR1013 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR1013)i).CIMSuperClassMSG_A().Attr_Arg_ID == this.Attr_Arg_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR1013)i).CIMSuperClassMSG_A() != null && (((CIMSubClassR1013)i).CIMSuperClassMSG_A().Attr_Arg_ID == this.Attr_Arg_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR1013)candidates.First();
@@ -9188,7 +9188,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR1019 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR1019)i).CIMSuperClassMSG_AM().Attr_Msg_ID == this.Attr_Msg_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR1019)i).CIMSuperClassMSG_AM() != null && (((CIMSubClassR1019)i).CIMSuperClassMSG_AM().Attr_Msg_ID == this.Attr_Msg_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR1019)candidates.First();
@@ -9805,7 +9805,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR1018 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR1018)i).CIMSuperClassMSG_M().Attr_Msg_ID == this.Attr_Msg_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR1018)i).CIMSuperClassMSG_M() != null && (((CIMSubClassR1018)i).CIMSuperClassMSG_M().Attr_Msg_ID == this.Attr_Msg_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR1018)candidates.First();
@@ -10072,7 +10072,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR1020 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR1020)i).CIMSuperClassMSG_SM().Attr_Msg_ID == this.Attr_Msg_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR1020)i).CIMSuperClassMSG_SM() != null && (((CIMSubClassR1020)i).CIMSuperClassMSG_SM().Attr_Msg_ID == this.Attr_Msg_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR1020)candidates.First();
@@ -10265,7 +10265,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR106 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR106)i).CIMSuperClassO_ATTR().Attr_Attr_ID == this.Attr_Attr_ID && ((CIMSubClassR106)i).CIMSuperClassO_ATTR().Attr_Obj_ID == this.Attr_Obj_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR106)i).CIMSuperClassO_ATTR() != null && (((CIMSubClassR106)i).CIMSuperClassO_ATTR().Attr_Attr_ID == this.Attr_Attr_ID && ((CIMSubClassR106)i).CIMSuperClassO_ATTR().Attr_Obj_ID == this.Attr_Obj_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR106)candidates.First();
@@ -10332,7 +10332,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR107 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR107)i).CIMSuperClassO_BATTR().Attr_Attr_ID == this.Attr_Attr_ID && ((CIMSubClassR107)i).CIMSuperClassO_BATTR().Attr_Obj_ID == this.Attr_Obj_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR107)i).CIMSuperClassO_BATTR() != null && (((CIMSubClassR107)i).CIMSuperClassO_BATTR().Attr_Attr_ID == this.Attr_Attr_ID && ((CIMSubClassR107)i).CIMSuperClassO_BATTR().Attr_Obj_ID == this.Attr_Obj_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR107)candidates.First();
@@ -11860,7 +11860,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR8001 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR8001)i).CIMSuperClassPE_PE().Attr_Element_ID == this.Attr_Element_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR8001)i).CIMSuperClassPE_PE() != null && (((CIMSubClassR8001)i).CIMSuperClassPE_PE().Attr_Element_ID == this.Attr_Element_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR8001)candidates.First();
@@ -12578,7 +12578,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR203 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR203)i).CIMSuperClassR_OIR().Attr_OIR_ID == this.Attr_OIR_ID && ((CIMSubClassR203)i).CIMSuperClassR_OIR().Attr_Rel_ID == this.Attr_Rel_ID && ((CIMSubClassR203)i).CIMSuperClassR_OIR().Attr_Obj_ID == this.Attr_Obj_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR203)i).CIMSuperClassR_OIR() != null && (((CIMSubClassR203)i).CIMSuperClassR_OIR().Attr_OIR_ID == this.Attr_OIR_ID && ((CIMSubClassR203)i).CIMSuperClassR_OIR().Attr_Rel_ID == this.Attr_Rel_ID && ((CIMSubClassR203)i).CIMSuperClassR_OIR().Attr_Obj_ID == this.Attr_Obj_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR203)candidates.First();
@@ -12816,7 +12816,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR206 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR206)i).CIMSuperClassR_REL().Attr_Rel_ID == this.Attr_Rel_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR206)i).CIMSuperClassR_REL() != null && (((CIMSubClassR206)i).CIMSuperClassR_REL().Attr_Rel_ID == this.Attr_Rel_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR206)candidates.First();
@@ -12897,7 +12897,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR205 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR205)i).CIMSuperClassR_RGO().Attr_OIR_ID == this.Attr_OIR_ID && ((CIMSubClassR205)i).CIMSuperClassR_RGO().Attr_Rel_ID == this.Attr_Rel_ID && ((CIMSubClassR205)i).CIMSuperClassR_RGO().Attr_Obj_ID == this.Attr_Obj_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR205)i).CIMSuperClassR_RGO() != null && (((CIMSubClassR205)i).CIMSuperClassR_RGO().Attr_OIR_ID == this.Attr_OIR_ID && ((CIMSubClassR205)i).CIMSuperClassR_RGO().Attr_Rel_ID == this.Attr_Rel_ID && ((CIMSubClassR205)i).CIMSuperClassR_RGO().Attr_Obj_ID == this.Attr_Obj_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR205)candidates.First();
@@ -12980,7 +12980,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR204 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR204)i).CIMSuperClassR_RTO().Attr_OIR_ID == this.Attr_OIR_ID && ((CIMSubClassR204)i).CIMSuperClassR_RTO().Attr_Rel_ID == this.Attr_Rel_ID && ((CIMSubClassR204)i).CIMSuperClassR_RTO().Attr_Obj_ID == this.Attr_Obj_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR204)i).CIMSuperClassR_RTO() != null && (((CIMSubClassR204)i).CIMSuperClassR_RTO().Attr_OIR_ID == this.Attr_OIR_ID && ((CIMSubClassR204)i).CIMSuperClassR_RTO().Attr_Rel_ID == this.Attr_Rel_ID && ((CIMSubClassR204)i).CIMSuperClassR_RTO().Attr_Obj_ID == this.Attr_Obj_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR204)candidates.First();
@@ -13378,7 +13378,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR513 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR513)i).CIMSuperClassSM_AH().Attr_SM_ID == this.Attr_SM_ID && ((CIMSubClassR513)i).CIMSuperClassSM_AH().Attr_Act_ID == this.Attr_Act_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR513)i).CIMSuperClassSM_AH() != null && (((CIMSubClassR513)i).CIMSuperClassSM_AH().Attr_SM_ID == this.Attr_SM_ID && ((CIMSubClassR513)i).CIMSuperClassSM_AH().Attr_Act_ID == this.Attr_Act_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR513)candidates.First();
@@ -13712,7 +13712,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR525 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR525)i).CIMSuperClassSM_EVT().Attr_SM_ID == this.Attr_SM_ID && ((CIMSubClassR525)i).CIMSuperClassSM_EVT().Attr_SMevt_ID == this.Attr_SMevt_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR525)i).CIMSuperClassSM_EVT() != null && (((CIMSubClassR525)i).CIMSuperClassSM_EVT().Attr_SM_ID == this.Attr_SM_ID && ((CIMSubClassR525)i).CIMSuperClassSM_EVT().Attr_SMevt_ID == this.Attr_SMevt_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR525)candidates.First();
@@ -14472,7 +14472,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR504 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR504)i).CIMSuperClassSM_SEME().Attr_SM_ID == this.Attr_SM_ID && ((CIMSubClassR504)i).CIMSuperClassSM_SEME().Attr_SMevt_ID == this.Attr_SMevt_ID && ((CIMSubClassR504)i).CIMSuperClassSM_SEME().Attr_SMstt_ID == this.Attr_SMstt_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR504)i).CIMSuperClassSM_SEME() != null && (((CIMSubClassR504)i).CIMSuperClassSM_SEME().Attr_SM_ID == this.Attr_SM_ID && ((CIMSubClassR504)i).CIMSuperClassSM_SEME().Attr_SMevt_ID == this.Attr_SMevt_ID && ((CIMSubClassR504)i).CIMSuperClassSM_SEME().Attr_SMstt_ID == this.Attr_SMstt_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR504)candidates.First();
@@ -14542,7 +14542,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR526 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR526)i).CIMSuperClassSM_SEVT().Attr_SM_ID == this.Attr_SM_ID && ((CIMSubClassR526)i).CIMSuperClassSM_SEVT().Attr_SMevt_ID == this.Attr_SMevt_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR526)i).CIMSuperClassSM_SEVT() != null && (((CIMSubClassR526)i).CIMSuperClassSM_SEVT().Attr_SM_ID == this.Attr_SM_ID && ((CIMSubClassR526)i).CIMSuperClassSM_SEVT().Attr_SMevt_ID == this.Attr_SMevt_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR526)candidates.First();
@@ -14752,7 +14752,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR510 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR510)i).CIMSuperClassSM_SM().Attr_SM_ID == this.Attr_SM_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR510)i).CIMSuperClassSM_SM() != null && (((CIMSubClassR510)i).CIMSuperClassSM_SM().Attr_SM_ID == this.Attr_SM_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR510)candidates.First();
@@ -14769,7 +14769,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR517 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR517)i).CIMSuperClassSM_SM().Attr_SM_ID == this.Attr_SM_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR517)i).CIMSuperClassSM_SM() != null && (((CIMSubClassR517)i).CIMSuperClassSM_SM().Attr_SM_ID == this.Attr_SM_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR517)candidates.First();
@@ -15035,7 +15035,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR507 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR507)i).CIMSuperClassSM_TXN().Attr_SM_ID == this.Attr_SM_ID && ((CIMSubClassR507)i).CIMSuperClassSM_TXN().Attr_Trans_ID == this.Attr_Trans_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR507)i).CIMSuperClassSM_TXN() != null && (((CIMSubClassR507)i).CIMSuperClassSM_TXN().Attr_SM_ID == this.Attr_SM_ID && ((CIMSubClassR507)i).CIMSuperClassSM_TXN().Attr_Trans_ID == this.Attr_Trans_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR507)candidates.First();
@@ -15104,7 +15104,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR4503 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR4503)i).CIMSuperClassSPR_PEP().Attr_Id == this.Attr_Id);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR4503)i).CIMSuperClassSPR_PEP() != null && (((CIMSubClassR4503)i).CIMSuperClassSPR_PEP().Attr_Id == this.Attr_Id));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR4503)candidates.First();
@@ -15362,7 +15362,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR4502 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR4502)i).CIMSuperClassSPR_REP().Attr_Id == this.Attr_Id);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR4502)i).CIMSuperClassSPR_REP() != null && (((CIMSubClassR4502)i).CIMSuperClassSPR_REP().Attr_Id == this.Attr_Id));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR4502)candidates.First();
@@ -15714,7 +15714,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR948 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR948)i).CIMSuperClassSQ_AV().Attr_Av_ID == this.Attr_Av_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR948)i).CIMSuperClassSQ_AV() != null && (((CIMSubClassR948)i).CIMSuperClassSQ_AV().Attr_Av_ID == this.Attr_Av_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR948)candidates.First();
@@ -15988,7 +15988,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR947 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR947)i).CIMSuperClassSQ_CPA().Attr_Ia_ID == this.Attr_Ia_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR947)i).CIMSuperClassSQ_CPA() != null && (((CIMSubClassR947)i).CIMSuperClassSQ_CPA().Attr_Ia_ID == this.Attr_Ia_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR947)candidates.First();
@@ -16396,7 +16396,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR930 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR930)i).CIMSuperClassSQ_P().Attr_Part_ID == this.Attr_Part_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR930)i).CIMSuperClassSQ_P() != null && (((CIMSubClassR930)i).CIMSuperClassSQ_P().Attr_Part_ID == this.Attr_Part_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR930)candidates.First();
@@ -17434,7 +17434,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR17 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR17)i).CIMSuperClassS_DT().Attr_DT_ID == this.Attr_DT_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR17)i).CIMSuperClassS_DT() != null && (((CIMSubClassR17)i).CIMSuperClassS_DT().Attr_DT_ID == this.Attr_DT_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR17)candidates.First();
@@ -18588,7 +18588,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR2010 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR2010)i).CIMSuperClassTE_ABA().Attr_AbaID == this.Attr_AbaID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR2010)i).CIMSuperClassTE_ABA() != null && (((CIMSubClassR2010)i).CIMSuperClassTE_ABA().Attr_AbaID == this.Attr_AbaID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR2010)candidates.First();
@@ -19767,7 +19767,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR2045 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR2045)i).CIMSuperClassTE_CONTAINER().Attr_flavor == this.Attr_flavor);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR2045)i).CIMSuperClassTE_CONTAINER() != null && (((CIMSubClassR2045)i).CIMSuperClassTE_CONTAINER().Attr_flavor == this.Attr_flavor));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR2045)candidates.First();
@@ -23740,7 +23740,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR2069 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR2069)i).CIMSuperClassTE_SMT().Attr_Statement_ID == this.Attr_Statement_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR2069)i).CIMSuperClassTE_SMT() != null && (((CIMSubClassR2069)i).CIMSuperClassTE_SMT().Attr_Statement_ID == this.Attr_Statement_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR2069)candidates.First();
@@ -25674,7 +25674,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR1210 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR1210)i).CIMSuperClassUC_UCA().Attr_Assoc_ID == this.Attr_Assoc_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR1210)i).CIMSuperClassUC_UCA() != null && (((CIMSubClassR1210)i).CIMSuperClassUC_UCA().Attr_Assoc_ID == this.Attr_Assoc_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR1210)candidates.First();
@@ -27844,7 +27844,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR801 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR801)i).CIMSuperClassV_VAL().Attr_Value_ID == this.Attr_Value_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR801)i).CIMSuperClassV_VAL() != null && (((CIMSubClassR801)i).CIMSuperClassV_VAL().Attr_Value_ID == this.Attr_Value_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR801)candidates.First();
@@ -28254,7 +28254,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             CIMSubClassR814 subClass = null;
             foreach (var scName in subClassNames)
             {
-                var candidates = repository.GetCIInstances(domainName, className).Where(i=> ((CIMSubClassR814)i).CIMSuperClassV_VAR().Attr_Var_ID == this.Attr_Var_ID);
+                var candidates = repository.GetCIInstances(domainName, scName).Where(i=> ((CIMSubClassR814)i).CIMSuperClassV_VAR() != null && (((CIMSubClassR814)i).CIMSuperClassV_VAR().Attr_Var_ID == this.Attr_Var_ID));
                 if (candidates.Count() > 0)
                 {
                     subClass = (CIMSubClassR814)candidates.First();

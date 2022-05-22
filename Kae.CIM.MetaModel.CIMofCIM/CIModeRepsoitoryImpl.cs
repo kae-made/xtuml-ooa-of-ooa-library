@@ -106,6 +106,10 @@ namespace Kae.CIM
                     }
                 }
             }
+            if (instances == null)
+            {
+                instances = new List<CIClassDef>();
+            }
             return instances;
         }
 

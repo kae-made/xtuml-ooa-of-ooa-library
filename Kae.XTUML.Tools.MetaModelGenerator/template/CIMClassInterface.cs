@@ -64,20 +64,39 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         var classDef = repository.Classes[ck];
         var className = RuleOfNamesForTransfrom.GetCIMInterfaceClassName(classDef);
+        var superSubRels = repository.Relationships.Values.Where(r => r.Kind == XTUMLOOAofOOA.KindOfRelatioship.SuperSub);
+        var baseClassName = "CIClassDef";
+        foreach (var ssRel in superSubRels)
+        {
+            var ssRelC = (XTUMLOOAofOOA.SuperSubRelationshipOfOOA)ssRel;
+            var superSubRelSub = ssRelC.SubEdges.Where(r => r.Edge.Name == ck);
+            foreach(var subrel in superSubRelSub)
+            {
+                var subClassIFName = RuleOfNamesForTransfrom.GetCIMSubClassName(ssRel);
+                baseClassName += $", {subClassIFName}";
+            }
+        }
 
             
             #line default
             #line hidden
             this.Write("    public interface ");
             
-            #line 29 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 41 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(className));
             
             #line default
             #line hidden
-            this.Write(" : CIClassDef\r\n    {\r\n");
+            this.Write(" : ");
             
-            #line 31 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 41 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(baseClassName));
+            
+            #line default
+            #line hidden
+            this.Write("\r\n    {\r\n");
+            
+            #line 43 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
 
         foreach(var attrName in classDef.Attributes.Keys)
         {
@@ -89,21 +108,21 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             #line hidden
             this.Write("        public ");
             
-            #line 37 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 49 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(attrTypeName));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 37 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 49 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(attrPropertyName));
             
             #line default
             #line hidden
             this.Write(" { get; set; }\r\n");
             
-            #line 38 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 50 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
 
         }
 
@@ -112,10 +131,9 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             #line hidden
             this.Write("\r\n");
             
-            #line 42 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 54 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
 
         var binaryRels = repository.Relationships.Values.Where(r => r.Kind == XTUMLOOAofOOA.KindOfRelatioship.Binary);
-        var superSubRels = repository.Relationships.Values.Where(r => r.Kind == XTUMLOOAofOOA.KindOfRelatioship.SuperSub);
         var relObjRels = repository.Relationships.Values.Where(r => r.Kind == XTUMLOOAofOOA.KindOfRelatioship.RelationshipClass);
 
         var binaryRelFrom = binaryRels.Where(r => r.FromEdge.Edge.Name == ck);
@@ -129,21 +147,21 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             #line hidden
             this.Write("        public ");
             
-            #line 53 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 64 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(linkedToTypeName));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 53 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 64 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(linkedToMethodName));
             
             #line default
             #line hidden
             this.Write("();\r\n");
             
-            #line 54 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 65 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
 
         }
 
@@ -158,21 +176,21 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             #line hidden
             this.Write("        public ");
             
-            #line 63 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 74 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(linkedFromTypeName));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 63 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 74 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(linkedFromMethodName));
             
             #line default
             #line hidden
             this.Write("();\r\n");
             
-            #line 64 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 75 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
 
         }
 
@@ -187,21 +205,21 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             #line hidden
             this.Write("        public ");
             
-            #line 73 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 84 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(subClassName));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 73 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 84 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(subClassGetMethodName));
             
             #line default
             #line hidden
             this.Write("();\r\n");
             
-            #line 74 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 85 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
 
         }
 
@@ -219,21 +237,21 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             #line hidden
             this.Write("        public ");
             
-            #line 86 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 97 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(superClassName));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 86 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 97 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(getSuperClassMethodName));
             
             #line default
             #line hidden
             this.Write("();\r\n");
             
-            #line 87 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 98 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
 
             }
         }
@@ -250,21 +268,21 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             #line hidden
             this.Write("        public ");
             
-            #line 98 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 109 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(linkedOtherTypeName));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 98 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 109 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(linkedOtherMethodName));
             
             #line default
             #line hidden
             this.Write("();\r\n");
             
-            #line 99 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 110 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
 
         }
 
@@ -281,21 +299,21 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             #line hidden
             this.Write("        public ");
             
-            #line 110 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 121 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(linkedOneTypeName));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 110 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 121 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(linkedOneMethodName));
             
             #line default
             #line hidden
             this.Write("();\r\n");
             
-            #line 111 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 122 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
 
         }
 
@@ -305,7 +323,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             #line hidden
             this.Write("\r\n");
             
-            #line 116 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 127 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
 
         if (classDef is XTUMLOOAofOOA.RelationshipClassOfOOA)
         {
@@ -318,21 +336,21 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             #line hidden
             this.Write("        public ");
             
-            #line 123 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 134 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(linkedOneSideReturnTypeName));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 123 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 134 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(linkedOneSideMethodName));
             
             #line default
             #line hidden
             this.Write("();\r\n");
             
-            #line 124 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 135 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
 
             var linkedOtherSideMethodName = RuleOfNamesForTransfrom.GetLinkedOOMethodName(relClassDef, RuleOfNamesForTransfrom.RelationshipEdgeSide.OtherSide);
             var linkedOtherSideReturnTypeName = RuleOfNamesForTransfrom.GetMethodReturnType(relClassDef.Relationship.OtherSideEdge.Edge, XTUMLOOAofOOA.RelationshpEdgeOfOOA.Multiplicity.MULT_1);
@@ -342,21 +360,21 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             #line hidden
             this.Write("        public ");
             
-            #line 128 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 139 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(linkedOtherSideReturnTypeName));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 128 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 139 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(linkedOtherSideMethodName));
             
             #line default
             #line hidden
             this.Write("();\r\n");
             
-            #line 129 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 140 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
 
         }
 
@@ -366,7 +384,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             #line hidden
             this.Write("    }\r\n\r\n");
             
-            #line 135 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 146 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
 
     }
     foreach (var rk in repository.Relationships.Keys)
@@ -383,28 +401,28 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             #line hidden
             this.Write("    public interface ");
             
-            #line 146 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 157 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(className));
             
             #line default
             #line hidden
-            this.Write(" : CIClassDef\r\n    {\r\n        public ");
+            this.Write("\r\n    {\r\n        public ");
             
-            #line 148 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 159 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(superClassName));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 148 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 159 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(getSuperClassMethodName));
             
             #line default
             #line hidden
             this.Write("();\r\n    }\r\n");
             
-            #line 150 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
+            #line 161 "C:\Users\kae-m\source\repos\xtMULMetaModelProjects\Kae.XTUML.Tools.MetaModelGenerator\template\CIMClassInterface.tt"
 
         }
     }

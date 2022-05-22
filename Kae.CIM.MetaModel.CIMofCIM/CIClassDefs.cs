@@ -33,7 +33,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_AI : CIClassDef
+    public interface CIMClassACT_AI : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_r_Value_ID { get; set; }
@@ -110,7 +110,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_BRB : CIClassDef
+    public interface CIMClassACT_BRB : CIClassDef, CIMSubClassR698
     {
         public string Attr_Action_ID { get; set; }
         public string Attr_Brg_ID { get; set; }
@@ -120,7 +120,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_BRG : CIClassDef
+    public interface CIMClassACT_BRG : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Brg_ID { get; set; }
@@ -135,7 +135,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_BRK : CIClassDef
+    public interface CIMClassACT_BRK : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
 
@@ -143,7 +143,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_CNV : CIClassDef
+    public interface CIMClassACT_CNV : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Obj_ID { get; set; }
@@ -155,7 +155,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_CON : CIClassDef
+    public interface CIMClassACT_CON : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
 
@@ -163,7 +163,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_CR : CIClassDef
+    public interface CIMClassACT_CR : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Var_ID { get; set; }
@@ -178,7 +178,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_CTL : CIClassDef
+    public interface CIMClassACT_CTL : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
 
@@ -186,7 +186,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_DAB : CIClassDef
+    public interface CIMClassACT_DAB : CIClassDef, CIMSubClassR698
     {
         public string Attr_Action_ID { get; set; }
         public string Attr_Obj_ID { get; set; }
@@ -198,7 +198,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_DEL : CIClassDef
+    public interface CIMClassACT_DEL : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Var_ID { get; set; }
@@ -208,7 +208,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_E : CIClassDef
+    public interface CIMClassACT_E : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Block_ID { get; set; }
@@ -221,7 +221,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_EL : CIClassDef
+    public interface CIMClassACT_EL : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Block_ID { get; set; }
@@ -236,7 +236,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_FIO : CIClassDef
+    public interface CIMClassACT_FIO : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Var_ID { get; set; }
@@ -252,7 +252,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_FIW : CIClassDef
+    public interface CIMClassACT_FIW : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Var_ID { get; set; }
@@ -270,7 +270,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_FNB : CIClassDef
+    public interface CIMClassACT_FNB : CIClassDef, CIMSubClassR698
     {
         public string Attr_Action_ID { get; set; }
         public string Attr_Sync_ID { get; set; }
@@ -280,7 +280,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_FNC : CIClassDef
+    public interface CIMClassACT_FNC : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Sync_ID { get; set; }
@@ -293,7 +293,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_FOR : CIClassDef
+    public interface CIMClassACT_FOR : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Block_ID { get; set; }
@@ -310,7 +310,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_IF : CIClassDef
+    public interface CIMClassACT_IF : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Block_ID { get; set; }
@@ -328,7 +328,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_IOP : CIClassDef
+    public interface CIMClassACT_IOP : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public int Attr_opNameLineNumber { get; set; }
@@ -372,7 +372,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_OPB : CIClassDef
+    public interface CIMClassACT_OPB : CIClassDef, CIMSubClassR698
     {
         public string Attr_Action_ID { get; set; }
         public string Attr_Tfr_ID { get; set; }
@@ -382,7 +382,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_POB : CIClassDef
+    public interface CIMClassACT_POB : CIClassDef, CIMSubClassR698
     {
         public string Attr_Action_ID { get; set; }
         public string Attr_Id { get; set; }
@@ -392,7 +392,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_PSB : CIClassDef
+    public interface CIMClassACT_PSB : CIClassDef, CIMSubClassR698
     {
         public string Attr_Action_ID { get; set; }
         public string Attr_Id { get; set; }
@@ -402,7 +402,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_REL : CIClassDef
+    public interface CIMClassACT_REL : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_One_Side_Var_ID { get; set; }
@@ -421,7 +421,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_RET : CIClassDef
+    public interface CIMClassACT_RET : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Value_ID { get; set; }
@@ -431,7 +431,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_ROB : CIClassDef
+    public interface CIMClassACT_ROB : CIClassDef, CIMSubClassR698
     {
         public string Attr_Action_ID { get; set; }
         public string Attr_Id { get; set; }
@@ -441,7 +441,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_RSB : CIClassDef
+    public interface CIMClassACT_RSB : CIClassDef, CIMSubClassR698
     {
         public string Attr_Action_ID { get; set; }
         public string Attr_Id { get; set; }
@@ -451,7 +451,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_RU : CIClassDef
+    public interface CIMClassACT_RU : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_One_Side_Var_ID { get; set; }
@@ -472,7 +472,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_SAB : CIClassDef
+    public interface CIMClassACT_SAB : CIClassDef, CIMSubClassR698
     {
         public string Attr_Action_ID { get; set; }
         public string Attr_SM_ID { get; set; }
@@ -483,7 +483,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_SEL : CIClassDef
+    public interface CIMClassACT_SEL : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Var_ID { get; set; }
@@ -499,7 +499,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_SGN : CIClassDef
+    public interface CIMClassACT_SGN : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public int Attr_sigNameLineNumber { get; set; }
@@ -536,7 +536,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_SR : CIClassDef
+    public interface CIMClassACT_SR : CIClassDef, CIMSubClassR664
     {
         public string Attr_Statement_ID { get; set; }
 
@@ -544,7 +544,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_SRW : CIClassDef
+    public interface CIMClassACT_SRW : CIClassDef, CIMSubClassR664
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Where_Clause_Value_ID { get; set; }
@@ -554,7 +554,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_TAB : CIClassDef
+    public interface CIMClassACT_TAB : CIClassDef, CIMSubClassR698
     {
         public string Attr_Action_ID { get; set; }
         public string Attr_SM_ID { get; set; }
@@ -565,7 +565,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_TFM : CIClassDef
+    public interface CIMClassACT_TFM : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Tfr_ID { get; set; }
@@ -582,7 +582,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_UNR : CIClassDef
+    public interface CIMClassACT_UNR : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_One_Side_Var_ID { get; set; }
@@ -601,7 +601,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_URU : CIClassDef
+    public interface CIMClassACT_URU : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_One_Side_Var_ID { get; set; }
@@ -622,7 +622,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassACT_WHL : CIClassDef
+    public interface CIMClassACT_WHL : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Value_ID { get; set; }
@@ -634,7 +634,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassA_ACT : CIClassDef
+    public interface CIMClassA_ACT : CIClassDef, CIMSubClassR1105
     {
         public string Attr_Id { get; set; }
 
@@ -643,7 +643,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassA_AE : CIClassDef
+    public interface CIMClassA_AE : CIClassDef, CIMSubClassR1107
     {
         public string Attr_Id { get; set; }
 
@@ -652,7 +652,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassA_AEA : CIClassDef
+    public interface CIMClassA_AEA : CIClassDef, CIMSubClassR1112
     {
         public string Attr_Id { get; set; }
         public string Attr_Name { get; set; }
@@ -662,7 +662,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassA_AF : CIClassDef
+    public interface CIMClassA_AF : CIClassDef, CIMSubClassR1106
     {
         public string Attr_Id { get; set; }
         public string Attr_Descrip { get; set; }
@@ -671,7 +671,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassA_AP : CIClassDef
+    public interface CIMClassA_AP : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Id { get; set; }
         public string Attr_Package_IDdeprecated { get; set; }
@@ -682,7 +682,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassA_ATE : CIClassDef
+    public interface CIMClassA_ATE : CIClassDef, CIMSubClassR1112
     {
         public string Attr_Id { get; set; }
         public string Attr_Name { get; set; }
@@ -692,7 +692,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassA_CTL : CIClassDef
+    public interface CIMClassA_CTL : CIClassDef, CIMSubClassR1105
     {
         public string Attr_Id { get; set; }
 
@@ -701,7 +701,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassA_DM : CIClassDef
+    public interface CIMClassA_DM : CIClassDef, CIMSubClassR1106
     {
         public string Attr_Id { get; set; }
         public string Attr_Name { get; set; }
@@ -711,7 +711,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassA_E : CIClassDef
+    public interface CIMClassA_E : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Id { get; set; }
         public string Attr_Package_IDdeprecated { get; set; }
@@ -726,7 +726,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassA_FF : CIClassDef
+    public interface CIMClassA_FF : CIClassDef, CIMSubClassR1106
     {
         public string Attr_Id { get; set; }
         public string Attr_Descrip { get; set; }
@@ -735,7 +735,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassA_FJ : CIClassDef
+    public interface CIMClassA_FJ : CIClassDef, CIMSubClassR1106
     {
         public string Attr_Id { get; set; }
         public string Attr_Descrip { get; set; }
@@ -745,7 +745,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassA_GA : CIClassDef
+    public interface CIMClassA_GA : CIClassDef, CIMSubClassR1107
     {
         public string Attr_Id { get; set; }
         public string Attr_Name { get; set; }
@@ -755,7 +755,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassA_INI : CIClassDef
+    public interface CIMClassA_INI : CIClassDef, CIMSubClassR1106
     {
         public string Attr_Id { get; set; }
         public string Attr_Descrip { get; set; }
@@ -764,7 +764,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassA_N : CIClassDef
+    public interface CIMClassA_N : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Id { get; set; }
         public string Attr_Package_IDdeprecated { get; set; }
@@ -776,7 +776,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassA_OBJ : CIClassDef
+    public interface CIMClassA_OBJ : CIClassDef, CIMSubClassR1105
     {
         public string Attr_Id { get; set; }
         public string Attr_Name { get; set; }
@@ -786,7 +786,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassA_SS : CIClassDef
+    public interface CIMClassA_SS : CIClassDef, CIMSubClassR1107
     {
         public string Attr_Id { get; set; }
         public string Attr_Name { get; set; }
@@ -796,7 +796,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassCL_IC : CIClassDef
+    public interface CIMClassCL_IC : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Id { get; set; }
         public string Attr_AssignedComp_Id { get; set; }
@@ -833,7 +833,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassCL_IP : CIClassDef
+    public interface CIMClassCL_IP : CIClassDef, CIMSubClassR4703
     {
         public string Attr_Id { get; set; }
         public string Attr_Name { get; set; }
@@ -854,7 +854,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassCL_IP LinkedOtherSideR4705();
     }
 
-    public interface CIMClassCL_IR : CIClassDef
+    public interface CIMClassCL_IR : CIClassDef, CIMSubClassR4703
     {
         public string Attr_Id { get; set; }
         public string Attr_Satisfaction_Element_Id { get; set; }
@@ -880,7 +880,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassCNST_CSP : CIClassDef
+    public interface CIMClassCNST_CSP : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Constant_Spec_ID { get; set; }
         public string Attr_InformalGroupName { get; set; }
@@ -950,7 +950,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassC_AS : CIClassDef
+    public interface CIMClassC_AS : CIClassDef, CIMSubClassR4004
     {
         public string Attr_Id { get; set; }
         public string Attr_Name { get; set; }
@@ -965,7 +965,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassC_C : CIClassDef
+    public interface CIMClassC_C : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Id { get; set; }
         public string Attr_Package_IDdeprecated { get; set; }
@@ -994,7 +994,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassC_DG : CIClassDef
+    public interface CIMClassC_DG : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Id { get; set; }
         public string Attr_Name { get; set; }
@@ -1025,7 +1025,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassC_I : CIClassDef
+    public interface CIMClassC_I : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Id { get; set; }
         public string Attr_Package_IDdeprecated { get; set; }
@@ -1040,7 +1040,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassC_IO : CIClassDef
+    public interface CIMClassC_IO : CIClassDef, CIMSubClassR4004
     {
         public string Attr_Id { get; set; }
         public string Attr_DT_ID { get; set; }
@@ -1076,7 +1076,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassC_P : CIClassDef
+    public interface CIMClassC_P : CIClassDef, CIMSubClassR4009
     {
         public string Attr_Provision_Id { get; set; }
         public string Attr_Name { get; set; }
@@ -1129,7 +1129,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassC_R : CIClassDef
+    public interface CIMClassC_R : CIClassDef, CIMSubClassR4009
     {
         public string Attr_Requirement_Id { get; set; }
         public string Attr_Name { get; set; }
@@ -1153,7 +1153,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassC_DG LinkedOtherSideR4013();
     }
 
-    public interface CIMClassC_SF : CIClassDef
+    public interface CIMClassC_SF : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Id { get; set; }
         public string Attr_Requirement_Id { get; set; }
@@ -1171,7 +1171,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassC_P LinkedOtherSideR4002();
     }
 
-    public interface CIMClassD_DEPL : CIClassDef
+    public interface CIMClassD_DEPL : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Deployment_ID { get; set; }
         public string Attr_Name { get; set; }
@@ -1238,7 +1238,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassEP_PKG : CIClassDef
+    public interface CIMClassEP_PKG : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Package_ID { get; set; }
         public string Attr_Sys_ID { get; set; }
@@ -1270,7 +1270,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassEP_PKG LinkedOtherSideR1402IsReferencedBy();
     }
 
-    public interface CIMClassE_CEA : CIClassDef
+    public interface CIMClassE_CEA : CIClassDef, CIMSubClassR704
     {
         public string Attr_Statement_ID { get; set; }
 
@@ -1278,7 +1278,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassE_CEC : CIClassDef
+    public interface CIMClassE_CEC : CIClassDef, CIMSubClassR704
     {
         public string Attr_Statement_ID { get; set; }
 
@@ -1286,7 +1286,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassE_CEI : CIClassDef
+    public interface CIMClassE_CEI : CIClassDef, CIMSubClassR704
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Var_ID { get; set; }
@@ -1296,7 +1296,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassE_CES : CIClassDef
+    public interface CIMClassE_CES : CIClassDef, CIMSubClassR701
     {
         public string Attr_Statement_ID { get; set; }
         public bool Attr_is_implicit { get; set; }
@@ -1319,7 +1319,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassE_ESS : CIClassDef
+    public interface CIMClassE_ESS : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public bool Attr_ParmListOK { get; set; }
@@ -1341,7 +1341,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassE_GAR : CIClassDef
+    public interface CIMClassE_GAR : CIClassDef, CIMSubClassR705
     {
         public string Attr_Statement_ID { get; set; }
 
@@ -1349,7 +1349,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassE_GEC : CIClassDef
+    public interface CIMClassE_GEC : CIClassDef, CIMSubClassR705
     {
         public string Attr_Statement_ID { get; set; }
 
@@ -1357,7 +1357,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassE_GEN : CIClassDef
+    public interface CIMClassE_GEN : CIClassDef, CIMSubClassR705
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Var_ID { get; set; }
@@ -1367,7 +1367,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassE_GES : CIClassDef
+    public interface CIMClassE_GES : CIClassDef, CIMSubClassR701
     {
         public string Attr_Statement_ID { get; set; }
 
@@ -1376,7 +1376,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassE_GPR : CIClassDef
+    public interface CIMClassE_GPR : CIClassDef, CIMSubClassR603
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_Value_ID { get; set; }
@@ -1407,7 +1407,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassS_SYS LinkedOtherSideR9100();
     }
 
-    public interface CIMClassIA_UCP : CIClassDef
+    public interface CIMClassIA_UCP : CIClassDef, CIMSubClassR930
     {
         public string Attr_Part_ID { get; set; }
         public string Attr_Name { get; set; }
@@ -1742,7 +1742,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_AM : CIClassDef
+    public interface CIMClassMSG_AM : CIClassDef, CIMSubClassR1018
     {
         public string Attr_Msg_ID { get; set; }
         public string Attr_InformalName { get; set; }
@@ -1759,7 +1759,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_B : CIClassDef
+    public interface CIMClassMSG_B : CIClassDef, CIMSubClassR1020
     {
         public string Attr_Msg_ID { get; set; }
         public string Attr_Brg_ID { get; set; }
@@ -1769,7 +1769,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_BA : CIClassDef
+    public interface CIMClassMSG_BA : CIClassDef, CIMSubClassR1013
     {
         public string Attr_Arg_ID { get; set; }
         public string Attr_BParm_ID { get; set; }
@@ -1779,7 +1779,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_E : CIClassDef
+    public interface CIMClassMSG_E : CIClassDef, CIMSubClassR1019
     {
         public string Attr_Msg_ID { get; set; }
         public string Attr_SMevt_ID { get; set; }
@@ -1789,7 +1789,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_EA : CIClassDef
+    public interface CIMClassMSG_EA : CIClassDef, CIMSubClassR1013
     {
         public string Attr_Arg_ID { get; set; }
         public string Attr_SM_ID { get; set; }
@@ -1800,7 +1800,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_EPA : CIClassDef
+    public interface CIMClassMSG_EPA : CIClassDef, CIMSubClassR1013
     {
         public string Attr_Arg_ID { get; set; }
         public string Attr_PP_Id { get; set; }
@@ -1810,7 +1810,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_F : CIClassDef
+    public interface CIMClassMSG_F : CIClassDef, CIMSubClassR1020
     {
         public string Attr_Msg_ID { get; set; }
         public string Attr_Sync_ID { get; set; }
@@ -1820,7 +1820,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_FA : CIClassDef
+    public interface CIMClassMSG_FA : CIClassDef, CIMSubClassR1013
     {
         public string Attr_Arg_ID { get; set; }
         public string Attr_SParm_ID { get; set; }
@@ -1830,7 +1830,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_IA : CIClassDef
+    public interface CIMClassMSG_IA : CIClassDef, CIMSubClassR1013
     {
         public string Attr_Arg_ID { get; set; }
 
@@ -1838,7 +1838,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_IAM : CIClassDef
+    public interface CIMClassMSG_IAM : CIClassDef, CIMSubClassR1019
     {
         public string Attr_Msg_ID { get; set; }
 
@@ -1846,7 +1846,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_IOP : CIClassDef
+    public interface CIMClassMSG_IOP : CIClassDef, CIMSubClassR1020
     {
         public string Attr_Msg_ID { get; set; }
         public string Attr_Id { get; set; }
@@ -1856,7 +1856,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_ISM : CIClassDef
+    public interface CIMClassMSG_ISM : CIClassDef, CIMSubClassR1020
     {
         public string Attr_Msg_ID { get; set; }
 
@@ -1864,7 +1864,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_M : CIClassDef
+    public interface CIMClassMSG_M : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Msg_ID { get; set; }
         public string Attr_Receiver_Part_ID { get; set; }
@@ -1880,7 +1880,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_O : CIClassDef
+    public interface CIMClassMSG_O : CIClassDef, CIMSubClassR1020
     {
         public string Attr_Msg_ID { get; set; }
         public string Attr_Tfr_ID { get; set; }
@@ -1890,7 +1890,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_OA : CIClassDef
+    public interface CIMClassMSG_OA : CIClassDef, CIMSubClassR1013
     {
         public string Attr_Arg_ID { get; set; }
         public string Attr_TParm_ID { get; set; }
@@ -1900,7 +1900,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_R : CIClassDef
+    public interface CIMClassMSG_R : CIClassDef, CIMSubClassR1018
     {
         public string Attr_Msg_ID { get; set; }
         public string Attr_Name { get; set; }
@@ -1914,7 +1914,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_SIG : CIClassDef
+    public interface CIMClassMSG_SIG : CIClassDef, CIMSubClassR1019
     {
         public string Attr_Msg_ID { get; set; }
         public string Attr_Id { get; set; }
@@ -1924,7 +1924,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassMSG_SM : CIClassDef
+    public interface CIMClassMSG_SM : CIClassDef, CIMSubClassR1018
     {
         public string Attr_Msg_ID { get; set; }
         public string Attr_InformalName { get; set; }
@@ -1970,7 +1970,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassO_BATTR : CIClassDef
+    public interface CIMClassO_BATTR : CIClassDef, CIMSubClassR106
     {
         public string Attr_Attr_ID { get; set; }
         public string Attr_Obj_ID { get; set; }
@@ -1981,7 +1981,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassO_DBATTR : CIClassDef
+    public interface CIMClassO_DBATTR : CIClassDef, CIMSubClassR107
     {
         public string Attr_Attr_ID { get; set; }
         public string Attr_Obj_ID { get; set; }
@@ -2018,7 +2018,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassO_IOBJ : CIClassDef
+    public interface CIMClassO_IOBJ : CIClassDef, CIMSubClassR8001
     {
         public string Attr_IObj_ID { get; set; }
         public string Attr_Obj_ID { get; set; }
@@ -2033,7 +2033,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassO_NBATTR : CIClassDef
+    public interface CIMClassO_NBATTR : CIClassDef, CIMSubClassR107
     {
         public string Attr_Attr_ID { get; set; }
         public string Attr_Obj_ID { get; set; }
@@ -2042,7 +2042,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassO_OBJ : CIClassDef
+    public interface CIMClassO_OBJ : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Obj_ID { get; set; }
         public string Attr_Name { get; set; }
@@ -2087,7 +2087,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassO_ATTR LinkedOtherSideR105();
     }
 
-    public interface CIMClassO_RATTR : CIClassDef
+    public interface CIMClassO_RATTR : CIClassDef, CIMSubClassR106
     {
         public string Attr_Attr_ID { get; set; }
         public string Attr_Obj_ID { get; set; }
@@ -2282,7 +2282,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassEP_PKG LinkedOtherSideR8002();
     }
 
-    public interface CIMClassR_AONE : CIClassDef
+    public interface CIMClassR_AONE : CIClassDef, CIMSubClassR204
     {
         public string Attr_Obj_ID { get; set; }
         public string Attr_Rel_ID { get; set; }
@@ -2296,7 +2296,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassR_AOTH : CIClassDef
+    public interface CIMClassR_AOTH : CIClassDef, CIMSubClassR204
     {
         public string Attr_Obj_ID { get; set; }
         public string Attr_Rel_ID { get; set; }
@@ -2310,7 +2310,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassR_ASSOC : CIClassDef
+    public interface CIMClassR_ASSOC : CIClassDef, CIMSubClassR206
     {
         public string Attr_Rel_ID { get; set; }
 
@@ -2321,7 +2321,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassR_ASSR : CIClassDef
+    public interface CIMClassR_ASSR : CIClassDef, CIMSubClassR205
     {
         public string Attr_Obj_ID { get; set; }
         public string Attr_Rel_ID { get; set; }
@@ -2333,7 +2333,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassR_COMP : CIClassDef
+    public interface CIMClassR_COMP : CIClassDef, CIMSubClassR206
     {
         public string Attr_Rel_ID { get; set; }
         public string Attr_Rel_Chn { get; set; }
@@ -2344,7 +2344,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassR_CONE : CIClassDef
+    public interface CIMClassR_CONE : CIClassDef, CIMSubClassR203
     {
         public string Attr_Obj_ID { get; set; }
         public string Attr_Rel_ID { get; set; }
@@ -2358,7 +2358,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassR_COTH : CIClassDef
+    public interface CIMClassR_COTH : CIClassDef, CIMSubClassR203
     {
         public string Attr_Obj_ID { get; set; }
         public string Attr_Rel_ID { get; set; }
@@ -2372,7 +2372,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassR_FORM : CIClassDef
+    public interface CIMClassR_FORM : CIClassDef, CIMSubClassR205
     {
         public string Attr_Obj_ID { get; set; }
         public string Attr_Rel_ID { get; set; }
@@ -2401,7 +2401,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassO_OBJ LinkedOtherSideR201();
     }
 
-    public interface CIMClassR_PART : CIClassDef
+    public interface CIMClassR_PART : CIClassDef, CIMSubClassR204
     {
         public string Attr_Obj_ID { get; set; }
         public string Attr_Rel_ID { get; set; }
@@ -2415,7 +2415,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassR_REL : CIClassDef
+    public interface CIMClassR_REL : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Rel_ID { get; set; }
         public int Attr_Numb { get; set; }
@@ -2438,7 +2438,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassR_RGO : CIClassDef
+    public interface CIMClassR_RGO : CIClassDef, CIMSubClassR203
     {
         public string Attr_Obj_ID { get; set; }
         public string Attr_Rel_ID { get; set; }
@@ -2450,7 +2450,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassR_RTO : CIClassDef
+    public interface CIMClassR_RTO : CIClassDef, CIMSubClassR203
     {
         public string Attr_Obj_ID { get; set; }
         public string Attr_Rel_ID { get; set; }
@@ -2464,7 +2464,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassR_SIMP : CIClassDef
+    public interface CIMClassR_SIMP : CIClassDef, CIMSubClassR206
     {
         public string Attr_Rel_ID { get; set; }
 
@@ -2474,7 +2474,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassR_SUB : CIClassDef
+    public interface CIMClassR_SUB : CIClassDef, CIMSubClassR205
     {
         public string Attr_Obj_ID { get; set; }
         public string Attr_Rel_ID { get; set; }
@@ -2485,7 +2485,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassR_SUBSUP : CIClassDef
+    public interface CIMClassR_SUBSUP : CIClassDef, CIMSubClassR206
     {
         public string Attr_Rel_ID { get; set; }
 
@@ -2495,7 +2495,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassR_SUPER : CIClassDef
+    public interface CIMClassR_SUPER : CIClassDef, CIMSubClassR204
     {
         public string Attr_Obj_ID { get; set; }
         public string Attr_Rel_ID { get; set; }
@@ -2533,7 +2533,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSM_ASM : CIClassDef
+    public interface CIMClassSM_ASM : CIClassDef, CIMSubClassR517
     {
         public string Attr_SM_ID { get; set; }
         public string Attr_Obj_ID { get; set; }
@@ -2543,7 +2543,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSM_CH : CIClassDef
+    public interface CIMClassSM_CH : CIClassDef, CIMSubClassR504
     {
         public string Attr_SMstt_ID { get; set; }
         public string Attr_SMevt_ID { get; set; }
@@ -2555,7 +2555,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSM_CRTXN : CIClassDef
+    public interface CIMClassSM_CRTXN : CIClassDef, CIMSubClassR507
     {
         public string Attr_Trans_ID { get; set; }
         public string Attr_SM_ID { get; set; }
@@ -2567,7 +2567,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSM_EIGN : CIClassDef
+    public interface CIMClassSM_EIGN : CIClassDef, CIMSubClassR504
     {
         public string Attr_SMstt_ID { get; set; }
         public string Attr_SMevt_ID { get; set; }
@@ -2626,7 +2626,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSM_ISM : CIClassDef
+    public interface CIMClassSM_ISM : CIClassDef, CIMSubClassR517
     {
         public string Attr_SM_ID { get; set; }
         public string Attr_Obj_ID { get; set; }
@@ -2636,7 +2636,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSM_LEVT : CIClassDef
+    public interface CIMClassSM_LEVT : CIClassDef, CIMSubClassR526
     {
         public string Attr_SMevt_ID { get; set; }
         public string Attr_SM_ID { get; set; }
@@ -2647,7 +2647,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSM_MEAH : CIClassDef
+    public interface CIMClassSM_MEAH : CIClassDef, CIMSubClassR513
     {
         public string Attr_Act_ID { get; set; }
         public string Attr_SM_ID { get; set; }
@@ -2659,7 +2659,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassSM_TXN LinkedOtherSideR512();
     }
 
-    public interface CIMClassSM_MEALY : CIClassDef
+    public interface CIMClassSM_MEALY : CIClassDef, CIMSubClassR510
     {
         public string Attr_SM_ID { get; set; }
 
@@ -2668,7 +2668,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSM_MOAH : CIClassDef
+    public interface CIMClassSM_MOAH : CIClassDef, CIMSubClassR513
     {
         public string Attr_Act_ID { get; set; }
         public string Attr_SM_ID { get; set; }
@@ -2680,7 +2680,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassSM_STATE LinkedOtherSideR511();
     }
 
-    public interface CIMClassSM_MOORE : CIClassDef
+    public interface CIMClassSM_MOORE : CIClassDef, CIMSubClassR510
     {
         public string Attr_SM_ID { get; set; }
 
@@ -2689,7 +2689,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSM_NETXN : CIClassDef
+    public interface CIMClassSM_NETXN : CIClassDef, CIMSubClassR507
     {
         public string Attr_Trans_ID { get; set; }
         public string Attr_SM_ID { get; set; }
@@ -2701,7 +2701,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSM_NLEVT : CIClassDef
+    public interface CIMClassSM_NLEVT : CIClassDef, CIMSubClassR526
     {
         public string Attr_SMevt_ID { get; set; }
         public string Attr_SM_ID { get; set; }
@@ -2716,7 +2716,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSM_NSTXN : CIClassDef
+    public interface CIMClassSM_NSTXN : CIClassDef, CIMSubClassR504, CIMSubClassR507
     {
         public string Attr_Trans_ID { get; set; }
         public string Attr_SM_ID { get; set; }
@@ -2729,7 +2729,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSM_PEVT : CIClassDef
+    public interface CIMClassSM_PEVT : CIClassDef, CIMSubClassR525
     {
         public string Attr_SMevt_ID { get; set; }
         public string Attr_SM_ID { get; set; }
@@ -2756,7 +2756,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassSM_SEVT LinkedOtherSideR503();
     }
 
-    public interface CIMClassSM_SEVT : CIClassDef
+    public interface CIMClassSM_SEVT : CIClassDef, CIMSubClassR525
     {
         public string Attr_SMevt_ID { get; set; }
         public string Attr_SM_ID { get; set; }
@@ -2768,7 +2768,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSM_SGEVT : CIClassDef
+    public interface CIMClassSM_SGEVT : CIClassDef, CIMSubClassR526
     {
         public string Attr_SMevt_ID { get; set; }
         public string Attr_SM_ID { get; set; }
@@ -2819,7 +2819,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSM_TAH : CIClassDef
+    public interface CIMClassSM_TAH : CIClassDef, CIMSubClassR513
     {
         public string Attr_Act_ID { get; set; }
         public string Attr_SM_ID { get; set; }
@@ -2859,7 +2859,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassC_P LinkedOtherSideR4501();
     }
 
-    public interface CIMClassSPR_PO : CIClassDef
+    public interface CIMClassSPR_PO : CIClassDef, CIMSubClassR4503
     {
         public string Attr_Id { get; set; }
         public string Attr_Name { get; set; }
@@ -2875,7 +2875,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSPR_PS : CIClassDef
+    public interface CIMClassSPR_PS : CIClassDef, CIMSubClassR4503
     {
         public string Attr_Id { get; set; }
         public string Attr_Name { get; set; }
@@ -2905,7 +2905,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassC_R LinkedOtherSideR4500();
     }
 
-    public interface CIMClassSPR_RO : CIClassDef
+    public interface CIMClassSPR_RO : CIClassDef, CIMSubClassR4502
     {
         public string Attr_Id { get; set; }
         public string Attr_Name { get; set; }
@@ -2922,7 +2922,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSPR_RS : CIClassDef
+    public interface CIMClassSPR_RS : CIClassDef, CIMSubClassR4502
     {
         public string Attr_Id { get; set; }
         public string Attr_Name { get; set; }
@@ -2939,7 +2939,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSQ_AP : CIClassDef
+    public interface CIMClassSQ_AP : CIClassDef, CIMSubClassR930
     {
         public string Attr_Part_ID { get; set; }
         public string Attr_Name { get; set; }
@@ -2971,7 +2971,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSQ_CIP : CIClassDef
+    public interface CIMClassSQ_CIP : CIClassDef, CIMSubClassR930
     {
         public string Attr_Part_ID { get; set; }
         public string Attr_Obj_ID { get; set; }
@@ -2988,7 +2988,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSQ_COP : CIClassDef
+    public interface CIMClassSQ_COP : CIClassDef, CIMSubClassR930
     {
         public string Attr_Part_ID { get; set; }
         public string Attr_Component_Id { get; set; }
@@ -3002,7 +3002,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSQ_CP : CIClassDef
+    public interface CIMClassSQ_CP : CIClassDef, CIMSubClassR930
     {
         public string Attr_Part_ID { get; set; }
         public string Attr_Obj_ID { get; set; }
@@ -3030,7 +3030,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSQ_EEP : CIClassDef
+    public interface CIMClassSQ_EEP : CIClassDef, CIMSubClassR930
     {
         public string Attr_Part_ID { get; set; }
         public string Attr_EE_ID { get; set; }
@@ -3044,7 +3044,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSQ_FA : CIClassDef
+    public interface CIMClassSQ_FA : CIClassDef, CIMSubClassR947
     {
         public string Attr_Ia_ID { get; set; }
 
@@ -3052,7 +3052,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSQ_FAV : CIClassDef
+    public interface CIMClassSQ_FAV : CIClassDef, CIMSubClassR948
     {
         public string Attr_Av_ID { get; set; }
 
@@ -3060,7 +3060,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSQ_IA : CIClassDef
+    public interface CIMClassSQ_IA : CIClassDef, CIMSubClassR947
     {
         public string Attr_Ia_ID { get; set; }
 
@@ -3068,7 +3068,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSQ_IAV : CIClassDef
+    public interface CIMClassSQ_IAV : CIClassDef, CIMSubClassR948
     {
         public string Attr_Av_ID { get; set; }
 
@@ -3076,7 +3076,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSQ_LS : CIClassDef
+    public interface CIMClassSQ_LS : CIClassDef, CIMSubClassR930
     {
         public string Attr_Part_ID { get; set; }
         public string Attr_Source_Part_ID { get; set; }
@@ -3090,7 +3090,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSQ_P : CIClassDef
+    public interface CIMClassSQ_P : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Part_ID { get; set; }
         public string Attr_Sequence_Package_IDdeprecated { get; set; }
@@ -3107,7 +3107,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassSQ_PP : CIClassDef
+    public interface CIMClassSQ_PP : CIClassDef, CIMSubClassR930
     {
         public string Attr_Part_ID { get; set; }
         public string Attr_Package_ID { get; set; }
@@ -3194,7 +3194,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassS_CDT : CIClassDef
+    public interface CIMClassS_CDT : CIClassDef, CIMSubClassR17
     {
         public string Attr_DT_ID { get; set; }
         public int Attr_Core_Typ { get; set; }
@@ -3244,7 +3244,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassS_DT : CIClassDef
+    public interface CIMClassS_DT : CIClassDef, CIMSubClassR8001
     {
         public string Attr_DT_ID { get; set; }
         public string Attr_Dom_IDdeprecated { get; set; }
@@ -3276,7 +3276,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassS_EDT : CIClassDef
+    public interface CIMClassS_EDT : CIClassDef, CIMSubClassR17
     {
         public string Attr_DT_ID { get; set; }
 
@@ -3285,7 +3285,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassS_EE : CIClassDef
+    public interface CIMClassS_EE : CIClassDef, CIMSubClassR8001
     {
         public string Attr_EE_ID { get; set; }
         public string Attr_Name { get; set; }
@@ -3331,7 +3331,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassS_EXP : CIClassDef
+    public interface CIMClassS_EXP : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Exception_ID { get; set; }
         public string Attr_Name { get; set; }
@@ -3341,7 +3341,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassS_IRDT : CIClassDef
+    public interface CIMClassS_IRDT : CIClassDef, CIMSubClassR17
     {
         public string Attr_DT_ID { get; set; }
         public bool Attr_isSet { get; set; }
@@ -3382,7 +3382,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassS_SDT : CIClassDef
+    public interface CIMClassS_SDT : CIClassDef, CIMSubClassR17
     {
         public string Attr_DT_ID { get; set; }
 
@@ -3413,7 +3413,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassS_SYNC : CIClassDef
+    public interface CIMClassS_SYNC : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Sync_ID { get; set; }
         public string Attr_Dom_IDdeprecated { get; set; }
@@ -3451,7 +3451,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassS_UDT : CIClassDef
+    public interface CIMClassS_UDT : CIClassDef, CIMSubClassR17
     {
         public string Attr_DT_ID { get; set; }
         public string Attr_CDT_DT_ID { get; set; }
@@ -3497,7 +3497,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_ACT : CIClassDef
+    public interface CIMClassTE_ACT : CIClassDef, CIMSubClassR2010
     {
         public string Attr_AbaID { get; set; }
         public string Attr_GeneratedName { get; set; }
@@ -3510,7 +3510,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_ASSIGN : CIClassDef
+    public interface CIMClassTE_ASSIGN : CIClassDef, CIMSubClassR2069
     {
         public bool Attr_isImplicit { get; set; }
         public int Attr_dimensions { get; set; }
@@ -3574,7 +3574,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_BREAK : CIClassDef
+    public interface CIMClassTE_BREAK : CIClassDef, CIMSubClassR2069
     {
         public string Attr_Statement_ID { get; set; }
 
@@ -3582,7 +3582,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_BRG : CIClassDef
+    public interface CIMClassTE_BRG : CIClassDef, CIMSubClassR2010
     {
         public string Attr_EEname { get; set; }
         public string Attr_EEkeyletters { get; set; }
@@ -3598,7 +3598,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_BRIDGE : CIClassDef
+    public interface CIMClassTE_BRIDGE : CIClassDef, CIMSubClassR2069
     {
         public string Attr_bridge_name { get; set; }
         public string Attr_parameters { get; set; }
@@ -3770,7 +3770,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_CONTINUE : CIClassDef
+    public interface CIMClassTE_CONTINUE : CIClassDef, CIMSubClassR2069
     {
         public string Attr_Statement_ID { get; set; }
 
@@ -3778,7 +3778,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_CONTROL : CIClassDef
+    public interface CIMClassTE_CONTROL : CIClassDef, CIMSubClassR2069
     {
         public string Attr_Statement_ID { get; set; }
 
@@ -3793,7 +3793,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_CREATE_EVENT : CIClassDef
+    public interface CIMClassTE_CREATE_EVENT : CIClassDef, CIMSubClassR2069
     {
         public string Attr_sm_evt { get; set; }
         public bool Attr_is_implicit { get; set; }
@@ -3809,7 +3809,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_CREATE_INSTANCE : CIClassDef
+    public interface CIMClassTE_CREATE_INSTANCE : CIClassDef, CIMSubClassR2069
     {
         public string Attr_o_obj { get; set; }
         public bool Attr_is_implicit { get; set; }
@@ -3821,7 +3821,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_DBATTR : CIClassDef
+    public interface CIMClassTE_DBATTR : CIClassDef, CIMSubClassR2010
     {
         public bool Attr_Included { get; set; }
         public string Attr_AbaID { get; set; }
@@ -3850,7 +3850,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_DELETE_INSTANCE : CIClassDef
+    public interface CIMClassTE_DELETE_INSTANCE : CIClassDef, CIMSubClassR2069
     {
         public string Attr_o_obj { get; set; }
         public string Attr_var_name { get; set; }
@@ -3893,7 +3893,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_DLIST : CIClassDef
+    public interface CIMClassTE_DLIST : CIClassDef, CIMSubClassR2045
     {
         public string Attr_flavor { get; set; }
         public string Attr_remove_node { get; set; }
@@ -3960,7 +3960,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_ELIF : CIClassDef
+    public interface CIMClassTE_ELIF : CIClassDef, CIMSubClassR2069
     {
         public string Attr_condition { get; set; }
         public string Attr_Statement_ID { get; set; }
@@ -3969,7 +3969,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_ELSE : CIClassDef
+    public interface CIMClassTE_ELSE : CIClassDef, CIMSubClassR2069
     {
         public string Attr_Statement_ID { get; set; }
 
@@ -4015,7 +4015,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_EVENT_PARAMETERS : CIClassDef
+    public interface CIMClassTE_EVENT_PARAMETERS : CIClassDef, CIMSubClassR2069
     {
         public string Attr_evt_msg_var { get; set; }
         public string Attr_parameter { get; set; }
@@ -4118,7 +4118,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_FOR : CIClassDef
+    public interface CIMClassTE_FOR : CIClassDef, CIMSubClassR2069
     {
         public bool Attr_isImplicit { get; set; }
         public string Attr_class_name { get; set; }
@@ -4130,7 +4130,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_FUNCTION : CIClassDef
+    public interface CIMClassTE_FUNCTION : CIClassDef, CIMSubClassR2069
     {
         public string Attr_method { get; set; }
         public string Attr_parameters { get; set; }
@@ -4140,7 +4140,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_GENERATE : CIClassDef
+    public interface CIMClassTE_GENERATE : CIClassDef, CIMSubClassR2069
     {
         public string Attr_sm_evt { get; set; }
         public bool Attr_self_directed { get; set; }
@@ -4154,7 +4154,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_GENERATE_CREATOR_EVENT : CIClassDef
+    public interface CIMClassTE_GENERATE_CREATOR_EVENT : CIClassDef, CIMSubClassR2069
     {
         public string Attr_sm_evt { get; set; }
         public bool Attr_self_directed { get; set; }
@@ -4168,7 +4168,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_GENERATE_PRECREATED_EVENT : CIClassDef
+    public interface CIMClassTE_GENERATE_PRECREATED_EVENT : CIClassDef, CIMSubClassR2069
     {
         public bool Attr_self_directed { get; set; }
         public string Attr_var_name { get; set; }
@@ -4178,7 +4178,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_GENERATE_TO_CLASS : CIClassDef
+    public interface CIMClassTE_GENERATE_TO_CLASS : CIClassDef, CIMSubClassR2069
     {
         public string Attr_sm_evt { get; set; }
         public bool Attr_self_directed { get; set; }
@@ -4192,7 +4192,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_IF : CIClassDef
+    public interface CIMClassTE_IF : CIClassDef, CIMSubClassR2069
     {
         public string Attr_condition { get; set; }
         public string Attr_Statement_ID { get; set; }
@@ -4263,7 +4263,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_IOP : CIClassDef
+    public interface CIMClassTE_IOP : CIClassDef, CIMSubClassR2069
     {
         public string Attr_name { get; set; }
         public string Attr_parameters { get; set; }
@@ -4299,7 +4299,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_MACT : CIClassDef
+    public interface CIMClassTE_MACT : CIClassDef, CIMSubClassR2010
     {
         public string Attr_AbaID { get; set; }
         public string Attr_ID { get; set; }
@@ -4378,7 +4378,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_OPERATION : CIClassDef
+    public interface CIMClassTE_OPERATION : CIClassDef, CIMSubClassR2069
     {
         public bool Attr_instance_based { get; set; }
         public string Attr_operation_name { get; set; }
@@ -4554,7 +4554,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_RELATE : CIClassDef
+    public interface CIMClassTE_RELATE : CIClassDef, CIMSubClassR2069
     {
         public string Attr_one_o_obj { get; set; }
         public string Attr_oth_o_obj { get; set; }
@@ -4570,7 +4570,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_RELATE_USING : CIClassDef
+    public interface CIMClassTE_RELATE_USING : CIClassDef, CIMSubClassR2069
     {
         public string Attr_one_o_obj { get; set; }
         public string Attr_oth_o_obj { get; set; }
@@ -4621,7 +4621,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_RETURN : CIClassDef
+    public interface CIMClassTE_RETURN : CIClassDef, CIMSubClassR2069
     {
         public string Attr_value { get; set; }
         public string Attr_cast1 { get; set; }
@@ -4632,7 +4632,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_SELECT : CIClassDef
+    public interface CIMClassTE_SELECT : CIClassDef, CIMSubClassR2069
     {
         public string Attr_o_obj { get; set; }
         public bool Attr_is_implicit { get; set; }
@@ -4647,7 +4647,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_SELECT_RELATED : CIClassDef
+    public interface CIMClassTE_SELECT_RELATED : CIClassDef, CIMSubClassR2069
     {
         public string Attr_Statement_ID { get; set; }
         public string Attr_link_ID { get; set; }
@@ -4677,7 +4677,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_SELECT_WHERE : CIClassDef
+    public interface CIMClassTE_SELECT_WHERE : CIClassDef, CIMSubClassR2069
     {
         public string Attr_o_obj { get; set; }
         public bool Attr_is_implicit { get; set; }
@@ -4729,7 +4729,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_SGN : CIClassDef
+    public interface CIMClassTE_SGN : CIClassDef, CIMSubClassR2069
     {
         public string Attr_sm_evt { get; set; }
         public bool Attr_self_directed { get; set; }
@@ -4743,7 +4743,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_SLIST : CIClassDef
+    public interface CIMClassTE_SLIST : CIClassDef, CIMSubClassR2045
     {
         public string Attr_flavor { get; set; }
         public string Attr_remove_node { get; set; }
@@ -4856,7 +4856,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_SYNC : CIClassDef
+    public interface CIMClassTE_SYNC : CIClassDef, CIMSubClassR2010
     {
         public string Attr_Name { get; set; }
         public bool Attr_Included { get; set; }
@@ -4931,7 +4931,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_TFR : CIClassDef
+    public interface CIMClassTE_TFR : CIClassDef, CIMSubClassR2010
     {
         public bool Attr_Included { get; set; }
         public bool Attr_XlateSemantics { get; set; }
@@ -5020,7 +5020,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_UNRELATE : CIClassDef
+    public interface CIMClassTE_UNRELATE : CIClassDef, CIMSubClassR2069
     {
         public string Attr_one_o_obj { get; set; }
         public string Attr_oth_o_obj { get; set; }
@@ -5036,7 +5036,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_UNRELATE_USING : CIClassDef
+    public interface CIMClassTE_UNRELATE_USING : CIClassDef, CIMSubClassR2069
     {
         public string Attr_one_o_obj { get; set; }
         public string Attr_oth_o_obj { get; set; }
@@ -5099,7 +5099,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassTE_WHILE : CIClassDef
+    public interface CIMClassTE_WHILE : CIClassDef, CIMSubClassR2069
     {
         public string Attr_condition { get; set; }
         public string Attr_Statement_ID { get; set; }
@@ -5287,7 +5287,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassUC_BA : CIClassDef
+    public interface CIMClassUC_BA : CIClassDef, CIMSubClassR1210
     {
         public string Attr_Assoc_ID { get; set; }
         public string Attr_Descrip { get; set; }
@@ -5296,7 +5296,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassUC_E : CIClassDef
+    public interface CIMClassUC_E : CIClassDef, CIMSubClassR1210
     {
         public string Attr_Assoc_ID { get; set; }
         public string Attr_Descrip { get; set; }
@@ -5305,7 +5305,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassUC_G : CIClassDef
+    public interface CIMClassUC_G : CIClassDef, CIMSubClassR1210
     {
         public string Attr_Assoc_ID { get; set; }
         public string Attr_Descrip { get; set; }
@@ -5314,7 +5314,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassUC_I : CIClassDef
+    public interface CIMClassUC_I : CIClassDef, CIMSubClassR1210
     {
         public string Attr_Assoc_ID { get; set; }
         public string Attr_Descrip { get; set; }
@@ -5323,7 +5323,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassUC_UCA : CIClassDef
+    public interface CIMClassUC_UCA : CIClassDef, CIMSubClassR8001
     {
         public string Attr_Assoc_ID { get; set; }
         public string Attr_Source_Part_ID { get; set; }
@@ -5336,7 +5336,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_AER : CIClassDef
+    public interface CIMClassV_AER : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Root_Value_ID { get; set; }
@@ -5348,7 +5348,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_ALV : CIClassDef
+    public interface CIMClassV_ALV : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Array_Value_ID { get; set; }
@@ -5358,7 +5358,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_AVL : CIClassDef
+    public interface CIMClassV_AVL : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Root_Value_ID { get; set; }
@@ -5371,7 +5371,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_BIN : CIClassDef
+    public interface CIMClassV_BIN : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Right_Value_ID { get; set; }
@@ -5384,7 +5384,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_BRV : CIClassDef
+    public interface CIMClassV_BRV : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Brg_ID { get; set; }
@@ -5398,7 +5398,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_EDV : CIClassDef
+    public interface CIMClassV_EDV : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
 
@@ -5420,7 +5420,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_FNV : CIClassDef
+    public interface CIMClassV_FNV : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Sync_ID { get; set; }
@@ -5432,7 +5432,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_INS : CIClassDef
+    public interface CIMClassV_INS : CIClassDef, CIMSubClassR814
     {
         public string Attr_Var_ID { get; set; }
         public string Attr_Obj_ID { get; set; }
@@ -5442,7 +5442,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_INT : CIClassDef
+    public interface CIMClassV_INT : CIClassDef, CIMSubClassR814
     {
         public string Attr_Var_ID { get; set; }
         public bool Attr_IsImplicitInFor { get; set; }
@@ -5453,7 +5453,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_IRF : CIClassDef
+    public interface CIMClassV_IRF : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Var_ID { get; set; }
@@ -5463,7 +5463,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_ISR : CIClassDef
+    public interface CIMClassV_ISR : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Var_ID { get; set; }
@@ -5473,7 +5473,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_LBO : CIClassDef
+    public interface CIMClassV_LBO : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Value { get; set; }
@@ -5482,7 +5482,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_LEN : CIClassDef
+    public interface CIMClassV_LEN : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Enum_ID { get; set; }
@@ -5494,7 +5494,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_LIN : CIClassDef
+    public interface CIMClassV_LIN : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Value { get; set; }
@@ -5515,7 +5515,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_LRL : CIClassDef
+    public interface CIMClassV_LRL : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Value { get; set; }
@@ -5524,7 +5524,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_LST : CIClassDef
+    public interface CIMClassV_LST : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Value { get; set; }
@@ -5533,7 +5533,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_MSV : CIClassDef
+    public interface CIMClassV_MSV : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_PEP_Id { get; set; }
@@ -5551,7 +5551,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_MVL : CIClassDef
+    public interface CIMClassV_MVL : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Root_Value_ID { get; set; }
@@ -5591,7 +5591,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_PVL : CIClassDef
+    public interface CIMClassV_PVL : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_BParm_ID { get; set; }
@@ -5607,7 +5607,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_SCV : CIClassDef
+    public interface CIMClassV_SCV : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Const_ID { get; set; }
@@ -5618,7 +5618,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_SLR : CIClassDef
+    public interface CIMClassV_SLR : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Obj_ID { get; set; }
@@ -5631,7 +5631,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_TRN : CIClassDef
+    public interface CIMClassV_TRN : CIClassDef, CIMSubClassR814
     {
         public string Attr_Var_ID { get; set; }
         public string Attr_DT_ID { get; set; }
@@ -5643,7 +5643,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_TRV : CIClassDef
+    public interface CIMClassV_TRV : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Tfr_ID { get; set; }
@@ -5660,7 +5660,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_TVL : CIClassDef
+    public interface CIMClassV_TVL : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Var_ID { get; set; }
@@ -5670,7 +5670,7 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMClassV_UNY : CIClassDef
+    public interface CIMClassV_UNY : CIClassDef, CIMSubClassR801
     {
         public string Attr_Value_ID { get; set; }
         public string Attr_Operand_Value_ID { get; set; }
@@ -5768,175 +5768,175 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
     }
 
-    public interface CIMSubClassR1013 : CIClassDef
+    public interface CIMSubClassR1013
     {
         public CIMClassMSG_A CIMSuperClassMSG_A();
     }
-    public interface CIMSubClassR1018 : CIClassDef
+    public interface CIMSubClassR1018
     {
         public CIMClassMSG_M CIMSuperClassMSG_M();
     }
-    public interface CIMSubClassR1019 : CIClassDef
+    public interface CIMSubClassR1019
     {
         public CIMClassMSG_AM CIMSuperClassMSG_AM();
     }
-    public interface CIMSubClassR1020 : CIClassDef
+    public interface CIMSubClassR1020
     {
         public CIMClassMSG_SM CIMSuperClassMSG_SM();
     }
-    public interface CIMSubClassR106 : CIClassDef
+    public interface CIMSubClassR106
     {
         public CIMClassO_ATTR CIMSuperClassO_ATTR();
     }
-    public interface CIMSubClassR107 : CIClassDef
+    public interface CIMSubClassR107
     {
         public CIMClassO_BATTR CIMSuperClassO_BATTR();
     }
-    public interface CIMSubClassR1105 : CIClassDef
+    public interface CIMSubClassR1105
     {
         public CIMClassA_N CIMSuperClassA_N();
     }
-    public interface CIMSubClassR1106 : CIClassDef
+    public interface CIMSubClassR1106
     {
         public CIMClassA_CTL CIMSuperClassA_CTL();
     }
-    public interface CIMSubClassR1107 : CIClassDef
+    public interface CIMSubClassR1107
     {
         public CIMClassA_ACT CIMSuperClassA_ACT();
     }
-    public interface CIMSubClassR1112 : CIClassDef
+    public interface CIMSubClassR1112
     {
         public CIMClassA_AE CIMSuperClassA_AE();
     }
-    public interface CIMSubClassR1210 : CIClassDef
+    public interface CIMSubClassR1210
     {
         public CIMClassUC_UCA CIMSuperClassUC_UCA();
     }
-    public interface CIMSubClassR17 : CIClassDef
+    public interface CIMSubClassR17
     {
         public CIMClassS_DT CIMSuperClassS_DT();
     }
-    public interface CIMSubClassR2010 : CIClassDef
+    public interface CIMSubClassR2010
     {
         public CIMClassTE_ABA CIMSuperClassTE_ABA();
     }
-    public interface CIMSubClassR203 : CIClassDef
+    public interface CIMSubClassR203
     {
         public CIMClassR_OIR CIMSuperClassR_OIR();
     }
-    public interface CIMSubClassR204 : CIClassDef
+    public interface CIMSubClassR204
     {
         public CIMClassR_RTO CIMSuperClassR_RTO();
     }
-    public interface CIMSubClassR2045 : CIClassDef
+    public interface CIMSubClassR2045
     {
         public CIMClassTE_CONTAINER CIMSuperClassTE_CONTAINER();
     }
-    public interface CIMSubClassR205 : CIClassDef
+    public interface CIMSubClassR205
     {
         public CIMClassR_RGO CIMSuperClassR_RGO();
     }
-    public interface CIMSubClassR206 : CIClassDef
+    public interface CIMSubClassR206
     {
         public CIMClassR_REL CIMSuperClassR_REL();
     }
-    public interface CIMSubClassR2069 : CIClassDef
+    public interface CIMSubClassR2069
     {
         public CIMClassTE_SMT CIMSuperClassTE_SMT();
     }
-    public interface CIMSubClassR4004 : CIClassDef
+    public interface CIMSubClassR4004
     {
         public CIMClassC_EP CIMSuperClassC_EP();
     }
-    public interface CIMSubClassR4009 : CIClassDef
+    public interface CIMSubClassR4009
     {
         public CIMClassC_IR CIMSuperClassC_IR();
     }
-    public interface CIMSubClassR4502 : CIClassDef
+    public interface CIMSubClassR4502
     {
         public CIMClassSPR_REP CIMSuperClassSPR_REP();
     }
-    public interface CIMSubClassR4503 : CIClassDef
+    public interface CIMSubClassR4503
     {
         public CIMClassSPR_PEP CIMSuperClassSPR_PEP();
     }
-    public interface CIMSubClassR4703 : CIClassDef
+    public interface CIMSubClassR4703
     {
         public CIMClassCL_IIR CIMSuperClassCL_IIR();
     }
-    public interface CIMSubClassR504 : CIClassDef
+    public interface CIMSubClassR504
     {
         public CIMClassSM_SEME CIMSuperClassSM_SEME();
     }
-    public interface CIMSubClassR507 : CIClassDef
+    public interface CIMSubClassR507
     {
         public CIMClassSM_TXN CIMSuperClassSM_TXN();
     }
-    public interface CIMSubClassR510 : CIClassDef
+    public interface CIMSubClassR510
     {
         public CIMClassSM_SM CIMSuperClassSM_SM();
     }
-    public interface CIMSubClassR513 : CIClassDef
+    public interface CIMSubClassR513
     {
         public CIMClassSM_AH CIMSuperClassSM_AH();
     }
-    public interface CIMSubClassR517 : CIClassDef
+    public interface CIMSubClassR517
     {
         public CIMClassSM_SM CIMSuperClassSM_SM();
     }
-    public interface CIMSubClassR525 : CIClassDef
+    public interface CIMSubClassR525
     {
         public CIMClassSM_EVT CIMSuperClassSM_EVT();
     }
-    public interface CIMSubClassR526 : CIClassDef
+    public interface CIMSubClassR526
     {
         public CIMClassSM_SEVT CIMSuperClassSM_SEVT();
     }
-    public interface CIMSubClassR603 : CIClassDef
+    public interface CIMSubClassR603
     {
         public CIMClassACT_SMT CIMSuperClassACT_SMT();
     }
-    public interface CIMSubClassR664 : CIClassDef
+    public interface CIMSubClassR664
     {
         public CIMClassACT_SEL CIMSuperClassACT_SEL();
     }
-    public interface CIMSubClassR698 : CIClassDef
+    public interface CIMSubClassR698
     {
         public CIMClassACT_ACT CIMSuperClassACT_ACT();
     }
-    public interface CIMSubClassR701 : CIClassDef
+    public interface CIMSubClassR701
     {
         public CIMClassE_ESS CIMSuperClassE_ESS();
     }
-    public interface CIMSubClassR704 : CIClassDef
+    public interface CIMSubClassR704
     {
         public CIMClassE_CSME CIMSuperClassE_CSME();
     }
-    public interface CIMSubClassR705 : CIClassDef
+    public interface CIMSubClassR705
     {
         public CIMClassE_GSME CIMSuperClassE_GSME();
     }
-    public interface CIMSubClassR8001 : CIClassDef
+    public interface CIMSubClassR8001
     {
         public CIMClassPE_PE CIMSuperClassPE_PE();
     }
-    public interface CIMSubClassR801 : CIClassDef
+    public interface CIMSubClassR801
     {
         public CIMClassV_VAL CIMSuperClassV_VAL();
     }
-    public interface CIMSubClassR814 : CIClassDef
+    public interface CIMSubClassR814
     {
         public CIMClassV_VAR CIMSuperClassV_VAR();
     }
-    public interface CIMSubClassR930 : CIClassDef
+    public interface CIMSubClassR930
     {
         public CIMClassSQ_P CIMSuperClassSQ_P();
     }
-    public interface CIMSubClassR947 : CIClassDef
+    public interface CIMSubClassR947
     {
         public CIMClassSQ_CPA CIMSuperClassSQ_CPA();
     }
-    public interface CIMSubClassR948 : CIClassDef
+    public interface CIMSubClassR948
     {
         public CIMClassSQ_AV CIMSuperClassSQ_AV();
     }
