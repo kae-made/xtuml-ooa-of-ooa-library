@@ -3,8 +3,8 @@
 // (see accompanying GPPGcopyright.rtf)
 
 // GPPG version 1.5.2
-// DateTime: 2022/05/19 17:38:21
-// Input file <XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2022/05/19 17:38:20>
+// DateTime: 2022/06/11 15:14:57
+// Input file <XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2022/06/11 15:14:47>
 
 // options: no-lines gplex
 
@@ -50,16 +50,16 @@ internal class ScanObj {
 [GeneratedCodeAttribute( "Gardens Point Parser Generator", "1.5.2")]
 internal partial class XTUMLOOAofOOAParserParser: ShiftReduceParser<ValueType, LexLocation>
 {
-  // Verbatim content from XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2022/05/19 17:38:20
+  // Verbatim content from XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2022/06/11 15:14:47
 // Copyright (c) Knowledge & Experience. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
-  // End verbatim content from XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2022/05/19 17:38:20
+  // End verbatim content from XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2022/06/11 15:14:47
 
 #pragma warning disable 649
   private static Dictionary<int, string> aliases;
 #pragma warning restore 649
-  private static Rule[] rules = new Rule[44];
-  private static State[] states = new State[70];
+  private static Rule[] rules = new Rule[46];
+  private static State[] states = new State[72];
   private static string[] nonTerms = new string[] {
       "main", "$accept", "line_list", "line", "statement", "create_statement", 
       "insert_statement", "table_statement", "rop_statememnt", "elem", "attributes_def", 
@@ -67,7 +67,7 @@ internal partial class XTUMLOOAofOOAParserParser: ShiftReduceParser<ValueType, L
       "rel_edge_base_def", "rel_edge_phrase", "rel_edge_base_args_def", "rel_edge_base_none_def", 
       "ref_attr_defs", "ref_attr_def", "attrval_defs", "attrval_def", "attrval_string_def", 
       "attrval_dstring_def", "attrval_integer_def", "attrval_remult_def", "attrval_real_def", 
-      };
+      "attrval_phrase_def", };
 
   static XTUMLOOAofOOAParserParser() {
     states[0] = new State(new int[]{7,8,8,50},new int[]{-1,1,-3,3,-4,4,-5,6,-7,49});
@@ -124,22 +124,24 @@ internal partial class XTUMLOOAofOOAParserParser: ShiftReduceParser<ValueType, L
     states[51] = new State(new int[]{17,52});
     states[52] = new State(new int[]{16,53});
     states[53] = new State(new int[]{24,54});
-    states[54] = new State(new int[]{20,61,21,63,26,65,23,67,22,69},new int[]{-23,55,-24,57,-25,60,-26,62,-27,64,-28,66,-29,68});
+    states[54] = new State(new int[]{20,61,21,63,26,65,23,67,22,69,19,71},new int[]{-23,55,-24,57,-25,60,-26,62,-27,64,-28,66,-29,68,-30,70});
     states[55] = new State(new int[]{25,56});
     states[56] = new State(-31);
     states[57] = new State(new int[]{5,58,25,-32});
-    states[58] = new State(new int[]{20,61,21,63,26,65,23,67,22,69},new int[]{-23,59,-24,57,-25,60,-26,62,-27,64,-28,66,-29,68});
+    states[58] = new State(new int[]{20,61,21,63,26,65,23,67,22,69,19,71},new int[]{-23,59,-24,57,-25,60,-26,62,-27,64,-28,66,-29,68,-30,70});
     states[59] = new State(-33);
     states[60] = new State(-34);
-    states[61] = new State(-39);
+    states[61] = new State(-40);
     states[62] = new State(-35);
-    states[63] = new State(-40);
+    states[63] = new State(-41);
     states[64] = new State(-36);
-    states[65] = new State(-41);
+    states[65] = new State(-42);
     states[66] = new State(-37);
-    states[67] = new State(-43);
+    states[67] = new State(-44);
     states[68] = new State(-38);
-    states[69] = new State(-42);
+    states[69] = new State(-43);
+    states[70] = new State(-39);
+    states[71] = new State(-45);
 
     for (int sNo = 0; sNo < states.Length; sNo++) states[sNo].number = sNo;
 
@@ -181,11 +183,13 @@ internal partial class XTUMLOOAofOOAParserParser: ShiftReduceParser<ValueType, L
     rules[36] = new Rule(-24, new int[]{-27});
     rules[37] = new Rule(-24, new int[]{-28});
     rules[38] = new Rule(-24, new int[]{-29});
-    rules[39] = new Rule(-25, new int[]{20});
-    rules[40] = new Rule(-26, new int[]{21});
-    rules[41] = new Rule(-27, new int[]{26});
-    rules[42] = new Rule(-29, new int[]{22});
-    rules[43] = new Rule(-28, new int[]{23});
+    rules[39] = new Rule(-24, new int[]{-30});
+    rules[40] = new Rule(-25, new int[]{20});
+    rules[41] = new Rule(-26, new int[]{21});
+    rules[42] = new Rule(-27, new int[]{26});
+    rules[43] = new Rule(-29, new int[]{22});
+    rules[44] = new Rule(-28, new int[]{23});
+    rules[45] = new Rule(-30, new int[]{19});
   }
 
   protected override void Initialize() {
@@ -269,35 +273,41 @@ internal partial class XTUMLOOAofOOAParserParser: ShiftReduceParser<ValueType, L
 			RegisterInsert(ValueStack[ValueStack.Depth-5].s);
 		}
         break;
-      case 39: // attrval_string_def -> ATTRVAL
+      case 40: // attrval_string_def -> ATTRVAL
 {
 			Console.WriteLine("Rule => attr string value : {0}", ValueStack[ValueStack.Depth-1].s);
 			string val = ValueStack[ValueStack.Depth-1].s;
 			AddAttrbuteValue(val.Substring(1, val.Length - 2));
 		}
         break;
-      case 40: // attrval_dstring_def -> ATTRSVAL
+      case 41: // attrval_dstring_def -> ATTRSVAL
 {
 			Console.WriteLine("Rule => attr unique string value : {0}", ValueStack[ValueStack.Depth-1].s);
 			string val = ValueStack[ValueStack.Depth-1].s;
 			AddAttrbuteValue(val.Substring(1, val.Length - 2));
 		}
         break;
-      case 41: // attrval_integer_def -> ATTRIVAL
+      case 42: // attrval_integer_def -> ATTRIVAL
 {
 			Console.WriteLine("Rule => attr integer value : {0}", ValueStack[ValueStack.Depth-1].s);
 			AddAttrbuteValue(ValueStack[ValueStack.Depth-1].s);
 		}
         break;
-      case 42: // attrval_real_def -> ATTRRVAL
+      case 43: // attrval_real_def -> ATTRRVAL
 {
 			Console.WriteLine("Rule => attr real value : {0}", ValueStack[ValueStack.Depth-1].s);
 			AddAttrbuteValue(ValueStack[ValueStack.Depth-1].s);
 		}
         break;
-      case 43: // attrval_remult_def -> REMULT
+      case 44: // attrval_remult_def -> REMULT
 {
 			Console.WriteLine("Rule => attr 1 value : {0}", ValueStack[ValueStack.Depth-1].s);
+			AddAttrbuteValue(ValueStack[ValueStack.Depth-1].s);
+		}
+        break;
+      case 45: // attrval_phrase_def -> PHRASEC
+{
+			Console.WriteLine("Rule => attr phrase value : {0}", ValueStack[ValueStack.Depth-1].s);
 			AddAttrbuteValue(ValueStack[ValueStack.Depth-1].s);
 		}
         break;

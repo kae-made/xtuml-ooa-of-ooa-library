@@ -148,7 +148,7 @@ insert_statement :	INSERT INTO ELEM VALUES POpen attrval_defs PClose
 attrval_defs :		attrval_def | attrval_def COMMA attrval_defs
 	;
 
-attrval_def : attrval_string_def | attrval_dstring_def | attrval_integer_def | attrval_remult_def | attrval_real_def
+attrval_def : attrval_string_def | attrval_dstring_def | attrval_integer_def | attrval_remult_def | attrval_real_def | attrval_phrase_def
 		
 	;
 
@@ -185,6 +185,12 @@ attrval_real_def :	ATTRRVAL
 attrval_remult_def : REMULT
 		{
 			Console.WriteLine("Rule => attr 1 value : {0}", $1.s);
+			AddAttrbuteValue($1.s);
+		}
+	;
+attrval_phrase_def :	PHRASEC
+		{
+			Console.WriteLine("Rule => attr phrase value : {0}", $1.s);
 			AddAttrbuteValue($1.s);
 		}
 	;

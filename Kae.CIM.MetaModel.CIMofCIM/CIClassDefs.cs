@@ -43,7 +43,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_VAL LinkedToR609();
         public CIMClassV_VAL LinkedToR689();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -116,7 +115,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Brg_ID { get; set; }
 
         public CIMClassS_BRG LinkedToR697();
-        public CIMClassACT_ACT CIMSuperClassACT_ACT();
 
     }
 
@@ -131,7 +129,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_BRG LinkedToR674();
         public IEnumerable<CIMClassV_PAR> LinkedFromR628();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -139,7 +136,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -151,7 +147,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public int Attr_modelClassKeyLettersColumn { get; set; }
 
         public CIMClassO_OBJ LinkedToR672();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -159,7 +154,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -174,7 +168,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_VAR LinkedToR633();
         public CIMClassO_OBJ LinkedToR671();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -182,7 +175,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -194,7 +186,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public bool Attr_AttributeWritten { get; set; }
 
         public CIMClassO_DBATTR LinkedToR693();
-        public CIMClassACT_ACT CIMSuperClassACT_ACT();
 
     }
 
@@ -204,7 +195,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Var_ID { get; set; }
 
         public CIMClassV_VAR LinkedToR634();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -217,7 +207,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassACT_BLK LinkedToR606();
         public CIMClassACT_IF LinkedToR683();
         public CIMClassACT_IF LinkedFromR692();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -232,7 +221,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassV_VAL LinkedToR659();
         public CIMClassACT_IF LinkedToR682();
         public CIMClassACT_IF LinkedFromR690();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -248,7 +236,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_VAR LinkedToR639();
         public CIMClassO_OBJ LinkedToR677();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -266,7 +253,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassV_VAL LinkedToR610();
         public CIMClassV_VAR LinkedToR665();
         public CIMClassO_OBJ LinkedToR676();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -276,7 +262,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Sync_ID { get; set; }
 
         public CIMClassS_SYNC LinkedToR695();
-        public CIMClassACT_ACT CIMSuperClassACT_ACT();
 
     }
 
@@ -289,7 +274,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_SYNC LinkedToR675();
         public IEnumerable<CIMClassV_PAR> LinkedFromR669();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -306,7 +290,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassV_VAR LinkedToR614();
         public CIMClassV_VAR LinkedToR652();
         public CIMClassO_OBJ LinkedToR670();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -324,7 +307,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassACT_E LinkedToR692();
         public IEnumerable<CIMClassACT_EL> LinkedFromR682();
         public CIMClassACT_E LinkedFromR683();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -343,7 +325,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassSPR_RO LinkedToR657();
         public CIMClassSPR_PO LinkedToR680();
         public IEnumerable<CIMClassV_PAR> LinkedFromR679();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -378,7 +359,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Tfr_ID { get; set; }
 
         public CIMClassO_TFR LinkedToR696();
-        public CIMClassACT_ACT CIMSuperClassACT_ACT();
 
     }
 
@@ -388,7 +368,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Id { get; set; }
 
         public CIMClassSPR_PO LinkedToR687();
-        public CIMClassACT_ACT CIMSuperClassACT_ACT();
 
     }
 
@@ -398,7 +377,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Id { get; set; }
 
         public CIMClassSPR_PS LinkedToR686();
-        public CIMClassACT_ACT CIMSuperClassACT_ACT();
 
     }
 
@@ -417,7 +395,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassV_VAR LinkedToR615();
         public CIMClassV_VAR LinkedToR616();
         public CIMClassR_REL LinkedToR653();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -427,7 +404,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Value_ID { get; set; }
 
         public CIMClassV_VAL LinkedToR668();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -437,7 +413,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Id { get; set; }
 
         public CIMClassSPR_RO LinkedToR685();
-        public CIMClassACT_ACT CIMSuperClassACT_ACT();
 
     }
 
@@ -447,7 +422,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Id { get; set; }
 
         public CIMClassSPR_RS LinkedToR684();
-        public CIMClassACT_ACT CIMSuperClassACT_ACT();
 
     }
 
@@ -468,7 +442,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassV_VAR LinkedToR618();
         public CIMClassV_VAR LinkedToR619();
         public CIMClassR_REL LinkedToR654();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -479,7 +452,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Act_ID { get; set; }
 
         public CIMClassSM_ACT LinkedToR691();
-        public CIMClassACT_ACT CIMSuperClassACT_ACT();
 
     }
 
@@ -495,7 +467,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassV_VAR LinkedToR638();
         public CIMClassACT_LNK LinkedFromR637();
         public CIMSubClassR664 SubClassR664();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -514,7 +485,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassSPR_RS LinkedToR660();
         public CIMClassSPR_PS LinkedToR663();
         public IEnumerable<CIMClassV_PAR> LinkedFromR662();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -540,7 +510,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassACT_SEL CIMSuperClassACT_SEL();
 
     }
 
@@ -550,7 +519,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Where_Clause_Value_ID { get; set; }
 
         public CIMClassV_VAL LinkedToR611();
-        public CIMClassACT_SEL CIMSuperClassACT_SEL();
 
     }
 
@@ -561,7 +529,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Act_ID { get; set; }
 
         public CIMClassSM_ACT LinkedToR688();
-        public CIMClassACT_ACT CIMSuperClassACT_ACT();
 
     }
 
@@ -578,7 +545,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassV_VAR LinkedToR667();
         public CIMClassO_TFR LinkedToR673();
         public IEnumerable<CIMClassV_PAR> LinkedFromR627();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -597,7 +563,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassV_VAR LinkedToR620();
         public CIMClassV_VAR LinkedToR621();
         public CIMClassR_REL LinkedToR655();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -618,7 +583,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassV_VAR LinkedToR623();
         public CIMClassV_VAR LinkedToR624();
         public CIMClassR_REL LinkedToR656();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -630,7 +594,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassACT_BLK LinkedToR608();
         public CIMClassV_VAL LinkedToR626();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -639,7 +602,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Id { get; set; }
 
         public CIMSubClassR1107 SubClassR1107();
-        public CIMClassA_N CIMSuperClassA_N();
 
     }
 
@@ -648,7 +610,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Id { get; set; }
 
         public CIMSubClassR1112 SubClassR1112();
-        public CIMClassA_ACT CIMSuperClassA_ACT();
 
     }
 
@@ -658,7 +619,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Name { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassA_AE CIMSuperClassA_AE();
 
     }
 
@@ -667,7 +627,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Id { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassA_CTL CIMSuperClassA_CTL();
 
     }
 
@@ -678,7 +637,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Name { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassPE_PE CIMSuperClassPE_PE();
 
     }
 
@@ -688,7 +646,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Name { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassA_AE CIMSuperClassA_AE();
 
     }
 
@@ -697,7 +654,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Id { get; set; }
 
         public CIMSubClassR1106 SubClassR1106();
-        public CIMClassA_N CIMSuperClassA_N();
 
     }
 
@@ -707,7 +663,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Name { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassA_CTL CIMSuperClassA_CTL();
 
     }
 
@@ -722,7 +677,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassA_N LinkedToR1103();
         public CIMClassA_N LinkedToR1104();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
 
     }
 
@@ -731,7 +685,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Id { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassA_CTL CIMSuperClassA_CTL();
 
     }
 
@@ -741,7 +694,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Descrip { get; set; }
         public string Attr_GuardCondition { get; set; }
 
-        public CIMClassA_CTL CIMSuperClassA_CTL();
 
     }
 
@@ -751,7 +703,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Name { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassA_ACT CIMSuperClassA_ACT();
 
     }
 
@@ -760,7 +711,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Id { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassA_CTL CIMSuperClassA_CTL();
 
     }
 
@@ -772,7 +722,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public IEnumerable<CIMClassA_E> LinkedFromR1103();
         public IEnumerable<CIMClassA_E> LinkedFromR1104();
         public CIMSubClassR1105 SubClassR1105();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
 
     }
 
@@ -782,7 +731,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Name { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassA_N CIMSuperClassA_N();
 
     }
 
@@ -792,7 +740,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Name { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassA_ACT CIMSuperClassA_ACT();
 
     }
 
@@ -812,7 +759,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassTE_CI LinkedFromR2009();
         public IEnumerable<CIMClassI_EXE> LinkedFromR2963();
         public IEnumerable<CIMClassCL_POR> LinkedFromR4707();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
 
     }
 
@@ -839,7 +785,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Name { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassCL_IIR CIMSuperClassCL_IIR();
         public IEnumerable<CIMClassCL_IPINS> LinkedOneSideR4705();
 
     }
@@ -862,7 +807,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Descrip { get; set; }
 
         public CIMClassC_SF LinkedToR4706();
-        public CIMClassCL_IIR CIMSuperClassCL_IIR();
 
     }
 
@@ -887,7 +831,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Descrip { get; set; }
 
         public IEnumerable<CIMClassCNST_SYC> LinkedFromR1504();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
 
     }
 
@@ -961,7 +904,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassC_AS LinkedToR4020Precedes();
         public IEnumerable<CIMClassMSG_SIG> LinkedFromR1021();
         public CIMClassC_AS LinkedFromR4020Succeeds();
-        public CIMClassC_EP CIMSuperClassC_EP();
 
     }
 
@@ -986,7 +928,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public IEnumerable<CIMClassPE_PE> LinkedFromR8003();
         public IEnumerable<CIMClassPE_CRS> LinkedFromR8007();
         public IEnumerable<CIMClassSQ_COP> LinkedFromR955();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
         public IEnumerable<CIMClassACT_BIC> LinkedOtherSideR694();
         public IEnumerable<CIMClassPE_CVS> LinkedOtherSideR8004();
         public IEnumerable<CIMClassPA_SIC> LinkedOtherSideR9000();
@@ -1002,7 +943,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public IEnumerable<CIMClassI_RCH> LinkedFromR2972();
         public IEnumerable<CIMClassC_IR> LinkedFromR4014();
         public CIMClassCL_IIR LinkedFromR4704();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
         public IEnumerable<CIMClassC_RID> LinkedOneSideR4013();
         public CIMClassPA_DIC LinkedOneSideR9002();
 
@@ -1036,7 +976,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassTM_IF LinkedFromR2807();
         public IEnumerable<CIMClassC_EP> LinkedFromR4003();
         public IEnumerable<CIMClassC_IR> LinkedFromR4012();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
 
     }
 
@@ -1055,7 +994,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public IEnumerable<CIMClassMSG_IOP> LinkedFromR1022();
         public IEnumerable<CIMClassS_DIM> LinkedFromR4018();
         public CIMClassC_IO LinkedFromR4019Succeeds();
-        public CIMClassC_EP CIMSuperClassC_EP();
 
     }
 
@@ -1084,7 +1022,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Descrip { get; set; }
         public string Attr_pathFromComponent { get; set; }
 
-        public CIMClassC_IR CIMSuperClassC_IR();
         public IEnumerable<CIMClassC_SF> LinkedOneSideR4002();
         public IEnumerable<CIMClassSPR_PEP> LinkedOneSideR4501();
 
@@ -1137,7 +1074,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_InformalName { get; set; }
         public string Attr_reversePathFromComponent { get; set; }
 
-        public CIMClassC_IR CIMSuperClassC_IR();
         public IEnumerable<CIMClassC_SF> LinkedOtherSideR4002();
         public IEnumerable<CIMClassSPR_REP> LinkedOneSideR4500();
 
@@ -1163,7 +1099,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public IEnumerable<CIMClassI_RCH> LinkedFromR2969();
         public CIMClassCL_IR LinkedFromR4706();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
         public CIMClassCL_IPINS LinkedOtherSideR4705();
         public CIMClassPA_SIC LinkedOneSideR9000();
 
@@ -1178,7 +1113,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Descrip { get; set; }
 
         public IEnumerable<CIMClassD_TERM> LinkedToR1650();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
 
     }
 
@@ -1253,7 +1187,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public IEnumerable<CIMClassPE_PE> LinkedFromR8000();
         public IEnumerable<CIMClassPE_SRS> LinkedFromR8005();
         public IEnumerable<CIMClassSQ_PP> LinkedFromR956();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
         public IEnumerable<CIMClassEP_PKGREF> LinkedOtherSideR1402RefersTo();
         public CIMClassEP_PKGREF LinkedOneSideR1402IsReferencedBy();
         public IEnumerable<CIMClassPE_VIS> LinkedOneSideR8002();
@@ -1274,7 +1207,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassE_CSME CIMSuperClassE_CSME();
 
     }
 
@@ -1282,7 +1214,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassE_CSME CIMSuperClassE_CSME();
 
     }
 
@@ -1292,7 +1223,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Var_ID { get; set; }
 
         public CIMClassV_VAR LinkedToR711();
-        public CIMClassE_CSME CIMSuperClassE_CSME();
 
     }
 
@@ -1304,7 +1234,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_VAR LinkedToR710();
         public CIMClassE_CSME LinkedFromR702();
-        public CIMClassE_ESS CIMSuperClassE_ESS();
 
     }
 
@@ -1337,7 +1266,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public IEnumerable<CIMClassV_PAR> LinkedFromR700();
         public CIMSubClassR701 SubClassR701();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -1345,7 +1273,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassE_GSME CIMSuperClassE_GSME();
 
     }
 
@@ -1353,7 +1280,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassE_GSME CIMSuperClassE_GSME();
 
     }
 
@@ -1363,7 +1289,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Var_ID { get; set; }
 
         public CIMClassV_VAR LinkedToR712();
-        public CIMClassE_GSME CIMSuperClassE_GSME();
 
     }
 
@@ -1372,7 +1297,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Statement_ID { get; set; }
 
         public CIMClassE_GSME LinkedFromR703();
-        public CIMClassE_ESS CIMSuperClassE_ESS();
 
     }
 
@@ -1382,7 +1306,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Value_ID { get; set; }
 
         public CIMClassV_VAL LinkedToR714();
-        public CIMClassACT_SMT CIMSuperClassACT_SMT();
 
     }
 
@@ -1413,7 +1336,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Name { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassSQ_P CIMSuperClassSQ_P();
 
     }
 
@@ -1755,7 +1677,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_SequenceNumb { get; set; }
 
         public CIMSubClassR1019 SubClassR1019();
-        public CIMClassMSG_M CIMSuperClassMSG_M();
 
     }
 
@@ -1765,7 +1686,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Brg_ID { get; set; }
 
         public CIMClassS_BRG LinkedToR1012();
-        public CIMClassMSG_SM CIMSuperClassMSG_SM();
 
     }
 
@@ -1775,7 +1695,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_BParm_ID { get; set; }
 
         public CIMClassS_BPARM LinkedToR1014();
-        public CIMClassMSG_A CIMSuperClassMSG_A();
 
     }
 
@@ -1785,7 +1704,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_SMevt_ID { get; set; }
 
         public CIMClassSM_EVT LinkedToR1009();
-        public CIMClassMSG_AM CIMSuperClassMSG_AM();
 
     }
 
@@ -1796,7 +1714,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_SMedi_ID { get; set; }
 
         public CIMClassSM_EVTDI LinkedToR1017();
-        public CIMClassMSG_A CIMSuperClassMSG_A();
 
     }
 
@@ -1806,7 +1723,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_PP_Id { get; set; }
 
         public CIMClassC_PP LinkedToR1023();
-        public CIMClassMSG_A CIMSuperClassMSG_A();
 
     }
 
@@ -1816,7 +1732,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Sync_ID { get; set; }
 
         public CIMClassS_SYNC LinkedToR1010();
-        public CIMClassMSG_SM CIMSuperClassMSG_SM();
 
     }
 
@@ -1826,7 +1741,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_SParm_ID { get; set; }
 
         public CIMClassS_SPARM LinkedToR1016();
-        public CIMClassMSG_A CIMSuperClassMSG_A();
 
     }
 
@@ -1834,7 +1748,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Arg_ID { get; set; }
 
-        public CIMClassMSG_A CIMSuperClassMSG_A();
 
     }
 
@@ -1842,7 +1755,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Msg_ID { get; set; }
 
-        public CIMClassMSG_AM CIMSuperClassMSG_AM();
 
     }
 
@@ -1852,7 +1764,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Id { get; set; }
 
         public CIMClassC_IO LinkedToR1022();
-        public CIMClassMSG_SM CIMSuperClassMSG_SM();
 
     }
 
@@ -1860,7 +1771,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Msg_ID { get; set; }
 
-        public CIMClassMSG_SM CIMSuperClassMSG_SM();
 
     }
 
@@ -1876,7 +1786,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public IEnumerable<CIMClassMSG_A> LinkedFromR1000();
         public IEnumerable<CIMClassMSG_A> LinkedFromR1001();
         public CIMSubClassR1018 SubClassR1018();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
 
     }
 
@@ -1886,7 +1795,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Tfr_ID { get; set; }
 
         public CIMClassO_TFR LinkedToR1011();
-        public CIMClassMSG_SM CIMSuperClassMSG_SM();
 
     }
 
@@ -1896,7 +1804,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_TParm_ID { get; set; }
 
         public CIMClassO_TPARM LinkedToR1015();
-        public CIMClassMSG_A CIMSuperClassMSG_A();
 
     }
 
@@ -1910,7 +1817,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_ReturnValue { get; set; }
         public string Attr_SequenceNumb { get; set; }
 
-        public CIMClassMSG_M CIMSuperClassMSG_M();
 
     }
 
@@ -1920,7 +1826,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Id { get; set; }
 
         public CIMClassC_AS LinkedToR1021();
-        public CIMClassMSG_AM CIMSuperClassMSG_AM();
 
     }
 
@@ -1937,7 +1842,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_SequenceNumb { get; set; }
 
         public CIMSubClassR1020 SubClassR1020();
-        public CIMClassMSG_M CIMSuperClassMSG_M();
 
     }
 
@@ -1977,7 +1881,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public IEnumerable<CIMClassO_RATTR> LinkedFromR113();
         public CIMSubClassR107 SubClassR107();
-        public CIMClassO_ATTR CIMSuperClassO_ATTR();
 
     }
 
@@ -1991,7 +1894,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassTE_DBATTR LinkedFromR2026();
         public CIMClassACT_DAB LinkedFromR693();
-        public CIMClassO_BATTR CIMSuperClassO_BATTR();
 
     }
 
@@ -2029,7 +1931,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_OBJ LinkedToR101();
         public IEnumerable<CIMClassR_OIR> LinkedFromR202();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
 
     }
 
@@ -2038,7 +1939,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Attr_ID { get; set; }
         public string Attr_Obj_ID { get; set; }
 
-        public CIMClassO_BATTR CIMSuperClassO_BATTR();
 
     }
 
@@ -2069,7 +1969,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public IEnumerable<CIMClassV_INS> LinkedFromR819();
         public IEnumerable<CIMClassSQ_CIP> LinkedFromR934();
         public IEnumerable<CIMClassSQ_CP> LinkedFromR939();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
         public IEnumerable<CIMClassR_OIR> LinkedOneSideR201();
 
     }
@@ -2098,7 +1997,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_BATTR LinkedToR113();
         public IEnumerable<CIMClassO_REF> LinkedFromR108();
-        public CIMClassO_ATTR CIMSuperClassO_ATTR();
 
     }
 
@@ -2292,7 +2190,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Txt_Phrs { get; set; }
 
         public CIMClassR_ASSOC LinkedToR209();
-        public CIMClassR_RTO CIMSuperClassR_RTO();
 
     }
 
@@ -2306,7 +2203,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Txt_Phrs { get; set; }
 
         public CIMClassR_ASSOC LinkedToR210();
-        public CIMClassR_RTO CIMSuperClassR_RTO();
 
     }
 
@@ -2317,7 +2213,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassR_AONE LinkedFromR209();
         public CIMClassR_AOTH LinkedFromR210();
         public CIMClassR_ASSR LinkedFromR211();
-        public CIMClassR_REL CIMSuperClassR_REL();
 
     }
 
@@ -2329,7 +2224,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public int Attr_Mult { get; set; }
 
         public CIMClassR_ASSOC LinkedToR211();
-        public CIMClassR_RGO CIMSuperClassR_RGO();
 
     }
 
@@ -2340,7 +2234,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_CONE LinkedFromR214();
         public CIMClassR_COTH LinkedFromR215();
-        public CIMClassR_REL CIMSuperClassR_REL();
 
     }
 
@@ -2354,7 +2247,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Txt_Phrs { get; set; }
 
         public CIMClassR_COMP LinkedToR214();
-        public CIMClassR_OIR CIMSuperClassR_OIR();
 
     }
 
@@ -2368,7 +2260,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Txt_Phrs { get; set; }
 
         public CIMClassR_COMP LinkedToR215();
-        public CIMClassR_OIR CIMSuperClassR_OIR();
 
     }
 
@@ -2382,7 +2273,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Txt_Phrs { get; set; }
 
         public CIMClassR_SIMP LinkedToR208();
-        public CIMClassR_RGO CIMSuperClassR_RGO();
 
     }
 
@@ -2411,7 +2301,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Txt_Phrs { get; set; }
 
         public CIMClassR_SIMP LinkedToR207();
-        public CIMClassR_RTO CIMSuperClassR_RTO();
 
     }
 
@@ -2432,7 +2321,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public IEnumerable<CIMClassACT_URU> LinkedFromR656();
         public IEnumerable<CIMClassACT_LNK> LinkedFromR681();
         public CIMSubClassR206 SubClassR206();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
         public IEnumerable<CIMClassO_DEF> LinkedOtherSideR126();
         public IEnumerable<CIMClassR_OIR> LinkedOtherSideR201();
 
@@ -2445,7 +2333,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_OIR_ID { get; set; }
 
         public CIMSubClassR205 SubClassR205();
-        public CIMClassR_OIR CIMSuperClassR_OIR();
         public IEnumerable<CIMClassO_REF> LinkedOtherSideR111();
 
     }
@@ -2459,7 +2346,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_ID LinkedToR109();
         public CIMSubClassR204 SubClassR204();
-        public CIMClassR_OIR CIMSuperClassR_OIR();
         public IEnumerable<CIMClassO_RTIDA> LinkedOtherSideR110();
 
     }
@@ -2470,7 +2356,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public IEnumerable<CIMClassR_PART> LinkedFromR207();
         public CIMClassR_FORM LinkedFromR208();
-        public CIMClassR_REL CIMSuperClassR_REL();
 
     }
 
@@ -2481,7 +2366,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_OIR_ID { get; set; }
 
         public CIMClassR_SUBSUP LinkedToR213();
-        public CIMClassR_RGO CIMSuperClassR_RGO();
 
     }
 
@@ -2491,7 +2375,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassR_SUPER LinkedFromR212();
         public IEnumerable<CIMClassR_SUB> LinkedFromR213();
-        public CIMClassR_REL CIMSuperClassR_REL();
 
     }
 
@@ -2502,7 +2385,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_OIR_ID { get; set; }
 
         public CIMClassR_SUBSUP LinkedToR212();
-        public CIMClassR_RTO CIMSuperClassR_RTO();
 
     }
 
@@ -2539,7 +2421,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Obj_ID { get; set; }
 
         public CIMClassO_OBJ LinkedToR519();
-        public CIMClassSM_SM CIMSuperClassSM_SM();
 
     }
 
@@ -2551,7 +2432,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_SMspd_IDdeprecated { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassSM_SEME CIMSuperClassSM_SEME();
 
     }
 
@@ -2563,7 +2443,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_SMspd_IDdeprecated { get; set; }
 
         public CIMClassSM_LEVT LinkedToR509();
-        public CIMClassSM_TXN CIMSuperClassSM_TXN();
 
     }
 
@@ -2575,7 +2454,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_SMspd_IDdeprecated { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassSM_SEME CIMSuperClassSM_SEME();
 
     }
 
@@ -2632,7 +2510,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Obj_ID { get; set; }
 
         public CIMClassO_OBJ LinkedToR518();
-        public CIMClassSM_SM CIMSuperClassSM_SM();
 
     }
 
@@ -2643,7 +2520,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_SMspd_IDdeprecated { get; set; }
 
         public CIMClassSM_CRTXN LinkedFromR509();
-        public CIMClassSM_SEVT CIMSuperClassSM_SEVT();
 
     }
 
@@ -2653,7 +2529,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_SM_ID { get; set; }
         public string Attr_Trans_ID { get; set; }
 
-        public CIMClassSM_AH CIMSuperClassSM_AH();
 
         public CIMClassSM_MEALY LinkedOneSideR512();
         public CIMClassSM_TXN LinkedOtherSideR512();
@@ -2663,7 +2538,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_SM_ID { get; set; }
 
-        public CIMClassSM_SM CIMSuperClassSM_SM();
         public IEnumerable<CIMClassSM_MEAH> LinkedOtherSideR512();
 
     }
@@ -2674,7 +2548,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_SM_ID { get; set; }
         public string Attr_SMstt_ID { get; set; }
 
-        public CIMClassSM_AH CIMSuperClassSM_AH();
 
         public CIMClassSM_MOORE LinkedOneSideR511();
         public CIMClassSM_STATE LinkedOtherSideR511();
@@ -2684,7 +2557,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_SM_ID { get; set; }
 
-        public CIMClassSM_SM CIMSuperClassSM_SM();
         public IEnumerable<CIMClassSM_MOAH> LinkedOtherSideR511();
 
     }
@@ -2697,7 +2569,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_SMspd_IDdeprecated { get; set; }
 
         public CIMClassSM_STATE LinkedToR508();
-        public CIMClassSM_TXN CIMSuperClassSM_TXN();
 
     }
 
@@ -2712,7 +2583,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Local_Meaning { get; set; }
 
         public CIMClassSM_PEVT LinkedToR527();
-        public CIMClassSM_SEVT CIMSuperClassSM_SEVT();
 
     }
 
@@ -2724,8 +2594,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_SMevt_ID { get; set; }
         public string Attr_SMspd_IDdeprecated { get; set; }
 
-        public CIMClassSM_SEME CIMSuperClassSM_SEME();
-        public CIMClassSM_TXN CIMSuperClassSM_TXN();
 
     }
 
@@ -2739,7 +2607,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_localEventMning { get; set; }
 
         public IEnumerable<CIMClassSM_NLEVT> LinkedFromR527();
-        public CIMClassSM_EVT CIMSuperClassSM_EVT();
 
     }
 
@@ -2763,7 +2630,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_SMspd_IDdeprecated { get; set; }
 
         public CIMSubClassR526 SubClassR526();
-        public CIMClassSM_EVT CIMSuperClassSM_EVT();
         public IEnumerable<CIMClassSM_SEME> LinkedOneSideR503();
 
     }
@@ -2779,7 +2645,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassSPR_PS LinkedToR528();
         public CIMClassSPR_RS LinkedToR529();
-        public CIMClassSM_SEVT CIMSuperClassSM_SEVT();
 
     }
 
@@ -2826,7 +2691,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Trans_ID { get; set; }
 
         public CIMClassSM_TXN LinkedToR530();
-        public CIMClassSM_AH CIMSuperClassSM_AH();
 
     }
 
@@ -2871,7 +2735,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassTE_MACT LinkedFromR2050();
         public IEnumerable<CIMClassACT_IOP> LinkedFromR680();
         public CIMClassACT_POB LinkedFromR687();
-        public CIMClassSPR_PEP CIMSuperClassSPR_PEP();
 
     }
 
@@ -2888,7 +2751,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassSM_SGEVT LinkedFromR528();
         public IEnumerable<CIMClassACT_SGN> LinkedFromR663();
         public CIMClassACT_PSB LinkedFromR686();
-        public CIMClassSPR_PEP CIMSuperClassSPR_PEP();
 
     }
 
@@ -2918,7 +2780,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassTE_MACT LinkedFromR2052();
         public IEnumerable<CIMClassACT_IOP> LinkedFromR657();
         public CIMClassACT_ROB LinkedFromR685();
-        public CIMClassSPR_REP CIMSuperClassSPR_REP();
 
     }
 
@@ -2935,7 +2796,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassSM_SGEVT LinkedFromR529();
         public IEnumerable<CIMClassACT_SGN> LinkedFromR660();
         public CIMClassACT_RSB LinkedFromR684();
-        public CIMClassSPR_REP CIMSuperClassSPR_REP();
 
     }
 
@@ -2947,7 +2807,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_LS_Part_ID { get; set; }
 
         public CIMClassSQ_LS LinkedToR949();
-        public CIMClassSQ_P CIMSuperClassSQ_P();
 
     }
 
@@ -2984,7 +2843,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassO_OBJ LinkedToR934();
         public IEnumerable<CIMClassSQ_AV> LinkedFromR936();
         public IEnumerable<CIMClassSQ_AV> LinkedFromR937();
-        public CIMClassSQ_P CIMSuperClassSQ_P();
 
     }
 
@@ -2998,7 +2856,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public bool Attr_isFormal { get; set; }
 
         public CIMClassC_C LinkedToR955();
-        public CIMClassSQ_P CIMSuperClassSQ_P();
 
     }
 
@@ -3013,7 +2870,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_OBJ LinkedToR939();
         public IEnumerable<CIMClassSQ_CPA> LinkedFromR935();
-        public CIMClassSQ_P CIMSuperClassSQ_P();
 
     }
 
@@ -3040,7 +2896,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public bool Attr_isFormal { get; set; }
 
         public CIMClassS_EE LinkedToR933();
-        public CIMClassSQ_P CIMSuperClassSQ_P();
 
     }
 
@@ -3048,7 +2903,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Ia_ID { get; set; }
 
-        public CIMClassSQ_CPA CIMSuperClassSQ_CPA();
 
     }
 
@@ -3056,7 +2910,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Av_ID { get; set; }
 
-        public CIMClassSQ_AV CIMSuperClassSQ_AV();
 
     }
 
@@ -3064,7 +2917,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Ia_ID { get; set; }
 
-        public CIMClassSQ_CPA CIMSuperClassSQ_CPA();
 
     }
 
@@ -3072,7 +2924,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Av_ID { get; set; }
 
-        public CIMClassSQ_AV CIMSuperClassSQ_AV();
 
     }
 
@@ -3086,7 +2937,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassSQ_P LinkedToR940();
         public IEnumerable<CIMClassSQ_TM> LinkedFromR931();
         public CIMClassSQ_AP LinkedFromR949();
-        public CIMClassSQ_P CIMSuperClassSQ_P();
 
     }
 
@@ -3103,7 +2953,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public IEnumerable<CIMClassUC_UCA> LinkedFromR1207();
         public CIMClassSQ_LS LinkedFromR940();
         public CIMSubClassR930 SubClassR930();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
 
     }
 
@@ -3117,7 +2966,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public bool Attr_isFormal { get; set; }
 
         public CIMClassEP_PKG LinkedToR956();
-        public CIMClassSQ_P CIMSuperClassSQ_P();
 
     }
 
@@ -3199,7 +3047,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_DT_ID { get; set; }
         public int Attr_Core_Typ { get; set; }
 
-        public CIMClassS_DT CIMSuperClassS_DT();
 
     }
 
@@ -3272,7 +3119,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public IEnumerable<CIMClassV_TRN> LinkedFromR821();
         public IEnumerable<CIMClassV_VAR> LinkedFromR848();
         public CIMSubClassR17 SubClassR17();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
 
     }
 
@@ -3281,7 +3127,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_DT_ID { get; set; }
 
         public IEnumerable<CIMClassS_ENUM> LinkedFromR27();
-        public CIMClassS_DT CIMSuperClassS_DT();
 
     }
 
@@ -3300,7 +3145,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassTE_EE LinkedFromR2020();
         public IEnumerable<CIMClassS_EEM> LinkedFromR9();
         public IEnumerable<CIMClassSQ_EEP> LinkedFromR933();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
 
     }
 
@@ -3337,7 +3181,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Name { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassPE_PE CIMSuperClassPE_PE();
 
     }
 
@@ -3348,7 +3191,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Obj_ID { get; set; }
 
         public CIMClassO_OBJ LinkedToR123();
-        public CIMClassS_DT CIMSuperClassS_DT();
 
     }
 
@@ -3387,7 +3229,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_DT_ID { get; set; }
 
         public IEnumerable<CIMClassS_MBR> LinkedFromR44();
-        public CIMClassS_DT CIMSuperClassS_DT();
 
     }
 
@@ -3434,7 +3275,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public IEnumerable<CIMClassACT_FNC> LinkedFromR675();
         public CIMClassACT_FNB LinkedFromR695();
         public IEnumerable<CIMClassV_FNV> LinkedFromR827();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
 
     }
 
@@ -3460,7 +3300,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_DT LinkedToR18();
         public CIMClassS_RANGE LinkedFromR57();
-        public CIMClassS_DT CIMSuperClassS_DT();
 
     }
 
@@ -3506,7 +3345,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Act_ID { get; set; }
 
         public CIMClassSM_ACT LinkedToR2022();
-        public CIMClassTE_ABA CIMSuperClassTE_ABA();
 
     }
 
@@ -3522,7 +3360,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Statement_ID { get; set; }
         public int Attr_rval_dimensions { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -3578,7 +3415,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -3594,7 +3430,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_BRG LinkedToR2025();
         public CIMClassTE_EE LinkedToR2089();
-        public CIMClassTE_ABA CIMSuperClassTE_ABA();
 
     }
 
@@ -3604,7 +3439,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_parameters { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -3774,7 +3608,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -3782,7 +3615,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -3805,7 +3637,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_parameters { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -3817,7 +3648,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_var_name { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -3830,7 +3660,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Obj_ID { get; set; }
 
         public CIMClassO_DBATTR LinkedToR2026();
-        public CIMClassTE_ABA CIMSuperClassTE_ABA();
 
     }
 
@@ -3857,7 +3686,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public int Attr_del_count { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -3898,7 +3726,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_flavor { get; set; }
         public string Attr_remove_node { get; set; }
 
-        public CIMClassTE_CONTAINER CIMSuperClassTE_CONTAINER();
 
     }
 
@@ -3965,7 +3792,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_condition { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -3973,7 +3799,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
     {
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4023,7 +3848,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_value_type { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4126,7 +3950,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_set_variable { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4136,7 +3959,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_parameters { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4150,7 +3972,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_parameters { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4164,7 +3985,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_parameters { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4174,7 +3994,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_var_name { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4188,7 +4007,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_parameters { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4197,7 +4015,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_condition { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4269,7 +4086,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_parameters { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4337,7 +4153,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassTE_MACT LinkedFromR2083Precedes();
         public CIMClassTE_PO LinkedFromR2099();
         public IEnumerable<CIMClassTM_MSG> LinkedFromR2809();
-        public CIMClassTE_ABA CIMSuperClassTE_ABA();
 
     }
 
@@ -4386,7 +4201,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_var_name { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4566,7 +4380,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_oth_var_name { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4586,7 +4399,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_oth_rel_phrase { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4628,7 +4440,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_cast2 { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4643,7 +4454,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_var_name { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4673,7 +4483,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassTE_CLASS LinkedToR2077();
         public CIMClassTE_VAR LinkedToR2093();
         public CIMClassTE_VAR LinkedToR2094();
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4692,7 +4501,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public int Attr_oid_id { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4739,7 +4547,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_parameters { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -4748,7 +4555,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_flavor { get; set; }
         public string Attr_remove_node { get; set; }
 
-        public CIMClassTE_CONTAINER CIMSuperClassTE_CONTAINER();
 
     }
 
@@ -4878,7 +4684,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassTE_SYNC LinkedToR2095Succeeds();
         public CIMClassTE_SYNC LinkedFromR2095Precedes();
         public CIMClassTE_C LinkedFromR2097();
-        public CIMClassTE_ABA CIMSuperClassTE_ABA();
 
     }
 
@@ -4943,7 +4748,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Tfr_ID { get; set; }
 
         public CIMClassO_TFR LinkedToR2024();
-        public CIMClassTE_ABA CIMSuperClassTE_ABA();
 
     }
 
@@ -5032,7 +4836,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_oth_var_name { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -5052,7 +4855,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_oth_rel_phrase { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -5104,7 +4906,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_condition { get; set; }
         public string Attr_Statement_ID { get; set; }
 
-        public CIMClassTE_SMT CIMSuperClassTE_SMT();
 
     }
 
@@ -5292,7 +5093,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Assoc_ID { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassUC_UCA CIMSuperClassUC_UCA();
 
     }
 
@@ -5301,7 +5101,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Assoc_ID { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassUC_UCA CIMSuperClassUC_UCA();
 
     }
 
@@ -5310,7 +5109,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Assoc_ID { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassUC_UCA CIMSuperClassUC_UCA();
 
     }
 
@@ -5319,7 +5117,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Assoc_ID { get; set; }
         public string Attr_Descrip { get; set; }
 
-        public CIMClassUC_UCA CIMSuperClassUC_UCA();
 
     }
 
@@ -5332,7 +5129,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassSQ_P LinkedToR1206();
         public CIMClassSQ_P LinkedToR1207();
         public CIMSubClassR1210 SubClassR1210();
-        public CIMClassPE_PE CIMSuperClassPE_PE();
 
     }
 
@@ -5344,7 +5140,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_VAL LinkedToR838();
         public CIMClassV_VAL LinkedToR839();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5354,7 +5149,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Array_Value_ID { get; set; }
 
         public CIMClassV_VAL LinkedToR840();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5367,7 +5161,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_ATTR LinkedToR806();
         public CIMClassV_VAL LinkedToR807();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5380,7 +5173,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassV_VAL LinkedToR802();
         public CIMClassV_VAL LinkedToR803();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5394,7 +5186,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_BRG LinkedToR828();
         public IEnumerable<CIMClassV_PAR> LinkedFromR810();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5403,7 +5194,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Value_ID { get; set; }
 
         public IEnumerable<CIMClassV_EPR> LinkedFromR834();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5428,7 +5218,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_SYNC LinkedToR827();
         public IEnumerable<CIMClassV_PAR> LinkedFromR817();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5438,7 +5227,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Obj_ID { get; set; }
 
         public CIMClassO_OBJ LinkedToR819();
-        public CIMClassV_VAR CIMSuperClassV_VAR();
 
     }
 
@@ -5449,7 +5237,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Obj_ID { get; set; }
 
         public CIMClassO_OBJ LinkedToR818();
-        public CIMClassV_VAR CIMSuperClassV_VAR();
 
     }
 
@@ -5459,7 +5246,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Var_ID { get; set; }
 
         public CIMClassV_VAR LinkedToR808();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5469,7 +5255,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Var_ID { get; set; }
 
         public CIMClassV_VAR LinkedToR809();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5478,7 +5263,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Value_ID { get; set; }
         public string Attr_Value { get; set; }
 
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5490,7 +5274,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public int Attr_dataTypeNameColumn { get; set; }
 
         public CIMClassS_ENUM LinkedToR824();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5499,7 +5282,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Value_ID { get; set; }
         public string Attr_Value { get; set; }
 
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5520,7 +5302,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Value_ID { get; set; }
         public string Attr_Value { get; set; }
 
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5529,7 +5310,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Value_ID { get; set; }
         public string Attr_Value { get; set; }
 
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5547,7 +5327,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassSPR_REP LinkedToR845();
         public CIMClassV_VAL LinkedToR851();
         public IEnumerable<CIMClassV_PAR> LinkedFromR842();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5560,7 +5339,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_MBR LinkedToR836();
         public CIMClassV_VAL LinkedToR837();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5603,7 +5381,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassS_SPARM LinkedToR832();
         public CIMClassO_TPARM LinkedToR833();
         public CIMClassC_PP LinkedToR843();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5614,7 +5391,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_DT_ID_Deprecated { get; set; }
 
         public CIMClassCNST_SYC LinkedToR850();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5627,7 +5403,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassO_ATTR LinkedToR812();
         public CIMClassV_TRV LinkedToR825();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5639,7 +5414,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
 
         public CIMClassS_DT LinkedToR821();
         public IEnumerable<CIMClassS_DIM> LinkedFromR844();
-        public CIMClassV_VAR CIMSuperClassV_VAR();
 
     }
 
@@ -5656,7 +5430,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public CIMClassV_VAR LinkedToR830();
         public IEnumerable<CIMClassV_PAR> LinkedFromR811();
         public CIMClassV_SLR LinkedFromR825();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5666,7 +5439,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Var_ID { get; set; }
 
         public CIMClassV_VAR LinkedToR805();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 
@@ -5677,7 +5449,6 @@ namespace Kae.CIM.MetaModel.CIMofCIM
         public string Attr_Operator { get; set; }
 
         public CIMClassV_VAL LinkedToR804();
-        public CIMClassV_VAL CIMSuperClassV_VAL();
 
     }
 

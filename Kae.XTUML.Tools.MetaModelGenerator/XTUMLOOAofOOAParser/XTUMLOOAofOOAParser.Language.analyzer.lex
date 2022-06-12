@@ -19,7 +19,7 @@ REMULT			[1M]C?
 FROM			FROM
 TO				TO
 Eol             (\r\n?|\n|\0)
-PHRASEC			'[a-zA-z][ a-zA-z0-9_]*'
+PHRASEC			'[a-zA-z]([ a-zA-z0-9_]|\.|'')*'
 ATTRSVAL		\"[^"]*\"
 ATTRVAL			'[^']*'
 ELEM			[a-zA-Z][a-zA-Z0-9_]*

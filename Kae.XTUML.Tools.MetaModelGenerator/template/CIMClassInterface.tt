@@ -93,9 +93,8 @@ namespace Kae.CIM.MetaModel.CIMofCIM
             {
                 var superClassName = RuleOfNamesForTransfrom.GetCIMInterfaceClassName(ssRel.ToEdge.Edge);
                 var getSuperClassMethodName = RuleOfNamesForTransfrom.GetCIMSuperClassMethodName(ssRel.ToEdge.Edge);
-#>
-        public <#= superClassName #> <#= getSuperClassMethodName #>();
-<#
+        
+
             }
         }
 

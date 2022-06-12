@@ -4,6 +4,15 @@
     <TargetFramework>net5.0</TargetFramework>
     <ApplicationIcon />
     <StartupObject />
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>0.1.0</Version>
+    <Authors>Hiroshi Ota</Authors>
+    <Company>Knowledge &amp; Experience</Company>
+    <Description>Generator of  Kae.CIM.MetaMode.CIMofCIM classes and importer of xtuml domain model.</Description>
+    <Copyright>all right reserved by Knowledge &amp; Experience</Copyright>
+    <PackageProjectUrl>https://github.com/kae-made/xtuml-ooa-of-ooa-library</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup Label="XTUMLOOAofOOAParser">
     <YaccFile Include="XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y">
@@ -36,6 +45,10 @@
   <ItemGroup>
     <None Update="datatype.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
     </None>
     <None Update="template\CIMClassBase.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
