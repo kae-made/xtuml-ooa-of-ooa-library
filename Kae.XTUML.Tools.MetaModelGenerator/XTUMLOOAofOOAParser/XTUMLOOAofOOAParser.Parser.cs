@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser
 {
@@ -58,6 +59,8 @@ namespace Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser
             {
                 phrase = phrase.Substring(1, phrase.Length - 2);
             }
+            var regex = new Regex("''");
+            phrase = regex.Replace(phrase, "'");
             modelBuilder.RegisterPhrase(phrase);
         }
 

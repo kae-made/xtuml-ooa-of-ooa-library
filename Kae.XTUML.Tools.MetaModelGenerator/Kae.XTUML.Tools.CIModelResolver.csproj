@@ -5,7 +5,7 @@
     <ApplicationIcon />
     <StartupObject />
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>0.1.0</Version>
+    <Version>1.0.0</Version>
     <Authors>Hiroshi Ota</Authors>
     <Company>Knowledge &amp; Experience</Company>
     <Description>Generator of  Kae.CIM.MetaMode.CIMofCIM classes and importer of xtuml domain model.</Description>

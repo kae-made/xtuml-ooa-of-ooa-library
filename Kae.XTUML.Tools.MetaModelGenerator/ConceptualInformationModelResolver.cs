@@ -26,9 +26,8 @@ namespace Kae.XTUML.Tools.CIModelResolver
 
         public IDictionary<string,  ImportStatus> ImportResult => importResult;
 
-        public ConceptualInformationModelResolver(string ooaOfooaFilePath)
+        public ConceptualInformationModelResolver()
         {
-            this.sqlOOAofOOAFilePath = ooaOfooaFilePath;
             metaModelRepository = new OOAofOOARepository()
             {
                 Classes = new Dictionary<string, ClassOfOOA>(),
@@ -39,8 +38,9 @@ namespace Kae.XTUML.Tools.CIModelResolver
             modelParser = new XTUMLOOAofOOAParserParser(modelBuilder);
         }
 
-        public void LoadOOAofOOA(string datatypeDefFilePath)
+        public void LoadOOAofOOA(string datatypeDefFilePath, string metaModelFilePath)
         {
+            this.sqlOOAofOOAFilePath = metaModelFilePath;
             modelBuilder.LoadDataTypeDef(datatypeDefFilePath);
             using (var fs = new StreamReader(sqlOOAofOOAFilePath))
             {
@@ -59,36 +59,39 @@ namespace Kae.XTUML.Tools.CIModelResolver
             // TODO : Build generated Framework Library
         }
 
-        public void LoadCIInstances(string instancesModelPath, bool isShowDetail = false)
+        public void LoadCIInstances(string[] instancesModelPaths, bool isShowDetail = false)
         {
             var ciModelBuilder = new Kae.CIM.CIModelRepositoryBuilder();
             ciModelRepository = ciModelBuilder.CreateModelRepository();
             var ciInstanceLoader = new CIInstancesLoader(modelParser, modelBuilder, "OOAofOOA", ciModelRepository);
-            importResult = ciInstanceLoader.Load(instancesModelPath);
 
-            var importedInstances = importResult.Values.Where(i => i.IsImported);
-            int importedInstancesCount = 0;
-            Console.WriteLine("CIClasses for imported Instances : ");
-            foreach (var ii in importedInstances)
+            foreach (var instancesModelPath in instancesModelPaths)
             {
-                if (isShowDetail)
-                    Console.WriteLine($"  {ii.ClassName} - {ii.Count}");
-                importedInstancesCount += ii.Count;
-            }
-            var unimportedInstances = importResult.Values.Where(i => i.IsImported == false);
-            int unimportedInstancesCount = 0;
-            Console.WriteLine("CIClasses for unimporeted Instances because the CIClass is undefined : ");
-            foreach (var ui in unimportedInstances)
-            {
-                if (isShowDetail)
-                    Console.WriteLine($"  {ui.ClassName} {ui.Count}");
-                unimportedInstancesCount += ui.Count;
-            }
+                importResult = ciInstanceLoader.Load(instancesModelPath);
 
-            Console.WriteLine("");
-            Console.WriteLine($"Imporeted Instances - {importedInstancesCount}");
-            Console.WriteLine($"Unimported Instances - {unimportedInstancesCount}");
+                var importedInstances = importResult.Values.Where(i => i.IsImported);
+                int importedInstancesCount = 0;
+                Console.WriteLine("CIClasses for imported Instances : ");
+                foreach (var ii in importedInstances)
+                {
+                    if (isShowDetail)
+                        Console.WriteLine($"  {ii.ClassName} - {ii.Count}");
+                    importedInstancesCount += ii.Count;
+                }
+                var unimportedInstances = importResult.Values.Where(i => i.IsImported == false);
+                int unimportedInstancesCount = 0;
+                Console.WriteLine("CIClasses for unimporeted Instances because the CIClass is undefined : ");
+                foreach (var ui in unimportedInstances)
+                {
+                    if (isShowDetail)
+                        Console.WriteLine($"  {ui.ClassName} {ui.Count}");
+                    unimportedInstancesCount += ui.Count;
+                }
 
+                Console.WriteLine("");
+                Console.WriteLine($"Imporeted Instances - {importedInstancesCount}");
+                Console.WriteLine($"Unimported Instances - {unimportedInstancesCount}");
+            }
         }
     }
 }

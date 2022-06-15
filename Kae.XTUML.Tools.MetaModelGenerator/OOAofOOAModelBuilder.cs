@@ -28,6 +28,10 @@ namespace Kae.XTUML.Tools.CIModelResolver
 
         public void LoadDataTypeDef(string yamlFilePath)
         {
+            if (string.IsNullOrEmpty(yamlFilePath))
+            {
+                yamlFilePath = "datatype.yaml";
+            }
             using (var reader = new StreamReader(yamlFilePath))
             {
                 userDataTypeDefs.Clear();
