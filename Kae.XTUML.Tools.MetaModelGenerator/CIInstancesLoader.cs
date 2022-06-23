@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Kae.XTUML.Tools.CIModelResolver
@@ -70,6 +71,8 @@ namespace Kae.XTUML.Tools.CIModelResolver
             {
                 modelBuilder.ResetAttributeValues();
                 var content = reader.ReadToEnd();
+                var regx = new Regex("''");
+                content = regx.Replace(content, "__SQ__");
                 parser.Parse(content);
             }
             return importedClasses;

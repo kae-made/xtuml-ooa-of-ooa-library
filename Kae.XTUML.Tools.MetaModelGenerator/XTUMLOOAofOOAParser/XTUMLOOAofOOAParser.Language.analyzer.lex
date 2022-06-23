@@ -18,6 +18,7 @@ REFNO			R[1-9][0-9]*
 REMULT			[1M]C?
 FROM			FROM
 TO				TO
+DSQ				__SQ__
 Eol             (\r\n?|\n|\0)
 PHRASEC			'[a-zA-z]([ a-zA-z0-9_]|\.|'')*'
 ATTRSVAL		\"[^"]*\"
@@ -55,6 +56,7 @@ PClose			\)
 {REMULT}		{ Console.WriteLine("rel edge multi: {0}", yytext); GetString(); return (int)Token.REMULT; }
 {FROM}			{ Console.WriteLine("from:"); return (int)Token.FROM; }
 {TO}			{ Console.WriteLine("to:"); return (int)Token.TO; }
+{DSQ}			{ Console.WriteLine("'' - double single quatation"); return (int)Token.DSQ; }
 {PHRASE}		{ Console.WriteLine("phrase"); return (int)Token.PHRASE; }
 {POpen}			{ Console.WriteLine("("); return (int)Token.POpen; }
 {PClose}		{ Console.WriteLine(")"); return (int)Token.PClose; }

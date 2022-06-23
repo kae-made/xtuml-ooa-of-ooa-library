@@ -5,7 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using YamlDotNet.RepresentationModel;
 
@@ -23,30 +25,39 @@ namespace Kae.XTUML.Tools.CIModelResolver
         private RelationshpEdgeOfOOA lastFromEdge;
         private RelationshpEdgeOfOOA lastToEdge;
         private string lastPhrase;
+        private string attrPhrase;
         private Dictionary<string, string> userDataTypeDefs = new Dictionary<string, string>();
+
+
 
 
         public void LoadDataTypeDef(string yamlFilePath)
         {
             if (string.IsNullOrEmpty(yamlFilePath))
             {
-                yamlFilePath = "datatype.yaml";
+                userDataTypeDefs.Add("UNIQUE_ID", "string");
+                userDataTypeDefs.Add("STRING", "string");
+                userDataTypeDefs.Add("INTEGER", "int");
+                userDataTypeDefs.Add("BOOLEAN", "bool");
             }
-            using (var reader = new StreamReader(yamlFilePath))
+            else
             {
-                userDataTypeDefs.Clear();
-                var yaml = new YamlStream();
-                yaml.Load(reader);
-                var config = (YamlMappingNode)yaml.Documents[0].RootNode;
-                foreach (var configItem in config.Children)
+                using (var reader = new StreamReader(yamlFilePath))
                 {
-                    if (((YamlScalarNode)configItem.Key).Value == "datatype")
+                    userDataTypeDefs.Clear();
+                    var yaml = new YamlStream();
+                    yaml.Load(reader);
+                    var config = (YamlMappingNode)yaml.Documents[0].RootNode;
+                    foreach (var configItem in config.Children)
                     {
-                        foreach (var dtItem in ((YamlMappingNode)configItem.Value).Children)
+                        if (((YamlScalarNode)configItem.Key).Value == "datatype")
                         {
-                            var modelTypeName = ((YamlScalarNode)dtItem.Key).Value;
-                            var userDefTypeName = ((YamlScalarNode)dtItem.Value).Value;
-                            userDataTypeDefs.Add(modelTypeName, userDefTypeName);
+                            foreach (var dtItem in ((YamlMappingNode)configItem.Value).Children)
+                            {
+                                var modelTypeName = ((YamlScalarNode)dtItem.Key).Value;
+                                var userDefTypeName = ((YamlScalarNode)dtItem.Value).Value;
+                                userDataTypeDefs.Add(modelTypeName, userDefTypeName);
+                            }
                         }
                     }
                 }
@@ -230,7 +241,19 @@ namespace Kae.XTUML.Tools.CIModelResolver
         private List<string> lastAttrValues = new List<string>();
         public void AddAttributeValue(string attrValue)
         {
-            lastAttrValues.Add(attrValue);
+            string value = attrValue;
+            string sqPattern = "__SQ__";
+            if (value.IndexOf(sqPattern) != -1)
+            {
+                var regex = new Regex(sqPattern);
+                value = regex.Replace(attrValue, "'");
+            }
+            lastAttrValues.Add(value);
+        }
+
+        public void AddAttrPhrase(string phrase)
+        {
+            attrPhrase += phrase;
         }
 
         public void RegisterInsert(string objName)

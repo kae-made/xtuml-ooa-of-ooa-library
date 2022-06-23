@@ -90,5 +90,10 @@ namespace Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser
         {
             modelBuilder.AddAttributeValue(attrValue);
         }
+
+        private void AddAttrPhrase(string phrase)
+        {
+            modelBuilder.AddAttrPhrase(phrase);
+        }
     }
 }

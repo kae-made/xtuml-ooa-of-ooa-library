@@ -3,8 +3,8 @@
 // (see accompanying GPPGcopyright.rtf)
 
 // GPPG version 1.5.2
-// DateTime: 2022/06/11 15:14:57
-// Input file <XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2022/06/11 15:14:47>
+// DateTime: 2022/06/23 17:33:13
+// Input file <XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2022/06/23 17:33:12>
 
 // options: no-lines gplex
 
@@ -17,11 +17,11 @@ using QUT.Gppg;
 
 namespace Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser
 {
-internal enum Token {error=2,EOF=3,NUMBER=4,COMMA=5,EOS=6,
-    CREATE=7,INSERT=8,TABLE=9,ROP=10,REFID=11,FROM=12,
-    TO=13,PHRASE=14,INTO=15,VALUES=16,ELEM=17,REFNO=18,
-    PHRASEC=19,ATTRVAL=20,ATTRSVAL=21,ATTRRVAL=22,REMULT=23,POpen=24,
-    PClose=25,ATTRIVAL=26};
+internal enum Token {error=2,EOF=3,NUMBER=4,COMMA=5,DSQ=6,
+    EOS=7,CREATE=8,INSERT=9,TABLE=10,ROP=11,REFID=12,
+    FROM=13,TO=14,PHRASE=15,INTO=16,VALUES=17,ELEM=18,
+    REFNO=19,PHRASEC=20,ATTRVAL=21,ATTRSVAL=22,ATTRRVAL=23,REMULT=24,
+    POpen=25,PClose=26,ATTRIVAL=27};
 
 internal partial struct ValueType
 { 
@@ -50,16 +50,16 @@ internal class ScanObj {
 [GeneratedCodeAttribute( "Gardens Point Parser Generator", "1.5.2")]
 internal partial class XTUMLOOAofOOAParserParser: ShiftReduceParser<ValueType, LexLocation>
 {
-  // Verbatim content from XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2022/06/11 15:14:47
+  // Verbatim content from XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2022/06/23 17:33:12
 // Copyright (c) Knowledge & Experience. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
-  // End verbatim content from XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2022/06/11 15:14:47
+  // End verbatim content from XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2022/06/23 17:33:12
 
 #pragma warning disable 649
   private static Dictionary<int, string> aliases;
 #pragma warning restore 649
-  private static Rule[] rules = new Rule[46];
-  private static State[] states = new State[72];
+  private static Rule[] rules = new Rule[50];
+  private static State[] states = new State[76];
   private static string[] nonTerms = new string[] {
       "main", "$accept", "line_list", "line", "statement", "create_statement", 
       "insert_statement", "table_statement", "rop_statememnt", "elem", "attributes_def", 
@@ -67,81 +67,85 @@ internal partial class XTUMLOOAofOOAParserParser: ShiftReduceParser<ValueType, L
       "rel_edge_base_def", "rel_edge_phrase", "rel_edge_base_args_def", "rel_edge_base_none_def", 
       "ref_attr_defs", "ref_attr_def", "attrval_defs", "attrval_def", "attrval_string_def", 
       "attrval_dstring_def", "attrval_integer_def", "attrval_remult_def", "attrval_real_def", 
-      "attrval_phrase_def", };
+      "attrval_dsq_def", "attrval_strings_def", "attrval_phrase_def", };
 
   static XTUMLOOAofOOAParserParser() {
-    states[0] = new State(new int[]{7,8,8,50},new int[]{-1,1,-3,3,-4,4,-5,6,-7,49});
+    states[0] = new State(new int[]{8,8,9,50},new int[]{-1,1,-3,3,-4,4,-5,6,-7,49});
     states[1] = new State(new int[]{3,2});
     states[2] = new State(-1);
     states[3] = new State(-2);
-    states[4] = new State(new int[]{7,8,8,50,3,-3},new int[]{-3,5,-4,4,-5,6,-7,49});
+    states[4] = new State(new int[]{8,8,9,50,3,-3},new int[]{-3,5,-4,4,-5,6,-7,49});
     states[5] = new State(-4);
-    states[6] = new State(new int[]{6,7});
+    states[6] = new State(new int[]{7,7});
     states[7] = new State(-5);
-    states[8] = new State(new int[]{9,11,10,24},new int[]{-6,9,-8,10,-9,23});
+    states[8] = new State(new int[]{10,11,11,24},new int[]{-6,9,-8,10,-9,23});
     states[9] = new State(-6);
     states[10] = new State(-8);
-    states[11] = new State(new int[]{17,22,24,-17},new int[]{-10,12});
-    states[12] = new State(new int[]{24,14},new int[]{-11,13});
+    states[11] = new State(new int[]{18,22,25,-17},new int[]{-10,12});
+    states[12] = new State(new int[]{25,14},new int[]{-11,13});
     states[13] = new State(-10);
-    states[14] = new State(new int[]{17,20,5,-15,25,-15},new int[]{-14,15,-15,17});
-    states[15] = new State(new int[]{25,16});
+    states[14] = new State(new int[]{18,20,5,-15,26,-15},new int[]{-14,15,-15,17});
+    states[15] = new State(new int[]{26,16});
     states[16] = new State(-12);
-    states[17] = new State(new int[]{5,18,25,-13});
-    states[18] = new State(new int[]{17,20,5,-15,25,-15},new int[]{-14,19,-15,17});
+    states[17] = new State(new int[]{5,18,26,-13});
+    states[18] = new State(new int[]{18,20,5,-15,26,-15},new int[]{-14,19,-15,17});
     states[19] = new State(-14);
-    states[20] = new State(new int[]{17,21});
+    states[20] = new State(new int[]{18,21});
     states[21] = new State(-16);
     states[22] = new State(-18);
     states[23] = new State(-9);
-    states[24] = new State(new int[]{11,25});
-    states[25] = new State(new int[]{18,26});
-    states[26] = new State(new int[]{12,47},new int[]{-12,27});
-    states[27] = new State(new int[]{13,29},new int[]{-13,28});
+    states[24] = new State(new int[]{12,25});
+    states[25] = new State(new int[]{19,26});
+    states[26] = new State(new int[]{13,47},new int[]{-12,27});
+    states[27] = new State(new int[]{14,29},new int[]{-13,28});
     states[28] = new State(-11);
-    states[29] = new State(new int[]{23,36},new int[]{-16,30,-17,31,-19,35,-20,46});
+    states[29] = new State(new int[]{24,36},new int[]{-16,30,-17,31,-19,35,-20,46});
     states[30] = new State(-20);
-    states[31] = new State(new int[]{14,33,6,-21,13,-21},new int[]{-18,32});
+    states[31] = new State(new int[]{15,33,7,-21,14,-21},new int[]{-18,32});
     states[32] = new State(-22);
-    states[33] = new State(new int[]{20,34});
+    states[33] = new State(new int[]{21,34});
     states[34] = new State(-27);
     states[35] = new State(-23);
-    states[36] = new State(new int[]{17,37});
-    states[37] = new State(new int[]{24,38});
-    states[38] = new State(new int[]{25,41,17,45},new int[]{-21,39,-22,42});
-    states[39] = new State(new int[]{25,40});
+    states[36] = new State(new int[]{18,37});
+    states[37] = new State(new int[]{25,38});
+    states[38] = new State(new int[]{26,41,18,45},new int[]{-21,39,-22,42});
+    states[39] = new State(new int[]{26,40});
     states[40] = new State(-25);
     states[41] = new State(-26);
-    states[42] = new State(new int[]{5,43,25,-28});
-    states[43] = new State(new int[]{17,45},new int[]{-21,44,-22,42});
+    states[42] = new State(new int[]{5,43,26,-28});
+    states[43] = new State(new int[]{18,45},new int[]{-21,44,-22,42});
     states[44] = new State(-29);
     states[45] = new State(-30);
     states[46] = new State(-24);
-    states[47] = new State(new int[]{23,36},new int[]{-16,48,-17,31,-19,35,-20,46});
+    states[47] = new State(new int[]{24,36},new int[]{-16,48,-17,31,-19,35,-20,46});
     states[48] = new State(-19);
     states[49] = new State(-7);
-    states[50] = new State(new int[]{15,51});
-    states[51] = new State(new int[]{17,52});
-    states[52] = new State(new int[]{16,53});
-    states[53] = new State(new int[]{24,54});
-    states[54] = new State(new int[]{20,61,21,63,26,65,23,67,22,69,19,71},new int[]{-23,55,-24,57,-25,60,-26,62,-27,64,-28,66,-29,68,-30,70});
-    states[55] = new State(new int[]{25,56});
+    states[50] = new State(new int[]{16,51});
+    states[51] = new State(new int[]{18,52});
+    states[52] = new State(new int[]{17,53});
+    states[53] = new State(new int[]{25,54});
+    states[54] = new State(new int[]{21,64,22,66,27,68,24,70,23,72,6,74},new int[]{-23,55,-24,57,-25,60,-26,65,-27,67,-28,69,-29,71,-30,73,-31,75});
+    states[55] = new State(new int[]{26,56});
     states[56] = new State(-31);
-    states[57] = new State(new int[]{5,58,25,-32});
-    states[58] = new State(new int[]{20,61,21,63,26,65,23,67,22,69,19,71},new int[]{-23,59,-24,57,-25,60,-26,62,-27,64,-28,66,-29,68,-30,70});
+    states[57] = new State(new int[]{5,58,26,-32});
+    states[58] = new State(new int[]{21,64,22,66,27,68,24,70,23,72,6,74},new int[]{-23,59,-24,57,-25,60,-26,65,-27,67,-28,69,-29,71,-30,73,-31,75});
     states[59] = new State(-33);
-    states[60] = new State(-34);
-    states[61] = new State(-40);
-    states[62] = new State(-35);
-    states[63] = new State(-41);
-    states[64] = new State(-36);
-    states[65] = new State(-42);
-    states[66] = new State(-37);
-    states[67] = new State(-44);
-    states[68] = new State(-38);
-    states[69] = new State(-43);
-    states[70] = new State(-39);
-    states[71] = new State(-45);
+    states[60] = new State(new int[]{6,61,5,-34,26,-34});
+    states[61] = new State(new int[]{21,64},new int[]{-31,62,-25,63});
+    states[62] = new State(-42);
+    states[63] = new State(new int[]{6,61,5,-41,26,-41});
+    states[64] = new State(-44);
+    states[65] = new State(-35);
+    states[66] = new State(-45);
+    states[67] = new State(-36);
+    states[68] = new State(-46);
+    states[69] = new State(-37);
+    states[70] = new State(-48);
+    states[71] = new State(-38);
+    states[72] = new State(-47);
+    states[73] = new State(-39);
+    states[74] = new State(-43);
+    states[75] = new State(-40);
 
     for (int sNo = 0; sNo < states.Length; sNo++) states[sNo].number = sNo;
 
@@ -149,33 +153,33 @@ internal partial class XTUMLOOAofOOAParserParser: ShiftReduceParser<ValueType, L
     rules[2] = new Rule(-1, new int[]{-3});
     rules[3] = new Rule(-3, new int[]{-4});
     rules[4] = new Rule(-3, new int[]{-4,-3});
-    rules[5] = new Rule(-4, new int[]{-5,6});
-    rules[6] = new Rule(-5, new int[]{7,-6});
+    rules[5] = new Rule(-4, new int[]{-5,7});
+    rules[6] = new Rule(-5, new int[]{8,-6});
     rules[7] = new Rule(-5, new int[]{-7});
     rules[8] = new Rule(-6, new int[]{-8});
     rules[9] = new Rule(-6, new int[]{-9});
-    rules[10] = new Rule(-8, new int[]{9,-10,-11});
-    rules[11] = new Rule(-9, new int[]{10,11,18,-12,-13});
-    rules[12] = new Rule(-11, new int[]{24,-14,25});
+    rules[10] = new Rule(-8, new int[]{10,-10,-11});
+    rules[11] = new Rule(-9, new int[]{11,12,19,-12,-13});
+    rules[12] = new Rule(-11, new int[]{25,-14,26});
     rules[13] = new Rule(-14, new int[]{-15});
     rules[14] = new Rule(-14, new int[]{-15,5,-14});
     rules[15] = new Rule(-15, new int[]{});
-    rules[16] = new Rule(-15, new int[]{17,17});
+    rules[16] = new Rule(-15, new int[]{18,18});
     rules[17] = new Rule(-10, new int[]{});
-    rules[18] = new Rule(-10, new int[]{17});
-    rules[19] = new Rule(-12, new int[]{12,-16});
-    rules[20] = new Rule(-13, new int[]{13,-16});
+    rules[18] = new Rule(-10, new int[]{18});
+    rules[19] = new Rule(-12, new int[]{13,-16});
+    rules[20] = new Rule(-13, new int[]{14,-16});
     rules[21] = new Rule(-16, new int[]{-17});
     rules[22] = new Rule(-16, new int[]{-17,-18});
     rules[23] = new Rule(-17, new int[]{-19});
     rules[24] = new Rule(-17, new int[]{-20});
-    rules[25] = new Rule(-19, new int[]{23,17,24,-21,25});
-    rules[26] = new Rule(-20, new int[]{23,17,24,25});
-    rules[27] = new Rule(-18, new int[]{14,20});
+    rules[25] = new Rule(-19, new int[]{24,18,25,-21,26});
+    rules[26] = new Rule(-20, new int[]{24,18,25,26});
+    rules[27] = new Rule(-18, new int[]{15,21});
     rules[28] = new Rule(-21, new int[]{-22});
     rules[29] = new Rule(-21, new int[]{-22,5,-21});
-    rules[30] = new Rule(-22, new int[]{17});
-    rules[31] = new Rule(-7, new int[]{8,15,17,16,24,-23,25});
+    rules[30] = new Rule(-22, new int[]{18});
+    rules[31] = new Rule(-7, new int[]{9,16,18,17,25,-23,26});
     rules[32] = new Rule(-23, new int[]{-24});
     rules[33] = new Rule(-23, new int[]{-24,5,-23});
     rules[34] = new Rule(-24, new int[]{-25});
@@ -184,12 +188,16 @@ internal partial class XTUMLOOAofOOAParserParser: ShiftReduceParser<ValueType, L
     rules[37] = new Rule(-24, new int[]{-28});
     rules[38] = new Rule(-24, new int[]{-29});
     rules[39] = new Rule(-24, new int[]{-30});
-    rules[40] = new Rule(-25, new int[]{20});
-    rules[41] = new Rule(-26, new int[]{21});
-    rules[42] = new Rule(-27, new int[]{26});
-    rules[43] = new Rule(-29, new int[]{22});
-    rules[44] = new Rule(-28, new int[]{23});
-    rules[45] = new Rule(-30, new int[]{19});
+    rules[40] = new Rule(-24, new int[]{-31});
+    rules[41] = new Rule(-31, new int[]{-25});
+    rules[42] = new Rule(-31, new int[]{-25,6,-31});
+    rules[43] = new Rule(-30, new int[]{6});
+    rules[44] = new Rule(-25, new int[]{21});
+    rules[45] = new Rule(-26, new int[]{22});
+    rules[46] = new Rule(-27, new int[]{27});
+    rules[47] = new Rule(-29, new int[]{23});
+    rules[48] = new Rule(-28, new int[]{24});
+    rules[49] = new Rule(-32, new int[]{20});
   }
 
   protected override void Initialize() {
@@ -273,42 +281,56 @@ internal partial class XTUMLOOAofOOAParserParser: ShiftReduceParser<ValueType, L
 			RegisterInsert(ValueStack[ValueStack.Depth-5].s);
 		}
         break;
-      case 40: // attrval_string_def -> ATTRVAL
+      case 42: // attrval_strings_def -> attrval_string_def, DSQ, attrval_strings_def
+{
+			Console.WriteLine("Rule => attr string value with '' : {0}", ValueStack[ValueStack.Depth-3].s);
+			string val = ValueStack[ValueStack.Depth-3].s;
+			AddAttrbuteValue(val);
+		}
+        break;
+      case 43: // attrval_dsq_def -> DSQ
+{
+			Console.WriteLine("Rule => attr string value : empty");
+			AddAttrbuteValue("");
+		}
+        break;
+      case 44: // attrval_string_def -> ATTRVAL
 {
 			Console.WriteLine("Rule => attr string value : {0}", ValueStack[ValueStack.Depth-1].s);
 			string val = ValueStack[ValueStack.Depth-1].s;
 			AddAttrbuteValue(val.Substring(1, val.Length - 2));
 		}
         break;
-      case 41: // attrval_dstring_def -> ATTRSVAL
+      case 45: // attrval_dstring_def -> ATTRSVAL
 {
 			Console.WriteLine("Rule => attr unique string value : {0}", ValueStack[ValueStack.Depth-1].s);
 			string val = ValueStack[ValueStack.Depth-1].s;
 			AddAttrbuteValue(val.Substring(1, val.Length - 2));
 		}
         break;
-      case 42: // attrval_integer_def -> ATTRIVAL
+      case 46: // attrval_integer_def -> ATTRIVAL
 {
 			Console.WriteLine("Rule => attr integer value : {0}", ValueStack[ValueStack.Depth-1].s);
 			AddAttrbuteValue(ValueStack[ValueStack.Depth-1].s);
 		}
         break;
-      case 43: // attrval_real_def -> ATTRRVAL
+      case 47: // attrval_real_def -> ATTRRVAL
 {
 			Console.WriteLine("Rule => attr real value : {0}", ValueStack[ValueStack.Depth-1].s);
 			AddAttrbuteValue(ValueStack[ValueStack.Depth-1].s);
 		}
         break;
-      case 44: // attrval_remult_def -> REMULT
+      case 48: // attrval_remult_def -> REMULT
 {
 			Console.WriteLine("Rule => attr 1 value : {0}", ValueStack[ValueStack.Depth-1].s);
 			AddAttrbuteValue(ValueStack[ValueStack.Depth-1].s);
 		}
         break;
-      case 45: // attrval_phrase_def -> PHRASEC
+      case 49: // attrval_phrase_def -> PHRASEC
 {
 			Console.WriteLine("Rule => attr phrase value : {0}", ValueStack[ValueStack.Depth-1].s);
-			AddAttrbuteValue(ValueStack[ValueStack.Depth-1].s);
+			//AddAttrbuteValue($1.s);
+			AddAttrPhrase(ValueStack[ValueStack.Depth-1].s);
 		}
         break;
     }

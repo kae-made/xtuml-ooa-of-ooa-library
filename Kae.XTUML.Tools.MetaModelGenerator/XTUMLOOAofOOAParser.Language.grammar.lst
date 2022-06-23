@@ -1,9 +1,9 @@
 
 // ==========================================================================
-//  GPPG error listing for yacc source file <XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2022/05/19 17:32:49>
+//  GPPG error listing for yacc source file <XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2022/06/23 17:33:12>
 // ==========================================================================
 //  Version:  1.5.2
-//  DateTime: 2022/05/19 17:32:50
+//  DateTime: 2022/06/23 17:33:13
 // ==========================================================================
 
 
@@ -25,7 +25,7 @@
 %start main
 
 %token NUMBER
-%token COMMA
+%token COMMA, DSQ
 %token EOS
 %token CREATE, INSERT
 %token TABLE
@@ -36,6 +36,8 @@
 %token ATTRIVAL
 
 %%
+// Warning: NonTerminal symbol "attrval_phrase_def" is unreachable
+// ---------------------------------------------------------------
 
 main   : line_list
        ;
@@ -157,31 +159,35 @@ insert_statement :	INSERT INTO ELEM VALUES POpen attrval_defs PClose
 attrval_defs :		attrval_def | attrval_def COMMA attrval_defs
 	;
 
-attrval_def : attrval_string_def | attrval_dstring_def | attrval_integer_def | attrval_remult_def | attrval_real_def
-		{
-		    // This level doesn't work
-//-----------------------------^^
-// Error: Literal string terminated by end of line
-// Error: Literal string terminated by end of line
-// Error: Literal string terminated by end of line
-// Error: Literal string terminated by end of line
-// -----------------------------------------------
-			// Console.WriteLine("Rule => attr value : {0}", $1.s);
-			// AddAttrbuteValue($1.s);
-		}
+attrval_def : attrval_string_def | attrval_dstring_def | attrval_integer_def | attrval_remult_def | attrval_real_def | attrval_dsq_def | attrval_strings_def
 	;
 
+attrval_strings_def : attrval_string_def | attrval_string_def DSQ attrval_strings_def
+		{
+			Console.WriteLine("Rule => attr string value with '' : {0}", $1.s);
+			string val = $1.s;
+			AddAttrbuteValue(val);
+		}
+	;
+attrval_dsq_def	: DSQ
+		{
+			Console.WriteLine("Rule => attr string value : empty");
+			AddAttrbuteValue("");
+		}
+	;
 attrval_string_def :	ATTRVAL
 		{
 			Console.WriteLine("Rule => attr string value : {0}", $1.s);
-			AddAttrbuteValue($1.s);
+			string val = $1.s;
+			AddAttrbuteValue(val.Substring(1, val.Length - 2));
 		}
 	;
 
 attrval_dstring_def :	ATTRSVAL
 		{
 			Console.WriteLine("Rule => attr unique string value : {0}", $1.s);
-			AddAttrbuteValue($1.s);
+			string val = $1.s;
+			AddAttrbuteValue(val.Substring(1, val.Length - 2));
 		}
 	;
 
@@ -203,6 +209,13 @@ attrval_remult_def : REMULT
 		{
 			Console.WriteLine("Rule => attr 1 value : {0}", $1.s);
 			AddAttrbuteValue($1.s);
+		}
+	;
+attrval_phrase_def :	PHRASEC
+		{
+			Console.WriteLine("Rule => attr phrase value : {0}", $1.s);
+			//AddAttrbuteValue($1.s);
+			AddAttrPhrase($1.s);
 		}
 	;
 %%// ==========================================================================
