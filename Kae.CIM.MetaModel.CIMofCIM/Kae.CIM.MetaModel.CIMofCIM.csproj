@@ -10,6 +10,7 @@
     <PackageProjectUrl>https://github.com/kae-made/xtuml-ooa-of-ooa-library</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Copyright>all right reserved by Knowledge &amp; Experience</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

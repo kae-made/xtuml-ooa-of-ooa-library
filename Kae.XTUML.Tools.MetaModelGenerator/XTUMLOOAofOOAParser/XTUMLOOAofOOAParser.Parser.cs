@@ -1,6 +1,8 @@
 // Copyright (c) Knowledge & Experience. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 using Kae.CIM;
+// Copyright (c) Knowledge & Experience. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 using Kae.XTUML.Tools.CIModelResolver;
 using Kae.XTUML.Tools.CIModelResolver.XTUMLOOAofOOA;
 using System;

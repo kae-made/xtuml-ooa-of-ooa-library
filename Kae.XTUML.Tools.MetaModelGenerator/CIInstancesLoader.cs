@@ -1,4 +1,6 @@
-﻿using Kae.CIM;
+﻿// Copyright (c) Knowledge & Experience. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+using Kae.CIM;
 using Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser;
 using System;
 using System.Collections.Generic;

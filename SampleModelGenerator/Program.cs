@@ -1,4 +1,6 @@
-﻿using Kae.CIM;
+﻿// Copyright (c) Knowledge & Experience. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+using Kae.CIM;
 using Kae.CIM.MetaModel.CIMofCIM;
 using Kae.XTUML.Tools.CIModelResolver;
 using System;
@@ -32,11 +34,11 @@ namespace SampleModelGenerator
                 return;
             }
 
-            var resolver = new ConceptualInformationModelResolver(commandLine.MetaModelFilePath);
+            var resolver = new ConceptualInformationModelResolver();
             try
             {
                 Console.WriteLine($"Loading OOA of OOA model... @{DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss")}");
-                resolver.LoadOOAofOOA(commandLine.DataTypeDefFilePath);
+                resolver.LoadOOAofOOA(commandLine.DataTypeDefFilePath, commandLine.MetaModelFilePath);
                 Console.WriteLine($"Loaded.  @{DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss")}");
 
                 if (commandLine.GenerateFWLib && !string.IsNullOrEmpty(commandLine.GenFolderPath))
@@ -48,7 +50,7 @@ namespace SampleModelGenerator
                 if (!string.IsNullOrEmpty(commandLine.InstancesFile))
                 {
                     Console.WriteLine($"Loading instances...   @{DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss")}");
-                    resolver.LoadCIInstances(commandLine.InstancesFile, true);
+                    resolver.LoadCIInstances(new string[] { commandLine.InstancesFile, }, true);
                     Console.WriteLine($"Loaded.   @{DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss")}");
 
                     ShowLoadedModel(resolver.ModelRepository);
@@ -223,6 +225,10 @@ namespace SampleModelGenerator
                     if (++index < args.Length)
                     {
                         InstancesFile = args[index];
+                        if (InstancesFile.StartsWith("\"") && InstancesFile.EndsWith("\""))
+                        {
+                            InstancesFile = InstancesFile.Substring(1, InstancesFile.Length - 2);
+                        }
                     }
                 }
                 else if (args[index] == "-dt" || args[index] == "--data-type")
