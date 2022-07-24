@@ -29,20 +29,32 @@ namespace Kae.XTUML.Tools.CIModelResolver
             builder.RegisterFondInsertHandler(this.RegisterInsert);
         }
 
-        public Dictionary<string, ImportStatus> Load(string instancesPath, string fileExt = ".xtuml", bool clearImportedClasses = false)
+        public Dictionary<string, ImportStatus> Load(string instancesPath, string fileExt = ".xtuml|.sql", bool clearImportedClasses = false)
         {
+            var fileExts = fileExt.Split(new char[] { '|' });
             if (clearImportedClasses)
             {
                 importedClasses.Clear();
             }
-            if (File.Exists(instancesPath) && instancesPath.EndsWith(fileExt))
+            if (File.Exists(instancesPath))
             {
-                Console.WriteLine($"Loading definitions in {instancesPath}");
-                using (var stream = File.OpenRead(instancesPath))
+                bool isValidFile = false;
+                foreach (var ext in fileExts)
                 {
-                    Load(stream, clearImportedClasses);
+                    if (instancesPath.EndsWith(ext))
+                    {
+                        isValidFile = true;
+                        break;
+                    }
                 }
-
+                if (isValidFile)
+                {
+                    Console.WriteLine($"Loading definitions in {instancesPath}");
+                    using (var stream = File.OpenRead(instancesPath))
+                    {
+                        Load(stream, clearImportedClasses);
+                    }
+                }
             }
             else if (Directory.Exists(instancesPath))
             {
@@ -73,8 +85,12 @@ namespace Kae.XTUML.Tools.CIModelResolver
             {
                 modelBuilder.ResetAttributeValues();
                 var content = reader.ReadToEnd();
-                var regx = new Regex("''");
-                content = regx.Replace(content, "__SQ__");
+                var regx0 = new Regex(@"'''(,|\))");
+                content = regx0.Replace(content, "__SQ__'$1");
+                var regx1 = new Regex("'''");
+                content = regx1.Replace(content, "'__SQ__");
+                var regx2 = new Regex("''");
+                content = regx2.Replace(content, "__SQ__");
                 parser.Parse(content);
             }
             return importedClasses;
