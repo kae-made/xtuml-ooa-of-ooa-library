@@ -1,6 +1,7 @@
 // Copyright (c) Knowledge & Experience. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 using Kae.CIM;
+using Kae.Utility.Logging;
 // Copyright (c) Knowledge & Experience. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 using Kae.XTUML.Tools.CIModelResolver;
@@ -15,8 +16,11 @@ namespace Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser
 {
     internal partial class XTUMLOOAofOOAParserParser
     {
-        public XTUMLOOAofOOAParserParser(OOAofOOAModelBuilder builder) : base(null)
+        private Logger logger;
+
+        public XTUMLOOAofOOAParserParser(OOAofOOAModelBuilder builder, Logger logger) : base(null)
         {
+            this.logger = logger;
             modelBuilder = builder;
         }
 
@@ -24,8 +28,25 @@ namespace Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser
         {
             byte[] inputBuffer = System.Text.Encoding.Default.GetBytes(s);
             MemoryStream stream = new MemoryStream(inputBuffer);
-            this.Scanner = new XTUMLOOAofOOAParserScanner(stream);
-            this.Parse();
+            try
+            {
+                this.Scanner = new XTUMLOOAofOOAParserScanner(stream);
+                this.Parse();
+            }
+            catch (Exception ex)
+            {
+                if (logger != null)
+                {
+                    logger.LogError($"{ex.Message}");
+                    if(ex is AggregateException)
+                    {
+                       foreach(var innerEx in ((AggregateException)ex).InnerExceptions)
+                        {
+                            logger.LogError($"{innerEx.Message}");
+                        }
+                    }
+                }
+            }
         }
 
         private OOAofOOAModelBuilder modelBuilder;

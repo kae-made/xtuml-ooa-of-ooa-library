@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Knowledge & Experience. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 using Kae.CIM;
+using Kae.Utility.Logging;
 using Kae.XTUML.Tools.CIModelResolver;
 using Kae.XTUML.Tools.CIModelResolver.XTUMLOOAofOOA;
 using Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser;
@@ -22,22 +23,24 @@ namespace Kae.XTUML.Tools.CIModelResolver
         private OOAofOOAModelBuilder modelBuilder;
         private XTUMLOOAofOOAParserParser modelParser;
         private Dictionary<string, ImportStatus> importResult;
+        private Logger logger;
 
         public OOAofOOARepository MetaModelRepository { get { return metaModelRepository; } }
         public CIModelRepository ModelRepository { get { return ciModelRepository; } }
 
         public IDictionary<string,  ImportStatus> ImportResult => importResult;
 
-        public ConceptualInformationModelResolver()
+        public ConceptualInformationModelResolver(Logger logger)
         {
+            this.logger = logger;
             metaModelRepository = new OOAofOOARepository()
             {
                 Classes = new Dictionary<string, ClassOfOOA>(),
                 Relationships = new Dictionary<string, RelationshipOfOOA>(),
                 DataTypes = new Dictionary<string, DataTypeOfOOA>()
             };
-            modelBuilder = new OOAofOOAModelBuilder() { Repository = metaModelRepository };
-            modelParser = new XTUMLOOAofOOAParserParser(modelBuilder);
+            modelBuilder = new OOAofOOAModelBuilder(logger) { Repository = metaModelRepository };
+            modelParser = new XTUMLOOAofOOAParserParser(modelBuilder, logger);
         }
 
         public void LoadOOAofOOA(string datatypeDefFilePath, string metaModelFilePath)
@@ -74,6 +77,10 @@ namespace Kae.XTUML.Tools.CIModelResolver
                 var importedInstances = importResult.Values.Where(i => i.IsImported);
                 int importedInstancesCount = 0;
                 Console.WriteLine("CIClasses for imported Instances : ");
+                if (logger != null)
+                {
+                    logger.LogInfo("CIClasses for imported Instances : ");
+                }
                 foreach (var ii in importedInstances)
                 {
                     if (isShowDetail)
@@ -82,17 +89,28 @@ namespace Kae.XTUML.Tools.CIModelResolver
                 }
                 var unimportedInstances = importResult.Values.Where(i => i.IsImported == false);
                 int unimportedInstancesCount = 0;
-                Console.WriteLine("CIClasses for unimporeted Instances because the CIClass is undefined : ");
-                foreach (var ui in unimportedInstances)
-                {
-                    if (isShowDetail)
-                        Console.WriteLine($"  {ui.ClassName} {ui.Count}");
-                    unimportedInstancesCount += ui.Count;
-                }
+                if (unimportedInstances != null && unimportedInstances.Count() > 0) {
+                    Console.WriteLine("CIClasses for unimporeted Instances because the CIClass is undefined : ");
+                    if (logger != null)
+                    {
+                        logger.LogInfo("CIClasses for unimporeted Instances because the CIClass is undefined : ");
+                    }
+                    foreach (var ui in unimportedInstances)
+                    {
+                        if (isShowDetail)
+                            Console.WriteLine($"  {ui.ClassName} {ui.Count}");
+                        unimportedInstancesCount += ui.Count;
+                    }
 
-                Console.WriteLine("");
-                Console.WriteLine($"Imporeted Instances - {importedInstancesCount}");
-                Console.WriteLine($"Unimported Instances - {unimportedInstancesCount}");
+                    Console.WriteLine("");
+                    Console.WriteLine($"Imporeted Instances - {importedInstancesCount}");
+                    Console.WriteLine($"Unimported Instances - {unimportedInstancesCount}");
+                    if (logger != null)
+                    {
+                        logger.LogInfo($"Imporeted Instances - {importedInstancesCount}");
+                        logger.LogInfo($"Unimported Instances - {unimportedInstancesCount}");
+                    }
+                }
             }
         }
     }

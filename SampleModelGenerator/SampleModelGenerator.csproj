@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Kae.Utility.Logging" Version="1.0.0" />
     <PackageReference Include="YaccLexTools" Version="1.0.0" />
   </ItemGroup>
 

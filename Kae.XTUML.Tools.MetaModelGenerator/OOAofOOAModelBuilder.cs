@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Knowledge & Experience. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+using Kae.Utility.Logging;
 using Kae.XTUML.Tools.CIModelResolver.XTUMLOOAofOOA;
 using System;
 using System.Collections.Generic;
@@ -27,9 +28,12 @@ namespace Kae.XTUML.Tools.CIModelResolver
         private string lastPhrase;
         private string attrPhrase;
         private Dictionary<string, string> userDataTypeDefs = new Dictionary<string, string>();
+        private Logger logger;
 
-
-
+        public OOAofOOAModelBuilder(Logger logger)
+        {
+            this.logger = logger;
+        }
 
         public void LoadDataTypeDef(string yamlFilePath)
         {
@@ -103,6 +107,10 @@ namespace Kae.XTUML.Tools.CIModelResolver
             else
             {
                 Console.WriteLine($"Object:{objName} has not been registered.");
+                if (logger != null)
+                {
+                    logger.LogWarning($"Object:{objName} has not been registered.");
+                }
             }
         }
 

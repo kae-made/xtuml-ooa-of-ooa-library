@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 using Kae.CIM;
 using Kae.CIM.MetaModel.CIMofCIM;
+using Kae.Utility.Logging;
 using Kae.XTUML.Tools.CIModelResolver;
 using System;
 
@@ -34,7 +35,7 @@ namespace SampleModelGenerator
                 return;
             }
 
-            var resolver = new ConceptualInformationModelResolver();
+            var resolver = new ConceptualInformationModelResolver(ConsoleLogger.CreateLogger());
             try
             {
                 Console.WriteLine($"Loading OOA of OOA model... @{DateTime.Now.ToString("yyyy/MM/dd-HH:mm:ss")}");
