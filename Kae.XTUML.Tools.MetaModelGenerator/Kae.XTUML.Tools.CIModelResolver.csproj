@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <ApplicationIcon />
     <StartupObject />
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.1.0</Version>
+    <Version>2.2.0</Version>
     <Authors>Hiroshi Ota</Authors>
     <Company>Knowledge &amp; Experience</Company>
     <Description>Generator of  Kae.CIM.MetaMode.CIMofCIM classes and importer of xtuml domain model.</Description>
@@ -34,11 +34,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-	  <PackageReference Include="Kae.CIM.MetaModel.CIMofCIM" Version="0.1.1" />
+	  <PackageReference Include="Kae.CIM.MetaModel.CIMofCIM" Version="1.0.0" />
 	  <PackageReference Include="Kae.Utility.Logging" Version="1.0.0" />
 	  <PackageReference Include="System.CodeDom" Version="6.0.0" />
 	  <PackageReference Include="YaccLexTools" Version="1.0.0" />
-    <PackageReference Include="YamlDotNet" Version="11.2.1" />
+    <PackageReference Include="YamlDotNet" Version="12.0.1" />
   </ItemGroup>
   <ItemGroup>
     <None Update="datatype.yaml">

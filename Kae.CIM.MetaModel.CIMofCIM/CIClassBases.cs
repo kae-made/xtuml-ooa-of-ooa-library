@@ -12,6 +12,92 @@ using System.Collections.Generic;
 
 namespace Kae.CIM.MetaModel.CIMofCIM
 {
+    public class CIMClassKAE_DOMBase : CIMOOAofOOAClass, CIMClassKAE_DOM
+    {
+        public string Attr_Domain_ID { get; set; }
+        public string Attr_Name { get; set; }
+        public string Attr_Descrip { get; set; }
+        public CIMClassKAE_DOMBase(CIModelRepository repository, string Domain_ID, string Name, string Descrip) : base(repository, "KAE_DOM")
+        {
+            this.Attr_Domain_ID = Domain_ID;
+            this.Attr_Name = Name;
+            this.Attr_Descrip = Descrip;
+        }
+        public CIMClassKAE_DOMBase(CIModelRepository repository, IDictionary<string, object> attrArgs) : this(repository, (string)attrArgs["Domain_ID"], (string)attrArgs["Name"], (string)attrArgs["Descrip"])
+        {
+            ;
+        }
+
+        public IEnumerable<CIMClassKAE_CID> LinkedFromR7001()
+        {
+            var candidates = repository.GetCIInstances(domainName, "CIMClassKAE_CID").Where(i => ((CIMClassKAE_CID)i).Attr_Domain_ID == this.Attr_Domain_ID);
+            var linked = new List<CIMClassKAE_CID>();
+            foreach(var c in candidates)
+            {
+                linked.Add((CIMClassKAE_CID)c);
+            }
+            return linked;
+        }
+
+        public bool Validate()
+        {
+            return true;
+        }
+
+        public void Dispose()
+        {
+            ;
+        }
+    }
+
+    public class CIMClassKAE_CIDBase : CIMOOAofOOAClass, CIMClassKAE_CID
+    {
+        public string Attr_Domain_ID { get; set; }
+        public string Attr_Obj_ID { get; set; }
+
+        public CIMClassKAE_CIDBase(CIModelRepository repository, string Domain_ID, string Obj_ID) : base(repository, "KAE_CID")
+        {
+            this.Attr_Domain_ID = Domain_ID;
+            this.Attr_Obj_ID = Obj_ID;
+        }
+
+        public CIMClassKAE_CIDBase(CIModelRepository repository, IDictionary<string, object> attrArgs) : this(repository, (string)attrArgs["Domain_ID"], (string)attrArgs["Obj_ID"])
+        {
+            ;
+        }
+
+        public void Dispose()
+        {
+            ;
+        }
+
+        public CIMClassKAE_DOM LinkedToOneSideR7001()
+        {
+            var candidates = repository.GetCIInstances(domainName, "CIMClassKAE_DOM").Where(i => ((CIMClassKAE_DOM)i).Attr_Domain_ID == this.Attr_Domain_ID);
+            CIMClassKAE_DOM linked = null;
+            if (candidates.Count() > 0)
+            {
+                linked = (CIMClassKAE_DOM)candidates.First();
+            }
+            return linked;
+        }
+        public CIMClassO_OBJ LinkedToOtherSideR7001()
+        {
+            var candidates = repository.GetCIInstances(domainName, "CIMClassO_OBJ").Where(i => ((CIMClassO_OBJ)i).Attr_Obj_ID == this.Attr_Obj_ID);
+            CIMClassO_OBJ linked = null;
+            if (candidates.Count() > 0)
+            {
+                linked = (CIMClassO_OBJ)candidates.First();
+            }
+            return linked;
+        }
+
+        public bool Validate()
+        {
+            return true;
+        }
+    }
+
     public class CIMClassACT_ACTBase : CIMOOAofOOAClass, CIMClassACT_ACT
     {
         public string Attr_Action_ID { get; set; }
