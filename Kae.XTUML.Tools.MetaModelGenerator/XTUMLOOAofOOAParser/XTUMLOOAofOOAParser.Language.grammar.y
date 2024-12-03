@@ -1,4 +1,4 @@
-﻿%namespace Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser
+%namespace Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser
 %partial
 %parsertype XTUMLOOAofOOAParserParser
 %visibility internal

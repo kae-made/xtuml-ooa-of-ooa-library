@@ -1,4 +1,4 @@
-﻿%namespace Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser
+%namespace Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser
 %scannertype XTUMLOOAofOOAParserScanner
 %visibility internal
 %tokentype Token

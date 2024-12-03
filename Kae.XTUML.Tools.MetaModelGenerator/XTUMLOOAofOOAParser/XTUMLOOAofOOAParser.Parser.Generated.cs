@@ -3,8 +3,8 @@
 // (see accompanying GPPGcopyright.rtf)
 
 // GPPG version 1.5.2
-// DateTime: 2024/11/28 15:18:44
-// Input file <XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2024/11/28 15:00:38>
+// DateTime: 2024/12/03 10:35:44
+// Input file <XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2024/12/03 10:35:38>
 
 // options: no-lines gplex
 
@@ -50,10 +50,10 @@ internal class ScanObj {
 [GeneratedCodeAttribute( "Gardens Point Parser Generator", "1.5.2")]
 internal partial class XTUMLOOAofOOAParserParser: ShiftReduceParser<ValueType, LexLocation>
 {
-  // Verbatim content from XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2024/11/28 15:00:38
+  // Verbatim content from XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2024/12/03 10:35:38
 // Copyright (c) Knowledge & Experience. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
-  // End verbatim content from XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2024/11/28 15:00:38
+  // End verbatim content from XTUMLOOAofOOAParser\XTUMLOOAofOOAParser.Language.grammar.y - 2024/12/03 10:35:38
 
 #pragma warning disable 649
   private static Dictionary<int, string> aliases;
