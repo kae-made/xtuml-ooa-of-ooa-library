@@ -3,7 +3,7 @@
 //  GPLEX error listing for lex source file <XTUMLOOAofOOAParser.Language.analyzer.lex>
 // ==========================================================================
 //  Version:  1.2.2
-//  DateTime: 2022/05/19 15:03:40
+//  DateTime: 2024/11/28 10:51:12
 // ==========================================================================
 
 
@@ -11,6 +11,14 @@
 %scannertype XTUMLOOAofOOAParserScanner
 %visibility internal
 %tokentype Token
+
+%encoding utf-8
+//^^^^^^^-^^^
+// Error: Unknown LEX tag name
+// Error: Illegal character in this context
+// Error: Illegal character in this context
+// Error: Illegal character in this context
+// ----------------------------------------
 
 %option stack, minimize, parser, verbose, persistbuffer, noembedbuffers 
 
@@ -27,8 +35,9 @@ REFNO			R[1-9][0-9]*
 REMULT			[1M]C?
 FROM			FROM
 TO				TO
+DSQ				__SQ__
 Eol             (\r\n?|\n|\0)
-PHRASEC			'[a-zA-z][ a-zA-z0-9_]*'
+PHRASEC			'[a-zA-z]([ a-zA-z0-9_]|\.|'')*'
 ATTRSVAL		\"[^"]*\"
 ATTRVAL			'[^']*'
 ELEM			[a-zA-Z][a-zA-Z0-9_]*
@@ -60,22 +69,17 @@ PClose			\)
 {INTO}			{ Console.WriteLine("into: "); return (int)Token.INTO; }
 {VALUES}		{ Console.WriteLine("values: "); return (int)Token.VALUES; }
 {ATTRVAL}		{ Console.WriteLine("attrval: {0}", yytext); GetString(); return (int)Token.ATTRVAL; }
-//^^^^^^^
-// Warning: This pattern always overrides "{PHRASEC}" 
-// ---------------------------------------------------
 {REFNO}			{ Console.WriteLine("fefno: {0}", yytext); GetString(); return (int)Token.REFNO; }
 {REMULT}		{ Console.WriteLine("rel edge multi: {0}", yytext); GetString(); return (int)Token.REMULT; }
 {FROM}			{ Console.WriteLine("from:"); return (int)Token.FROM; }
 {TO}			{ Console.WriteLine("to:"); return (int)Token.TO; }
+{DSQ}			{ Console.WriteLine("'' - double single quatation"); return (int)Token.DSQ; }
 {PHRASE}		{ Console.WriteLine("phrase"); return (int)Token.PHRASE; }
 {POpen}			{ Console.WriteLine("("); return (int)Token.POpen; }
 {PClose}		{ Console.WriteLine(")"); return (int)Token.PClose; }
 {ELEM}			{ Console.WriteLine("elem: {0}", yytext); GetString(); return (int)Token.ELEM; }
 {COMMA}			{ Console.WriteLine("comma: {0}", yytext); return (int)Token.COMMA; }
 {PHRASEC}		{ Console.WriteLine("phrase content : {0}", yytext); GetString(); return (int)Token.PHRASEC; }
-//^^^^^^^
-// Warning: This pattern always overridden by "{ATTRVAL}" 
-// -------------------------------------------------------
 {ATTRSVAL}		{ Console.WriteLine("attr string value : {0}", yytext); GetString(); return (int)Token.ATTRSVAL; }
 {ATTRIVAL}		{ Console.WriteLine("attr integer value : {0}", yytext); GetString(); return (int)Token.ATTRIVAL; }
 {ATTRRVAL}		{ Console.WriteLine("attr real value : {0}", yytext); GetString(); return (int)Token.ATTRRVAL; }

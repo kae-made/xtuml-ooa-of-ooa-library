@@ -266,9 +266,8 @@ namespace QUT.GplexBuffers
         // Double buffer for char stream.
         class BufferElement
         {
-            // Temporal implementation waiting for YaccLexTools bug fix. 
-            Kae.XTUML.Tools.CIModelResolver.StringBuilderExt bldr = new Kae.XTUML.Tools.CIModelResolver.StringBuilderExt();
-            Kae.XTUML.Tools.CIModelResolver.StringBuilderExt next = new Kae.XTUML.Tools.CIModelResolver.StringBuilderExt();
+            StringBuilder bldr = new StringBuilder();
+            StringBuilder next = new StringBuilder();
             int minIx;
             int maxIx;
             int brkIx;
@@ -326,8 +325,7 @@ namespace QUT.GplexBuffers
             {
                 if (limit > brkIx + 16) // Rotate blocks
                 {
-                    // Temporal implementation waiting for YaccLexTools bug fix. 
-                    Kae.XTUML.Tools.CIModelResolver.StringBuilderExt temp = bldr;
+                    StringBuilder temp = bldr;
                     bldr = next;
                     next = temp;
                     next.Length = 0;

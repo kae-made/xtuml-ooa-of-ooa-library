@@ -2,8 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 using Kae.CIM;
 using Kae.Utility.Logging;
-// Copyright (c) Knowledge & Experience. All rights reserved.
-// Licensed under the MIT license. See LICENSE file in the project root for full license information.
 using Kae.XTUML.Tools.CIModelResolver;
 using Kae.XTUML.Tools.CIModelResolver.XTUMLOOAofOOA;
 using System;
@@ -24,9 +22,11 @@ namespace Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser
             modelBuilder = builder;
         }
 
-        public void Parse(string s)
+        public void Parse(string s, Encoding currentEncoding)
         {
-            byte[] inputBuffer = System.Text.Encoding.Default.GetBytes(s);
+            byte[] inputBuffer = currentEncoding.GetBytes(s);
+            //string suc = System.Text.Encoding.Unicode.GetString(System.Text.Encoding.Convert(currentEncoding,System.Text.Encoding.Unicode,inputBuffer));
+            //inputBuffer = System.Text.Encoding.Unicode.GetBytes(suc);
             MemoryStream stream = new MemoryStream(inputBuffer);
             try
             {
@@ -38,9 +38,9 @@ namespace Kae_XTUML_Tools_MetaModelGenerator.XTUMLOOAofOOAParser
                 if (logger != null)
                 {
                     logger.LogError($"{ex.Message}");
-                    if(ex is AggregateException)
+                    if (ex is AggregateException)
                     {
-                       foreach(var innerEx in ((AggregateException)ex).InnerExceptions)
+                        foreach (var innerEx in ((AggregateException)ex).InnerExceptions)
                         {
                             logger.LogError($"{innerEx.Message}");
                         }

@@ -91,7 +91,7 @@ namespace Kae.XTUML.Tools.CIModelResolver
                 content = regx1.Replace(content, "'__SQ__");
                 var regx2 = new Regex("''");
                 content = regx2.Replace(content, "__SQ__");
-                parser.Parse(content, reader.CurrentEncoding);
+                parser.Parse(content);
             }
             return importedClasses;
         }

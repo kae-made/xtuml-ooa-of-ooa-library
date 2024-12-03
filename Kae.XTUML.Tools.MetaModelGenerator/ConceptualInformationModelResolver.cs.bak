@@ -47,10 +47,10 @@ namespace Kae.XTUML.Tools.CIModelResolver
         {
             this.sqlOOAofOOAFilePath = metaModelFilePath;
             modelBuilder.LoadDataTypeDef(datatypeDefFilePath);
-            using (var reader = new StreamReader(sqlOOAofOOAFilePath))
+            using (var fs = new StreamReader(sqlOOAofOOAFilePath))
             {
-                var content = reader.ReadToEnd();
-                modelParser.Parse(content, reader.CurrentEncoding);
+                var content = fs.ReadToEnd();
+                modelParser.Parse(content);
 
                 modelBuilder.PickupDataType();
             }
